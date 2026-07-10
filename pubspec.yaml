@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.6
   shared_preferences: ^2.2.2
+  audioplayers: ^6.1.0
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +23,35 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/images/Greek/Olympians/
+    - assets/images/Greek/Titans/
+    - assets/images/Greek/Primordial/
+    - assets/images/Greek/Underworld/
+    - assets/images/Greek/SeaGods/
+    - assets/images/Greek/Heroes/
+    - assets/images/Greek/Monsters/
+    - assets/images/Greek/Cosmology/
+    - assets/images/Egypt/
+    - assets/images/Egypt/Death/
+    - assets/images/Egypt/Ennead/
+    - assets/images/Egypt/Fertility/
+    - assets/images/Egypt/Knowledge/
+    - assets/images/Egypt/Sun&Sky/
+    - assets/images/Egypt/Creatures/
+    - assets/images/Egypt/Cosmology/
+    - assets/images/Hindu/
+    - assets/images/Hindu/Trimurti/
+    - assets/images/Hindu/Tridevi/
+    - assets/images/Hindu/Avatar/
+    - assets/images/Hindu/Devas/
+    - assets/images/Hindu/Figures/
+    - assets/images/Hindu/Cosmology/
+    - assets/images/Nordik/
+    - assets/images/Nordik/Aesir/
+    - assets/images/Nordik/Vanir/
+    - assets/images/Nordik/Jotun/
+    - assets/images/Nordik/Mythical/
+    - assets/images/Nordik/Figures/
+    - assets/images/Nordik/Cosmology/
+    - assets/audio/
+

@@ -1,7 +1,19 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/god_model.dart';
 import '../data/gods_data.dart';
 import '../widgets/god_card.dart';
+import '../l10n/language_provider.dart';
+import '../l10n/app_strings.dart';
+import '../services/bookmark_service.dart';
+import '../services/sound_service.dart';
+import 'detail_screen.dart';
+import 'bookmark_screen.dart';
+import 'greek_category_screen.dart';
+import 'nordic_category_screen.dart';
+import 'egypt_category_screen.dart';
+import 'hindu_category_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,11 +22,21 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with TickerProviderStateMixin {
   late List<God> _allGods;
   List<God> _filteredGods = [];
   final TextEditingController _searchController = TextEditingController();
   String _selectedMythology = 'All';
+  String? _expandedGodId;
+  late final AnimationController _staggerCtrl;
+
+  // Random God animation state
+  bool _isRandomizing = false;
+  God? _randomDisplayGod;
+  Timer? _randomTimer;
+  int _randomStep = 0;
+  static const _randomTotalSteps = 25;
 
   static const _mythologies = ['All', 'Greek', 'Egyptian', 'Nordic', 'Hindu'];
 
@@ -24,10 +46,35 @@ class _HomeScreenState extends State<HomeScreen> {
     _allGods = List.from(godsData);
     _filteredGods = List.from(godsData);
     _searchController.addListener(_applyFilters);
+    _staggerCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    )..forward();
+    _loadBookmarks();
+  }
+
+  /// Returns a staggered animation for card at [index].
+  Animation<double> _stagger(int index) {
+    final count = _filteredGods.length.clamp(1, 20);
+    final start = (index / count).clamp(0.0, 1.0);
+    final end = ((index + 1) / count).clamp(0.0, 1.0);
+    return CurvedAnimation(
+      parent: _staggerCtrl,
+      curve: Interval(start, end, curve: Curves.easeOutCubic),
+    );
+  }
+
+  Future<void> _loadBookmarks() async {
+    final ids = await BookmarkService.load();
+    for (final god in _allGods) {
+      god.isBookmarked = ids.contains(god.id);
+    }
+    if (mounted) setState(() {});
   }
 
   @override
   void dispose() {
+    _staggerCtrl.dispose();
     _searchController.dispose();
     super.dispose();
   }
@@ -35,60 +82,301 @@ class _HomeScreenState extends State<HomeScreen> {
   void _applyFilters() {
     setState(() {
       final q = _searchController.text.toLowerCase();
+      final lang = LanguageProvider.of(context).value;
       _filteredGods = _allGods.where((g) {
         final matchQ = q.isEmpty ||
             g.name.toLowerCase().contains(q) ||
-            g.title.toLowerCase().contains(q) ||
-            g.powers.any((p) => p.toLowerCase().contains(q));
-        final matchM =
-            _selectedMythology == 'All' || g.mythology == _selectedMythology;
+            g.localizedTitle(lang).toLowerCase().contains(q) ||
+            g.localizedPowers(lang).any((p) => p.toLowerCase().contains(q));
+        final matchM = _selectedMythology == 'All' || g.mythology == _selectedMythology;
         return matchQ && matchM;
       }).toList();
     });
+    _staggerCtrl
+      ..reset()
+      ..forward();
+  }
+
+  void _startRandomGod() {
+    if (_isRandomizing || _allGods.isEmpty) return;
+    SoundService.playClick();
+    setState(() {
+      _isRandomizing = true;
+      _randomStep = 0;
+      _randomDisplayGod = _allGods[DateTime.now().millisecondsSinceEpoch % _allGods.length];
+    });
+    _showRandomOverlay();
+    _runRandomCycle();
+  }
+
+  void _runRandomCycle() {
+    const durations = [
+      80, 80, 100, 100, 120, 140, 160, 180, 220, 260,
+      300, 350, 420, 500, 600, 720, 850, 1000, 1200, 1500,
+      1800, 2200, 2800, 3500, 4000,
+    ];
+    _randomTimer?.cancel();
+    _randomTimer = Timer(const Duration(milliseconds: 80), () {
+      if (!mounted || !_isRandomizing) return;
+      _randomStep++;
+      final idx = DateTime.now().millisecondsSinceEpoch % _allGods.length;
+      setState(() => _randomDisplayGod = _allGods[idx]);
+      if (_randomStep < _randomTotalSteps) {
+        final ms = durations[_randomStep.clamp(0, durations.length - 1)];
+        _randomTimer = Timer(Duration(milliseconds: ms ~/ (1 + _randomStep * 0.15)), _runRandomCycle);
+      } else {
+        _finishRandom();
+      }
+    });
+  }
+
+  void _finishRandom() {
+    final finalGod = _allGods[DateTime.now().millisecondsSinceEpoch % _allGods.length];
+    setState(() {
+      _randomDisplayGod = finalGod;
+      _isRandomizing = false;
+    });
+    _randomTimer?.cancel();
+    Future.delayed(const Duration(milliseconds: 1200), () {
+      if (!mounted) return;
+      Navigator.of(context).pop(); // close overlay
+      Navigator.push(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (_, __, ___) => DetailScreen(
+            god: finalGod,
+            onReturn: () {},
+          ),
+          transitionsBuilder: (_, anim, __, child) =>
+              FadeTransition(opacity: anim, child: child),
+          transitionDuration: const Duration(milliseconds: 300),
+        ),
+      );
+    });
+  }
+
+  void _showRandomOverlay() {
+    final lang = LanguageProvider.of(context).value;
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: false,
+      barrierColor: Colors.black87,
+      transitionDuration: const Duration(milliseconds: 300),
+      transitionBuilder: (ctx, a1, a2, child) {
+        return FadeTransition(
+          opacity: a1,
+          child: ScaleTransition(scale: CurvedAnimation(parent: a1, curve: Curves.easeOutBack), child: child),
+        );
+      },
+      pageBuilder: (_, __, ___) {
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            // Listen to parent state changes
+            if (_isRandomizing) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (mounted) setDialogState(() {});
+              });
+            }
+            final god = _randomDisplayGod;
+            if (god == null) return const SizedBox();
+            return Center(
+              child: Container(
+                width: 280,
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF111111),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: _isRandomizing
+                        ? const Color(0xFFFF6F00).withValues(alpha: 0.5 + (DateTime.now().millisecondsSinceEpoch % 1000) / 2000)
+                        : const Color(0xFFB07800),
+                    width: 2,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xFFFF6F00).withValues(alpha: _isRandomizing ? 0.3 : 0.1),
+                      blurRadius: _isRandomizing ? 30 : 10,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Title
+                    Text(
+                      _isRandomizing
+                          ? (lang == 'id' ? 'MENARIK...' : 'DRAWING...')
+                          : (lang == 'id' ? 'KAMU DAPAT!' : 'YOU GOT!'),
+                      style: GoogleFonts.cinzel(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w800,
+                        color: const Color(0xFFFF8A00),
+                        letterSpacing: 3,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // God card
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 60),
+                      child: Container(
+                        key: ValueKey(god.id),
+                        width: 200,
+                        height: 200,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF1A1A1A),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: GodCard.mythologyColor(god.mythology).withValues(alpha: 0.5),
+                          ),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: god.imageUrl.isNotEmpty
+                              ? Image.asset(god.imageUrl, fit: BoxFit.cover)
+                              : Center(
+                                  child: Text(
+                                    god.name[0],
+                                    style: const TextStyle(fontSize: 64, color: Color(0xFFB07800)),
+                                  ),
+                                ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 14),
+                    // God name
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 60),
+                      child: Text(
+                        god.name,
+                        key: ValueKey(god.id),
+                        style: GoogleFonts.cinzel(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    // God title
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 60),
+                      child: Text(
+                        god.localizedTitle(lang),
+                        key: ValueKey('${god.id}_title'),
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: GodCard.mythologyColor(god.mythology),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    // Mythology tag
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: GodCard.mythologyColor(god.mythology).withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        god.mythology,
+                        style: TextStyle(
+                          fontSize: 10,
+                          color: GodCard.mythologyColor(god.mythology),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    if (!_isRandomizing) ...[
+                      const SizedBox(height: 16),
+                      Text(
+                        lang == 'id' ? 'Menutup otomatis...' : 'Closing automatically...',
+                        style: const TextStyle(fontSize: 11, color: Color(0xFF666666)),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
+    );
   }
 
   void _selectMythology(String m) {
+    // Greek, Nordic & Egyptian open a sub-category chooser
+    if (m == 'Greek' || m == 'Nordic' || m == 'Egyptian' || m == 'Hindu') {
+      SoundService.playClick();
+      Navigator.push(
+        context,
+        PageRouteBuilder(
+          pageBuilder: (_, __, ___) {
+            if (m == 'Greek') return const GreekCategoryScreen();
+            if (m == 'Nordic') return const NordicCategoryScreen();
+            if (m == 'Hindu') return const HinduCategoryScreen();
+            return const EgyptCategoryScreen();
+          },
+          transitionsBuilder: (_, anim, __, child) =>
+              FadeTransition(opacity: anim, child: child),
+          transitionDuration: const Duration(milliseconds: 300),
+        ),
+      );
+      return;
+    }
     setState(() => _selectedMythology = m);
     _applyFilters();
   }
 
+  void _toggleLanguage() {
+    final lang = LanguageProvider.of(context);
+    lang.setLanguage(lang.value == 'id' ? 'en' : 'id');
+  }
+
+  void _openBookmarks() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => const BookmarkScreen()),
+    );
+    // Re-sync bookmarks when returning
+    for (final god in _allGods) {
+      final ids = await BookmarkService.load();
+      god.isBookmarked = ids.contains(god.id);
+    }
+    if (mounted) setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
+    final lang = LanguageProvider.of(context).value;
+
     return Scaffold(
-      backgroundColor: const Color(0xFF050812),
-      body: Stack(
-        children: [
-          const Positioned.fill(child: _Starfield()),
-          SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildHeader(),
-                _buildSearchBar(),
-                _buildFilterChips(),
-                _buildResultCount(),
-                Expanded(child: _buildList()),
-              ],
-            ),
-          ),
-        ],
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildHeader(lang),
+            _buildSearchBar(lang),
+            _buildFilterChips(),
+            _buildResultCount(lang),
+            Expanded(child: _buildList()),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildHeader() {
+  Widget _buildHeader(String lang) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-      child: Column(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              ShaderMask(
-                shaderCallback: (bounds) => const LinearGradient(
-                  colors: [Color(0xFFFFD700), Color(0xFFFFC107), Color(0xFFFFAB00)],
-                ).createShader(bounds),
-                child: const Text(
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
                   'MYTHOPEDIA',
                   style: TextStyle(
                     color: Colors.white,
@@ -97,18 +385,55 @@ class _HomeScreenState extends State<HomeScreen> {
                     letterSpacing: 4,
                   ),
                 ),
-              ),
-              const SizedBox(width: 8),
-              const Text('✨', style: TextStyle(fontSize: 18)),
-            ],
+                const SizedBox(height: 3),
+                Text(
+                  AppStrings.get('homeSubtitle', lang),
+                  style: const TextStyle(
+                    color: Color(0xFF9CA3AF),
+                    fontSize: 12.5,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ],
+            ),
           ),
-          const SizedBox(height: 3),
-          const Text(
-            'Jelajahi mitologi dunia',
-            style: TextStyle(
-              color: Color(0xFF4B5870),
-              fontSize: 12.5,
-              letterSpacing: 0.5,
+          GestureDetector(
+            onTap: _openBookmarks,
+            child: Container(
+              margin: const EdgeInsets.only(right: 8),
+              padding: const EdgeInsets.all(7),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1A1A),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: const Color(0xFF333333)),
+              ),
+              child: const Icon(Icons.bookmark_rounded, color: Color(0xFFB07800), size: 16),
+            ),
+          ),
+          GestureDetector(
+            onTap: _toggleLanguage,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1A1A),
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: const Color(0xFF333333)),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.language, color: Color(0xFFB07800), size: 16),
+                  const SizedBox(width: 6),
+                  Text(
+                    lang == 'id' ? 'EN' : 'ID',
+                    style: const TextStyle(
+                      color: Color(0xFFB07800),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -116,49 +441,63 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _buildSearchBar() {
+  Widget _buildSearchBar(String lang) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
-      child: Container(
-        decoration: BoxDecoration(
-          color: const Color(0xFF0D1528),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: const Color(0xFF1E2D4A)),
-          boxShadow: const [
-            BoxShadow(
-              color: Color(0x22000000),
-              blurRadius: 8,
-              offset: Offset(0, 2),
+      child: Row(
+        children: [
+          // Search field
+          Expanded(
+            child: Container(
+              height: 40,
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1A1A),
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color(0xFF333333)),
+              ),
+              child: TextField(
+                controller: _searchController,
+                style: const TextStyle(color: Colors.white, fontSize: 13),
+                decoration: InputDecoration(
+                  hintText: AppStrings.get('searchHint', lang),
+                  hintStyle: const TextStyle(color: Color(0xFF777777), fontSize: 13),
+                  prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFFB07800), size: 18),
+                  suffixIcon: _searchController.text.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.close_rounded, color: Color(0xFF777777), size: 16),
+                          onPressed: () => _searchController.clear(),
+                        )
+                      : null,
+                  border: InputBorder.none,
+                  isDense: true,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                ),
+              ),
             ),
-          ],
-        ),
-        child: TextField(
-          controller: _searchController,
-          style: const TextStyle(color: Colors.white, fontSize: 14),
-          decoration: InputDecoration(
-            hintText: 'Cari nama dewa, kekuatan...',
-            hintStyle: const TextStyle(color: Color(0xFF3D4F68), fontSize: 14),
-            prefixIcon: const Icon(Icons.search_rounded,
-                color: Color(0xFFFFC107), size: 20),
-            suffixIcon: _searchController.text.isNotEmpty
-                ? IconButton(
-                    icon: const Icon(Icons.close_rounded,
-                        color: Color(0xFF3D4F68), size: 18),
-                    onPressed: () => _searchController.clear(),
-                  )
-                : null,
-            border: InputBorder.none,
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
           ),
-        ),
+          const SizedBox(width: 8),
+          // Random God button
+          GestureDetector(
+            onTap: _startRandomGod,
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1A1A),
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color(0xFFB07800).withValues(alpha: 0.4)),
+              ),
+              child: const Icon(Icons.casino_rounded, color: Color(0xFFB07800), size: 20),
+            ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildFilterChips() {
     return SizedBox(
-      height: 48,
+      height: 44,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
@@ -166,9 +505,7 @@ class _HomeScreenState extends State<HomeScreen> {
         itemBuilder: (_, i) {
           final m = _mythologies[i];
           final selected = m == _selectedMythology;
-          final color = m == 'All'
-              ? const Color(0xFFFFC107)
-              : GodCard.mythologyColor(m);
+          final color = m == 'All' ? const Color(0xFFB07800) : GodCard.mythologyColor(m);
           return GestureDetector(
             onTap: () => _selectMythology(m),
             child: AnimatedContainer(
@@ -176,17 +513,14 @@ class _HomeScreenState extends State<HomeScreen> {
               margin: const EdgeInsets.only(right: 8),
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
               decoration: BoxDecoration(
-                color: selected ? color.withValues(alpha: 0.18) : const Color(0xFF0D1528),
+                color: selected ? color : const Color(0xFF1A1A1A),
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: selected ? color : const Color(0xFF1E2D4A),
-                  width: selected ? 1.5 : 1,
-                ),
+                border: Border.all(color: selected ? color : const Color(0xFF333333)),
               ),
               child: Text(
                 m,
                 style: TextStyle(
-                  color: selected ? color : const Color(0xFF4B5870),
+                  color: selected ? Colors.white : const Color(0xFFAAAAAA),
                   fontSize: 12,
                   fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
                 ),
@@ -198,29 +532,30 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget _buildResultCount() {
+  Widget _buildResultCount(String lang) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
       child: Text(
-        '${_filteredGods.length} dewa',
-        style: const TextStyle(color: Color(0xFF2E3D55), fontSize: 11),
+        '${_filteredGods.length} ${AppStrings.get("resultCount", lang)}',
+        style: const TextStyle(color: Color(0xFFD1D5DB), fontSize: 11),
       ),
     );
   }
 
   Widget _buildList() {
+    final lang = LanguageProvider.of(context).value;
     if (_filteredGods.isEmpty) {
-      return const Center(
+      return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('🔮', style: TextStyle(fontSize: 48)),
-            SizedBox(height: 14),
-            Text('Tidak ada dewa ditemukan',
-                style: TextStyle(color: Color(0xFF3D4F68), fontSize: 15)),
-            SizedBox(height: 6),
-            Text('Coba kata kunci lain',
-                style: TextStyle(color: Color(0xFF2E3D55), fontSize: 13)),
+            const Icon(Icons.search_off_rounded, size: 48, color: Color(0xFF555555)),
+            const SizedBox(height: 14),
+            Text(AppStrings.get('emptyTitle', lang),
+                style: const TextStyle(color: Color(0xFF999999), fontSize: 15)),
+            const SizedBox(height: 6),
+            Text(AppStrings.get('emptySubtitle', lang),
+                style: const TextStyle(color: Color(0xFF555555), fontSize: 13)),
           ],
         ),
       );
@@ -230,68 +565,16 @@ class _HomeScreenState extends State<HomeScreen> {
       itemCount: _filteredGods.length,
       itemBuilder: (_, i) => GodCard(
         god: _filteredGods[i],
+        isExpanded: _filteredGods[i].id == _expandedGodId,
+        entranceAnim: _stagger(i),
+        onToggle: () {
+          setState(() {
+            final tappedId = _filteredGods[i].id;
+            _expandedGodId = _expandedGodId == tappedId ? null : tappedId;
+          });
+        },
         onReturn: () => setState(() {}),
       ),
     );
   }
-}
-
-// ─── Starfield background ───────────────────────────────────────────────────
-
-class _Starfield extends StatelessWidget {
-  const _Starfield();
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: _StarPainter(),
-      child: const SizedBox.expand(),
-    );
-  }
-}
-
-class _StarPainter extends CustomPainter {
-  // x%, y%, radius, opacity
-  static const _stars = [
-    [0.03, 0.05, 1.0, 0.70], [0.12, 0.10, 1.5, 0.40], [0.24, 0.07, 0.8, 0.80],
-    [0.36, 0.03, 1.2, 0.60], [0.47, 0.11, 1.0, 0.45], [0.59, 0.06, 1.5, 0.85],
-    [0.68, 0.09, 0.8, 0.40], [0.80, 0.04, 1.0, 0.65], [0.91, 0.12, 1.3, 0.50],
-    [0.07, 0.18, 1.2, 0.45], [0.19, 0.22, 0.8, 0.75], [0.31, 0.16, 1.5, 0.35],
-    [0.43, 0.20, 1.0, 0.65], [0.55, 0.14, 0.8, 0.50], [0.64, 0.24, 1.2, 0.80],
-    [0.75, 0.17, 1.0, 0.55], [0.87, 0.21, 1.5, 0.35], [0.97, 0.15, 0.8, 0.65],
-    [0.02, 0.30, 0.8, 0.55], [0.14, 0.35, 1.2, 0.45], [0.26, 0.28, 1.5, 0.75],
-    [0.38, 0.33, 0.8, 0.40], [0.50, 0.29, 1.0, 0.65], [0.62, 0.36, 1.2, 0.50],
-    [0.73, 0.31, 0.8, 0.80], [0.84, 0.27, 1.5, 0.35], [0.95, 0.34, 1.0, 0.55],
-    [0.06, 0.42, 1.5, 0.35], [0.17, 0.46, 0.8, 0.70], [0.29, 0.40, 1.0, 0.50],
-    [0.41, 0.44, 1.2, 0.65], [0.53, 0.48, 0.8, 0.40], [0.66, 0.41, 1.5, 0.55],
-    [0.78, 0.45, 1.0, 0.45], [0.89, 0.43, 0.8, 0.75], [0.98, 0.49, 1.2, 0.35],
-    [0.04, 0.55, 1.0, 0.65], [0.16, 0.58, 1.5, 0.35], [0.27, 0.52, 0.8, 0.55],
-    [0.39, 0.57, 1.0, 0.45], [0.52, 0.54, 1.2, 0.75], [0.63, 0.60, 0.8, 0.40],
-    [0.75, 0.56, 1.5, 0.65], [0.86, 0.53, 1.0, 0.50], [0.96, 0.59, 0.8, 0.55],
-    [0.08, 0.66, 1.2, 0.45], [0.20, 0.70, 0.8, 0.65], [0.32, 0.64, 1.5, 0.35],
-    [0.44, 0.68, 1.0, 0.55], [0.56, 0.72, 0.8, 0.45], [0.67, 0.65, 1.2, 0.75],
-    [0.79, 0.69, 1.0, 0.40], [0.90, 0.66, 1.5, 0.55], [0.99, 0.73, 0.8, 0.45],
-    [0.03, 0.80, 0.8, 0.70], [0.15, 0.83, 1.5, 0.35], [0.27, 0.78, 1.0, 0.55],
-    [0.40, 0.82, 0.8, 0.45], [0.52, 0.79, 1.2, 0.65], [0.64, 0.85, 1.0, 0.35],
-    [0.76, 0.81, 1.5, 0.55], [0.88, 0.77, 0.8, 0.45], [0.97, 0.84, 1.0, 0.65],
-    [0.10, 0.91, 1.2, 0.45], [0.22, 0.95, 0.8, 0.65], [0.35, 0.93, 1.5, 0.35],
-    [0.48, 0.90, 1.0, 0.55], [0.61, 0.96, 0.8, 0.45], [0.72, 0.92, 1.2, 0.75],
-    [0.83, 0.94, 1.0, 0.35], [0.93, 0.89, 1.5, 0.55],
-  ];
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint();
-    for (final s in _stars) {
-      paint.color = Colors.white.withValues(alpha: s[3]);
-      canvas.drawCircle(
-        Offset(s[0] * size.width, s[1] * size.height),
-        s[2],
-        paint,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(_) => false;
 }

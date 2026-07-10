@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'l10n/language_provider.dart';
+import 'widgets/music_button.dart';
+import 'screens/splash_screen.dart';
 
-void main() {
-  runApp(const MythopediaApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final langNotifier = LanguageNotifier();
+  await langNotifier.init();
+  runApp(LanguageProvider(notifier: langNotifier, child: const MythopediaApp()));
 }
 
 class MythopediaApp extends StatelessWidget {
@@ -14,36 +19,38 @@ class MythopediaApp extends StatelessWidget {
       title: 'Mythopedia',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF0A0E27),
-        colorScheme: const ColorScheme.dark(
-          surface: Color(0xFF1A1F3A),
-          primary: Color(0xFFFFC107),
-          secondary: Color(0xFF9C27B0),
-          onSurface: Colors.white,
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.black,
+        colorScheme: const ColorScheme.light(
+          surface: Color(0xFFF5F5F5),
+          primary: Color(0xFFB07800),
+          secondary: Color(0xFF7B1FA2),
+          onSurface: Color(0xFF1A1A2E),
         ),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF0A0E27),
-          foregroundColor: Colors.white,
+          backgroundColor: Colors.white,
+          foregroundColor: Color(0xFF1A1A2E),
           elevation: 0,
         ),
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          fillColor: const Color(0xFF1A1F3A),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide.none,
-          ),
-          hintStyle: const TextStyle(color: Color(0xFF6B7280)),
-          prefixIconColor: const Color(0xFFFFC107),
-        ),
         snackBarTheme: const SnackBarThemeData(
-          backgroundColor: Color(0xFF1A1F3A),
+          backgroundColor: Color(0xFF1A1A2E),
           contentTextStyle: TextStyle(color: Colors.white),
         ),
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
+      builder: (context, child) {
+        return Stack(
+          children: [
+            child ?? const SizedBox.shrink(),
+            const Positioned(
+              right: 20,
+              bottom: 32,
+              child: MusicButton(),
+            ),
+          ],
+        );
+      },
     );
   }
 }
