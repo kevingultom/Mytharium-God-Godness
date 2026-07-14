@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../models/quiz_question_model.dart';
 import '../data/quiz_greek_data.dart';
 import '../data/quiz_nordic_data.dart';
@@ -146,7 +146,7 @@ class _QuizTriviaScreenState extends State<QuizTriviaScreen> {
                       children: [
                         Text(
                           _genreTitle,
-                          style: GoogleFonts.cinzel(
+                          style: AppFonts.cinzel(
                             fontSize: 16,
                             fontWeight: FontWeight.w900,
                             color: color,
@@ -304,7 +304,7 @@ class _QuizTriviaScreenState extends State<QuizTriviaScreen> {
                       _currentIndex < _questions.length - 1
                           ? (lang == 'id' ? 'SELANJUTNYA' : 'NEXT')
                           : (lang == 'id' ? 'LIHAT HASIL' : 'VIEW RESULTS'),
-                      style: GoogleFonts.cinzel(
+                      style: AppFonts.cinzel(
                         fontSize: 13,
                         fontWeight: FontWeight.w800,
                         color: Colors.white,

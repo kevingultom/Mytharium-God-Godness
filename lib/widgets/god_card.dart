@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../models/god_model.dart';
 import '../screens/detail_screen.dart';
 import '../l10n/language_provider.dart';
@@ -24,15 +24,25 @@ class GodCard extends StatefulWidget {
 
   static Color mythologyColor(String mythology) {
     switch (mythology) {
-      case 'Greek':    return const Color(0xFF6B1013);
-      case 'Egyptian': return const Color(0xFFD97706);
-      case 'Nordic':   return const Color(0xFF2563EB);
-      case 'Hindu':    return const Color(0xFFFF6F00);
-      default:         return const Color(0xFF7C3AED);
+      case 'Greek':
+        return const Color(0xFF0E7490);
+      case 'Egyptian':
+        return const Color(0xFFD97706);
+      case 'Nordic':
+        return const Color(0xFF2563EB);
+      case 'Hindu':
+        return const Color(0xFFFF6F00);
+      case 'Chinese':
+        return const Color(0xFFC8102E);
+      case 'Japanese':
+        return const Color(0xFFDB2763);
+      default:
+        return const Color(0xFF7C3AED);
     }
   }
 
-  static TextStyle mythologyFont(String mythology, {
+  static TextStyle mythologyFont(
+    String mythology, {
     double fontSize = 18,
     FontWeight fontWeight = FontWeight.w700,
     Color? color,
@@ -41,7 +51,7 @@ class GodCard extends StatefulWidget {
   }) {
     switch (mythology) {
       case 'Greek':
-        return GoogleFonts.cinzel(
+        return AppFonts.cinzel(
           fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,
@@ -49,7 +59,7 @@ class GodCard extends StatefulWidget {
           letterSpacing: letterSpacing,
         );
       case 'Egyptian':
-        return GoogleFonts.cinzelDecorative(
+        return AppFonts.cinzelDecorative(
           fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,
@@ -57,7 +67,7 @@ class GodCard extends StatefulWidget {
           letterSpacing: letterSpacing,
         );
       case 'Nordic':
-        return GoogleFonts.medievalSharp(
+        return AppFonts.medievalSharp(
           fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,
@@ -65,7 +75,23 @@ class GodCard extends StatefulWidget {
           letterSpacing: letterSpacing,
         );
       case 'Hindu':
-        return GoogleFonts.yatraOne(
+        return AppFonts.yatraOne(
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          color: color,
+          shadows: shadows,
+          letterSpacing: letterSpacing,
+        );
+      case 'Chinese':
+        return AppFonts.cinzelDecorative(
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+          color: color,
+          shadows: shadows,
+          letterSpacing: letterSpacing,
+        );
+      case 'Japanese':
+        return AppFonts.cinzel(
           fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,
@@ -73,7 +99,7 @@ class GodCard extends StatefulWidget {
           letterSpacing: letterSpacing,
         );
       default:
-        return GoogleFonts.cinzel(
+        return AppFonts.cinzel(
           fontSize: fontSize,
           fontWeight: fontWeight,
           color: color,
@@ -88,25 +114,31 @@ class GodCard extends StatefulWidget {
 }
 
 class _GodCardState extends State<GodCard> {
+  static const _bottomAlignNames = {'Yama'};
+  // Portraits whose faces sit well above image-center; raised further up
+  // than the default topCenter crop so the face is never cut off.
+  static const _raisedAlignments = {
+    'Bhishma': Alignment(0, -0.7),
+    'Ashwini Kumaras': Alignment(0, -0.55),
+    'Vishwakarma': Alignment(0, -0.3),
+    'Asura': Alignment(0, -0.25),
+  };
 
   Widget _buildImage() {
     final url = widget.god.imageUrl;
+    final name = widget.god.name;
+    final align = _bottomAlignNames.contains(name)
+        ? Alignment.bottomCenter
+        : (_raisedAlignments[name] ?? Alignment.topCenter);
+
     if (url.startsWith('assets/')) {
-      return Image.asset(
-        url,
-        fit: BoxFit.cover,
-        width: double.infinity,
-        height: double.infinity,
-        errorBuilder: (_, __, ___) => Container(color: const Color(0xFF222222)),
-      );
+      return Image.asset(url, fit: BoxFit.cover, alignment: align,
+        width: double.infinity, height: double.infinity,
+        errorBuilder: (_, __, ___) => Container(color: const Color(0xFF222222)));
     } else if (url.isNotEmpty) {
-      return Image.network(
-        url,
-        fit: BoxFit.cover,
-        width: double.infinity,
-        height: double.infinity,
-        errorBuilder: (_, __, ___) => Container(color: const Color(0xFF222222)),
-      );
+      return Image.network(url, fit: BoxFit.cover, alignment: align,
+        width: double.infinity, height: double.infinity,
+        errorBuilder: (_, __, ___) => Container(color: const Color(0xFF222222)));
     }
     return Container(color: const Color(0xFF222222));
   }
@@ -144,108 +176,110 @@ class _GodCardState extends State<GodCard> {
         child: GestureDetector(
           onTap: widget.onToggle,
           child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        margin: const EdgeInsets.only(bottom: 2),
-        color: Colors.black,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            // Banner Section
-            SizedBox(
-              height: 110,
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  _buildImage(),
-                  Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Colors.black.withValues(alpha: 0.9),
-                          Colors.black.withValues(alpha: 0.5),
-                          Colors.transparent,
-                        ],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          widget.god.name,
-                          style: GodCard.mythologyFont(
-                            widget.god.mythology,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
+            duration: const Duration(milliseconds: 300),
+            margin: const EdgeInsets.only(bottom: 2),
+            color: Colors.black,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // Banner Section
+                SizedBox(
+                  height: 110,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      _buildImage(),
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.black.withValues(alpha: 0.9),
+                              Colors.black.withValues(alpha: 0.5),
+                              Colors.transparent,
+                            ],
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16.0, vertical: 16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              widget.god.name,
+                              style: GodCard.mythologyFont(
+                                widget.god.mythology,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              widget.god.localizedTitle(lang),
+                              style: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 13,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Expanded Section
+                if (widget.isExpanded)
+                  Container(
+                    color: const Color(0xFF1A1A1A),
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
                         Text(
-                          widget.god.localizedTitle(lang),
-                          style: const TextStyle(
-                            color: Colors.white70,
-                            fontSize: 13,
-                          ),
-                          maxLines: 1,
+                          widget.god.localizedStory(lang).split('\n\n').first,
+                          maxLines: 5,
                           overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            height: 1.5,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Center(
+                          child: OutlinedButton(
+                            onPressed: _navigateToDetail,
+                            style: OutlinedButton.styleFrom(
+                              side: const BorderSide(color: Colors.white),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 32, vertical: 10),
+                            ),
+                            child: Text(
+                              AppStrings.get('learnMore', lang),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),
                   ),
-                ],
-              ),
+              ],
             ),
-
-            // Expanded Section
-            if (widget.isExpanded)
-              Container(
-                color: const Color(0xFF1A1A1A),
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      widget.god.localizedStory(lang).split('\n\n').first,
-                      maxLines: 5,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        height: 1.5,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Center(
-                      child: OutlinedButton(
-                        onPressed: _navigateToDetail,
-                        style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: Colors.white),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
-                        ),
-                        child: Text(
-                          AppStrings.get('learnMore', lang),
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-          ],
-        ),
-      ),
+          ),
         ),
       ),
     );

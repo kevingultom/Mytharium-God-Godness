@@ -4,6 +4,8 @@ import '../widgets/god_card.dart';
 import '../l10n/language_provider.dart';
 import '../l10n/app_strings.dart';
 import '../services/bookmark_service.dart';
+import '../services/reading_service.dart';
+import '../services/sound_service.dart';
 import '../data/gods_data.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -21,10 +23,12 @@ class _DetailScreenState extends State<DetailScreen>
   late final AnimationController _ctrl;
   late final Animation<double> _fadeAnim;
   late final Animation<Offset> _slideAnim;
+  late bool _read;
 
   @override
   void initState() {
     super.initState();
+    _read = ReadingService.isGodRead(widget.god.id);
     _ctrl = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 700),
@@ -79,13 +83,22 @@ class _DetailScreenState extends State<DetailScreen>
 
   // Gods whose portrait looks better centered instead of top-anchored.
   static const _centeredGods = {'Crius', 'Hyperion', 'Atlas', 'Menoetius', 'Thanatos', 'Nereus', 'Heracles'};
+  // Portraits whose faces sit well above image-center; raised further up
+  // than the default topCenter crop so the face is never cut off.
+  static const _raisedAlignments = {
+    'Bhishma': Alignment(0, -0.7),
+    'Ashwini Kumaras': Alignment(0, -0.55),
+    'Vishwakarma': Alignment(0, -0.3),
+    'Asura': Alignment(0, -0.25),
+  };
 
   Widget _buildHeroImage() {
     final url = widget.god.imageUrl;
     final color = GodCard.mythologyColor(widget.god.mythology);
-    final align = _centeredGods.contains(widget.god.name)
+    final name = widget.god.name;
+    final align = _centeredGods.contains(name)
         ? Alignment.center
-        : Alignment.topCenter;
+        : (_raisedAlignments[name] ?? Alignment.topCenter);
     if (url.startsWith('assets/')) {
       return Image.asset(
         url,
@@ -274,7 +287,60 @@ class _DetailScreenState extends State<DetailScreen>
           ),
           const SizedBox(height: 12),
           _buildStory(lang),
+          _buildMarkAsRead(lang, color),
         ],
+      ),
+    );
+  }
+
+  Future<void> _toggleRead() async {
+    SoundService.playClick();
+    final nowRead = await ReadingService.toggleGodRead(widget.god);
+    if (mounted) setState(() => _read = nowRead);
+  }
+
+  Widget _buildMarkAsRead(String lang, Color color) {
+    final id = lang == 'id';
+    const readGreen = Color(0xFF66BB6A);
+    return GestureDetector(
+      onTap: _toggleRead,
+      child: Container(
+        width: double.infinity,
+        margin: const EdgeInsets.only(top: 24),
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        decoration: BoxDecoration(
+          color: _read
+              ? readGreen.withValues(alpha: 0.14)
+              : color.withValues(alpha: 0.14),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(
+              color: _read
+                  ? readGreen.withValues(alpha: 0.6)
+                  : color.withValues(alpha: 0.5)),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              _read
+                  ? Icons.check_circle_rounded
+                  : Icons.check_circle_outline_rounded,
+              color: _read ? readGreen : Colors.white,
+              size: 20,
+            ),
+            const SizedBox(width: 8),
+            Text(
+              _read
+                  ? (id ? 'Sudah Dibaca' : 'Read')
+                  : (id ? 'Tandai Sudah Dibaca' : 'Mark as Read'),
+              style: TextStyle(
+                color: _read ? readGreen : Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -361,6 +427,7 @@ class _DetailScreenState extends State<DetailScreen>
           for (int i = 0; i < paragraphs.length; i++) ...[
             Text(
               paragraphs[i],
+              textAlign: TextAlign.justify,
               style: const TextStyle(
                 color: Color(0xFFCCCCCC),
                 fontSize: 14.5,

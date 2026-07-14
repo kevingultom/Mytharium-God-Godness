@@ -1,4 +1,4 @@
-import '../models/god_model.dart';
+import '../models/combatant.dart';
 
 /// Bilingual short text pair.
 class _Bi {
@@ -30,8 +30,8 @@ class BattleFactor {
 
 /// Result of a single god-vs-god battle.
 class BattleResult {
-  final God winner;
-  final God loser;
+  final Combatant winner;
+  final Combatant loser;
   final double winnerProbability; // 0.0–1.0, chance the winner had of winning
   final String explanationId;
   final String explanationEn;
@@ -156,7 +156,9 @@ class BattleEngine {
     'Hindu|Radha': 4.0,
   };
 
-  static double _tierOf(God g) {
+  static double _tierOf(Combatant g) {
+    // Pop-culture combatants carry their own tier.
+    if (g.tierOverride != null) return g.tierOverride!;
     final key = '${g.mythology}|${g.name}';
     if (_tierOverride.containsKey(key)) return _tierOverride[key]!;
     return _categoryTier['${g.mythology}|${g.category}'] ?? _defaultTier;
@@ -219,7 +221,7 @@ class BattleEngine {
     'Creation': _Bi('penciptaan', 'creation'),
   };
 
-  static List<String> _domainsOf(God g) {
+  static List<String> _domainsOf(Combatant g) {
     final text = [...g.powers, ...g.powersEn].join(' ').toLowerCase();
     final hits = <String>[];
     _domainKeywords.forEach((domain, keywords) {
@@ -265,7 +267,7 @@ class BattleEngine {
     'Hindu|Figures': _Bi('tokoh penting dalam mitologi Hindu', 'a significant figure in Hindu mythology'),
   };
 
-  static _Bi _roleOf(God g) =>
+  static _Bi _roleOf(Combatant g) =>
       _roleLabel['${g.mythology}|${g.category}'] ??
       const _Bi('sosok dalam mitologi', 'a mythological figure');
 
@@ -353,7 +355,7 @@ class BattleEngine {
             'Garuda has been the eternal enemy and natural predator of the Nagas since birth — an ancient rivalry in Hindu mythology.')),
   ];
 
-  static _CanonicalMatch? _findCanonical(God a, God b) {
+  static _CanonicalMatch? _findCanonical(Combatant a, Combatant b) {
     for (final m in _canonical) {
       if (m.mythology != a.mythology) continue;
       if ((m.winnerName == a.name && m.loserName == b.name) ||
@@ -384,7 +386,7 @@ class BattleEngine {
         'The ground trembles and the air grows hot as {w} locks eyes with {l}.'),
   ];
 
-  static _Bi _pickOpener(God winner, God loser) {
+  static _Bi _pickOpener(Combatant winner, Combatant loser) {
     final idx = (winner.name.hashCode ^ loser.name.hashCode).abs() % _openers.length;
     final t = _openers[idx];
     return _Bi(
@@ -414,7 +416,7 @@ class BattleEngine {
     }
   }
 
-  static BattleResult battle(God a, God b) {
+  static BattleResult battle(Combatant a, Combatant b) {
     // 1) Canonical myth override — always follows the attested story.
     final canon = _findCanonical(a, b);
     if (canon != null) {
@@ -490,7 +492,7 @@ class BattleEngine {
 
   // ─── Structured "why" factors ───────────────────────────────
   static List<BattleFactor> _canonicalFactors(
-      God winner, God loser, _CanonicalMatch canon) {
+      Combatant winner, Combatant loser, _CanonicalMatch canon) {
     return [
       BattleFactor(
         kind: 'myth',
@@ -505,8 +507,8 @@ class BattleEngine {
   }
 
   static List<BattleFactor> _computedFactors({
-    required God winner,
-    required God loser,
+    required Combatant winner,
+    required Combatant loser,
     required double winnerTier,
     required double loserTier,
     required String? counterDomain,
@@ -515,6 +517,18 @@ class BattleEngine {
     final gap = winnerTier - loserTier;
     final winnerRole = _roleOf(winner);
     final loserRole = _roleOf(loser);
+
+    // A pop-culture combatant's signature game/story feat is the headline
+    // reason behind their win.
+    if (winner.combatLoreId != null && winner.combatLoreEn != null) {
+      factors.add(BattleFactor(
+        kind: 'myth',
+        titleId: 'Legenda Pop Culture',
+        titleEn: 'Pop Culture Legend',
+        descId: winner.combatLoreId!,
+        descEn: winner.combatLoreEn!,
+      ));
+    }
 
     if (counterDomain != null) {
       final label = _domainLabel[counterDomain]!;
@@ -565,8 +579,8 @@ class BattleEngine {
   }
 
   static _Bi _generateExplanation({
-    required God winner,
-    required God loser,
+    required Combatant winner,
+    required Combatant loser,
     required double winnerTier,
     required double loserTier,
     required String? counterDomain,

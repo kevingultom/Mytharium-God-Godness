@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import '../models/god_model.dart';
+import '../utils/app_fonts.dart';
+import '../models/combatant.dart';
 import '../data/gods_data.dart';
 import '../widgets/god_card.dart';
 import '../l10n/language_provider.dart';
@@ -19,8 +19,8 @@ class GodBattleScreen extends StatefulWidget {
 
 class _GodBattleScreenState extends State<GodBattleScreen>
     with TickerProviderStateMixin {
-  God? _god1;
-  God? _god2;
+  Combatant? _god1;
+  Combatant? _god2;
   BattleResult? _result;
   bool _showResult = false;
   bool _isBattling = false;
@@ -168,7 +168,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
               children: [
                 Text(
                   'GOD BATTLE',
-                  style: GoogleFonts.cinzel(
+                  style: AppFonts.cinzel(
                     fontSize: 22,
                     fontWeight: FontWeight.w800,
                     color: Colors.white,
@@ -362,7 +362,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                 fit: BoxFit.scaleDown,
                 child: Text(
                   statusText,
-                  style: GoogleFonts.cinzel(
+                  style: AppFonts.cinzel(
                     fontSize: 22,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 5,
@@ -399,12 +399,110 @@ class _GodBattleScreenState extends State<GodBattleScreen>
           ),
         ),
 
+        // Fighting-game power-struggle meter (does not shake).
+        Positioned(
+          top: 20,
+          left: 20,
+          right: 20,
+          child: _buildPowerStruggle(v, leftColor, rightColor),
+        ),
+
         // Flash overlay on clash + final blow
         Positioned.fill(
           child: IgnorePointer(
             child: ColoredBox(
               color: Color.lerp(Colors.white, const Color(0xFFFFE0B2), 0.35)!
                   .withValues(alpha: (impact * 0.35 + finalBlow * 0.6).clamp(0, 0.85)),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  // Fighting-game "power struggle" bar: two name plates and a meter that
+  // starts even and slides toward the eventual winner as the clash resolves.
+  Widget _buildPowerStruggle(double v, Color left, Color right) {
+    final winnerProb = _result?.winnerProbability ?? 0.5;
+    final leftIsWinner = _result?.winner == _god1;
+    final targetLeft = leftIsWinner ? winnerProb : (1 - winnerProb);
+    final t = Curves.easeInOutCubic.transform(v.clamp(0.0, 1.0));
+    final leftShare = (0.5 + (targetLeft - 0.5) * t).clamp(0.06, 0.94);
+
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                _god1!.name,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppFonts.cinzel(
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                  shadows: const [Shadow(color: Colors.black, blurRadius: 6)],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Text('VS',
+                  style: AppFonts.cinzel(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w900,
+                      color: const Color(0xFFFFC107))),
+            ),
+            Expanded(
+              child: Text(
+                _god2!.name,
+                textAlign: TextAlign.right,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppFonts.cinzel(
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                  shadows: const [Shadow(color: Colors.black, blurRadius: 6)],
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            border: Border.all(color: Colors.white24),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: SizedBox(
+            height: 12,
+            child: LayoutBuilder(
+              builder: (ctx, c) {
+                final w = c.maxWidth;
+                final split = w * leftShare;
+                return Stack(
+                  children: [
+                    Container(color: right.withValues(alpha: 0.85)),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                        width: split,
+                        color: left.withValues(alpha: 0.9),
+                      ),
+                    ),
+                    Positioned(
+                      left: split - 1.5,
+                      top: 0,
+                      bottom: 0,
+                      child: Container(width: 3, color: Colors.white),
+                    ),
+                  ],
+                );
+              },
             ),
           ),
         ),
@@ -424,7 +522,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
     return sin(((v - start) / (end - start)) * pi);
   }
 
-  Widget _buildFightCard(God god, Color accent,
+  Widget _buildFightCard(Combatant god, Color accent,
       {required bool isLeft, required bool isWinner, required bool isFight,
       required double phase, required double jolt, required double reveal}) {
     final toward = isLeft ? 1.0 : -1.0;
@@ -562,7 +660,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
           ),
         ],
       ),
-      child: Text('VS', style: GoogleFonts.cinzel(
+      child: Text('VS', style: AppFonts.cinzel(
         fontSize: 14 + energy * 6,
         fontWeight: FontWeight.w900,
         color: Colors.white,
@@ -629,7 +727,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                         child: Center(
                           child: Text(
                             'VS',
-                            style: GoogleFonts.cinzel(
+                            style: AppFonts.cinzel(
                               fontSize: 18,
                               fontWeight: FontWeight.w900,
                               color: Colors.white,
@@ -680,7 +778,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                       : lang == 'id'
                           ? 'Pilih Dewamu'
                           : 'Choose Your Gods',
-                  style: GoogleFonts.cinzel(
+                  style: AppFonts.cinzel(
                     fontSize: (_god1 != null && _god2 != null) ? 18 : 13,
                     fontWeight: FontWeight.w800,
                     color: (_god1 != null && _god2 != null)
@@ -692,10 +790,56 @@ class _GodBattleScreenState extends State<GodBattleScreen>
               ),
             ),
           ),
+          const SizedBox(height: 10),
+          // Random battle — pick two combatants at random and fight instantly.
+          GestureDetector(
+            onTap: _randomFight,
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1A1A),
+                borderRadius: BorderRadius.circular(14),
+                border:
+                    Border.all(color: const Color(0xFFB07800).withValues(alpha: 0.5)),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.casino_rounded,
+                      color: Color(0xFFB07800), size: 18),
+                  const SizedBox(width: 8),
+                  Text(
+                    lang == 'id' ? 'Acak Pertarungan' : 'Random Battle',
+                    style: AppFonts.cinzel(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                      color: const Color(0xFFB07800),
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
           const SizedBox(height: 24),
         ],
       ),
     );
+  }
+
+  void _randomFight() {
+    final pool = <Combatant>[
+      ...godsData.where((g) => g.category != 'Cosmology'),
+      ...popCultureCombatants,
+    ]..shuffle();
+    setState(() {
+      _god1 = pool[0];
+      _god2 = pool[1];
+      _result = null;
+      _showResult = false;
+    });
+    _startBattle();
   }
 
   // ─── God Slot ───────────────────────────────────────────
@@ -748,7 +892,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
     );
   }
 
-  Widget _buildFilledSlot(God god, Color accent, String lang) {
+  Widget _buildFilledSlot(Combatant god, Color accent, String lang) {
     final url = god.imageUrl;
     final color = GodCard.mythologyColor(god.mythology);
 
@@ -807,7 +951,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
     );
   }
 
-  Widget _buildWinnerCard(God god, Color accent, String lang) {
+  Widget _buildWinnerCard(Combatant god, Color accent, String lang) {
     final url = god.imageUrl;
     const gold = Color(0xFFFFD700);
 
@@ -859,7 +1003,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                     children: [
                       Text(
                         lang == 'id' ? 'PEMENANG' : 'WINNER',
-                        style: GoogleFonts.cinzel(
+                        style: AppFonts.cinzel(
                           color: gold,
                           fontSize: 11,
                           fontWeight: FontWeight.w800,
@@ -915,7 +1059,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
     );
   }
 
-  Widget _placeholderGod(God god, Color accent) {
+  Widget _placeholderGod(Combatant god, Color accent) {
     return Container(
       width: double.infinity,
       color: accent.withValues(alpha: 0.08),
@@ -995,7 +1139,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                           children: [
                             Text(
                               lang == 'id' ? 'FAKTOR PENENTU' : 'KEY FACTORS',
-                              style: GoogleFonts.cinzel(
+                              style: AppFonts.cinzel(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w700,
                                 color: const Color(0xFFFFD700),
@@ -1033,7 +1177,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                         // Full narrative chronicle
                         Text(
                           lang == 'id' ? 'KRONIK PERTARUNGAN' : 'BATTLE CHRONICLE',
-                          style: GoogleFonts.cinzel(
+                          style: AppFonts.cinzel(
                             fontSize: 10.5,
                             fontWeight: FontWeight.w700,
                             color: const Color(0xFF9CA3AF),
@@ -1076,7 +1220,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                   child: Center(
                     child: Text(
                       lang == 'id' ? 'ADU LAGI' : 'REMATCH',
-                      style: GoogleFonts.cinzel(
+                      style: AppFonts.cinzel(
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
                         color: const Color(0xFFB07800),
@@ -1215,7 +1359,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
     );
   }
 
-  Widget _buildPowersSection(God god, Color color, String lang) {
+  Widget _buildPowersSection(Combatant god, Color color, String lang) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1258,8 +1402,8 @@ class _GodBattleScreenState extends State<GodBattleScreen>
 
 // ─── God Picker Bottom Sheet ────────────────────────────────
 class _GodPickerSheet extends StatefulWidget {
-  final God? exclude;
-  final ValueChanged<God> onPick;
+  final Combatant? exclude;
+  final ValueChanged<Combatant> onPick;
 
   const _GodPickerSheet({required this.onPick, this.exclude});
 
@@ -1272,15 +1416,32 @@ class _GodPickerSheetState extends State<_GodPickerSheet> {
   String _query = '';
   final _ctrl = TextEditingController();
 
-  static const _mythologies = ['All', 'Greek', 'Egyptian', 'Nordic', 'Hindu'];
+  static const _mythologies = [
+    'All',
+    'Greek',
+    'Egyptian',
+    'Nordic',
+    'Hindu',
+    'Chinese',
+    'Japanese',
+    'Pop Culture',
+  ];
 
-  List<God> get _filtered {
-    return godsData.where((g) {
-      // Places/concepts (e.g. Mount Olympus, Yggdrasil, Duat) aren't
-      // combatants, so they're excluded from the battle roster.
-      if (g.category == 'Cosmology') return false;
+  // Full roster: every god (except non-combatant places) plus the
+  // pop-culture characters, so either can be pitted against the other.
+  static final List<Combatant> _roster = [
+    ...godsData.where((g) => g.category != 'Cosmology'),
+    ...popCultureCombatants,
+  ];
+
+  List<Combatant> get _filtered {
+    return _roster.where((g) {
       if (widget.exclude != null && g.id == widget.exclude!.id) return false;
-      if (_filter != 'All' && g.mythology != _filter) return false;
+      if (_filter == 'Pop Culture') {
+        if (!g.isPopCulture) return false;
+      } else if (_filter != 'All' && g.mythology != _filter) {
+        return false;
+      }
       if (_query.isNotEmpty) {
         final q = _query.toLowerCase();
         return g.name.toLowerCase().contains(q) ||
@@ -1411,35 +1572,85 @@ class _GodPickerSheetState extends State<_GodPickerSheet> {
                   separatorBuilder: (_, __) => const SizedBox(height: 4),
                   itemBuilder: (_, i) {
                     final g = filtered[i];
+                    final color = GodCard.mythologyColor(g.mythology);
                     return GestureDetector(
                       onTap: () => widget.onPick(g),
                       child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 10),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           color: const Color(0xFF1A1A1A),
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: const Color(0xFF222222)),
+                          border: Border.all(color: color.withValues(alpha: 0.25)),
                         ),
                         child: Row(
                           children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: SizedBox(
+                                width: 40,
+                                height: 48,
+                                child: g.imageUrl.startsWith('assets/')
+                                    ? Image.asset(g.imageUrl,
+                                        fit: BoxFit.cover,
+                                        alignment: Alignment.topCenter,
+                                        errorBuilder: (_, __, ___) => Container(
+                                            color: color.withValues(alpha: 0.12)))
+                                    : Container(
+                                        color: color.withValues(alpha: 0.12)),
+                              ),
+                            ),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    g.name,
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w700,
-                                    ),
+                                  Row(
+                                    children: [
+                                      Flexible(
+                                        child: Text(
+                                          g.name,
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                      if (g.isPopCulture) ...[
+                                        const SizedBox(width: 6),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 5, vertical: 1),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFB07800)
+                                                .withValues(alpha: 0.2),
+                                            borderRadius:
+                                                BorderRadius.circular(6),
+                                          ),
+                                          child: const Text(
+                                            'POP',
+                                            style: TextStyle(
+                                              color: Color(0xFFB07800),
+                                              fontSize: 8,
+                                              fontWeight: FontWeight.w800,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ],
                                   ),
+                                  const SizedBox(height: 2),
                                   Text(
-                                    '${g.mythology} / ${g.category}',
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 10,
+                                    g.isPopCulture
+                                        ? '${g.mythology} · ${g.title}'
+                                        : '${g.mythology} · ${g.category}',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: color,
+                                      fontSize: 10.5,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -1465,11 +1676,11 @@ class _GodPickerSheetState extends State<_GodPickerSheet> {
 }
 
 // ─── Energy clash painter ───────────────────────────────────
-// Draws the burst of light at the collision point: a bright core flare,
-// radiating energy shards tinted between each fighter's color, and a few
-// jagged lightning bolts. All motion is derived deterministically from
-// [phase] (no per-frame randomness), so it reads as controlled energy
-// rather than visual noise.
+// Draws a clean, bold impact flash at the collision point: a bright core
+// flare plus a symmetric 8-point impact star (4 long cardinal spikes + 4
+// shorter diagonals), like the "clash" hit-spark in a fighting game. All
+// motion is derived deterministically from [phase] (no per-frame randomness),
+// so it reads as a designed impact rather than particle noise.
 class _ClashPainter extends CustomPainter {
   final double energy; // 0..1 intensity of the clash right now
   final double phase; // 0..1 overall battle progress
@@ -1488,60 +1699,46 @@ class _ClashPainter extends CustomPainter {
     final e = energy.clamp(0.0, 1.0);
     if (e <= 0.01) return;
     final center = Offset(size.width / 2, size.height / 2);
+    final tint = Color.lerp(colorA, colorB, 0.5)!;
 
-    // Core flare
-    final coreR = 12 + e * 48;
+    // Bold core flare — a single bright burst, no particle noise.
+    final coreR = 18 + e * 58;
     final corePaint = Paint()
       ..shader = RadialGradient(
         colors: [
-          Colors.white.withValues(alpha: 0.9 * e),
-          const Color(0xFFFFC107).withValues(alpha: 0.5 * e),
-          const Color(0xFFFF3D00).withValues(alpha: 0.0),
+          Colors.white.withValues(alpha: 0.95 * e),
+          tint.withValues(alpha: 0.55 * e),
+          tint.withValues(alpha: 0.0),
         ],
+        stops: const [0.0, 0.45, 1.0],
       ).createShader(Rect.fromCircle(center: center, radius: coreR));
     canvas.drawCircle(center, coreR, corePaint);
 
-    // Radiating energy shards
-    const shardCount = 20;
-    for (int i = 0; i < shardCount; i++) {
-      final baseAngle = i / shardCount * 2 * pi;
-      final angle = baseAngle + phase * 0.7 + sin(phase * pi * 6 + i) * 0.12;
-      final flicker = 0.55 + 0.45 * sin(i * 2.3 + phase * pi * 9).abs();
-      final len = (36 + e * 128) * flicker;
+    // Symmetric impact star: filled tapered spikes from the center.
+    void spike(double angle, double length, double halfWidth, Color c) {
       final dir = Offset(cos(angle), sin(angle));
-      final start = center + dir * (coreR * 0.55);
-      final end = center + dir * len;
-      final col = Color.lerp(colorA, colorB, i / shardCount)!;
-      final paint = Paint()
-        ..strokeCap = StrokeCap.round
-        ..strokeWidth = 1.0 + e * 2.6
-        ..color = col.withValues(alpha: (0.12 + 0.5 * e) * flicker);
-      canvas.drawLine(start, end, paint);
+      final perp = Offset(-sin(angle), cos(angle));
+      final tip = center + dir * length;
+      final b1 = center + perp * halfWidth;
+      final b2 = center - perp * halfWidth;
+      final path = Path()
+        ..moveTo(b1.dx, b1.dy)
+        ..lineTo(tip.dx, tip.dy)
+        ..lineTo(b2.dx, b2.dy)
+        ..close();
+      canvas.drawPath(path, Paint()..color = c);
     }
 
-    // Jagged lightning bolts
-    const boltCount = 3;
-    for (int b = 0; b < boltCount; b++) {
-      final angle = b / boltCount * 2 * pi + phase * pi * 2 + b;
-      const segs = 5;
-      final maxLen = 55 + e * 150;
-      final path = Path()..moveTo(center.dx, center.dy);
-      final perp = angle + pi / 2;
-      for (int s = 1; s <= segs; s++) {
-        final t = s / segs;
-        final jitter =
-            sin(s * 12.9898 + b * 3.1 + (phase * 22).floorToDouble()) * 20 * (1 - t);
-        final r = maxLen * t;
-        final px = center.dx + cos(angle) * r + cos(perp) * jitter;
-        final py = center.dy + sin(angle) * r + sin(perp) * jitter;
-        path.lineTo(px, py);
-      }
-      final paint = Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round
-        ..strokeWidth = 1.4 + e * 2
-        ..color = Colors.white.withValues(alpha: 0.55 * e);
-      canvas.drawPath(path, paint);
+    final longLen = 46 + e * 168;
+    final shortLen = longLen * 0.52;
+    final hw = 5 + e * 10;
+    final spin = phase * 0.5; // slow, controlled rotation — not chaotic
+    for (int i = 0; i < 4; i++) {
+      final a = spin + i * (pi / 2);
+      // Long white cardinal spikes.
+      spike(a, longLen, hw, Colors.white.withValues(alpha: 0.92 * e));
+      // Shorter color-tinted diagonal spikes.
+      spike(a + pi / 4, shortLen, hw * 0.6, tint.withValues(alpha: 0.8 * e));
     }
   }
 

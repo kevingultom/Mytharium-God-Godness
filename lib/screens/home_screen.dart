@@ -1,19 +1,26 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../models/god_model.dart';
+import '../models/pop_culture_model.dart';
 import '../data/gods_data.dart';
+import '../data/pop_culture_data.dart';
 import '../widgets/god_card.dart';
+import '../widgets/random_god_dialog.dart';
 import '../l10n/language_provider.dart';
 import '../l10n/app_strings.dart';
 import '../services/bookmark_service.dart';
+import '../services/onboarding_service.dart';
 import '../services/sound_service.dart';
+import '../utils/app_fonts.dart';
 import 'detail_screen.dart';
-import 'bookmark_screen.dart';
+import 'pop_culture_detail_screen.dart';
 import 'greek_category_screen.dart';
 import 'nordic_category_screen.dart';
 import 'egypt_category_screen.dart';
 import 'hindu_category_screen.dart';
+import 'chinese_category_screen.dart';
+import 'japanese_category_screen.dart';
+import 'god_battle_screen.dart';
+import 'quiz_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,23 +29,13 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
-    with TickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late List<God> _allGods;
   List<God> _filteredGods = [];
   final TextEditingController _searchController = TextEditingController();
   String _selectedMythology = 'All';
   String? _expandedGodId;
   late final AnimationController _staggerCtrl;
-
-  // Random God animation state
-  bool _isRandomizing = false;
-  God? _randomDisplayGod;
-  Timer? _randomTimer;
-  int _randomStep = 0;
-  static const _randomTotalSteps = 25;
-
-  static const _mythologies = ['All', 'Greek', 'Egyptian', 'Nordic', 'Hindu'];
 
   @override
   void initState() {
@@ -88,7 +85,8 @@ class _HomeScreenState extends State<HomeScreen>
             g.name.toLowerCase().contains(q) ||
             g.localizedTitle(lang).toLowerCase().contains(q) ||
             g.localizedPowers(lang).any((p) => p.toLowerCase().contains(q));
-        final matchM = _selectedMythology == 'All' || g.mythology == _selectedMythology;
+        final matchM =
+            _selectedMythology == 'All' || g.mythology == _selectedMythology;
         return matchQ && matchM;
       }).toList();
     });
@@ -97,215 +95,57 @@ class _HomeScreenState extends State<HomeScreen>
       ..forward();
   }
 
-  void _startRandomGod() {
-    if (_isRandomizing || _allGods.isEmpty) return;
+  Future<void> _startRandomGod() async {
+    if (_allGods.isEmpty) return;
     SoundService.playClick();
-    setState(() {
-      _isRandomizing = true;
-      _randomStep = 0;
-      _randomDisplayGod = _allGods[DateTime.now().millisecondsSinceEpoch % _allGods.length];
-    });
-    _showRandomOverlay();
-    _runRandomCycle();
-  }
-
-  void _runRandomCycle() {
-    const durations = [
-      80, 80, 100, 100, 120, 140, 160, 180, 220, 260,
-      300, 350, 420, 500, 600, 720, 850, 1000, 1200, 1500,
-      1800, 2200, 2800, 3500, 4000,
-    ];
-    _randomTimer?.cancel();
-    _randomTimer = Timer(const Duration(milliseconds: 80), () {
-      if (!mounted || !_isRandomizing) return;
-      _randomStep++;
-      final idx = DateTime.now().millisecondsSinceEpoch % _allGods.length;
-      setState(() => _randomDisplayGod = _allGods[idx]);
-      if (_randomStep < _randomTotalSteps) {
-        final ms = durations[_randomStep.clamp(0, durations.length - 1)];
-        _randomTimer = Timer(Duration(milliseconds: ms ~/ (1 + _randomStep * 0.15)), _runRandomCycle);
-      } else {
-        _finishRandom();
-      }
-    });
-  }
-
-  void _finishRandom() {
-    final finalGod = _allGods[DateTime.now().millisecondsSinceEpoch % _allGods.length];
-    setState(() {
-      _randomDisplayGod = finalGod;
-      _isRandomizing = false;
-    });
-    _randomTimer?.cancel();
-    Future.delayed(const Duration(milliseconds: 1200), () {
-      if (!mounted) return;
-      Navigator.of(context).pop(); // close overlay
-      Navigator.push(
-        context,
-        PageRouteBuilder(
-          pageBuilder: (_, __, ___) => DetailScreen(
-            god: finalGod,
-            onReturn: () {},
-          ),
-          transitionsBuilder: (_, anim, __, child) =>
-              FadeTransition(opacity: anim, child: child),
-          transitionDuration: const Duration(milliseconds: 300),
-        ),
-      );
-    });
-  }
-
-  void _showRandomOverlay() {
     final lang = LanguageProvider.of(context).value;
-    showGeneralDialog(
-      context: context,
-      barrierDismissible: false,
-      barrierColor: Colors.black87,
-      transitionDuration: const Duration(milliseconds: 300),
-      transitionBuilder: (ctx, a1, a2, child) {
-        return FadeTransition(
-          opacity: a1,
-          child: ScaleTransition(scale: CurvedAnimation(parent: a1, curve: Curves.easeOutBack), child: child),
-        );
-      },
-      pageBuilder: (_, __, ___) {
-        return StatefulBuilder(
-          builder: (context, setDialogState) {
-            // Listen to parent state changes
-            if (_isRandomizing) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                if (mounted) setDialogState(() {});
-              });
-            }
-            final god = _randomDisplayGod;
-            if (god == null) return const SizedBox();
-            return Center(
-              child: Container(
-                width: 280,
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF111111),
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: _isRandomizing
-                        ? const Color(0xFFFF6F00).withValues(alpha: 0.5 + (DateTime.now().millisecondsSinceEpoch % 1000) / 2000)
-                        : const Color(0xFFB07800),
-                    width: 2,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xFFFF6F00).withValues(alpha: _isRandomizing ? 0.3 : 0.1),
-                      blurRadius: _isRandomizing ? 30 : 10,
-                    ),
-                  ],
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    // Title
-                    Text(
-                      _isRandomizing
-                          ? (lang == 'id' ? 'MENARIK...' : 'DRAWING...')
-                          : (lang == 'id' ? 'KAMU DAPAT!' : 'YOU GOT!'),
-                      style: GoogleFonts.cinzel(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w800,
-                        color: const Color(0xFFFF8A00),
-                        letterSpacing: 3,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    // God card
-                    AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 60),
-                      child: Container(
-                        key: ValueKey(god.id),
-                        width: 200,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF1A1A1A),
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                            color: GodCard.mythologyColor(god.mythology).withValues(alpha: 0.5),
-                          ),
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: god.imageUrl.isNotEmpty
-                              ? Image.asset(god.imageUrl, fit: BoxFit.cover)
-                              : Center(
-                                  child: Text(
-                                    god.name[0],
-                                    style: const TextStyle(fontSize: 64, color: Color(0xFFB07800)),
-                                  ),
-                                ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 14),
-                    // God name
-                    AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 60),
-                      child: Text(
-                        god.name,
-                        key: ValueKey(god.id),
-                        style: GoogleFonts.cinzel(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    // God title
-                    AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 60),
-                      child: Text(
-                        god.localizedTitle(lang),
-                        key: ValueKey('${god.id}_title'),
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: GodCard.mythologyColor(god.mythology),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    // Mythology tag
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: GodCard.mythologyColor(god.mythology).withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        god.mythology,
-                        style: TextStyle(
-                          fontSize: 10,
-                          color: GodCard.mythologyColor(god.mythology),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                    if (!_isRandomizing) ...[
-                      const SizedBox(height: 16),
-                      Text(
-                        lang == 'id' ? 'Menutup otomatis...' : 'Closing automatically...',
-                        style: const TextStyle(fontSize: 11, color: Color(0xFF666666)),
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-            );
-          },
-        );
-      },
+
+    // The dice can land on a god OR a Mythic Pop Culture character.
+    final pool = <RandomEntry>[
+      for (final g in _allGods)
+        RandomEntry(
+          imageUrl: g.imageUrl,
+          name: g.name,
+          subtitle: g.localizedTitle(lang),
+          verse: g.mythology,
+          payload: g,
+        ),
+      for (final c in popCultureData)
+        RandomEntry(
+          imageUrl: c.imageUrl,
+          name: c.name,
+          subtitle: c.sourceMedia,
+          verse: c.originVerse,
+          payload: c,
+        ),
+    ];
+
+    final result = await RandomGodDialog.show(context, pool);
+    if (result == null || !mounted) return;
+
+    final payload = result.payload;
+    Widget page;
+    if (payload is God) {
+      page = DetailScreen(god: payload, onReturn: () {});
+    } else if (payload is MythicPopCultureCharacter) {
+      page = PopCultureDetailScreen(character: payload);
+    } else {
+      return;
+    }
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => page,
+        transitionsBuilder: (_, anim, __, child) =>
+            FadeTransition(opacity: anim, child: child),
+        transitionDuration: const Duration(milliseconds: 300),
+      ),
     );
   }
 
   void _selectMythology(String m) {
-    // Greek, Nordic & Egyptian open a sub-category chooser
-    if (m == 'Greek' || m == 'Nordic' || m == 'Egyptian' || m == 'Hindu') {
+    // Greek, Nordic, Egyptian, Hindu, Chinese & Japanese open a sub-category chooser
+    if (m == 'Greek' || m == 'Nordic' || m == 'Egyptian' || m == 'Hindu' || m == 'Chinese' || m == 'Japanese') {
       SoundService.playClick();
       Navigator.push(
         context,
@@ -314,6 +154,8 @@ class _HomeScreenState extends State<HomeScreen>
             if (m == 'Greek') return const GreekCategoryScreen();
             if (m == 'Nordic') return const NordicCategoryScreen();
             if (m == 'Hindu') return const HinduCategoryScreen();
+            if (m == 'Chinese') return const ChineseCategoryScreen();
+            if (m == 'Japanese') return const JapaneseCategoryScreen();
             return const EgyptCategoryScreen();
           },
           transitionsBuilder: (_, anim, __, child) =>
@@ -332,17 +174,147 @@ class _HomeScreenState extends State<HomeScreen>
     lang.setLanguage(lang.value == 'id' ? 'en' : 'id');
   }
 
-  void _openBookmarks() async {
-    await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => const BookmarkScreen()),
+  void _showBattleDisclaimer(String lang) {
+    showGeneralDialog(
+      context: context,
+      barrierDismissible: true,
+      barrierLabel: lang == 'id' ? 'Tutup dialog' : 'Dismiss dialog',
+      barrierColor: Colors.black54,
+      transitionDuration: const Duration(milliseconds: 300),
+      transitionBuilder: (ctx, a1, a2, child) {
+        return FadeTransition(
+          opacity: a1,
+          child: ScaleTransition(
+            scale: CurvedAnimation(parent: a1, curve: Curves.easeOutBack),
+            child: child,
+          ),
+        );
+      },
+      pageBuilder: (dialogContext, __, ___) {
+        return Center(
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 32),
+            padding: const EdgeInsets.all(24),
+            decoration: BoxDecoration(
+              color: const Color(0xFF111111),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: const Color(0xFFB07800).withValues(alpha: 0.3)),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Warning icon
+                Container(
+                  width: 56,
+                  height: 56,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFF6F00).withValues(alpha: 0.15),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.warning_amber_rounded,
+                    color: Color(0xFFFF8A00),
+                    size: 32,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                // Title
+                Text(
+                  lang == 'id' ? 'Pernyataan Penting' : 'Important Notice',
+                  style: AppFonts.cinzel(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                    color: const Color(0xFFE0E0E0),
+                    letterSpacing: 1,
+                  ).copyWith(decoration: TextDecoration.none),
+                ),
+                const SizedBox(height: 14),
+                // Warning text
+                Text(
+                  lang == 'id'
+                      ? 'Fitur "Adu Dewa" dibuat semata-mata untuk hiburan dan edukasi mengenai mitologi.\n\nKami tidak bermaksud untuk menyinggung, menyalahgunakan, atau tidak menghormati dewa-dewi dari berbagai kepercayaan.\n\nGunakan fitur ini dengan bijak dan tetap hormati mitologi yang ada.'
+                      : 'The "God Battle" feature is created solely for entertainment and educational purposes about mythology.\n\nWe do not intend to offend, misuse, or disrespect any deities from various beliefs.\n\nUse this feature wisely and remain respectful of existing mythologies.',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    color: Color(0xFFAAAAAA),
+                    height: 1.6,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+                const SizedBox(height: 24),
+                // Buttons
+                Row(
+                  children: [
+                    // Batal
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () => Navigator.of(dialogContext).pop(),
+                        child: Container(
+                          height: 44,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF1A1A1A),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: const Color(0xFF333333)),
+                          ),
+                          child: Center(
+                            child: Text(
+                              lang == 'id' ? 'Batal' : 'Cancel',
+                              style: const TextStyle(
+                                color: Color(0xFF9CA3AF),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                decoration: TextDecoration.none,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    // Lanjut
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(dialogContext).pop();
+                          Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => const GodBattleScreen(),
+                              transitionsBuilder: (_, anim, __, child) =>
+                                  FadeTransition(opacity: anim, child: child),
+                              transitionDuration: const Duration(milliseconds: 300),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 44,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFB07800),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Center(
+                            child: Text(
+                              lang == 'id' ? 'Lanjut' : 'Continue',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                                decoration: TextDecoration.none,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
-    // Re-sync bookmarks when returning
-    for (final god in _allGods) {
-      final ids = await BookmarkService.load();
-      god.isBookmarked = ids.contains(god.id);
-    }
-    if (mounted) setState(() {});
   }
 
   @override
@@ -356,8 +328,9 @@ class _HomeScreenState extends State<HomeScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildHeader(lang),
+            _buildGenreCards(lang),
+            _buildFeatureCards(lang),
             _buildSearchBar(lang),
-            _buildFilterChips(),
             _buildResultCount(lang),
             Expanded(child: _buildList()),
           ],
@@ -377,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'MYTHOPEDIA',
+                  'MYTHARIUM',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 26,
@@ -398,19 +371,6 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
           GestureDetector(
-            onTap: _openBookmarks,
-            child: Container(
-              margin: const EdgeInsets.only(right: 8),
-              padding: const EdgeInsets.all(7),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: const Color(0xFF333333)),
-              ),
-              child: const Icon(Icons.bookmark_rounded, color: Color(0xFFB07800), size: 16),
-            ),
-          ),
-          GestureDetector(
             onTap: _toggleLanguage,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -422,7 +382,8 @@ class _HomeScreenState extends State<HomeScreen>
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.language, color: Color(0xFFB07800), size: 16),
+                  const Icon(Icons.language,
+                      color: Color(0xFFB07800), size: 16),
                   const SizedBox(width: 6),
                   Text(
                     lang == 'id' ? 'EN' : 'ID',
@@ -460,17 +421,21 @@ class _HomeScreenState extends State<HomeScreen>
                 style: const TextStyle(color: Colors.white, fontSize: 13),
                 decoration: InputDecoration(
                   hintText: AppStrings.get('searchHint', lang),
-                  hintStyle: const TextStyle(color: Color(0xFF777777), fontSize: 13),
-                  prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFFB07800), size: 18),
+                  hintStyle:
+                      const TextStyle(color: Color(0xFF777777), fontSize: 13),
+                  prefixIcon: const Icon(Icons.search_rounded,
+                      color: Color(0xFFB07800), size: 18),
                   suffixIcon: _searchController.text.isNotEmpty
                       ? IconButton(
-                          icon: const Icon(Icons.close_rounded, color: Color(0xFF777777), size: 16),
+                          icon: const Icon(Icons.close_rounded,
+                              color: Color(0xFF777777), size: 16),
                           onPressed: () => _searchController.clear(),
                         )
                       : null,
                   border: InputBorder.none,
                   isDense: true,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 ),
               ),
             ),
@@ -485,9 +450,11 @@ class _HomeScreenState extends State<HomeScreen>
               decoration: BoxDecoration(
                 color: const Color(0xFF1A1A1A),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFFB07800).withValues(alpha: 0.4)),
+                border: Border.all(
+                    color: const Color(0xFFB07800).withValues(alpha: 0.4)),
               ),
-              child: const Icon(Icons.casino_rounded, color: Color(0xFFB07800), size: 20),
+              child: const Icon(Icons.casino_rounded,
+                  color: Color(0xFFB07800), size: 20),
             ),
           ),
         ],
@@ -495,39 +462,248 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  Widget _buildFilterChips() {
+  // 6 pantheon cards (image background), horizontally scrollable, replacing
+  // the old plain filter chips. Tapping opens that pantheon's god catalog.
+  static const _genreCards = [
+    (key: 'Greek', image: 'assets/images/greek.jpg'),
+    (key: 'Egyptian', image: 'assets/images/egypt.jpg'),
+    (key: 'Nordic', image: 'assets/images/nordik.jpg'),
+    (key: 'Hindu', image: 'assets/images/hindu.jpg'),
+    (key: 'Chinese', image: 'assets/images/cina.jpg'),
+    (key: 'Japanese', image: 'assets/images/japanese.jpg'),
+  ];
+
+  // Genre cards with the user's onboarding realm (their patron god's pantheon)
+  // moved to the front, so Discover opens on the world they chose.
+  List<({String key, String image})> get _orderedGenreCards {
+    final pref = OnboardingService.preferredPantheon;
+    if (pref == null) return _genreCards;
+    final list = [..._genreCards];
+    final idx = list.indexWhere((g) => g.key == pref);
+    if (idx > 0) list.insert(0, list.removeAt(idx));
+    return list;
+  }
+
+  Widget _buildGenreCards(String lang) {
+    final cards = _orderedGenreCards;
     return SizedBox(
-      height: 44,
+      height: 108,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-        itemCount: _mythologies.length,
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+        itemCount: cards.length,
         itemBuilder: (_, i) {
-          final m = _mythologies[i];
-          final selected = m == _selectedMythology;
-          final color = m == 'All' ? const Color(0xFFB07800) : GodCard.mythologyColor(m);
+          final g = cards[i];
+          final color = GodCard.mythologyColor(g.key);
+          final count = godsData.where((x) => x.mythology == g.key).length;
           return GestureDetector(
-            onTap: () => _selectMythology(m),
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 180),
-              margin: const EdgeInsets.only(right: 8),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+            onTap: () => _selectMythology(g.key),
+            child: Container(
+              width: 116,
+              margin: const EdgeInsets.only(right: 10),
               decoration: BoxDecoration(
-                color: selected ? color : const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: selected ? color : const Color(0xFF333333)),
+                borderRadius: BorderRadius.circular(14),
               ),
-              child: Text(
-                m,
-                style: TextStyle(
-                  color: selected ? Colors.white : const Color(0xFFAAAAAA),
-                  fontSize: 12,
-                  fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
-                ),
+              clipBehavior: Clip.antiAlias,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image.asset(
+                    g.image,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            color.withValues(alpha: 0.55),
+                            const Color(0xFF0E0E0E),
+                          ],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.transparent,
+                          Colors.black.withValues(alpha: 0.85),
+                        ],
+                        stops: const [0.4, 1.0],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          g.key,
+                          style: GodCard.mythologyFont(
+                            g.key,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(height: 1),
+                        Text(
+                          '$count ${lang == 'id' ? 'dewa' : 'gods'}',
+                          style: const TextStyle(
+                            color: Color(0xFFCFCFCF),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           );
         },
+      ),
+    );
+  }
+
+  Widget _buildFeatureCards(String lang) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      child: SizedBox(
+        height: 54,
+        child: Row(
+          children: [
+            Expanded(
+              child: _featureCard(
+                image: 'assets/images/whats_your_god.jpg',
+                fallback: const Color(0xFFB07800),
+                icon: Icons.psychology_rounded,
+                title: lang == 'id' ? 'Dewa Apa Dirimu?' : "What's Your God?",
+                onTap: () {
+                  SoundService.playClick();
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (_, __, ___) => const QuizScreen(),
+                      transitionsBuilder: (_, anim, __, child) =>
+                          FadeTransition(opacity: anim, child: child),
+                      transitionDuration: const Duration(milliseconds: 300),
+                    ),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _featureCard(
+                image: 'assets/images/god_battle.jpg',
+                fallback: const Color(0xFFB07800),
+                icon: Icons.flash_on_rounded,
+                title: lang == 'id' ? 'Adu Dewa' : 'God Battle',
+                onTap: () {
+                  SoundService.playClick();
+                  _showBattleDisclaimer(lang);
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Same visual language as the "Favorites" card in Codex (icon circle +
+  // title + chevron in a row, left-to-right dark gradient over the image),
+  // just scaled down so two of these still fit side by side.
+  Widget _featureCard({
+    required String image,
+    required Color fallback,
+    required IconData icon,
+    required String title,
+    required VoidCallback onTap,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF111111),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: fallback.withValues(alpha: 0.45)),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset(
+              image,
+              fit: BoxFit.cover,
+              errorBuilder: (_, __, ___) => Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      fallback.withValues(alpha: 0.5),
+                      const Color(0xFF0E0E0E),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.black.withValues(alpha: 0.9),
+                    Colors.black.withValues(alpha: 0.7),
+                    Colors.black.withValues(alpha: 0.25),
+                  ],
+                  stops: const [0.0, 0.5, 1.0],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              child: Row(
+                children: [
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF1A1A1A),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(icon, color: fallback, size: 16),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppFonts.cinzel(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  Icon(Icons.chevron_right_rounded,
+                      color: fallback, size: 16),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -549,7 +725,8 @@ class _HomeScreenState extends State<HomeScreen>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.search_off_rounded, size: 48, color: Color(0xFF555555)),
+            const Icon(Icons.search_off_rounded,
+                size: 48, color: Color(0xFF555555)),
             const SizedBox(height: 14),
             Text(AppStrings.get('emptyTitle', lang),
                 style: const TextStyle(color: Color(0xFF999999), fontSize: 15)),

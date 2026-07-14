@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
 import 'l10n/language_provider.dart';
-import 'widgets/music_button.dart';
-import 'screens/splash_screen.dart';
+import 'services/sound_service.dart';
+import 'services/reading_service.dart';
+import 'services/pop_culture_bookmark_service.dart';
+import 'services/onboarding_service.dart';
+import 'screens/onboarding_screen.dart';
+import 'screens/main_shell.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final langNotifier = LanguageNotifier();
   await langNotifier.init();
-  runApp(LanguageProvider(notifier: langNotifier, child: const MythopediaApp()));
+  await SoundService.init();
+  await ReadingService.init();
+  await PopCultureBookmarkService.init();
+  await OnboardingService.init();
+  runApp(LanguageProvider(notifier: langNotifier, child: const MythariumApp()));
 }
 
-class MythopediaApp extends StatelessWidget {
-  const MythopediaApp({super.key});
+class MythariumApp extends StatelessWidget {
+  const MythariumApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mythopedia',
+      title: 'Mytharium',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
@@ -38,19 +46,9 @@ class MythopediaApp extends StatelessWidget {
           contentTextStyle: TextStyle(color: Colors.white),
         ),
       ),
-      home: const SplashScreen(),
-      builder: (context, child) {
-        return Stack(
-          children: [
-            child ?? const SizedBox.shrink(),
-            const Positioned(
-              right: 20,
-              bottom: 32,
-              child: MusicButton(),
-            ),
-          ],
-        );
-      },
+      home: OnboardingService.isComplete
+          ? const MainShell()
+          : const OnboardingScreen(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../l10n/language_provider.dart';
 import '../services/sound_service.dart';
 import 'quiz_trivia_screen.dart';
@@ -42,7 +42,7 @@ class QuizGenreScreen extends StatelessWidget {
                       children: [
                         Text(
                           lang == 'id' ? 'Kuis Mitologi' : 'Mythology Quiz',
-                          style: GoogleFonts.cinzel(
+                          style: AppFonts.cinzel(
                             fontSize: 18,
                             fontWeight: FontWeight.w900,
                             color: Colors.white,
@@ -52,8 +52,8 @@ class QuizGenreScreen extends StatelessWidget {
                         const SizedBox(height: 2),
                         Text(
                           lang == 'id'
-                              ? 'Pilih genre, jawab 10 soal acak dari 50'
-                              : 'Pick a genre, answer 10 random questions from 50',
+                              ? 'Pilih genre, jawab 10 soal acak'
+                              : 'Pick a genre, answer 10 random questions',
                           style: const TextStyle(
                             color: Color(0xFF9CA3AF),
                             fontSize: 11,
@@ -176,7 +176,7 @@ class _GenreCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: GoogleFonts.cinzel(
+                    style: AppFonts.cinzel(
                       fontSize: 16,
                       fontWeight: FontWeight.w800,
                       color: color,

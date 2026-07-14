@@ -1,9 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mythopedia/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:mytharium/main.dart';
+import 'package:mytharium/l10n/language_provider.dart';
 
 void main() {
   testWidgets('App renders', (WidgetTester tester) async {
-    await tester.pumpWidget(const MythopediaApp());
-    expect(find.text('MYTHOPEDIA'), findsNothing);
+    SharedPreferences.setMockInitialValues({});
+    final langNotifier = LanguageNotifier();
+    await langNotifier.init();
+
+    await tester.pumpWidget(
+      LanguageProvider(notifier: langNotifier, child: const MythariumApp()),
+    );
+    expect(tester.takeException(), isNull, reason: 'App failed to render');
+    // The splash screen shows the MYTHARIUM wordmark immediately.
+    expect(find.text('MYTHARIUM'), findsOneWidget);
   });
 }

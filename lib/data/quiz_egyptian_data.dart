@@ -161,7 +161,7 @@ final List<QuizQuestion> egyptianQuizData = [
       'Hathor',
       'Bastet',
     ],
-    correctIndex: 0,
+    correctIndex: 1,
   ),
   // 10
   QuizQuestion(
@@ -705,16 +705,16 @@ final List<QuizQuestion> egyptianQuizData = [
   ),
   // 40
   QuizQuestion(
-    question: 'Siapa yang menurut cerita menempatkan mayat Set di dalam peti mati sebelum melemparkannya ke sungai?',
-    questionEn: 'Who according to the story placed Set\'s body in a coffin before throwing it into the river?',
+    question: 'Siapa yang menurut cerita menjebak Osiris ke dalam peti sebelum melemparkannya ke sungai?',
+    questionEn: 'Who according to the story tricked Osiris into a coffin before throwing it into the river?',
     options: [
-      'Osiris',
+      'Set',
       'Geb',
       'Ra',
       'Thoth',
     ],
     optionsEn: [
-      'Osiris',
+      'Set',
       'Geb',
       'Ra',
       'Thoth',
@@ -900,5 +900,149 @@ final List<QuizQuestion> egyptianQuizData = [
       'Neheb',
     ],
     correctIndex: 2,
+  ),
+  // 51
+  QuizQuestion(
+    question: 'Dewa pencipta primordial Heliopolis manakah yang muncul sendiri dari air purba Nun dan menciptakan Shu serta Tefnut dari air matanya?',
+    questionEn: 'Which primordial creator god of Heliopolis arose by himself from the primeval waters of Nun and created Shu and Tefnut from his tears?',
+    options: [
+      'Khepri',
+      'Atum',
+      'Ptah',
+      'Amun',
+    ],
+    optionsEn: [
+      'Khepri',
+      'Atum',
+      'Ptah',
+      'Amun',
+    ],
+    correctIndex: 1,
+  ),
+  // 52
+  QuizQuestion(
+    question: 'Dewa kurcaci bertubuh gempal dan berwajah menyeramkan manakah yang justru bertugas menakuti roh jahat dan melindungi rumah tangga serta ibu melahirkan?',
+    questionEn: 'Which stocky, fearsome-faced dwarf god actually served to frighten away evil spirits and protect households and mothers in childbirth?',
+    options: [
+      'Bes',
+      'Taweret',
+      'Sobek',
+      'Anubis',
+    ],
+    optionsEn: [
+      'Bes',
+      'Taweret',
+      'Sobek',
+      'Anubis',
+    ],
+    correctIndex: 0,
+  ),
+  // 53
+  QuizQuestion(
+    question: 'Dewa kesuburan dan panen manakah yang menjadi salah satu dewa tertua Mesir dan pelindung para pengembara yang melintasi padang pasir timur?',
+    questionEn: 'Which god of fertility and harvest was one of Egypt\'s oldest deities and protector of travelers crossing the eastern desert?',
+    options: [
+      'Geb',
+      'Hapi',
+      'Min',
+      'Khnum',
+    ],
+    optionsEn: [
+      'Geb',
+      'Hapi',
+      'Min',
+      'Khnum',
+    ],
+    correctIndex: 2,
+  ),
+  // 54
+  QuizQuestion(
+    question: 'Monumen apa di Giza, salah satu monumen tertua dan terbesar di dunia, digambarkan berbadan singa dan berkepala manusia untuk melambangkan kekuatan raja yang dipadukan kebijaksanaan ilahi?',
+    questionEn: 'What monument at Giza, one of the oldest and largest in the world, is depicted with the body of a lion and the head of a human to symbolize royal power fused with divine wisdom?',
+    options: [
+      'Obelisk',
+      'Piramida Agung',
+      'Kuil Karnak',
+      'Sphinx',
+    ],
+    optionsEn: [
+      'The Obelisk',
+      'The Great Pyramid',
+      'The Temple of Karnak',
+      'The Sphinx',
+    ],
+    correctIndex: 3,
+  ),
+  // 55
+  QuizQuestion(
+    question: 'Firaun Mesir dianggap sebagai inkarnasi hidup dewa apa selama hidupnya, dan menjadi dewa apa setelah wafat?',
+    questionEn: 'The Egyptian pharaoh was regarded as the living incarnation of which god during his life, and became which god after death?',
+    options: [
+      'Ra saat hidup, Anubis setelah wafat',
+      'Horus saat hidup, Osiris setelah wafat',
+      'Thoth saat hidup, Set setelah wafat',
+      'Amun saat hidup, Ptah setelah wafat',
+    ],
+    optionsEn: [
+      'Ra in life, Anubis after death',
+      'Horus in life, Osiris after death',
+      'Thoth in life, Set after death',
+      'Amun in life, Ptah after death',
+    ],
+    correctIndex: 1,
+  ),
+  // 56
+  QuizQuestion(
+    question: 'Apa nama kendaraan sakral yang membawa Ra melintasi langit siang hari dan menembus kegelapan Duat di malam hari?',
+    questionEn: 'What is the name of the sacred vessel that carries Ra across the daytime sky and through the darkness of the Duat at night?',
+    options: [
+      'Sayap Horus',
+      'Tongkat Was',
+      'Perahu Matahari (Barque of Ra)',
+      'Mahkota Atef',
+    ],
+    optionsEn: [
+      'The Wings of Horus',
+      'The Was Scepter',
+      'The Solar Barque',
+      'The Atef Crown',
+    ],
+    correctIndex: 2,
+  ),
+  // 57
+  QuizQuestion(
+    question: 'Menjadi berapa bagian tubuh Osiris dicabik-cabik dan disebarkan oleh Set ke seluruh Mesir?',
+    questionEn: 'Into how many pieces was Osiris\'s body dismembered and scattered across Egypt by Set?',
+    options: [
+      'Tujuh',
+      'Dua belas',
+      'Dua puluh satu',
+      'Empat belas',
+    ],
+    optionsEn: [
+      'Seven',
+      'Twelve',
+      'Twenty-one',
+      'Fourteen',
+    ],
+    correctIndex: 3,
+  ),
+  // 58
+  QuizQuestion(
+    question: 'Bagaimana cara Isis membangkitkan Osiris sesaat untuk mengandung Horus, setelah mengumpulkan bagian-bagian tubuhnya yang tercerai-berai?',
+    questionEn: 'How did Isis briefly revive Osiris to conceive Horus, after gathering his scattered body parts?',
+    options: [
+      'Berubah wujud menjadi burung layang-layang dan meniupkan napas kehidupan',
+      'Memberinya minum air keabadian',
+      'Meminta bantuan Ra membangkitkannya',
+      'Menguburnya selama tujuh hari',
+    ],
+    optionsEn: [
+      'She transformed into a kite bird and breathed the breath of life into him',
+      'She gave him water of eternal life to drink',
+      'She asked Ra to revive him',
+      'She buried him for seven days',
+    ],
+    correctIndex: 0,
   ),
 ];

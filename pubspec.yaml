@@ -1,4 +1,4 @@
-name: mythopedia
+name: mytharium
 description: Explore gods and deities from world mythologies.
 publish_to: 'none'
 version: 1.0.0+1
@@ -12,7 +12,6 @@ dependencies:
   cupertino_icons: ^1.0.6
   shared_preferences: ^2.2.2
   audioplayers: ^6.1.0
-  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -42,9 +41,11 @@ flutter:
     - assets/images/Hindu/
     - assets/images/Hindu/Trimurti/
     - assets/images/Hindu/Tridevi/
-    - assets/images/Hindu/Avatar/
+    - assets/images/Hindu/Dashavatara/
     - assets/images/Hindu/Devas/
     - assets/images/Hindu/Figures/
+    - assets/images/Hindu/Devi/
+    - assets/images/Hindu/Creatures/
     - assets/images/Hindu/Cosmology/
     - assets/images/Nordik/
     - assets/images/Nordik/Aesir/
@@ -53,5 +54,48 @@ flutter:
     - assets/images/Nordik/Mythical/
     - assets/images/Nordik/Figures/
     - assets/images/Nordik/Cosmology/
+    - assets/images/Chinese/
+    - assets/images/Chinese/Court/
+    - assets/images/Chinese/Primordial/
+    - assets/images/Chinese/Nature/
+    - assets/images/Chinese/Underworld/
+    - assets/images/Chinese/Hero/
+    - assets/images/Chinese/Creature/
+    - assets/images/Chinese/Cosmology/
+    - assets/images/Japanese/
+    - assets/images/Japanese/Celestial/
+    - assets/images/Japanese/Primordial/
+    - assets/images/Japanese/Nature/
+    - assets/images/Japanese/Underworld/
+    - assets/images/Japanese/War/
+    - assets/images/Japanese/Lucky/
+    - assets/images/Japanese/Hero/
+    - assets/images/Japanese/Creature/
+    - assets/images/Japanese/Cosmology/
+    - assets/images/Mythic/
     - assets/audio/
+
+  fonts:
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel-Regular.ttf
+        - asset: assets/fonts/Cinzel-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cinzel-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cinzel-ExtraBold.ttf
+          weight: 800
+    - family: CinzelDecorative
+      fonts:
+        - asset: assets/fonts/CinzelDecorative-Regular.ttf
+        - asset: assets/fonts/CinzelDecorative-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/CinzelDecorative-Black.ttf
+          weight: 900
+    - family: MedievalSharp
+      fonts:
+        - asset: assets/fonts/MedievalSharp-Regular.ttf
+    - family: YatraOne
+      fonts:
+        - asset: assets/fonts/YatraOne-Regular.ttf
 

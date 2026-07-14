@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../l10n/language_provider.dart';
 import '../l10n/app_strings.dart';
 import 'quiz_result_screen.dart';
@@ -116,7 +116,7 @@ class _QuizScreenState extends State<QuizScreen> {
       padding: const EdgeInsets.only(bottom: 10, top: 4),
       child: Text(
         map?[lang] ?? id,
-        style: GoogleFonts.cinzel(
+        style: AppFonts.cinzel(
           fontSize: 14,
           fontWeight: FontWeight.w700,
           color: const Color(0xFFB07800),
@@ -292,7 +292,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       children: [
                         Text(
                           quizTitle,
-                          style: GoogleFonts.cinzel(
+                          style: AppFonts.cinzel(
                             fontSize: 18,
                             fontWeight: FontWeight.w900,
                             color: Colors.white,
@@ -444,7 +444,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   child: Center(
                     child: Text(
                       findBtn,
-                      style: GoogleFonts.cinzel(
+                      style: AppFonts.cinzel(
                         fontSize: 14,
                         fontWeight: FontWeight.w900,
                         color:

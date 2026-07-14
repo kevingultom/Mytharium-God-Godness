@@ -217,7 +217,7 @@ Idun is the wife of Bragi, though her own lineage is not extensively described i
 Idun is entrusted with guarding the golden apples that keep the gods eternally youthful, stored within a special chest or box. Without these apples, the gods would begin to age and weaken rapidly. Her role symbolizes renewal, spring, fertility, and the continuity of the gods' power across generations.
 
 The most famous story about Idun tells of her abduction by the giant Thjazi, disguised as an eagle, after tricking Loki into luring her out of Asgard. Without Idun's apples, the gods begin aging rapidly, forcing Loki, who caused the abduction, to rescue her by transforming into a falcon and carrying her back in the form of a nut, pursued by Thjazi in eagle form, who is ultimately killed by fires set by the Aesir along the walls of Asgard. This tale makes Idun a symbol of immortality and eternal youth within Norse mythology, a golden apple motif that also echoes across numerous other world mythologies.''',
-    imageUrl: 'assets/images/Nordik/Aesir/idun.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/Idun.jpg',
     category: 'Aesir',
   ),
   God(
@@ -799,7 +799,7 @@ Yggdrasil is the immense ash tree that stands as the central axis of the entire 
 The tree has three principal roots, each reaching into a different realm: one toward Asgard and the well of Urd where the Norns dwell, one toward Jotunheim and the well of wisdom belonging to Mimir, and another toward Niflheim and the spring Hvergelmir, where the dragon Nidhogg gnaws at its roots. Numerous creatures live in and around Yggdrasil, including an eagle perched at its crown, the squirrel Ratatoskr who scurries back and forth relaying insults between the eagle and Nidhogg, and four stags that feed upon its foliage, making the tree a cosmic ecosystem that portrays both the balance and the enduring tension within the order of the universe.
 
 The most famous tale about Yggdrasil is Odin's self-sacrifice, as recounted in Havamal, when he hung himself upon the tree for nine days and nine nights, piercing his own body with a spear, without food or drink, in order to gain secret knowledge of the runes. This sacrifice makes Yggdrasil a symbol of the pursuit of wisdom through suffering, a theme deeply rooted in Norse spirituality. Although the world suffers total destruction at Ragnarok, Yggdrasil is believed to endure, sheltering the last two humans, Lif and Lifthrasir, within its trunk until they can emerge and begin life anew in a world made fresh again.''',
-    imageUrl: 'assets/images/Nordik/Cosmology/yggdrasil.jpg',
+    imageUrl: 'assets/images/Nordik/Cosmology/Yggdrasil.jpg',
     category: 'Cosmology',
   ),
   God(
@@ -899,4 +899,100 @@ In that battle, Odin falls, swallowed by Fenrir, before being avenged by his son
     category: 'Cosmology',
   ),
 
+  God(
+    id: '192',
+    name: 'Forseti',
+    mythology: 'Nordic',
+    title: 'Dewa Keadilan & Rekonsiliasi',
+    titleEn: 'God of Justice & Reconciliation',
+    symbol: '⚖️',
+    powers: ['Keadilan', 'Mediasi', 'Kebijaksanaan', 'Perdamaian', 'Hukum'],
+    powersEn: ['Justice', 'Mediation', 'Wisdom', 'Peace', 'Law'],
+    story: '''
+Forseti adalah putra dari Baldr, dewa cahaya dan keindahan, dengan istrinya Nanna, sehingga ia merupakan cucu dari Odin dan Frigg serta tergolong sebagai salah satu dewa Aesir. Namanya berarti "sang pemimpin sidang" atau "yang memimpin," mencerminkan perannya sebagai hakim tertinggi di antara para dewa. Ia disebutkan dalam Grímnismál dari Puisi Edda maupun dalam Prosa Edda karya Snorri Sturluson, yang keduanya menempatkannya sebagai figur yang dihormati karena kebijaksanaan hukumnya. Meski keturunan Baldr yang tragis kelak tewas akibat tipu daya Loki, Forseti sendiri jarang terlibat dalam konflik para dewa dan lebih dikenal sebagai sosok penengah yang tenang.
+
+Forseti adalah dewa keadilan, mediasi, dan rekonsiliasi, yang tinggal di aula megah bernama Glitnir, "yang berkilau," dengan tiang-tiang dari emas dan atap dari perak. Ke sanalah para dewa dan manusia yang berselisih datang untuk memohon penghakiman, dan menurut Prosa Edda, tidak ada seorang pun yang pergi dari hadapannya tanpa merasa didamaikan, sebab ia dianggap hakim paling bijaksana yang pernah ada. Atributnya berupa timbangan keadilan dan aula bercahaya keemasan melambangkan kemurnian serta ketidakberpihakan dalam memutuskan perkara. Kepribadiannya digambarkan tenang, sabar, dan adil, kontras dengan banyak dewa Aesir lain yang cenderung meledak-ledak atau suka berperang.
+
+Kisah paling terkenal yang mengaitkan Forseti dengan dunia nyata datang dari catatan biarawan Alcuin dalam Vita Willibrordi abad ke-8, yang menceritakan misionaris Willibrord mengunjungi pulau suci bangsa Frisia yang disebut Fositesland, tempat sebuah dewa bernama Fosite disembah dengan aturan ketat menjaga kedamaian dan larangan berbicara keras di sekitar mata airnya. Para ahli meyakini Fosite bangsa Frisia dan Forseti bangsa Nordik adalah figur yang sama atau setidaknya berasal dari akar mitologi Jermanik bersama, menunjukkan pemujaan terhadap dewa keadilan ini telah tersebar luas sejak sebelum era Viking. Warisannya bertahan hingga kini secara mengejutkan: kata "forseti" dalam bahasa Islandia modern berarti "presiden," diambil langsung dari nama sang dewa sebagai penanda pemimpin yang memutuskan perkara dengan adil. Dengan demikian Forseti tetap hidup bukan hanya dalam naskah-naskah kuno, tetapi juga dalam bahasa sehari-hari masyarakat Nordik modern.''',
+    storyEn: '''
+Forseti is the son of Baldr, the god of light and beauty, and his wife Nanna, making him a grandson of Odin and Frigg and a member of the Aesir. His name means "the presiding one" or "he who presides," reflecting his role as the foremost judge among the gods. He appears in the Grímnismál of the Poetic Edda and in Snorri Sturluson's Prose Edda, both of which present him as a respected figure renowned for his legal wisdom. Although his father Baldr later dies tragically through Loki's treachery, Forseti himself remains largely detached from the conflicts among the gods, better known instead as a calm and impartial mediator.
+
+Forseti is the god of justice, mediation, and reconciliation, dwelling in a magnificent hall called Glitnir, "the shining one," supported by pillars of gold and roofed with silver. It is there that gods and men alike bring their disputes for judgment, and according to the Prose Edda, no one ever leaves his presence without being reconciled, for he is considered the wisest judge that ever existed. His attributes, the scales of justice and his radiant golden hall, symbolize purity and impartiality in rendering verdicts. His personality is portrayed as calm, patient, and fair, standing in contrast to many other Aesir who are prone to temper or warfare.
+
+The most notable link between Forseti and the historical record comes from the monk Alcuin's eighth-century Vita Willibrordi, which recounts the missionary Willibrord's visit to a sacred Frisian island called Fositesland, where a god named Fosite was worshipped under strict rules of peace and silence around his holy spring. Scholars generally believe the Frisian Fosite and the Norse Forseti are the same figure, or at least share a common Germanic root, indicating that worship of this god of justice was widespread well before the Viking Age. His legacy endures in an unexpected way: the modern Icelandic word "forseti" means "president," taken directly from the god's name to denote a leader who judges fairly. In this sense Forseti survives not only in ancient manuscripts but also in the everyday language of modern Nordic society.''',
+    imageUrl: 'assets/images/Nordik/Aesir/forseti.jpg',
+    category: 'Aesir',
+  ),
+  God(
+    id: '193',
+    name: 'Ratatoskr',
+    mythology: 'Nordic',
+    title: 'Sang Pembawa Fitnah Yggdrasil',
+    titleEn: 'The Gossip-Bearer of Yggdrasil',
+    symbol: '🐿️',
+    powers: ['Kelincahan', 'Penghasutan', 'Pembawa Pesan', 'Kekacauan', 'Pengintaian'],
+    powersEn: ['Agility', 'Instigation', 'Message-Carrying', 'Discord', 'Espionage'],
+    story: '''
+Ratatoskr bukanlah dewa maupun raksasa, melainkan seekor tupai yang mendiami pohon dunia Yggdrasil, poros kosmis yang menghubungkan sembilan alam dalam mitologi Nordik. Ia disebutkan dalam Grímnismál dari Puisi Edda dan dalam Prosa Edda karya Snorri Sturluson, yang menggambarkannya berlari naik turun di sepanjang batang raksasa Yggdrasil tanpa henti. Namanya, yang diperkirakan berarti "gigi pengebor" atau "gigi penggerek," merujuk pada kegiatannya yang terus-menerus menggerogoti dan memanjat kulit kayu pohon dunia. Posisinya yang unik di antara puncak dan akar Yggdrasil menjadikannya penghubung sekaligus pengganggu tatanan kosmis yang seharusnya seimbang.
+
+Peran utama Ratatoskr adalah membawa kata-kata hinaan bolak-balik antara elang tak bernama yang bertengger di puncak Yggdrasil dan naga Nidhogg yang menggerogoti akar pohon di dekat mata air Hvergelmir. Ia bukan sekadar kurir netral, melainkan provokator yang sengaja memutarbalikkan dan memperkeruh pesan agar permusuhan antara elang dan Nidhogg terus menyala. Karena itu Ratatoskr menjadi lambang gosip jahat, fitnah, dan hasutan yang merusak dari dalam, sebuah kekuatan kecil namun destruktif yang menunjukkan bahwa bahkan struktur kosmos yang megah sekalipun tidak luput dari intrik dan perselisihan. Sifatnya digambarkan lincah, licik, dan gemar mengadu domba, jauh berbeda dari citra tupai yang lucu dan tidak berbahaya.
+
+Kisahnya diceritakan secara eksplisit dalam Grímnismál bait ke-32, yang menyebut nama Ratatoskr sebagai tupai yang berlari di pohon abu Yggdrasil membawa perkataan elang turun untuk disampaikan kepada Nidhogg, sebuah gambaran yang kemudian diulang dan diperluas oleh Snorri dalam Gylfaginning. Meski hanya muncul sekilas, ia digambarkan sebagai bagian dari ekosistem penuh makhluk Yggdrasil lainnya, termasuk empat rusa yang memakan dedaunannya dan naga Nidhogg yang terus menggerogoti akarnya. Warisan budayanya bertahan sebagai personifikasi gosip dan hasutan dalam berbagai penceritaan ulang mitologi Nordik modern, mulai dari sastra hingga permainan video, di mana Ratatoskr sering dijadikan simbol bahwa konflik besar terkadang dipicu oleh bisikan kecil yang sengaja disebarluaskan.''',
+    storyEn: '''
+Ratatoskr is neither a god nor a giant but a squirrel that lives on the world tree Yggdrasil, the cosmic axis connecting the nine realms of Norse mythology. He is mentioned in the Grímnismál of the Poetic Edda and in Snorri Sturluson's Prose Edda, both of which describe him running ceaselessly up and down the immense trunk of Yggdrasil. His name, thought to mean "drill-tooth" or "bore-tooth," refers to his constant gnawing and climbing along the world tree's bark. His unique position between the top and the roots of Yggdrasil makes him both a connector and a disruptor of a cosmic order that is otherwise meant to be balanced.
+
+Ratatoskr's chief role is to carry insulting words back and forth between the unnamed eagle perched atop Yggdrasil and the dragon Nidhogg, who gnaws at the tree's roots near the spring Hvergelmir. He is no neutral courier but a deliberate instigator, twisting and inflaming each message so that the hostility between the eagle and Nidhogg never dies down. For this reason Ratatoskr has become an emblem of malicious gossip, slander, and corrosive incitement, a small but destructive force showing that even the grandest cosmic structure is not immune to intrigue and discord. He is characterized as nimble, cunning, and fond of stirring up trouble, a far cry from the harmless, amusing image squirrels usually evoke.
+
+His role is explicitly recorded in stanza 32 of the Grímnismál, which names Ratatoskr as the squirrel that runs upon the ash Yggdrasil carrying the eagle's words down to Nidhogg, an image later echoed and expanded by Snorri in Gylfaginning. Though he appears only briefly, he is presented as part of a wider ecosystem of creatures inhabiting Yggdrasil, including four stags that graze on its foliage and the dragon Nidhogg who never stops gnawing at its roots. His cultural legacy endures as a personification of gossip and incitement in modern retellings of Norse mythology, from literature to video games, where Ratatoskr is often invoked as a reminder that great conflicts are sometimes sparked by small whispers deliberately spread.''',
+    imageUrl: 'assets/images/Nordik/Mythical/ratatoskr.jpg',
+    category: 'Creature',
+  ),
+  God(
+    id: '194',
+    name: 'Huginn & Muninn',
+    mythology: 'Nordic',
+    title: 'Mata dan Telinga Odin',
+    titleEn: 'The Eyes and Ears of Odin',
+    symbol: '🐦‍⬛',
+    powers: ['Pengetahuan', 'Pengintaian', 'Ingatan', 'Kecepatan Terbang', 'Kebijaksanaan'],
+    powersEn: ['Knowledge', 'Reconnaissance', 'Memory', 'Flight Speed', 'Wisdom'],
+    story: '''
+Huginn dan Muninn adalah sepasang gagak yang menjadi pendamping setia Odin, pemimpin para dewa Aesir, sejajar dengan sepasang serigalanya, Geri dan Freki. Keduanya bukan dewa melainkan makhluk suci yang melayani Odin, dan kemunculan mereka dalam ikonografi Jermanik, termasuk pada pelat helm era Vendel dan bracteate periode Migrasi, menunjukkan bahwa gagasan tentang gagak pendamping Odin sudah ada jauh sebelum Puisi Edda dan Prosa Edda dituliskan. Nama mereka, Huginn yang berarti "Pikiran" dan Muninn yang berarti "Ingatan," pertama kali dicatat secara jelas dalam bait Grímnismál pada Puisi Edda. Keduanya menegaskan identitas Odin sebagai "dewa gagak" atau Hrafnaguð, julukan yang lekat dengannya di berbagai sumber Nordik kuno.
+
+Setiap pagi saat fajar, Huginn dan Muninn terbang meninggalkan bahu Odin untuk menjelajahi seluruh Midgard dan sembilan alam, mengamati segala peristiwa yang terjadi di dunia manusia maupun alam-alam lainnya. Menjelang malam mereka kembali tepat saat jamuan makan para dewa, hinggap di bahu Odin, dan membisikkan ke telinganya segala yang telah mereka lihat dan dengar sepanjang hari. Berkat kedua gagak ini, Odin menjadi sosok mahatahu yang senantiasa mendapat kabar terbaru dari seluruh penjuru kosmos tanpa perlu meninggalkan Asgard. Simbol gagak melekat kuat pada Odin karena burung ini dalam budaya Nordik juga diasosiasikan dengan medan perang dan kematian, sejalan dengan peran Odin sebagai dewa perang dan pengumpul arwah prajurit yang gugur.
+
+Dalam Grímnismál bait ke-20, Odin sendiri berkata bahwa ia mengkhawatirkan Huginn, sang Pikiran, jika suatu hari gagak itu tidak kembali, namun ia mengaku lebih cemas lagi akan keselamatan Muninn, sang Ingatan, sebuah pengakuan yang oleh para peneliti mitologi sering ditafsirkan sebagai simbol ketakutan universal akan hilangnya ingatan dibanding hilangnya pikiran itu sendiri. Snorri Sturluson mengulang gambaran ini dalam Gylfaginning, menegaskan bahwa kedua gagak tersebut adalah sumber utama pengetahuan Odin tentang dunia. Warisan Huginn dan Muninn tetap kuat dalam budaya populer modern, mulai dari lambang gagak pada bendera perang para pemimpin Viking hingga penggambaran mereka dalam sastra, permainan video, dan film kontemporer, menjadikan keduanya salah satu pasangan hewan mitologis paling dikenal luas dari tradisi Nordik.''',
+    storyEn: '''
+Huginn and Muninn are a pair of ravens who serve as the constant companions of Odin, chief of the Aesir, alongside his two wolves, Geri and Freki. They are not gods but sacred creatures in Odin's service, and their appearance in Germanic iconography, including on Vendel-era helmet plates and Migration Period bracteates, suggests that the idea of Odin's raven companions predates the written Poetic and Prose Eddas by centuries. Their names, Huginn meaning "Thought" and Muninn meaning "Memory," are first clearly recorded in a stanza of the Grímnismál in the Poetic Edda. Together they reinforce Odin's identity as the "raven god," or Hrafnaguð, an epithet firmly attached to him throughout Old Norse sources.
+
+Every morning at dawn, Huginn and Muninn leave Odin's shoulders to fly across the whole of Midgard and the nine realms, observing everything that happens in the world of men and beyond. By evening, at the time of the gods' feast, they return, perch on Odin's shoulders, and whisper into his ears everything they have seen and heard throughout the day. Thanks to these two ravens, Odin becomes an all-knowing figure who receives constant news from every corner of the cosmos without ever having to leave Asgard. The raven as a symbol clung closely to Odin because the bird was also associated in Norse culture with battlefields and death, matching Odin's role as a god of war and gatherer of slain warriors.
+
+In stanza 20 of the Grímnismál, Odin himself declares that he fears for Huginn, Thought, lest the raven fail to return one day, yet admits he worries even more for the safety of Muninn, Memory, a confession that scholars of mythology often interpret as a symbolic acknowledgment that the loss of memory is feared more than the loss of thought itself. Snorri Sturluson repeats this image in Gylfaginning, affirming that the two ravens are Odin's principal source of knowledge about the world. The legacy of Huginn and Muninn remains strong in modern popular culture, from raven emblems on the war banners of Viking leaders to their depiction in literature, video games, and contemporary film, making them one of the most widely recognized animal pairs in Norse tradition.''',
+    imageUrl: 'assets/images/Nordik/Mythical/huginn_muninn.jpg',
+    category: 'Creature',
+  ),
+  God(
+    id: '195',
+    name: 'Utgard-Loki',
+    mythology: 'Nordic',
+    title: 'Raja Ilusi Utgard',
+    titleEn: 'King of Illusion in Utgard',
+    symbol: '🧌',
+    powers: ['Ilusi', 'Sihir', 'Kekuatan Raksasa', 'Kelicikan', 'Manipulasi'],
+    powersEn: ['Illusion', 'Magic', 'Giant Strength', 'Cunning', 'Manipulation'],
+    story: '''
+Utgard-Loki, atau Útgarða-Loki, adalah seorang raja raksasa (jotun) yang memerintah wilayah ilusif bernama Utgard, terletak jauh di dalam Jotunheim, negeri para raksasa. Ia hanya tercatat dalam Prosa Edda karya Snorri Sturluson, tepatnya dalam bagian Gylfaginning, dan tidak muncul dalam Puisi Edda yang lebih tua, sehingga sebagian ahli menduga kisahnya merupakan pengembangan sastra Snorri sendiri berdasarkan tradisi lisan yang telah ada. Namanya yang memuat unsur "Loki" kerap membingungkan karena mengingatkan pada Loki si dewa penipu, tetapi para peneliti umumnya menganggap keduanya sebagai figur yang berbeda, meski sama-sama mewakili kelicikan dan kekuatan ilusi. Sebagai penguasa Utgard, "wilayah di luar pagar," ia melambangkan sisi liar dan tak terduga dari dunia raksasa yang berada di luar batas tatanan para dewa Aesir.
+
+Kekuatan utama Utgard-Loki adalah penguasaan sihir ilusi, atau sjónhverfing dalam bahasa Norse Kuno, yang memungkinkannya menyamarkan kenyataan kosmis menjadi tampak seperti hal-hal biasa. Istananya digambarkan begitu besar hingga para tamu nyaris tidak dapat melihat puncak gerbangnya, sebuah pertanda awal dari tipu daya yang menantinya. Ia memerintah dengan gaya mengejek dan meremehkan tamunya, mengadakan berbagai kontes yang tampak adil namun sebenarnya telah direkayasa sedemikian rupa sehingga mustahil dimenangkan. Kepribadiannya licik, angkuh, dan penuh perhitungan, mewakili kecerdasan raksasa yang mengandalkan tipu muslihat untuk mengalahkan kekuatan fisik para dewa yang jauh lebih superior.
+
+Kisahnya yang paling terkenal menceritakan kunjungan Thor, Loki, serta pelayan Thjalfi dan Roskva ke Utgard, di mana Utgard-Loki menantang mereka dengan serangkaian kontes: Loki kalah dalam lomba makan melawan Logi yang ternyata adalah personifikasi api liar, Thjalfi kalah berlari melawan Hugi yang ternyata adalah personifikasi pikiran, sementara Thor sendiri gagal menghabiskan minuman dari tanduk yang diam-diam tersambung ke lautan, gagal mengangkat seekor kucing abu-abu yang sebenarnya adalah Ular Midgard, Jormungand, yang melingkari dunia, dan hampir kalah bergulat melawan seorang perempuan tua bernama Elli yang tidak lain adalah usia tua itu sendiri. Setelah rombongan Thor pergi, Utgard-Loki mengungkapkan seluruh tipuan itu, mengaku ketakutan akan kekuatan asli Thor, lalu membuat dirinya dan seluruh istananya lenyap begitu Thor mengangkat palu Mjolnir untuk membalas dendam sehingga Thor tak pernah sempat menghukumnya. Kisah dalam Gylfaginning ini menjadi salah satu mitos Thor paling terkenal, sering dikutip sebagai contoh klasik tema "bahkan yang terkuat pun bisa tertipu," dan hingga kini terus menginspirasi penceritaan ulang modern dalam sastra maupun budaya populer.''',
+    storyEn: '''
+Utgard-Loki, or Utgarda-Loki, is a giant king who rules the illusory realm of Utgard, deep within Jotunheim, the land of the giants. He appears only in Snorri Sturluson's Prose Edda, specifically in the Gylfaginning section, and is absent from the older Poetic Edda, leading some scholars to suspect his tale reflects Snorri's own literary elaboration of an existing oral tradition. His name, which includes the element "Loki," often causes confusion since it recalls the trickster god Loki, but researchers generally treat the two as distinct figures who nonetheless share an association with cunning and illusion. As ruler of Utgard, "the place outside the fence," he embodies the wild, unpredictable side of giant-kind that lies beyond the ordered realm of the Aesir gods.
+
+Utgard-Loki's chief power lies in mastery of illusion, known in Old Norse as sjónhverfing, allowing him to disguise cosmic realities as seemingly ordinary things. His stronghold is described as so vast that visitors can barely see the top of its gate, an early sign of the deception awaiting them. He rules with a mocking, condescending manner toward his guests, staging a series of contests that appear fair but are in fact rigged so that victory is impossible. His personality is cunning, arrogant, and calculating, representing the giants' brand of intelligence, one that relies on trickery to overcome the vastly superior physical power of the gods.
+
+His most famous tale recounts the visit of Thor, Loki, and their servants Thjalfi and Roskva to Utgard, where Utgard-Loki challenges them to a series of contests: Loki loses an eating contest against Logi, who turns out to be the personification of wildfire, Thjalfi loses a footrace against Hugi, the personification of thought, while Thor himself fails to empty a drinking horn secretly connected to the ocean, fails to lift a grey cat that is in truth the Midgard Serpent, Jormungandr, coiled around the world, and very nearly loses a wrestling match against an old woman named Elli, who is none other than old age itself. After Thor's party departs, Utgard-Loki reveals the whole deception, admits his fear of Thor's true strength, and then causes himself and his entire stronghold to vanish the instant Thor raises Mjolnir to strike him down in revenge, leaving Thor forever unable to punish him. This episode from Gylfaginning stands as one of the most celebrated Thor myths, frequently cited as a classic illustration of the theme that even the mightiest can be deceived, and it continues to inspire modern retellings in literature and popular culture alike.''',
+    imageUrl: 'assets/images/Nordik/Jotun/utgard-loki.jpg',
+    category: 'Jotun',
+  ),
 ];

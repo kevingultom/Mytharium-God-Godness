@@ -66,6 +66,16 @@ class HinduCategoryScreen extends StatelessWidget {
                   _buildCategoryCard(
                     context,
                     color: color,
+                    label: id ? 'Dewi' : 'Devi',
+                    category: 'Devi',
+                    subtitle: id
+                        ? 'Wujud dahsyat energi feminin ilahi'
+                        : 'Fierce forms of the divine feminine',
+                  ),
+                  const SizedBox(height: 10),
+                  _buildCategoryCard(
+                    context,
+                    color: color,
                     label: id ? 'Dashavatara' : 'Dashavatara',
                     category: 'Avatar',
                     subtitle: id
@@ -86,11 +96,21 @@ class HinduCategoryScreen extends StatelessWidget {
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Tokoh & Makhluk' : 'Figures',
+                    label: id ? 'Tokoh' : 'Figures',
                     category: 'Figures',
                     subtitle: id
-                        ? 'Tokoh & makhluk mitologis'
-                        : 'Mythological figures & creatures',
+                        ? 'Tokoh penting dalam epos Hindu'
+                        : 'Important figures of Hindu epics',
+                  ),
+                  const SizedBox(height: 10),
+                  _buildCategoryCard(
+                    context,
+                    color: color,
+                    label: id ? 'Makhluk Mitologi' : 'Creatures',
+                    category: 'Creature',
+                    subtitle: id
+                        ? 'Naga, Garuda & makhluk sakti lainnya'
+                        : 'Nagas, Garuda & other mystical beings',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(

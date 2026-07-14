@@ -723,8 +723,8 @@ final List<QuizQuestion> greekQuizData = [
   ),
   // 41
   QuizQuestion(
-    question: 'Siapakah nama ayah Demeter dan istri Zeus?',
-    questionEn: 'Who was the father of Demeter and wife of Zeus?',
+    question: 'Siapakah ayah dari Demeter, dewi panen?',
+    questionEn: 'Who is the father of Demeter, goddess of the harvest?',
     options: [
       'Hyperion',
       'Cronus',
@@ -813,39 +813,39 @@ final List<QuizQuestion> greekQuizData = [
   ),
   // 46
   QuizQuestion(
-    question: 'Siapa yang mengubah putra-putra Athena menjadi monyet karena menantang seni menenun?',
-    questionEn: 'Who turned Athena\'s weaving students into monkeys for challenging her weaving skill?',
+    question: 'Siapa penenun manusia yang diubah menjadi laba-laba oleh Athena karena menantangnya dalam seni menenun?',
+    questionEn: 'Who is the mortal weaver transformed into a spider by Athena for challenging her at weaving?',
     options: [
-      'Hera',
       'Arachne',
       'Pandora',
-      'Aphrodite',
+      'Niobe',
+      'Medusa',
     ],
     optionsEn: [
-      'Hera',
       'Arachne',
       'Pandora',
-      'Aphrodite',
+      'Niobe',
+      'Medusa',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
   ),
   // 47
   QuizQuestion(
-    question: 'Siapakah raja yang menawarkan sayap dan tali emas kepada Icarus?',
-    questionEn: 'Which king offered Icarus wings and gold thread?',
+    question: 'Siapa yang membuat sayap dari bulu dan lilin untuk Icarus agar bisa melarikan diri dari Kreta?',
+    questionEn: 'Who crafted the wings of feathers and wax for Icarus to escape from Crete?',
     options: [
+      'Daedalus',
       'Minos',
-      'Pandion',
-      'Aegeus',
-      'Creon',
+      'Talos',
+      'Hephaestus',
     ],
     optionsEn: [
+      'Daedalus',
       'Minos',
-      'Pandion',
-      'Aegeus',
-      'Creon',
+      'Talos',
+      'Hephaestus',
     ],
-    correctIndex: 1,
+    correctIndex: 0,
   ),
   // 48
   QuizQuestion(
@@ -900,5 +900,491 @@ final List<QuizQuestion> greekQuizData = [
       'Thetis',
     ],
     correctIndex: 2,
+  ),
+  // 51
+  QuizQuestion(
+    question: 'Titan manakah yang dikaitkan dengan rasi bintang dan penanda musim di langit?',
+    questionEn: 'Which Titan is associated with the constellations and the markers of the seasons in the sky?',
+    options: [
+      'Coeus',
+      'Hyperion',
+      'Crius',
+      'Iapetus',
+    ],
+    optionsEn: [
+      'Coeus',
+      'Hyperion',
+      'Crius',
+      'Iapetus',
+    ],
+    correctIndex: 2,
+  ),
+  // 52
+  QuizQuestion(
+    question: 'Titan manakah yang menjelmakan poros langit dan menjadi kakek dari Apollo serta Artemis melalui putrinya, Leto?',
+    questionEn: 'Which Titan embodies the celestial axis and became the grandfather of Apollo and Artemis through his daughter Leto?',
+    options: [
+      'Crius',
+      'Coeus',
+      'Oceanus',
+      'Hyperion',
+    ],
+    optionsEn: [
+      'Crius',
+      'Coeus',
+      'Oceanus',
+      'Hyperion',
+    ],
+    correctIndex: 1,
+  ),
+  // 53
+  QuizQuestion(
+    question: 'Siapakah istri Oceanus yang menjadi ibu dari ribuan sungai dan para Oceanid?',
+    questionEn: 'Who is the wife of Oceanus and mother of thousands of rivers and the Oceanids?',
+    options: [
+      'Theia',
+      'Rhea',
+      'Themis',
+      'Tethys',
+    ],
+    optionsEn: [
+      'Theia',
+      'Rhea',
+      'Themis',
+      'Tethys',
+    ],
+    correctIndex: 3,
+  ),
+  // 54
+  QuizQuestion(
+    question: 'Titan manakah yang bersama Hyperion melahirkan Helios, Selene, dan Eos?',
+    questionEn: 'Which Titaness, together with Hyperion, gave birth to Helios, Selene, and Eos?',
+    options: [
+      'Theia',
+      'Phoebe',
+      'Mnemosyne',
+      'Tethys',
+    ],
+    optionsEn: [
+      'Theia',
+      'Phoebe',
+      'Mnemosyne',
+      'Tethys',
+    ],
+    correctIndex: 0,
+  ),
+  // 55
+  QuizQuestion(
+    question: 'Titan perempuan manakah yang dipercaya pernah menguasai Oracle Delphi sebelum menurunkannya kepada cucunya, Apollo?',
+    questionEn: 'Which Titaness was believed to have once held the Oracle at Delphi before passing it down to her grandson Apollo?',
+    options: [
+      'Theia',
+      'Themis',
+      'Phoebe',
+      'Mnemosyne',
+    ],
+    optionsEn: [
+      'Theia',
+      'Themis',
+      'Phoebe',
+      'Mnemosyne',
+    ],
+    correctIndex: 2,
+  ),
+  // 56
+  QuizQuestion(
+    question: 'Titan manakah yang menjadi ibu dari sembilan Muse setelah bersatu dengan Zeus selama sembilan malam?',
+    questionEn: 'Which Titaness became the mother of the nine Muses after uniting with Zeus for nine nights?',
+    options: [
+      'Themis',
+      'Mnemosyne',
+      'Rhea',
+      'Theia',
+    ],
+    optionsEn: [
+      'Themis',
+      'Mnemosyne',
+      'Rhea',
+      'Theia',
+    ],
+    correctIndex: 1,
+  ),
+  // 57
+  QuizQuestion(
+    question: 'Titan manakah yang dihukum Zeus untuk memikul langit di pundaknya selamanya?',
+    questionEn: 'Which Titan was condemned by Zeus to hold up the sky on his shoulders forever?',
+    options: [
+      'Menoetius',
+      'Epimetheus',
+      'Prometheus',
+      'Atlas',
+    ],
+    optionsEn: [
+      'Menoetius',
+      'Epimetheus',
+      'Prometheus',
+      'Atlas',
+    ],
+    correctIndex: 3,
+  ),
+  // 58
+  QuizQuestion(
+    question: 'Siapakah saudara Prometheus yang menerima Pandora sebagai istri dan membuka guci berisi segala kesengsaraan dunia?',
+    questionEn: 'Who is the brother of Prometheus who accepted Pandora as his wife and opened the jar of the world\'s miseries?',
+    options: [
+      'Epimetheus',
+      'Atlas',
+      'Menoetius',
+      'Iapetus',
+    ],
+    optionsEn: [
+      'Epimetheus',
+      'Atlas',
+      'Menoetius',
+      'Iapetus',
+    ],
+    correctIndex: 0,
+  ),
+  // 59
+  QuizQuestion(
+    question: 'Titan manakah yang dilemparkan Zeus ke Tartarus karena kesombongan dan amarahnya yang tak terkendali dalam Titanomakhia?',
+    questionEn: 'Which Titan was cast by Zeus into Tartarus for his hubris and uncontrolled rage during the Titanomachy?',
+    options: [
+      'Atlas',
+      'Epimetheus',
+      'Menoetius',
+      'Coeus',
+    ],
+    optionsEn: [
+      'Atlas',
+      'Epimetheus',
+      'Menoetius',
+      'Coeus',
+    ],
+    correctIndex: 2,
+  ),
+  // 60
+  QuizQuestion(
+    question: 'Apa nama kekosongan primordial yang ada sebelum segala sesuatu dan menjadi sumber lahirnya Gaia, Tartarus, Erebus, dan Nyx?',
+    questionEn: 'What is the name of the primordial void that existed before all things, the source from which Gaia, Tartarus, Erebus, and Nyx were born?',
+    options: [
+      'Tartarus',
+      'Chaos',
+      'Erebus',
+      'Nyx',
+    ],
+    optionsEn: [
+      'Tartarus',
+      'Chaos',
+      'Erebus',
+      'Nyx',
+    ],
+    correctIndex: 1,
+  ),
+  // 61
+  QuizQuestion(
+    question: 'Siapakah personifikasi langit purba, suami sekaligus putra Gaia, yang dikebiri oleh putranya Cronus?',
+    questionEn: 'Who is the personification of the primordial sky, husband and son of Gaia, who was castrated by his son Cronus?',
+    options: [
+      'Chaos',
+      'Erebus',
+      'Tartarus',
+      'Uranus',
+    ],
+    optionsEn: [
+      'Chaos',
+      'Erebus',
+      'Tartarus',
+      'Uranus',
+    ],
+    correctIndex: 3,
+  ),
+  // 62
+  QuizQuestion(
+    question: 'Apa nama jurang paling dalam di bawah Dunia Bawah, tempat para Titan yang kalah dipenjarakan?',
+    questionEn: 'What is the name of the deepest abyss beneath the Underworld, where the defeated Titans were imprisoned?',
+    options: [
+      'Tartarus',
+      'Erebus',
+      'Elysium',
+      'Asphodel',
+    ],
+    optionsEn: [
+      'Tartarus',
+      'Erebus',
+      'Elysium',
+      'Asphodel',
+    ],
+    correctIndex: 0,
+  ),
+  // 63
+  QuizQuestion(
+    question: 'Dewi malam manakah yang begitu perkasa sehingga Zeus sendiri pun segan kepadanya?',
+    questionEn: 'Which goddess of the night was so mighty that even Zeus himself was wary of her?',
+    options: [
+      'Theia',
+      'Selene',
+      'Nyx',
+      'Hemera',
+    ],
+    optionsEn: [
+      'Theia',
+      'Selene',
+      'Nyx',
+      'Hemera',
+    ],
+    correctIndex: 2,
+  ),
+  // 64
+  QuizQuestion(
+    question: 'Personifikasi kegelapan pekat manakah yang lahir dari Chaos dan menjadi ayah dari Aether dan Hemera bersama Nyx?',
+    questionEn: 'Which personification of deep darkness was born from Chaos and fathered Aether and Hemera with Nyx?',
+    options: [
+      'Tartarus',
+      'Erebus',
+      'Chaos',
+      'Uranus',
+    ],
+    optionsEn: [
+      'Tartarus',
+      'Erebus',
+      'Chaos',
+      'Uranus',
+    ],
+    correctIndex: 1,
+  ),
+  // 65
+  QuizQuestion(
+    question: 'Dewa Titan manakah yang mengendarai kereta emas melintasi langit setiap hari membawa matahari dari timur ke barat?',
+    questionEn: 'Which Titan sun god drives a golden chariot across the sky each day, carrying the sun from east to west?',
+    options: [
+      'Apollo',
+      'Hyperion',
+      'Atlas',
+      'Helios',
+    ],
+    optionsEn: [
+      'Apollo',
+      'Hyperion',
+      'Atlas',
+      'Helios',
+    ],
+    correctIndex: 3,
+  ),
+  // 66
+  QuizQuestion(
+    question: 'Dewi bulan Titan manakah yang jatuh cinta kepada gembala fana Endymion, yang diberi tidur abadi agar tetap muda selamanya?',
+    questionEn: 'Which Titan moon goddess fell in love with the mortal shepherd Endymion, who was granted eternal sleep to remain forever young?',
+    options: [
+      'Selene',
+      'Artemis',
+      'Theia',
+      'Nyx',
+    ],
+    optionsEn: [
+      'Selene',
+      'Artemis',
+      'Theia',
+      'Nyx',
+    ],
+    correctIndex: 0,
+  ),
+  // 67
+  QuizQuestion(
+    question: 'Dewa tidur manakah yang tinggal di gua dekat sungai Lethe dan pernah menidurkan Zeus atas permintaan Hera?',
+    questionEn: 'Which god of sleep dwells in a cave near the river Lethe and once lulled Zeus to sleep at Hera\'s request?',
+    options: [
+      'Thanatos',
+      'Morpheus',
+      'Hypnos',
+      'Somnus',
+    ],
+    optionsEn: [
+      'Thanatos',
+      'Morpheus',
+      'Hypnos',
+      'Somnus',
+    ],
+    correctIndex: 2,
+  ),
+  // 68
+  QuizQuestion(
+    question: 'Siapakah istri Poseidon yang menjadi ratu lautan setelah dibujuk kembali oleh seekor lumba-lumba?',
+    questionEn: 'Who is the wife of Poseidon who became queen of the sea after being persuaded to return by a dolphin?',
+    options: [
+      'Thetis',
+      'Amphitrite',
+      'Tethys',
+      'Doris',
+    ],
+    optionsEn: [
+      'Thetis',
+      'Amphitrite',
+      'Tethys',
+      'Doris',
+    ],
+    correctIndex: 1,
+  ),
+  // 69
+  QuizQuestion(
+    question: 'Putra Poseidon dan Amphitrite manakah yang meniup terompet kerang untuk menenangkan atau membangkitkan ombak?',
+    questionEn: 'Which son of Poseidon and Amphitrite blows a conch-shell trumpet to calm or stir the waves?',
+    options: [
+      'Nereus',
+      'Proteus',
+      'Glaucus',
+      'Triton',
+    ],
+    optionsEn: [
+      'Nereus',
+      'Proteus',
+      'Glaucus',
+      'Triton',
+    ],
+    correctIndex: 3,
+  ),
+  // 70
+  QuizQuestion(
+    question: 'Dewa laut tua yang bijaksana dan jujur, ayah dari lima puluh Nereid, yang pernah ditahan erat-erat oleh Heracles agar memberi petunjuk?',
+    questionEn: 'The wise and honest old sea god, father of fifty Nereids, whom Heracles once had to hold tightly to force him to reveal directions?',
+    options: [
+      'Nereus',
+      'Triton',
+      'Proteus',
+      'Phorcys',
+    ],
+    optionsEn: [
+      'Nereus',
+      'Triton',
+      'Proteus',
+      'Phorcys',
+    ],
+    correctIndex: 0,
+  ),
+  // 71
+  QuizQuestion(
+    question: 'Chimera, monster berkepala singa, bertubuh kambing, dan berekor ular yang menyemburkan api, akhirnya dikalahkan oleh pahlawan mana yang menunggangi Pegasus?',
+    questionEn: 'The Chimera, a fire-breathing monster with the head of a lion, body of a goat, and tail of a serpent, was finally defeated by which hero riding Pegasus?',
+    options: [
+      'Perseus',
+      'Heracles',
+      'Bellerophon',
+      'Theseus',
+    ],
+    optionsEn: [
+      'Perseus',
+      'Heracles',
+      'Bellerophon',
+      'Theseus',
+    ],
+    correctIndex: 2,
+  ),
+  // 72
+  QuizQuestion(
+    question: 'Sphinx, monster berbadan singa, bersayap elang, dan berkepala wanita yang menjaga jalan menuju Thebes, dikalahkan oleh pahlawan mana yang berhasil memecahkan teka-tekinya?',
+    questionEn: 'The Sphinx, a monster with the body of a lion, wings of an eagle, and head of a woman, guarded the road to Thebes and was defeated by which hero who solved its riddle?',
+    options: [
+      'Theseus',
+      'Oedipus',
+      'Perseus',
+      'Cadmus',
+    ],
+    optionsEn: [
+      'Theseus',
+      'Oedipus',
+      'Perseus',
+      'Cadmus',
+    ],
+    correctIndex: 1,
+  ),
+  // 73
+  QuizQuestion(
+    question: 'Sungai manakah yang menjadi tempat sumpah paling suci bagi para dewa dan tempat Thetis mencelupkan Achilles agar kebal terhadap senjata?',
+    questionEn: 'Which river served as the site of the gods\' most sacred oaths, and where Thetis dipped Achilles to make him invulnerable to weapons?',
+    options: [
+      'Sungai Lethe',
+      'Sungai Acheron',
+      'Sungai Phlegethon',
+      'Sungai Styx',
+    ],
+    optionsEn: [
+      'The River Lethe',
+      'The River Acheron',
+      'The River Phlegethon',
+      'The River Styx',
+    ],
+    correctIndex: 3,
+  ),
+  // 74
+  QuizQuestion(
+    question: 'Bagaimana Zeus, Poseidon, dan Hades menentukan siapa yang menguasai langit, laut, dan dunia bawah setelah mengalahkan para Titan?',
+    questionEn: 'How did Zeus, Poseidon, and Hades decide who would rule the sky, sea, and underworld after defeating the Titans?',
+    options: [
+      'Dengan undian yang adil',
+      'Dengan pertarungan',
+      'Berdasarkan usia',
+      'Ditentukan oleh Gaia',
+    ],
+    optionsEn: [
+      'By a fair drawing of lots',
+      'By combat',
+      'By seniority',
+      'Decided by Gaia',
+    ],
+    correctIndex: 0,
+  ),
+  // 75
+  QuizQuestion(
+    question: 'Berapa lama Titanomakhia, perang antara para dewa Olympus dan para Titan, berlangsung?',
+    questionEn: 'How long did the Titanomachy, the war between the Olympian gods and the Titans, last?',
+    options: [
+      'Satu tahun',
+      'Seratus tahun',
+      'Sepuluh tahun',
+      'Tiga hari',
+    ],
+    optionsEn: [
+      'One year',
+      'A hundred years',
+      'Ten years',
+      'Three days',
+    ],
+    correctIndex: 2,
+  ),
+  // 76
+  QuizQuestion(
+    question: 'Apa yang membuat Persephone terikat untuk menghabiskan sebagian tahun di Dunia Bawah setiap tahunnya?',
+    questionEn: 'What binds Persephone to spend part of every year in the Underworld?',
+    options: [
+      'Ia menikahi Hades secara sah',
+      'Ia memakan biji delima dari Hades',
+      'Zeus mengutuknya',
+      'Ia kalah dalam sebuah taruhan',
+    ],
+    optionsEn: [
+      'She legally married Hades',
+      'She ate pomegranate seeds from Hades',
+      'Zeus cursed her',
+      'She lost a wager',
+    ],
+    correctIndex: 1,
+  ),
+  // 77
+  QuizQuestion(
+    question: 'Dewi manakah yang dipilih Paris sebagai yang tercantik setelah menjanjikan cinta Helen kepadanya?',
+    questionEn: 'Which goddess did Paris choose as the fairest after she promised him the love of Helen?',
+    options: [
+      'Hera',
+      'Athena',
+      'Artemis',
+      'Aphrodite',
+    ],
+    optionsEn: [
+      'Hera',
+      'Athena',
+      'Artemis',
+      'Aphrodite',
+    ],
+    correctIndex: 3,
   ),
 ];

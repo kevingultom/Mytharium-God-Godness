@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../models/history_model.dart';
 import '../l10n/language_provider.dart';
 import '../widgets/god_card.dart';
 import '../services/sound_service.dart';
+import '../services/reading_service.dart';
 
 /// Book-style, paginated reader for a single [MythStory].
 ///
@@ -24,14 +25,27 @@ class HistoryStoryDetailScreen extends StatefulWidget {
 class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
   final PageController _controller = PageController();
   int _page = 0;
+  late bool _read;
 
   static const _gold = Color(0xFFC9A227);
   static const _textShadow = [Shadow(color: Colors.black, blurRadius: 8)];
 
   @override
+  void initState() {
+    super.initState();
+    _read = ReadingService.isStoryRead(widget.story.id);
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  Future<void> _toggleRead() async {
+    SoundService.playClick();
+    final nowRead = await ReadingService.toggleStoryRead(widget.story);
+    if (mounted) setState(() => _read = nowRead);
   }
 
   void _goTo(int page, int total) {
@@ -153,7 +167,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
             child: Center(
               child: Text(
                 '${_page + 1} / $total',
-                style: GoogleFonts.cinzel(
+                style: AppFonts.cinzel(
                   color: _gold,
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
@@ -162,14 +176,61 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
               ),
             ),
           ),
-          _navButton(
-            label: lang == 'id' ? 'Berikutnya' : 'Next',
-            icon: Icons.chevron_right_rounded,
-            enabled: canNext,
-            onTap: () => _goTo(_page + 1, total),
-            iconLeft: false,
-          ),
+          // On the final page, the "Next" slot becomes the Mark-as-read button.
+          canNext
+              ? _navButton(
+                  label: lang == 'id' ? 'Berikutnya' : 'Next',
+                  icon: Icons.chevron_right_rounded,
+                  enabled: true,
+                  onTap: () => _goTo(_page + 1, total),
+                  iconLeft: false,
+                )
+              : _buildMarkReadButton(lang),
         ],
+      ),
+    );
+  }
+
+  Widget _buildMarkReadButton(String lang) {
+    final id = lang == 'id';
+    const readGreen = Color(0xFF66BB6A);
+    return GestureDetector(
+      onTap: _toggleRead,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          color: _read
+              ? readGreen.withValues(alpha: 0.16)
+              : Colors.black.withValues(alpha: 0.5),
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+              color: _read
+                  ? readGreen.withValues(alpha: 0.7)
+                  : _gold.withValues(alpha: 0.5)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              _read
+                  ? (id ? 'Sudah Dibaca' : 'Read')
+                  : (id ? 'Tandai Dibaca' : 'Mark Read'),
+              style: TextStyle(
+                color: _read ? readGreen : Colors.white,
+                fontSize: 12.5,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(width: 4),
+            Icon(
+              _read
+                  ? Icons.check_circle_rounded
+                  : Icons.check_circle_outline_rounded,
+              color: _read ? readGreen : _gold,
+              size: 18,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -272,7 +333,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 12),
         Text(
           s.localizedTitle(lang),
-          style: GoogleFonts.cinzel(
+          style: AppFonts.cinzel(
             color: Colors.white,
             fontSize: 26,
             fontWeight: FontWeight.w800,
@@ -294,6 +355,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 16),
         Text(
           s.localizedSummary(lang),
+          textAlign: TextAlign.justify,
           style: const TextStyle(
             color: Color(0xFFF0EADD),
             fontSize: 14.5,
@@ -318,7 +380,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
       children: [
         Text(
           '${lang == 'id' ? 'BAB' : 'CHAPTER'} ${index + 1} / $total',
-          style: GoogleFonts.cinzel(
+          style: AppFonts.cinzel(
             color: color,
             fontSize: 10.5,
             fontWeight: FontWeight.w700,
@@ -329,7 +391,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 8),
         Text(
           ch.localizedHeading(lang),
-          style: GoogleFonts.cinzel(
+          style: AppFonts.cinzel(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.w800,
@@ -340,6 +402,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 14),
         Text(
           ch.localizedBody(lang),
+          textAlign: TextAlign.justify,
           style: const TextStyle(
             color: Color(0xFFF0EADD),
             fontSize: 14.5,
@@ -376,6 +439,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 12),
         Text(
           s.localizedImpact(lang),
+          textAlign: TextAlign.justify,
           style: const TextStyle(
             color: Color(0xFFF0EADD),
             fontSize: 14.5,
@@ -388,6 +452,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 12),
         Text(
           s.localizedMeaning(lang),
+          textAlign: TextAlign.justify,
           style: const TextStyle(
             color: Color(0xFFF0EADD),
             fontSize: 14.5,
@@ -411,7 +476,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(width: 8),
         Text(
           text.toUpperCase(),
-          style: GoogleFonts.cinzel(
+          style: AppFonts.cinzel(
             color: Colors.white,
             fontSize: 15,
             fontWeight: FontWeight.w800,
@@ -501,6 +566,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
               padding: const EdgeInsets.only(top: 3),
               child: Text(
                 text,
+                textAlign: TextAlign.justify,
                 style: const TextStyle(
                   color: Color(0xFFF0EADD),
                   fontSize: 13.5,

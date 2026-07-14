@@ -37,7 +37,7 @@ final List<QuizQuestion> nordicQuizData = [
   QuizQuestion(
     question: 'Nama ayah dari Ymir dalam kosmologi Nordik?',
     questionEn: 'What is the name of Ymir\'s father in Norse cosmology?',
-    options: ['Buri', 'Audhumla tidak memiliki suami', 'Ymir tidak memiliki ayah — ia lahir dari冰火', 'Naglfar'],
+    options: ['Buri', 'Audhumla tidak memiliki suami', 'Ymir tidak memiliki ayah — ia lahir dari es dan api', 'Naglfar'],
     optionsEn: ['Buri', 'Audhumla had no husband', 'Ymir had no father — born from fire and ice', 'Naglfar'],
     correctIndex: 2,
   ),
@@ -399,6 +399,94 @@ final List<QuizQuestion> nordicQuizData = [
     questionEn: 'Who connected the Mead of Poetry with Kvasir?',
     options: ['Gagnrâd', 'Baugi dan Suttung', 'Odin dan Kvasir', 'Mimir'],
     optionsEn: ['Gagnrâd', 'Baugi and Suttung', 'Odin and Kvasir', 'Mimir'],
+    correctIndex: 1,
+  ),
+  // 51
+  QuizQuestion(
+    question: 'Istri Thor manakah yang terkenal dengan rambut emasnya yang melambangkan ladang gandum, sebelum dipotong oleh Loki?',
+    questionEn: 'Which wife of Thor was famed for her golden hair symbolizing fields of grain, before Loki cut it off?',
+    options: ['Freya', 'Idun', 'Sif', 'Frigg'],
+    optionsEn: ['Freya', 'Idun', 'Sif', 'Frigg'],
+    correctIndex: 2,
+  ),
+  // 52
+  QuizQuestion(
+    question: 'Siapakah dua saudara Odin yang bersamanya menciptakan manusia pertama, Ask dan Embla, dari sepasang batang kayu?',
+    questionEn: 'Who are Odin\'s two brothers who together with him created the first humans, Ask and Embla, from a pair of tree trunks?',
+    options: ['Vili dan Vé', 'Baldur dan Hodr', 'Hoenir dan Lodur', 'Mimir dan Kvasir'],
+    optionsEn: ['Vili and Vé', 'Baldur and Hodr', 'Hoenir and Lodur', 'Mimir and Kvasir'],
+    correctIndex: 0,
+  ),
+  // 53
+  QuizQuestion(
+    question: 'Raksasa terkuat dengan kepala dan hati dari batu keras ini berduel melawan Thor hingga kepalanya hancur oleh Mjolnir. Siapakah dia?',
+    questionEn: 'This strongest giant, with a head and heart of solid stone, dueled Thor until his head was shattered by Mjolnir. Who is he?',
+    options: ['Thrym', 'Surtr', 'Ymir', 'Hrungnir'],
+    optionsEn: ['Thrym', 'Surtr', 'Ymir', 'Hrungnir'],
+    correctIndex: 3,
+  ),
+  // 54
+  QuizQuestion(
+    question: 'Apa sebutan untuk mayat hidup dalam mitologi Nordik yang bangkit dari kuburnya untuk menjaga harta karunnya?',
+    questionEn: 'What is the term for the undead in Norse mythology that rises from its grave to guard its treasure hoard?',
+    options: ['Einherjar', 'Draugr', 'Valkyrie', 'Jotun'],
+    optionsEn: ['Einherjar', 'Draugr', 'Valkyrie', 'Jotun'],
+    correctIndex: 1,
+  ),
+  // 55
+  QuizQuestion(
+    question: 'Siapakah para prajurit perempuan pelayan Odin yang terbang di atas medan perang untuk memilih pahlawan gugur yang paling gagah menuju Valhalla?',
+    questionEn: 'Who are the warrior maidens serving Odin who fly over the battlefield to choose the bravest fallen heroes for Valhalla?',
+    options: ['Valkyrie', 'Norns', 'Disir', 'Idis'],
+    optionsEn: ['Valkyrie', 'Norns', 'Disir', 'Idis'],
+    correctIndex: 0,
+  ),
+  // 56
+  QuizQuestion(
+    question: 'Apa nama jembatan pelangi yang menghubungkan Asgard dengan Midgard dan dijaga oleh Heimdall?',
+    questionEn: 'What is the name of the rainbow bridge connecting Asgard with Midgard, guarded by Heimdall?',
+    options: ['Gjallarbru', 'Yggdrasil', 'Bifröst', 'Gnipahellir'],
+    optionsEn: ['Gjallarbru', 'Yggdrasil', 'Bifröst', 'Gnipahellir'],
+    correctIndex: 2,
+  ),
+  // 57
+  QuizQuestion(
+    question: 'Siapakah raja raksasa yang mencuri palu Mjolnir milik Thor dan menuntut Freyja sebagai istri untuk mengembalikannya?',
+    questionEn: 'Which giant king stole Thor\'s hammer Mjolnir and demanded Freyja as his bride in exchange for its return?',
+    options: ['Hrungnir', 'Thrym', 'Surtr', 'Skrymir'],
+    optionsEn: ['Hrungnir', 'Thrym', 'Surtr', 'Skrymir'],
+    correctIndex: 1,
+  ),
+  // 58
+  QuizQuestion(
+    question: 'Bagaimana cara Thor akhirnya berhasil merebut kembali Mjolnir dari Thrym?',
+    questionEn: 'How did Thor finally manage to seize Mjolnir back from Thrym?',
+    options: ['Menantang duel langsung', 'Mengirim Loki untuk mencurinya kembali', 'Meminta bantuan Odin', 'Menyamar sebagai pengantin perempuan Freyja'],
+    optionsEn: ['By challenging him to a direct duel', 'By sending Loki to steal it back', 'By asking Odin for help', 'By disguising himself as the bride Freyja'],
+    correctIndex: 3,
+  ),
+  // 59
+  QuizQuestion(
+    question: 'Bagaimana para dewa akhirnya menghukum Loki setelah kematian Baldur?',
+    questionEn: 'How did the gods finally punish Loki after Baldur\'s death?',
+    options: ['Membelenggunya di bawah ular berbisa dengan usus putranya sendiri', 'Mengasingkannya ke Jotunheim selamanya', 'Melemparnya ke dalam Ginnungagap', 'Mengubahnya menjadi batu'],
+    optionsEn: ['They bound him beneath a venomous serpent with his own son\'s entrails', 'They exiled him to Jotunheim forever', 'They cast him into Ginnungagap', 'They turned him to stone'],
+    correctIndex: 0,
+  ),
+  // 60
+  QuizQuestion(
+    question: 'Apa yang dikorbankan Tyr sebagai jaminan saat para dewa membelenggu serigala Fenrir dengan tali gaib Gleipnir?',
+    questionEn: 'What did Tyr sacrifice as a pledge when the gods bound the wolf Fenrir with the magical fetter Gleipnir?',
+    options: ['Matanya', 'Nyawanya', 'Tangan kanannya', 'Palunya'],
+    optionsEn: ['His eye', 'His life', 'His right hand', 'His hammer'],
+    correctIndex: 2,
+  ),
+  // 61
+  QuizQuestion(
+    question: 'Bagaimana Perang Aesir-Vanir, perang pertama di dunia, akhirnya berakhir?',
+    questionEn: 'How did the Aesir-Vanir War, the first war in the world, ultimately end?',
+    options: ['Kemenangan total Aesir', 'Gencatan senjata dan pertukaran sandera', 'Kemenangan total Vanir', 'Kehancuran kedua belah pihak'],
+    optionsEn: ['Total Aesir victory', 'A truce and exchange of hostages', 'Total Vanir victory', 'Mutual destruction of both sides'],
     correctIndex: 1,
   ),
 ];

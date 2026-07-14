@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../data/gods_data.dart';
 import '../models/god_model.dart';
 import '../widgets/god_card.dart';
@@ -469,7 +469,7 @@ class QuizResultScreen extends StatelessWidget {
                   const SizedBox(width: 14),
                   Text(
                     titleText,
-                    style: GoogleFonts.cinzel(
+                    style: AppFonts.cinzel(
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
                       color: const Color(0xFFB07800),

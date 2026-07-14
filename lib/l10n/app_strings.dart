@@ -10,7 +10,7 @@ class AppStrings {
   static const splashEnter = {'id': 'MASUK', 'en': 'ENTER'};
 
   // -- Home --
-  static const homeTitle = 'MYTHOPEDIA';
+  static const homeTitle = 'MYTHARIUM';
   static const homeSubtitle = {'id': 'Jelajahi mitologi dunia', 'en': 'Explore world mythologies'};
   static const searchHint = {'id': 'Cari nama dewa, kekuatan...', 'en': 'Search god name, powers...'};
   static const resultCount = {'id': 'dewa', 'en': 'gods'};

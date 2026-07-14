@@ -1,6 +1,6 @@
 {
-    "name": "mythopedia",
-    "short_name": "mythopedia",
+    "name": "mytharium",
+    "short_name": "mytharium",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,6 +1,6 @@
-# Mythopedia
+# Mytharium
 
-Mythopedia is a Flutter app for exploring gods and deities from world mythologies. It combines an encyclopedic god database, narrative mythological history, and interactive quiz and battle features, available in both Indonesian and English.
+Mytharium is a Flutter app for exploring gods and deities from world mythologies. It combines an encyclopedic god database, narrative mythological history, and interactive quiz and battle features, available in both Indonesian and English.
 
 ## Features
 

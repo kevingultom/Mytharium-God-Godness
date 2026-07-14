@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../l10n/language_provider.dart';
 import '../services/sound_service.dart';
 
@@ -93,7 +93,7 @@ class QuizTriviaResultScreen extends StatelessWidget {
                   children: [
                     Text(
                       '$pct%',
-                      style: GoogleFonts.cinzel(
+                      style: AppFonts.cinzel(
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
                         color: color,
@@ -112,7 +112,7 @@ class QuizTriviaResultScreen extends StatelessWidget {
               const SizedBox(height: 24),
               Text(
                 _genreTitle,
-                style: GoogleFonts.cinzel(
+                style: AppFonts.cinzel(
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
                   color: color,
@@ -150,7 +150,7 @@ class QuizTriviaResultScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text(
                     lang == 'id' ? 'COBA LAGI' : 'TRY AGAIN',
-                    style: GoogleFonts.cinzel(
+                    style: AppFonts.cinzel(
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                       color: Colors.white,
