@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mytharium/main.dart';
-import 'package:mytharium/l10n/language_provider.dart';
-import 'package:mytharium/services/onboarding_service.dart';
+import 'package:mythera/main.dart';
+import 'package:mythera/l10n/language_provider.dart';
+import 'package:mythera/services/onboarding_service.dart';
 
 void main() {
   testWidgets('First-run onboarding: pick realm + god, then enter the app',
@@ -22,7 +22,7 @@ void main() {
     await lang.init();
 
     await tester.pumpWidget(
-      LanguageProvider(notifier: lang, child: const MythariumApp()),
+      LanguageProvider(notifier: lang, child: const MytheraApp()),
     );
     await tester.pumpAndSettle();
 
@@ -64,8 +64,8 @@ void main() {
     await tester.pumpAndSettle();
 
     // Page 7 — Ready → enter the app.
-    expect(find.text('Enter Mytharium'), findsOneWidget);
-    await tester.tap(find.text('Enter Mytharium'));
+    expect(find.text('Enter Mythera'), findsOneWidget);
+    await tester.tap(find.text('Enter Mythera'));
     await tester.pumpAndSettle();
 
     expect(tester.takeException(), isNull, reason: 'Finishing onboarding threw');

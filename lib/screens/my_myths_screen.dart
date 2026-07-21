@@ -3,7 +3,10 @@ import '../data/gods_data.dart';
 import '../data/history_data.dart';
 import '../l10n/language_provider.dart';
 import '../services/reading_service.dart';
+import '../services/sound_service.dart';
 import '../widgets/god_card.dart';
+import 'god_detail_screen.dart';
+import 'history_story_detail_screen.dart';
 
 /// The user's reading "Library": how many god cards and myth stories they've
 /// read (per pantheon), a day-based reading streak, and their recent reads.
@@ -22,7 +25,8 @@ class MyMythsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final id = LanguageProvider.of(context).value == 'id';
+    final lang = LanguageProvider.of(context).value;
+    final id = lang == 'id';
 
     // Per-pantheon totals & read counts.
     final godTotals = <String, int>{};
@@ -45,28 +49,28 @@ class MyMythsScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+          padding: const EdgeInsets.fromLTRB(20, 10, 20, 32),
           children: [
             _buildHeader(context, id),
             const SizedBox(height: 18),
             _buildStatsRow(id),
             const SizedBox(height: 26),
 
-            _sectionLabel(id ? 'KOLEKSI DEWA' : 'GOD COLLECTION'),
+            _sectionLabel(localize(lang, 'KOLEKSI DEWA', 'GOD COLLECTION')),
             const SizedBox(height: 12),
             for (final v in _verses)
               _progressRow(v, godRead[v] ?? 0, godTotals[v] ?? 0),
 
             const SizedBox(height: 26),
-            _sectionLabel(id ? 'KISAH MITOLOGI' : 'MYTH STORIES'),
+            _sectionLabel(localize(lang, 'KISAH MITOLOGI', 'MYTH STORIES')),
             const SizedBox(height: 12),
             for (final v in versesWithStories)
               _progressRow(v, storyRead[v] ?? 0, storyTotals[v] ?? 0),
 
             const SizedBox(height: 26),
-            _sectionLabel(id ? 'BARU DIBACA' : 'RECENTLY READ'),
+            _sectionLabel(localize(lang, 'BARU DIBACA', 'RECENTLY READ')),
             const SizedBox(height: 12),
-            _buildRecent(id),
+            _buildRecent(context, id),
           ],
         ),
       ),
@@ -74,24 +78,31 @@ class MyMythsScreen extends StatelessWidget {
   }
 
   Widget _buildHeader(BuildContext context, bool id) {
-    return Row(
+    final lang = id ? 'id' : 'en';
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         GestureDetector(
           onTap: () => Navigator.pop(context),
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: const Color(0xFF1A1A1A),
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: const Color(0xFF333333)),
-            ),
-            child: const Icon(Icons.arrow_back_ios_new_rounded,
-                color: Colors.white, size: 16),
+          child: const Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.arrow_back_rounded, color: Colors.white, size: 22),
+              SizedBox(width: 4),
+              Text(
+                'Back',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
           ),
         ),
-        const SizedBox(width: 14),
+        const SizedBox(height: 14),
         Text(
-          id ? 'My Myths' : 'My Myths',
+          localize(lang, 'My Myths', 'My Myths'),
           style: const TextStyle(
             color: Colors.white,
             fontSize: 26,
@@ -103,6 +114,7 @@ class MyMythsScreen extends StatelessWidget {
   }
 
   Widget _buildStatsRow(bool id) {
+    final lang = id ? 'id' : 'en';
     final streak = ReadingService.streak;
     final gods = ReadingService.godsReadCount;
     final stories = ReadingService.storiesReadCount;
@@ -113,19 +125,19 @@ class MyMythsScreen extends StatelessWidget {
         _statBadge(
           Icons.local_fire_department_rounded,
           streak > 0
-              ? (id ? '$streak hari beruntun' : '$streak day streak')
-              : (id ? 'Belum ada streak' : 'No streak yet'),
+              ? (localize(lang, '$streak hari beruntun', '$streak day streak'))
+              : (localize(lang, 'Belum ada streak', 'No streak yet')),
           const Color(0xFFFF8A00),
           highlighted: streak > 0,
         ),
         _statBadge(
           Icons.auto_awesome_rounded,
-          id ? '$gods dewa dibaca' : '$gods gods read',
+          localize(lang, '$gods dewa dibaca', '$gods gods read'),
           const Color(0xFFB07800),
         ),
         _statBadge(
           Icons.auto_stories_rounded,
-          id ? '$stories kisah dibaca' : '$stories stories read',
+          localize(lang, '$stories kisah dibaca', '$stories stories read'),
           const Color(0xFFB07800),
         ),
       ],
@@ -222,7 +234,8 @@ class MyMythsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildRecent(bool id) {
+  Widget _buildRecent(BuildContext context, bool id) {
+    final lang = id ? 'id' : 'en';
     final recent = ReadingService.recent;
     if (recent.isEmpty) {
       return Container(
@@ -239,9 +252,7 @@ class MyMythsScreen extends StatelessWidget {
                 color: Color(0xFF555555), size: 32),
             const SizedBox(height: 10),
             Text(
-              id
-                  ? 'Belum ada yang dibaca.\nTandai kartu dewa atau kisah "sudah dibaca" untuk mulai.'
-                  : 'Nothing read yet.\nMark a god card or story as read to get started.',
+              localize(lang, 'Belum ada yang dibaca.\nTandai kartu dewa atau kisah "sudah dibaca" untuk mulai.', 'Nothing read yet.\nMark a god card or story as read to get started.'),
               textAlign: TextAlign.center,
               style: const TextStyle(
                   color: Color(0xFF777777), fontSize: 12.5, height: 1.5),
@@ -250,95 +261,135 @@ class MyMythsScreen extends StatelessWidget {
         ),
       );
     }
+    // Flat text list: bold title, then a subtitle row (main character /
+    // god title + a muted verse chip + time), divided by thin lines. Stays
+    // compact even with many reads since each item is just two lines.
     return Column(
-      children: recent.map((r) => _recentItem(r, id)).toList(),
+      children: [
+        for (int i = 0; i < recent.length; i++) ...[
+          _recentItem(context, recent[i], lang, id),
+          if (i < recent.length - 1)
+            const Divider(color: Color(0xFF1E1E1E), height: 1),
+        ],
+      ],
     );
   }
 
-  Widget _recentItem(RecentRead r, bool id) {
-    final color = GodCard.mythologyColor(r.verse);
-    final isStory = r.type == 'story';
-    return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: const Color(0xFF111111),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF222222)),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 38,
-            height: 38,
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.14),
-              shape: BoxShape.circle,
+  Widget _recentItem(
+      BuildContext context, RecentRead r, String lang, bool id) {
+    final subtitle = _recentSubtitle(r, lang);
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () => _openRecent(context, r),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              r.name,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+              ),
             ),
-            child: Icon(
-              isStory ? Icons.auto_stories_rounded : Icons.person_rounded,
-              color: color,
-              size: 19,
-            ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            const SizedBox(height: 6),
+            Row(
               children: [
-                Text(
-                  r.name,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
+                if (subtitle.isNotEmpty)
+                  Flexible(
+                    child: Text(
+                      subtitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(color: Colors.white, fontSize: 14),
+                    ),
+                  ),
+                if (subtitle.isNotEmpty) const SizedBox(width: 8),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 9, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF262626),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(
+                    r.verse,
+                    style: const TextStyle(
+                      color: Color(0xFFB0B0B0),
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
-                const SizedBox(height: 4),
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 7, vertical: 1.5),
-                      decoration: BoxDecoration(
-                        color: color.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        r.verse,
-                        style: TextStyle(
-                          color: color,
-                          fontSize: 9.5,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      _timeAgo(r.timestamp, id),
-                      style: const TextStyle(
-                          color: Color(0xFF777777), fontSize: 11),
-                    ),
-                  ],
+                const SizedBox(width: 10),
+                Text(
+                  _timeAgo(r.timestamp, id),
+                  style:
+                      const TextStyle(color: Color(0xFF777777), fontSize: 13),
                 ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
+  // Opens the god/story a recent-read entry points to. Silently ignores an
+  // entry whose underlying god/story is no longer in the data.
+  void _openRecent(BuildContext context, RecentRead r) {
+    Widget? page;
+    if (r.type == 'story') {
+      final matches = historyData.where((s) => s.id == r.id);
+      if (matches.isNotEmpty) {
+        page = HistoryStoryDetailScreen(story: matches.first);
+      }
+    } else {
+      final matches = godsData.where((g) => g.id == r.id);
+      if (matches.isNotEmpty) page = GodDetailScreen(god: matches.first);
+    }
+    if (page == null) return;
+    SoundService.playClick();
+    Navigator.push(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => page!,
+        transitionsBuilder: (_, anim, __, child) =>
+            FadeTransition(opacity: anim, child: child),
+        transitionDuration: const Duration(milliseconds: 300),
+      ),
+    );
+  }
+
+  // Second line under a recent-read title: the story's lead character or the
+  // god's epithet, looked up live so it follows the current language.
+  String _recentSubtitle(RecentRead r, String lang) {
+    if (r.type == 'story') {
+      final matches = historyData.where((s) => s.id == r.id);
+      if (matches.isEmpty) return '';
+      final chars = matches.first.localizedCharacters(lang);
+      if (chars.isEmpty) return '';
+      return chars.first.split(',').first.trim();
+    } else {
+      final matches = godsData.where((g) => g.id == r.id);
+      if (matches.isEmpty) return '';
+      return matches.first.localizedTitle(lang);
+    }
+  }
+
   String _timeAgo(int ts, bool id) {
+    final lang = id ? 'id' : 'en';
     final diff = DateTime.now().millisecondsSinceEpoch - ts;
     final mins = diff ~/ 60000;
-    if (mins < 1) return id ? 'baru saja' : 'just now';
-    if (mins < 60) return id ? '$mins mnt lalu' : '${mins}m ago';
+    if (mins < 1) return localize(lang, 'baru saja', 'just now');
+    if (mins < 60) return localize(lang, '$mins mnt lalu', '${mins}m ago');
     final hours = mins ~/ 60;
-    if (hours < 24) return id ? '$hours jam lalu' : '${hours}h ago';
+    if (hours < 24) return localize(lang, '$hours jam lalu', '${hours}h ago');
     final days = hours ~/ 24;
-    return id ? '$days hari lalu' : '${days}d ago';
+    return localize(lang, '$days hari lalu', '${days}d ago');
   }
 }

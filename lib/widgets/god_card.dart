@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utils/app_fonts.dart';
 import '../models/god_model.dart';
-import '../screens/detail_screen.dart';
+import '../screens/god_detail_screen.dart';
 import '../l10n/language_provider.dart';
 import '../l10n/app_strings.dart';
 import '../services/sound_service.dart';
@@ -12,6 +12,7 @@ class GodCard extends StatefulWidget {
   final Animation<double> entranceAnim;
   final VoidCallback onToggle;
   final VoidCallback onReturn;
+  final bool showInfoIcon;
 
   const GodCard({
     super.key,
@@ -20,6 +21,7 @@ class GodCard extends StatefulWidget {
     required this.entranceAnim,
     required this.onToggle,
     required this.onReturn,
+    this.showInfoIcon = true,
   });
 
   static Color mythologyColor(String mythology) {
@@ -47,7 +49,7 @@ class GodCard extends StatefulWidget {
     FontWeight fontWeight = FontWeight.w700,
     Color? color,
     List<Shadow>? shadows,
-    letterSpacing,
+    double? letterSpacing,
   }) {
     switch (mythology) {
       case 'Greek':
@@ -150,8 +152,7 @@ class _GodCardState extends State<GodCard> {
     await Navigator.push(
       context,
       PageRouteBuilder(
-        pageBuilder: (_, __, ___) =>
-            DetailScreen(god: widget.god, onReturn: widget.onReturn),
+        pageBuilder: (_, __, ___) => GodDetailScreen(god: widget.god),
         transitionsBuilder: (_, anim, __, child) => FadeTransition(
           opacity: anim,
           child: child,
@@ -202,6 +203,26 @@ class _GodCardState extends State<GodCard> {
                           ),
                         ),
                       ),
+                      if (widget.showInfoIcon)
+                        Positioned(
+                          top: 12,
+                          right: 12,
+                          child: GestureDetector(
+                            onTap: _navigateToDetail,
+                            child: Container(
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: Colors.black.withValues(alpha: 0.5),
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                Icons.info_outline,
+                                color: Colors.white70,
+                                size: 20,
+                              ),
+                            ),
+                          ),
+                        ),
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 16.0, vertical: 16.0),
@@ -256,9 +277,9 @@ class _GodCardState extends State<GodCard> {
                         const SizedBox(height: 16),
                         Center(
                           child: OutlinedButton(
-                            onPressed: _navigateToDetail,
+                            onPressed: widget.showInfoIcon ? widget.onToggle : _navigateToDetail,
                             style: OutlinedButton.styleFrom(
-                              side: const BorderSide(color: Colors.white),
+                              side: BorderSide(color: widget.showInfoIcon ? Colors.white24 : Colors.white),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
@@ -266,9 +287,11 @@ class _GodCardState extends State<GodCard> {
                                   horizontal: 32, vertical: 10),
                             ),
                             child: Text(
-                              AppStrings.get('learnMore', lang),
-                              style: const TextStyle(
-                                color: Colors.white,
+                              widget.showInfoIcon
+                                  ? localize(lang, 'Tutup', 'Close')
+                                  : AppStrings.get('learnMore', lang),
+                              style: TextStyle(
+                                color: widget.showInfoIcon ? Colors.white54 : Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

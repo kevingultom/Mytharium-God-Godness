@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mytharium/data/gods_data.dart';
-import 'package:mytharium/l10n/language_provider.dart';
-import 'package:mytharium/screens/detail_screen.dart';
-import 'package:mytharium/screens/my_myths_screen.dart';
-import 'package:mytharium/services/reading_service.dart';
+import 'package:mythera/data/gods_data.dart';
+import 'package:mythera/l10n/language_provider.dart';
+import 'package:mythera/screens/god_detail_screen.dart';
+import 'package:mythera/screens/my_myths_screen.dart';
+import 'package:mythera/services/reading_service.dart';
 
 Widget _wrap(Widget child, LanguageNotifier lang) =>
     LanguageProvider(notifier: lang, child: MaterialApp(home: child));
@@ -21,14 +21,19 @@ void main() {
     final god = godsData.first; // Zeus
     expect(ReadingService.isGodRead(god.id), isFalse);
 
-    await tester.pumpWidget(
-        _wrap(DetailScreen(god: god, onReturn: () {}), lang));
+    await tester.pumpWidget(_wrap(GodDetailScreen(god: god), lang));
     await tester.pumpAndSettle();
 
-    // The button sits at the bottom of the story content — scroll it in.
-    final markBtn = find.text('Tandai Sudah Dibaca'); // default lang is id
-    await tester.ensureVisible(markBtn);
+    // Open the god's own legend story card (default lang is id). The hero
+    // portrait above it can push the card below the fold, so scroll it into
+    // view first.
+    final storyCard = find.text('Legenda ${god.name}');
+    await tester.ensureVisible(storyCard);
     await tester.pumpAndSettle();
+    await tester.tap(storyCard);
+    await tester.pumpAndSettle();
+
+    final markBtn = find.text('Tandai Dibaca');
     expect(markBtn, findsOneWidget);
 
     await tester.tap(markBtn);

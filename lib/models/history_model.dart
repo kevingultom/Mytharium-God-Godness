@@ -24,6 +24,7 @@ class MythStory {
   final String id;
   final String mythology; // 'Greek' | 'Egyptian' | 'Nordic' | 'Hindu'
   final String icon; // emoji shown on the card
+  final String imageUrl; // optional illustration; '' falls back to icon-only
   final String title;
   final String titleEn;
   final String summary; // 1–2 sentence card summary
@@ -31,7 +32,7 @@ class MythStory {
   final String timeline; // subtitle / era shown under the title
   final String timelineEn;
   final List<StoryChapter> chapters; // main narrative, chapter by chapter
-  final List<String> characters; // "Nama — peran"
+  final List<String> characters; // "Nama, peran"
   final List<String> charactersEn;
   final List<String> chronology; // ordered chronological steps
   final List<String> chronologyEn;
@@ -44,6 +45,7 @@ class MythStory {
     required this.id,
     required this.mythology,
     required this.icon,
+    this.imageUrl = '',
     required this.title,
     required this.titleEn,
     required this.summary,

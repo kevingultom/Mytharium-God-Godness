@@ -5,12 +5,12 @@ import 'favorites_screen.dart';
 import 'my_myths_screen.dart';
 import 'mythic_pop_culture_screen.dart';
 import 'quiz_genre_screen.dart';
+import 'tier_screen.dart';
 
 class CodexScreen extends StatelessWidget {
   const CodexScreen({super.key});
 
   static const _cardBg = Color(0xFF111111);
-  static const _cardBorder = Color(0xFF1E1E1E);
 
   void _open(BuildContext context, Widget page) {
     SoundService.playClick();
@@ -27,7 +27,8 @@ class CodexScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final id = LanguageProvider.of(context).value == 'id';
+    final lang = LanguageProvider.of(context).value;
+    final id = lang == 'id';
 
     // A non-scrolling Column whose cards flex to fill the available height, so
     // the layout always fills one screen — bigger on large phones, still fits
@@ -36,7 +37,7 @@ class CodexScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+          padding: const EdgeInsets.fromLTRB(16, 10, 16, 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -56,8 +57,8 @@ class CodexScreen extends StatelessWidget {
                 child: _BigCard(
                   icon: Icons.favorite_rounded,
                   title: 'Favorites',
-                  subtitle: id ? 'Dewa yang kamu simpan' : 'Gods you have saved',
-                  imageAsset: 'assets/images/favorites_banner.jpg',
+                  subtitle: localize(lang, 'Dewa yang kamu simpan', 'Gods you have saved'),
+                  imageAsset: 'assets/images/favorite.webp',
                   onTap: () => _open(context, const FavoritesScreen()),
                 ),
               ),
@@ -68,8 +69,8 @@ class CodexScreen extends StatelessWidget {
                   icon: Icons.auto_stories_rounded,
                   title: 'My Myths',
                   subtitle:
-                      id ? 'Kisah yang sudah kamu baca' : 'Stories you have read',
-                  imageAsset: 'assets/images/my_myths_banner.jpg',
+                      localize(lang, 'Kisah yang sudah kamu baca', 'Stories you have read'),
+                  imageAsset: 'assets/images/book.webp',
                   onTap: () => _open(context, const MyMythsScreen()),
                 ),
               ),
@@ -79,10 +80,8 @@ class CodexScreen extends StatelessWidget {
                 child: _BigCard(
                   icon: Icons.movie_filter_rounded,
                   title: 'Mythic Pop Culture',
-                  subtitle: id
-                      ? 'Mitologi dalam film, game & budaya populer'
-                      : 'Mythology in films, games & pop culture',
-                  imageAsset: 'assets/images/mythic_pop_culture.jpg',
+                  subtitle: localize(lang, 'Mitologi dalam film, game & budaya populer', 'Mythology in films, games & pop culture'),
+                  imageAsset: 'assets/images/myth.webp',
                   onTap: () => _open(context, const MythicPopCultureScreen()),
                 ),
               ),
@@ -97,17 +96,20 @@ class CodexScreen extends StatelessWidget {
                         icon: Icons.quiz_rounded,
                         title: 'Quiz',
                         subtitle:
-                            id ? 'Uji pengetahuanmu' : 'Test your knowledge',
+                            localize(lang, 'Uji pengetahuanmu', 'Test your knowledge'),
                         onTap: () => _open(context, const QuizGenreScreen()),
+                        imageAsset: 'assets/images/quiz.webp',
                       ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
                       child: _SmallCard(
-                        icon: Icons.wallpaper_rounded,
-                        title: 'Wallpapers',
-                        subtitle: id ? 'Segera hadir' : 'Coming soon',
-                        onTap: null,
+                        icon: Icons.military_tech_rounded,
+                        title: 'Tier',
+                        subtitle: localize(
+                            lang, 'Peringkat kekuatan dewa', 'God power rankings'),
+                        onTap: () => _open(context, const TierScreen()),
+                        imageAsset: 'assets/images/tier.webp',
                       ),
                     ),
                   ],
@@ -151,7 +153,6 @@ class _BigCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: CodexScreen._cardBg,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: CodexScreen._cardBorder),
         ),
         clipBehavior: Clip.antiAlias,
         child: Stack(
@@ -236,13 +237,9 @@ class _SmallCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final VoidCallback? onTap;
+  final String? imageAsset;
 
-  const _SmallCard({
-    required this.icon,
-    required this.title,
-    required this.subtitle,
-    required this.onTap,
-  });
+  const _SmallCard({required this.icon, required this.title, required this.subtitle, required this.onTap, this.imageAsset});
 
   static const _gold = Color(0xFFB07800);
 
@@ -251,50 +248,73 @@ class _SmallCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(13),
         decoration: BoxDecoration(
           color: CodexScreen._cardBg,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-              color: onTap == null
-                  ? CodexScreen._cardBorder
-                  : _gold.withValues(alpha: 0.35)),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        clipBehavior: Clip.antiAlias,
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-            Container(
-              width: 34,
-              height: 34,
-              decoration: const BoxDecoration(
-                color: Color(0xFF1A1A1A),
-                shape: BoxShape.circle,
+            if (imageAsset != null)
+              Image.asset(
+                imageAsset!,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
               ),
-              child: Icon(icon, color: _gold, size: 17),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  title,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
+            if (imageAsset != null)
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.black.withValues(alpha: 0.88),
+                      Colors.black.withValues(alpha: 0.65),
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
                 ),
-                const SizedBox(height: 2),
-                Text(
-                  subtitle,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(color: Color(0xFF9CA3AF), fontSize: 11),
-                ),
-              ],
+              ),
+            Padding(
+              padding: const EdgeInsets.all(13),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 34,
+                    height: 34,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF1A1A1A),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(icon, color: _gold, size: 17),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        subtitle,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(color: Color(0xFF9CA3AF), fontSize: 11),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -312,11 +332,11 @@ class _SupportBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final lang = id ? 'id' : 'en';
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: _gold.withValues(alpha: 0.4)),
         gradient: LinearGradient(
           colors: [_gold.withValues(alpha: 0.35), _gold.withValues(alpha: 0.08)],
           begin: Alignment.topLeft,
@@ -342,7 +362,7 @@ class _SupportBanner extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  id ? 'Dukung pengembangan' : 'Support the development',
+                  localize(lang, 'Dukung pengembangan', 'Support the development'),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
@@ -353,9 +373,7 @@ class _SupportBanner extends StatelessWidget {
                 ),
                 const SizedBox(height: 3),
                 Text(
-                  id
-                      ? 'Bantu kami kembangkan fitur baru'
-                      : 'Help us build more myth features',
+                  localize(lang, 'Bantu kami kembangkan fitur baru', 'Help us build more myth features'),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(color: Color(0xFFB0B0B0), fontSize: 11.5),

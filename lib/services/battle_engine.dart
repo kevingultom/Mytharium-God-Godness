@@ -1,4 +1,6 @@
 import '../models/combatant.dart';
+import '../l10n/language_provider.dart';
+import '../data/god_tiers.dart';
 
 /// Bilingual short text pair.
 class _Bi {
@@ -24,8 +26,8 @@ class BattleFactor {
     required this.descEn,
   });
 
-  String title(String lang) => lang == 'id' ? titleId : titleEn;
-  String desc(String lang) => lang == 'id' ? descId : descEn;
+  String title(String lang) => localize(lang, titleId, titleEn);
+  String desc(String lang) => localize(lang, descId, descEn);
 }
 
 /// Result of a single god-vs-god battle.
@@ -48,7 +50,7 @@ class BattleResult {
     this.factors = const [],
   });
 
-  String explanation(String lang) => lang == 'id' ? explanationId : explanationEn;
+  String explanation(String lang) => localize(lang, explanationId, explanationEn);
 }
 
 /// Deterministic, mythology-grounded battle engine.
@@ -56,8 +58,12 @@ class BattleResult {
 /// A fight's outcome is driven by three layers, in priority order:
 /// 1. Canonical matchups — specific named victories attested in the actual
 ///    myths (e.g. Heracles beating the Hydra). These always follow the myth.
-/// 2. Status tier — a god's rank/authority within their pantheon
-///    (e.g. a king of the gods outranks a minor hero).
+/// 2. Status tier — a god's rank/authority within their pantheon. This is
+///    seeded from the same [GodTier] badge shown on the god's detail page
+///    and in the Codex "Tier" feature (World-Ender > Legendary > Elite >
+///    Veteran > Noble > Guardian), then fine-tuned by a handful of
+///    individual overrides for gods whose narrative status clearly outranks
+///    the rest of their tier (e.g. Zeus above Poseidon, both World-Enders).
 /// 3. Power-domain counters — elemental/thematic advantages derived from
 ///    each god's actual `powers` (e.g. storm counters fire, wisdom counters
 ///    brute strength, light counters death).
@@ -109,8 +115,8 @@ class BattleEngine {
     'Greek|Poseidon': 9.0,
     'Greek|Hades': 9.0,
     'Greek|Persephone': 7.5,
-    'Greek|Athena': 8.8,
-    'Greek|Cronus': 8.5,
+    'Greek|Athena': 8.3,
+    'Greek|Cronus': 9.2,
     'Greek|Heracles': 7.0,
     'Greek|Hydra': 6.5,
     'Greek|Cerberus': 6.3,
@@ -119,11 +125,11 @@ class BattleEngine {
     // Egyptian
     'Egyptian|Ra': 9.3,
     'Egyptian|Amun': 9.0,
-    'Egyptian|Horus': 8.5,
-    'Egyptian|Osiris': 8.3,
+    'Egyptian|Horus': 8.9,
+    'Egyptian|Osiris': 8.9,
     'Egyptian|Isis': 8.0,
-    'Egyptian|Seth': 7.8,
-    'Egyptian|Apep': 8.0,
+    'Egyptian|Seth': 9.0,
+    'Egyptian|Apep': 9.0,
     'Egyptian|Sekhmet': 7.5,
     'Egyptian|Anubis': 6.8,
     // Nordic
@@ -156,12 +162,105 @@ class BattleEngine {
     'Hindu|Radha': 4.0,
   };
 
+  // ─── Base strength band for each visible power tier (the Codex "Tier"
+  // feature / god-detail badge). This is the PRIMARY, authoritative driver
+  // of battle strength: the Tier badge you see is exactly what decides a
+  // fight. The bands DO NOT OVERLAP (each tier's floor sits above the next
+  // tier's ceiling), which guarantees a World-Ender always out-bases a
+  // Legendary, a Legendary always out-bases an Elite, and so on — so a
+  // higher-tier god can never be quietly under-scored below a lower-tier
+  // one (the exact bug where World-Ender Seth was scored 7.8, below
+  // Legendary Persephone's 7.5).
+  //
+  // (base, lo, hi): `base` is used when a god has no individual override;
+  // an override is clamped into [lo, hi] so it can only fine-tune ordering
+  // WITHIN the tier, never cross into another tier's band.
+  static const Map<GodTier, ({double base, double lo, double hi})> _tierBand = {
+    GodTier.worldEnder: (base: 9.5, lo: 8.8, hi: 10.5),
+    GodTier.legendary: (base: 7.7, lo: 7.2, hi: 8.3),
+    GodTier.elite: (base: 6.3, lo: 5.8, hi: 6.9),
+    GodTier.veteran: (base: 4.9, lo: 4.4, hi: 5.4),
+    GodTier.noble: (base: 3.7, lo: 3.4, hi: 4.1),
+    GodTier.guardian: (base: 2.9, lo: 2.5, hi: 3.2),
+    GodTier.anomaly: (base: 6.0, lo: 0, hi: 10.5), // pop culture sets its own tier directly
+  };
+
+  /// The visible [GodTier] badge for [g], or null for pop-culture combatants
+  /// (who carry their own curated tier) and the rare entry with no badge.
+  static GodTier? _godTierOf(Combatant g) =>
+      g.isPopCulture ? null : tierOf(g.mythology, g.name);
+
+  /// Numeric rank of a tier for direction-aware comparisons (higher =
+  /// stronger). Uses the band base so the ordering matches the scoring.
+  static double _tierRank(GodTier t) => _tierBand[t]?.base ?? 0;
+
   static double _tierOf(Combatant g) {
-    // Pop-culture combatants carry their own tier.
+    // Pop-culture combatants carry their own curated tier directly.
     if (g.tierOverride != null) return g.tierOverride!;
+
     final key = '${g.mythology}|${g.name}';
-    if (_tierOverride.containsKey(key)) return _tierOverride[key]!;
+    final override = _tierOverride[key];
+    final godTier = _godTierOf(g);
+
+    // Tier badge is authoritative. An individual override (if any) only
+    // fine-tunes ordering inside the tier's band — Zeus above Poseidon,
+    // both World-Ender — but is clamped so it can never drop the god below
+    // its tier (or lift it above the next one).
+    if (godTier != null) {
+      final band = _tierBand[godTier]!;
+      if (override != null) return override.clamp(band.lo, band.hi).toDouble();
+      return band.base;
+    }
+
+    // No tier badge (rare — e.g. an uncategorized figure): fall back to the
+    // raw override, then category tier, then the neutral default.
+    if (override != null) return override;
     return _categoryTier['${g.mythology}|${g.category}'] ?? _defaultTier;
+  }
+
+  // ─── Combat prowess: a fighter's own described powers, independent of
+  // formal Tier/status. A humble Guardian-tier warrior whose whole
+  // description is spears and raw strength should meaningfully threaten —
+  // and occasionally upset — a higher-tier god whose powers are mostly
+  // wisdom, healing, or craft. Scored by matching each god's `powers`
+  // against two keyword sets (front-line-fighter vs. non-combat), so every
+  // god gets an individualized value derived straight from their own data,
+  // not a hand-typed number.
+  static const List<String> _combatSignals = [
+    'perang', 'war', 'pertarungan', 'combat', 'battle', 'bertarung', 'fight',
+    'prajurit', 'warrior', 'ksatria', 'knight', 'pejuang', 'petarung', 'fighter',
+    'kekuatan fisik', 'physical strength', 'kekuatan', 'strength', 'raw power',
+    'pembunuh', 'slayer', 'membunuh', 'kill',
+    'senjata', 'weapon', 'pedang', 'sword', 'kapak', 'axe', 'tombak', 'spear',
+    'panah', 'bow', 'arrow', 'palu', 'hammer', 'trisula', 'trident', 'cakar', 'claw',
+    'tak terkalahkan', 'invincible', 'invulnerable', 'kebal',
+    'kemarahan', 'wrath', 'fury', 'amarah', 'murka', 'mengamuk', 'rampage',
+    'kesaktian', 'prowess', 'ketangguhan', 'toughness', 'ganas', 'ferocious',
+    'pemburu', 'hunter', 'pertempuran', 'skirmish', 'duel',
+  ];
+
+  static const List<String> _nonCombatSignals = [
+    'kebijaksanaan', 'wisdom', 'penyembuhan', 'healing', 'musik', 'music',
+    'kesuburan', 'fertility', 'cinta', 'love', 'kecantikan', 'beauty',
+    'keluarga', 'family', 'pengetahuan', 'knowledge', 'seni', 'art',
+    'kerajinan', 'craft', 'craftsmanship', 'diplomasi', 'diplomacy',
+    'perdamaian', 'peace', 'ramalan', 'prophecy', 'tenun', 'weaving',
+    'pertanian', 'agriculture', 'panen', 'harvest', 'kelahiran', 'childbirth',
+    'perkawinan', 'marriage', 'perdagangan', 'trade', 'commerce',
+    'keadilan', 'justice', 'hukum', 'law',
+  ];
+
+  /// A ±1.2 swing derived from how combat-oriented [g]'s own powers read.
+  /// Big enough that a dedicated fighter can upset a rival within about one
+  /// Tier — the whole point of "prowess matters in a 1v1" — but bounded so
+  /// it can never bridge a multi-tier gap on its own (a Guardian brawler
+  /// still can't topple a World-Ender).
+  static double _combatProwess(Combatant g) {
+    final text = [...g.powers, ...g.powersEn].join(' ').toLowerCase();
+    final combatHits = _combatSignals.where(text.contains).length;
+    final passiveHits = _nonCombatSignals.where(text.contains).length;
+    final net = (combatHits - passiveHits).clamp(-3, 3);
+    return net * 0.4;
   }
 
   // ─── Power domains: keywords are matched against a god's Indonesian
@@ -353,6 +452,9 @@ class BattleEngine {
     _CanonicalMatch('Hindu', 'Garuda', 'Naga', 0.85,
         _Bi('Garuda adalah musuh bebuyutan sekaligus pemangsa alami para Naga sejak lahir, permusuhan abadi dalam mitologi Hindu.',
             'Garuda has been the eternal enemy and natural predator of the Nagas since birth — an ancient rivalry in Hindu mythology.')),
+    _CanonicalMatch('Japanese', 'Momotaro', 'Oni', 0.88,
+        _Bi('Dibantu tiga sahabat setianya, si anjing, monyet, dan burung pegar, Momotaro menyerbu benteng Onigashima dan menaklukkan sang pemimpin Oni, memaksanya menyerah dan mengembalikan seluruh harta rampasan.',
+            'Aided by his three loyal companions, a dog, a monkey, and a pheasant, Momotaro storms the fortress of Onigashima and subdues the Oni chieftain, forcing him to surrender and return all his plundered treasure.')),
   ];
 
   static _CanonicalMatch? _findCanonical(Combatant a, Combatant b) {
@@ -447,15 +549,22 @@ class BattleEngine {
     final counterAoverB = _counterDomain(domainsA, domainsB);
     final counterBoverA = _counterDomain(domainsB, domainsA);
 
-    const domainBonus = 1.3;
-    final adjA = tierA + (counterAoverB != null ? domainBonus : 0);
-    final adjB = tierB + (counterBoverA != null ? domainBonus : 0);
+    const domainBonus = 1.0;
+    final tierOnlyA = tierA + (counterAoverB != null ? domainBonus : 0);
+    final tierOnlyB = tierB + (counterBoverA != null ? domainBonus : 0);
+
+    // 4) Combat prowess — a fighter's own described powers, which can
+    // meaningfully offset (or even overturn) a Tier/status advantage.
+    final prowessA = _combatProwess(a);
+    final prowessB = _combatProwess(b);
+    final adjA = tierOnlyA + prowessA;
+    final adjB = tierOnlyB + prowessB;
 
     // Deterministic outcome: whoever has the higher combined status +
-    // domain-counter score wins, full stop — no coin flip. The computed
-    // percentage reflects how decisive that edge is, so it always matches
-    // who actually won (and a rematch always gives the same result, as
-    // befits a myth-grounded rather than luck-based system).
+    // domain-counter + prowess score wins, full stop — no coin flip. The
+    // computed percentage reflects how decisive that edge is, so it always
+    // matches who actually won (and a rematch always gives the same
+    // result, as befits a myth-grounded rather than luck-based system).
     final aWins = adjA >= adjB;
     final winnerProb = (0.5 + (adjA - adjB).abs() * 0.09).clamp(0.5, 0.94);
     final winner = aWins ? a : b;
@@ -463,6 +572,20 @@ class BattleEngine {
     final winnerTier = aWins ? tierA : tierB;
     final loserTier = aWins ? tierB : tierA;
     final winnerCounter = aWins ? counterAoverB : counterBoverA;
+    final winnerProwess = aWins ? prowessA : prowessB;
+    final loserProwess = aWins ? prowessB : prowessA;
+
+    // Is this an upset by TIER BADGE — i.e. did the winner hold a strictly
+    // LOWER visible Tier than the loser? (Guaranteed to mean the win came
+    // from domain/prowess, since the non-overlapping bands make a lower
+    // tier always start from a lower base.) This flag is what stops the
+    // engine from ever saying "the Legendary is far above the World-Ender"
+    // when a lower-ranked god pulls off the win.
+    final winnerGodTier = _godTierOf(winner);
+    final loserGodTier = _godTierOf(loser);
+    final isRankUpset = winnerGodTier != null &&
+        loserGodTier != null &&
+        _tierRank(winnerGodTier) < _tierRank(loserGodTier);
 
     final explanation = _generateExplanation(
       winner: winner,
@@ -470,6 +593,9 @@ class BattleEngine {
       winnerTier: winnerTier,
       loserTier: loserTier,
       counterDomain: winnerCounter,
+      winnerProwess: winnerProwess,
+      loserProwess: loserProwess,
+      isRankUpset: isRankUpset,
       winnerProb: winnerProb,
     );
 
@@ -486,6 +612,9 @@ class BattleEngine {
         winnerTier: winnerTier,
         loserTier: loserTier,
         counterDomain: winnerCounter,
+        winnerProwess: winnerProwess,
+        loserProwess: loserProwess,
+        isRankUpset: isRankUpset,
       ),
     );
   }
@@ -512,9 +641,15 @@ class BattleEngine {
     required double winnerTier,
     required double loserTier,
     required String? counterDomain,
+    required double winnerProwess,
+    required double loserProwess,
+    required bool isRankUpset,
   }) {
     final factors = <BattleFactor>[];
     final gap = winnerTier - loserTier;
+    final prowessGap = winnerProwess - loserProwess;
+    final winnerGodTier = _godTierOf(winner);
+    final loserGodTier = _godTierOf(loser);
     final winnerRole = _roleOf(winner);
     final loserRole = _roleOf(loser);
 
@@ -543,7 +678,43 @@ class BattleEngine {
       ));
     }
 
-    if (gap > 2.5) {
+    // A lower-Tier fighter overturning a higher-ranked one is the most
+    // notable possible outcome, so it takes priority over — and REPLACES —
+    // the tier-gap framing (which would otherwise read backwards, e.g.
+    // "the Legendary is far above the World-Ender"). We name the real
+    // cause: superior prowess and/or an elemental counter.
+    if (isRankUpset) {
+      final byProwess = prowessGap > 0.3;
+      final wLabel = winnerGodTier!.label;
+      final lLabel = loserGodTier!.label;
+      factors.add(BattleFactor(
+        kind: 'prowess',
+        titleId: 'Kejutan: Peringkat Lebih Rendah Menang',
+        titleEn: 'Upset: The Lower Rank Wins',
+        descId: byProwess
+            ? 'Meski ${loser.name} berperingkat lebih tinggi ($lLabel vs $wLabel), kekuatan ${winner.name} jauh lebih berorientasi pada pertarungan langsung — insting petarung murni itulah yang membalikkan keadaan dalam duel satu lawan satu ini.'
+            : 'Meski ${loser.name} berperingkat lebih tinggi ($lLabel vs $wLabel), keunggulan elemental ${winner.name} menjadi penentu yang membalikkan keadaan dalam duel langsung ini.',
+        descEn: byProwess
+            ? "Although ${loser.name} holds the higher rank ($lLabel vs $wLabel), ${winner.name}'s powers are far more combat-oriented — that raw fighting instinct is what turns the tables in this one-on-one duel."
+            : "Although ${loser.name} holds the higher rank ($lLabel vs $wLabel), ${winner.name}'s elemental edge proves decisive and turns the tables in this direct duel.",
+      ));
+    } else if (winnerGodTier != null &&
+        loserGodTier != null &&
+        _tierRank(winnerGodTier) > _tierRank(loserGodTier)) {
+      // Tier-badge gap, in the CORRECT direction (winner genuinely outranks
+      // loser) — the exact World-Ender/Legendary/Elite/Veteran/Noble/
+      // Guardian rank shown on the god's detail page and the Codex "Tier"
+      // feature, cited directly so the badge is a visible reason.
+      factors.add(BattleFactor(
+        kind: 'status',
+        titleId: 'Kesenjangan Tier',
+        titleEn: 'Tier Gap',
+        descId:
+            '${winner.name} berperingkat ${winnerGodTier.label}, sementara ${loser.name} "hanya" berperingkat ${loserGodTier.label} — kesenjangan yang diakui di seluruh mitologi.',
+        descEn:
+            '${winner.name} ranks as ${winnerGodTier.label}, while ${loser.name} sits "only" at ${loserGodTier.label} — a gap recognized across mythology.',
+      ));
+    } else if (gap > 2.5) {
       factors.add(BattleFactor(
         kind: 'status',
         titleId: 'Status Jauh Lebih Tinggi',
@@ -575,6 +746,20 @@ class BattleEngine {
       ));
     }
 
+    // Supporting note: prowess helped even when it didn't need to flip the
+    // outcome outright.
+    if (!isRankUpset && prowessGap > 0.6) {
+      factors.add(BattleFactor(
+        kind: 'prowess',
+        titleId: 'Naluri Petarung Sejati',
+        titleEn: 'Born Fighter',
+        descId:
+            '${winner.name} juga dikenal sebagai sosok petarung sejati — kekuatannya jauh lebih berorientasi pada pertarungan langsung dibanding ${loser.name}.',
+        descEn:
+            "${winner.name} is also known as a true fighter — their powers are far more oriented toward direct combat than ${loser.name}'s.",
+      ));
+    }
+
     return factors;
   }
 
@@ -584,11 +769,16 @@ class BattleEngine {
     required double winnerTier,
     required double loserTier,
     required String? counterDomain,
+    required double winnerProwess,
+    required double loserProwess,
+    required bool isRankUpset,
     required double winnerProb,
   }) {
     final tierGap = winnerTier - loserTier;
     final opener = _pickOpener(winner, loser);
     final flourish = _confidenceFlourish(winnerProb);
+    final winnerGodTier = _godTierOf(winner);
+    final loserGodTier = _godTierOf(loser);
     final winnerRole = _roleOf(winner);
     final loserRole = _roleOf(loser);
     final winnerPower = winner.powers.isNotEmpty ? winner.powers.first : winner.title;
@@ -607,7 +797,21 @@ class BattleEngine {
           "Here lies the key to this clash: ${winner.name}'s command of ${label.en} — channeled through \"$winnerPowerEn\" — naturally exposes a weakness in ${loser.name}'s \"$loserPowerEn\", an elemental edge proven time and again across the myths. ");
     }
 
-    if (tierGap > 2.5) {
+    if (isRankUpset) {
+      final lLabel = loserGodTier!.label;
+      final wLabel = winnerGodTier!.label;
+      idBuf.write(
+          'Di atas kertas, ${loser.name} berperingkat lebih tinggi ($lLabel, di atas $wLabel milik ${winner.name}). Namun pertarungan satu lawan satu bukan sekadar soal kedudukan — kekuatan "$winnerPower" milik ${winner.name} jauh lebih tajam dalam pertarungan langsung, dan itulah yang akhirnya membalikkan keadaan. ');
+      enBuf.write(
+          "On paper, ${loser.name} holds the higher rank ($lLabel, above ${winner.name}'s $wLabel). But a one-on-one duel isn't just about standing — ${winner.name}'s \"$winnerPowerEn\" cuts far sharper in direct combat, and that is what ultimately turns the tables. ");
+    } else if (winnerGodTier != null &&
+        loserGodTier != null &&
+        _tierRank(winnerGodTier) > _tierRank(loserGodTier)) {
+      idBuf.write(
+          'Dalam sistem peringkat kekuatan mitologi, ${winner.name} berada di jajaran ${winnerGodTier.label}, jauh di atas ${loser.name} yang "hanya" berperingkat ${loserGodTier.label} — kesenjangan tingkat yang sulit diabaikan. ');
+      enBuf.write(
+          "By the mythology's own power ranking, ${winner.name} stands among the ${winnerGodTier.label} ranks, well above ${loser.name}, who sits \"only\" at ${loserGodTier.label} — a tier gap that's hard to ignore. ");
+    } else if (tierGap > 2.5) {
       idBuf.write(
           'Sebagai ${winnerRole.id}, wibawa dan kekuasaan ${winner.name} jauh melampaui ${loser.name} yang hanya berkedudukan sebagai ${loserRole.id} — sebuah jurang kekuatan yang hampir mustahil dijembatani. ');
       enBuf.write(

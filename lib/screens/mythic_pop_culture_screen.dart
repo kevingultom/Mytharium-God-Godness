@@ -19,17 +19,26 @@ class MythicPopCultureScreen extends StatefulWidget {
 }
 
 class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
-  static const _verses = ['All', 'Greek', 'Nordic', 'Chinese', 'Japanese', 'Hindu'];
+  static const _verses = ['All', 'Greek', 'Egyptian', 'Nordic', 'Chinese', 'Japanese', 'Hindu'];
   static const _mediaTypes = ['All', 'Game', 'Film', 'Novel'];
 
   String _verseFilter = 'All';
   String _mediaFilter = 'All';
+  String _searchQuery = '';
+  final TextEditingController _searchCtrl = TextEditingController();
+  final FocusNode _searchFocus = FocusNode();
 
   List<MythicPopCultureCharacter> get _filtered {
     return popCultureData.where((c) {
       final matchVerse = _verseFilter == 'All' || c.originVerse == _verseFilter;
       final matchMedia = _mediaFilter == 'All' || c.mediaType == _mediaFilter;
-      return matchVerse && matchMedia;
+      final q = _searchQuery.toLowerCase();
+      final matchSearch = q.isEmpty ||
+          c.name.toLowerCase().contains(q) ||
+          c.inspiredFrom.toLowerCase().contains(q) ||
+          c.sourceMedia.toLowerCase().contains(q) ||
+          c.originVerse.toLowerCase().contains(q);
+      return matchVerse && matchMedia && matchSearch;
     }).toList();
   }
 
@@ -57,7 +66,8 @@ class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final id = LanguageProvider.of(context).value == 'id';
+    final lang = LanguageProvider.of(context).value;
+    final id = lang == 'id';
     final filtered = _filtered;
 
     return Scaffold(
@@ -73,6 +83,7 @@ class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       _buildHeader(context, id),
+                      _buildSearchBar(id),
                       _buildChipRow(_verses, _verseFilter,
                           (v) => setState(() => _verseFilter = v)),
                       const SizedBox(height: 4),
@@ -81,7 +92,7 @@ class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 6, 20, 2),
                         child: Text(
-                          '${filtered.length} ${id ? 'karakter' : 'characters'}',
+                          '${filtered.length} ${localize(lang, 'karakter', 'characters')}',
                           style: const TextStyle(
                               color: Color(0xFFD1D5DB), fontSize: 11),
                         ),
@@ -91,7 +102,8 @@ class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
                 ),
                 if (filtered.isEmpty)
                   SliverToBoxAdapter(
-                    child: SizedBox(height: cardHeight, child: _buildEmpty(id)),
+                    child:
+                        SizedBox(height: cardHeight, child: _buildEmpty(id)),
                   )
                 else
                   SliverFixedExtentList(
@@ -115,48 +127,98 @@ class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
     );
   }
 
+  @override
+  void dispose() {
+    _searchCtrl.dispose();
+    _searchFocus.dispose();
+    super.dispose();
+  }
+
+  // Header lives at the top of the scrolling content, so the back link and
+  // title scroll away with the filters as the feed is scrolled down.
   Widget _buildHeader(BuildContext context, bool id) {
+    final lang = id ? 'id' : 'en';
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 20, 8),
-      child: Row(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           GestureDetector(
             onTap: () => Navigator.pop(context),
-            child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF333333)),
-              ),
-              child: const Icon(Icons.arrow_back_ios_new_rounded,
-                  color: Colors.white, size: 16),
-            ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  'Mythic Pop Culture',
+                Icon(Icons.arrow_back_rounded, color: Colors.white, size: 22),
+                SizedBox(width: 4),
+                Text(
+                  'Back',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 19,
-                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                   ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  id
-                      ? 'Karakter game/film & padanan mitologi aslinya'
-                      : 'Game/film characters & their mythological counterparts',
-                  style: const TextStyle(color: Color(0xFF9CA3AF), fontSize: 11),
                 ),
               ],
             ),
           ),
+          const SizedBox(height: 12),
+          const Text(
+            'Mythic Pop Culture',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            localize(lang, 'Karakter game/film & padanan mitologi aslinya', 'Game/film characters & their mythological counterparts'),
+            style: const TextStyle(color: Color(0xFF9CA3AF), fontSize: 11),
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildSearchBar(bool id) {
+    final lang = id ? 'id' : 'en';
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 4, 20, 8),
+      child: TextField(
+        controller: _searchCtrl,
+        focusNode: _searchFocus,
+        onChanged: (v) => setState(() => _searchQuery = v),
+        style: const TextStyle(color: Colors.white, fontSize: 13),
+        decoration: InputDecoration(
+          hintText: localize(lang, 'Cari karakter, game, film...', 'Search characters, games, films...'),
+          hintStyle: const TextStyle(color: Color(0xFF666666), fontSize: 13),
+          prefixIcon: const Icon(Icons.search_rounded, color: Color(0xFF888888), size: 20),
+          suffixIcon: _searchQuery.isNotEmpty
+              ? GestureDetector(
+                  onTap: () {
+                    _searchCtrl.clear();
+                    setState(() => _searchQuery = '');
+                    _searchFocus.unfocus();
+                  },
+                  child: const Icon(Icons.close_rounded, color: Color(0xFF888888), size: 18),
+                )
+              : null,
+          filled: true,
+          fillColor: const Color(0xFF1A1A1A),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(24),
+            borderSide: const BorderSide(color: Color(0xFF333333)),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(24),
+            borderSide: const BorderSide(color: Color(0xFF333333)),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(24),
+            borderSide: const BorderSide(color: Color(0xFFB07800)),
+          ),
+        ),
       ),
     );
   }
@@ -204,9 +266,10 @@ class _MythicPopCultureScreenState extends State<MythicPopCultureScreen> {
   }
 
   Widget _buildEmpty(bool id) {
+    final lang = id ? 'id' : 'en';
     return Center(
       child: Text(
-        id ? 'Tidak ada karakter ditemukan' : 'No characters found',
+        localize(lang, 'Tidak ada karakter ditemukan', 'No characters found'),
         style: const TextStyle(color: Color(0xFF999999), fontSize: 14),
       ),
     );
@@ -242,7 +305,7 @@ class _ImmersivePcCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final id = LanguageProvider.of(context).value == 'id';
+    final lang = LanguageProvider.of(context).value;
     final color = GodCard.mythologyColor(character.originVerse);
 
     return Padding(
@@ -251,7 +314,6 @@ class _ImmersivePcCard extends StatelessWidget {
         children: [
           Expanded(
             child: GestureDetector(
-              onTap: onTap,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(18),
                 child: Stack(
@@ -357,9 +419,7 @@ class _ImmersivePcCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      id
-                          ? 'Terinspirasi: ${character.inspiredFrom}'
-                          : 'Inspired by: ${character.inspiredFrom}',
+                      localize(lang, 'Terinspirasi: ${character.inspiredFrom}', 'Inspired by: ${character.inspiredFrom}'),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(

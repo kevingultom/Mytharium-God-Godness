@@ -1,4 +1,4 @@
-name: mytharium
+name: mythera
 description: Explore gods and deities from world mythologies.
 publish_to: 'none'
 version: 1.0.0+1
@@ -9,14 +9,28 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
   shared_preferences: ^2.2.2
   audioplayers: ^6.1.0
+  # Firebase
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.4.1
+  cloud_firestore: ^5.6.1
+  firebase_messaging: ^15.2.1
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+  # Auth
+  google_sign_in: ^6.2.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/icon.webp"
 
 flutter:
   uses-material-design: true
@@ -30,6 +44,8 @@ flutter:
     - assets/images/Greek/Heroes/
     - assets/images/Greek/Monsters/
     - assets/images/Greek/Cosmology/
+    - assets/images/Greek/Category/
+    - assets/images/Greek/History/
     - assets/images/Egypt/
     - assets/images/Egypt/Death/
     - assets/images/Egypt/Ennead/
@@ -38,6 +54,8 @@ flutter:
     - assets/images/Egypt/Sun&Sky/
     - assets/images/Egypt/Creatures/
     - assets/images/Egypt/Cosmology/
+    - assets/images/Egypt/Category/
+    - assets/images/Egypt/History/
     - assets/images/Hindu/
     - assets/images/Hindu/Trimurti/
     - assets/images/Hindu/Tridevi/
@@ -47,6 +65,8 @@ flutter:
     - assets/images/Hindu/Devi/
     - assets/images/Hindu/Creatures/
     - assets/images/Hindu/Cosmology/
+    - assets/images/Hindu/Category/
+    - assets/images/Hindu/History/
     - assets/images/Nordik/
     - assets/images/Nordik/Aesir/
     - assets/images/Nordik/Vanir/
@@ -54,6 +74,8 @@ flutter:
     - assets/images/Nordik/Mythical/
     - assets/images/Nordik/Figures/
     - assets/images/Nordik/Cosmology/
+    - assets/images/Nordik/Category/
+    - assets/images/Nordik/History/
     - assets/images/Chinese/
     - assets/images/Chinese/Court/
     - assets/images/Chinese/Primordial/
@@ -62,6 +84,8 @@ flutter:
     - assets/images/Chinese/Hero/
     - assets/images/Chinese/Creature/
     - assets/images/Chinese/Cosmology/
+    - assets/images/Chinese/Category/
+    - assets/images/Chinese/History/
     - assets/images/Japanese/
     - assets/images/Japanese/Celestial/
     - assets/images/Japanese/Primordial/
@@ -72,6 +96,8 @@ flutter:
     - assets/images/Japanese/Hero/
     - assets/images/Japanese/Creature/
     - assets/images/Japanese/Cosmology/
+    - assets/images/Japanese/Category/
+    - assets/images/Japanese/History/
     - assets/images/Mythic/
     - assets/audio/
 

@@ -22,7 +22,7 @@ According to Taoist scripture, the Jade Emperor began his existence as a mortal 
 As Jade Emperor, he holds ultimate authority over Heaven, Earth, and the underworld, presiding over a celestial bureaucracy that mirrors the structure of an imperial Chinese court, complete with ministers, generals, and divine officials of every rank. He weighs the merits and sins of every being, determines fate, and both grants and revokes the offices of lesser gods, reviewing the annual reports the Kitchen God submits on the conduct of each mortal household. He is traditionally depicted in imperial robes embroidered with dragons and a flat rectangular crown strung with hanging beads that veil his face, seated upright on his throne and holding a jade tablet as emblem of absolute yet impartial power.
 
 His most famous episode appears in Journey to the West, when the Monkey King Sun Wukong threw Heaven into chaos by declaring himself the "Great Sage Equal to Heaven" and ransacking the Peach Banquet of Immortality. The Jade Emperor mobilized his entire celestial army, yet no general could subdue the rebellious monkey, until the Buddha himself intervened and imprisoned him beneath Five Finger Mountain for five hundred years. The episode captures the Jade Emperor as a figure of majestic authority rather than unchecked personal power, embodying cosmic order more than brute strength. He remains the supreme deity of Chinese folk religion today, his birthday celebrated with great festivity on the ninth day of the Lunar New Year.''',
-    imageUrl: 'assets/images/Chinese/Court/jade_emperor.jpg',
+    imageUrl: 'assets/images/Chinese/Court/jade_emperor.webp',
     category: 'Court',
   ),
   God(
@@ -46,7 +46,7 @@ Xi Wangmu, the Queen Mother of the West, is among the oldest deities in Chinese 
 As ruler of the Western Paradise atop Mount Kunlun, Xi Wangmu tends the Garden of Immortal Peaches, whose magical trees bear fruit only once every few thousand years yet grant eternal life to whoever eats it. She presides over the ranks of female immortals and goddesses, serving as the source of longevity and cosmic balance, and is widely venerated, especially by women who pray to her for long life, fertile descendants, and a harmonious household. She is traditionally portrayed wearing a phoenix crown and lavish royal robes, attended by white cranes and the sacred blue birds (qingniao) who carry her messages across the cosmos.
 
 Her best-known episode is the Peach Banquet (Pantao Hui), a grand feast held once every several thousand years when her immortal peaches finally ripen, to which every god and goddess of Heaven is invited to partake of eternal life; it is precisely this banquet that Sun Wukong disrupts in Journey to the West by stealing and devouring the sacred fruit before his invitation ever arrives. Xi Wangmu is also linked to the archer Hou Yi, to whom she personally granted the elixir of immortality as a reward for shooting down nine of the ten suns that once scorched the earth—an elixir later drunk by his wife Chang'e, who ascended to the moon as a result. To this day, Xi Wangmu remains the foremost symbol of immortality and feminine wisdom in Taoist belief.''',
-    imageUrl: 'assets/images/Chinese/Court/queen_mother.jpg',
+    imageUrl: 'assets/images/Chinese/Court/queen_mother.webp',
     category: 'Court',
   ),
   God(
@@ -70,7 +70,7 @@ Erlang Shen, whose personal name is Yang Jian, was born of a forbidden union bet
 His third eye can pierce through any illusion, disguise, or hidden evil, making him one of the sharpest detectors of truth in all of Heaven, and it can also unleash a blinding beam capable of stunning enemies outright. As a warrior-general among the gods, he commands the six sworn brothers of Mount Mei and wields a three-pointed, double-edged lance, accompanied always by his loyal celestial hound Xiaotian Quan, who fights faithfully at his side. He is also venerated as a protector against floods and water disasters, inheriting a role as guardian of irrigation and river control, which is why his temples remain concentrated in flood-prone Sichuan since ancient times.
 
 His most celebrated tale is his fierce duel with Sun Wukong in Journey to the West, when the Jade Emperor dispatched him to capture the rebellious Monkey King who had thrown Heaven into disorder. The two traded shapes in a legendary contest of transformation—becoming birds, fish, snakes, even a temple—until Erlang Shen finally overpowered Sun Wukong with the help of Laozi's diamond bracelet and a well-timed bite from Xiaotian Quan. In another well-known story, he is the one who imprisons his own younger sister beneath Mount Hua for marrying a mortal man—an irony later undone by his nephew Chenxiang, who splits the mountain open to free his mother. Erlang Shen remains venerated today as a guardian against flooding and a symbol of unyielding justice in Chinese opera and folklore.''',
-    imageUrl: 'assets/images/Chinese/Court/erlang_shen.jpg',
+    imageUrl: 'assets/images/Chinese/Court/erlang_shen.webp',
     category: 'Court',
   ),
   God(
@@ -94,7 +94,7 @@ Nezha was born in extraordinary fashion from Lady Yin, wife of Li Jing, after a 
 Nezha's power flows from four treasures: the Wind-Fire Wheels bound to his feet, which let him fly at lightning speed; the Universe Ring, capable of hurling enemies with devastating force; the flexible yet lethal Red Armillary Sash; and a fire-tipped spear. As a child-god, he embodies both rebellion against injustice and a fearless youthful energy, typically depicted bare-chested with a child's topknot, riding his fire wheels through the clouds while carrying his sacred weapons—a figure venerated as a protector against evil spirits and a symbol of courage for children.
 
 His most famous and poignant story begins when the young Nezha accidentally kills the son of Dragon King Ao Guang while playing by the sea, provoking the enraged king to threaten flooding the entire village and punishing Nezha's parents unless he took responsibility. To save his family and his hometown, Nezha bravely returned his own body to his parents as an act of atonement, ending his life in the ultimate sacrifice of a child for those he loved. His spirit was then rescued by his master, Taiyi Zhenren, who fashioned him a new body from lotus stems and petals, granting him a second life more powerful than before. This tale of sacrifice and rebirth has made Nezha an enduring symbol of sacrifice, defiance of unjust authority, and self-renewal—themes that keep him hugely popular in Chinese film and popular culture today.''',
-    imageUrl: 'assets/images/Chinese/Court/nezha.jpg',
+    imageUrl: 'assets/images/Chinese/Court/nezha.webp',
     category: 'Court',
   ),
   God(
@@ -118,127 +118,7 @@ Li Jing appears in Investiture of the Gods as the commander stationed to guard C
 Once deified, Li Jing bore the title Pagoda-Bearing Heavenly King, commanding Heaven's military forces on behalf of the Jade Emperor and ranking among the highest commanders in the celestial order of defense. His signature weapon and emblem of authority is a miniature golden pagoda that traps any enemy inside the moment it is thrown—a treasure given to him by the Buddha Dipankara as a means of enforcing order among rebellious gods and spirits alike. The pagoda marks him as a strict yet fair paternal authority, a figure who places the rule of heavenly law above the pull of family sentiment.
 
 His most dramatic story centers on his fractured relationship with his own son, Nezha, following the boy's self-sacrifice to spare the family from the Dragon King's wrath. When Nezha's spirit returned in a new lotus body, a still-shamed and traumatized Li Jing refused to build a shrine in his honor and even destroyed an existing statue of him—an act that provoked fierce anger from his resurrected son. The rift was only healed after the Buddha Dipankara intervened, granting Li Jing the sacred pagoda as a means of subduing Nezha and forcing a reconciliation under a higher heavenly authority. The episode has made Li Jing an enduring symbol of the tension between institutional duty and family bonds in Chinese mythology.''',
-    imageUrl: 'assets/images/Chinese/Court/li_jing.jpg',
-    category: 'Court',
-  ),
-  God(
-    id: '207',
-    name: 'Tai Bai Jin Xing',
-    mythology: 'Chinese',
-    title: 'Bintang Venus yang Bijaksana',
-    titleEn: 'The Wise Venus Star',
-    symbol: '⭐',
-    powers: ['Kebijaksanaan', 'Diplomasi', 'Utusan Langit', 'Ramalan Bintang', 'Penengah Konflik'],
-    powersEn: ['Wisdom', 'Diplomacy', 'Celestial Messenger', 'Astral Insight', 'Mediation'],
-    story: '''
-Tai Bai Jin Xing adalah pendewaan dari planet Venus, salah satu objek langit paling terang yang telah dipuja sejak zaman purba Tiongkok jauh sebelum sistem birokrasi Kahyangan yang rumit terbentuk. Seiring berkembangnya kosmologi Tao, sosok astral ini diberi wujud manusia sebagai seorang penasihat langit yang bijaksana, diserap ke dalam struktur istana surgawi sebagai salah satu menteri tepercaya Kaisar Giok. Statusnya sebagai bintang purba yang telah lama diamati manusia menjadikannya figur dengan wibawa alami, dihormati bukan karena kekuatan tempurnya, melainkan karena kearifan panjangnya dalam mengamati pergerakan langit dan nasib manusia.
-
-Perannya di Kahyangan adalah sebagai utusan resmi dan penasihat pribadi Kaisar Giok, sosok yang dikirim turun ke bumi untuk mengamati urusan manusia, merekrut pahlawan berbakat, atau menyampaikan titah-titah penting kepada makhluk fana maupun dewa rendahan. Ia digambarkan sebagai seorang kakek tua berjanggut putih panjang, mengenakan jubah sederhana, membawa tongkat kayu persik atau tongkat ruyi sebagai lambang kebijaksanaan yang mengutamakan diplomasi dan musyawarah dibanding kekerasan. Wataknya yang tenang dan sabar membuatnya sering menjadi penengah dalam berbagai perselisihan antara Kahyangan dan dunia manusia, mencerminkan cita-cita Tao tentang penyelesaian konflik melalui kebijaksanaan.
-
-Perannya paling menonjol muncul dalam Kera Sakti, ketika ia berulang kali menyarankan Kaisar Giok untuk meredam amukan Sun Wukong dengan cara damai alih-alih kekerasan—pertama dengan menawarkan jabatan remeh sebagai penjaga kuda surgawi (Bimawen), kemudian gelar kehormatan kosong "Dewa Agung yang Setara dengan Langit". Sayangnya, kebijaksanaan diplomatiknya justru terganjal oleh keangkuhan Sun Wukong yang merasa dipermainkan begitu mengetahui gelar-gelar itu tak memiliki kekuasaan nyata, memicu konflik yang lebih besar antara Kahyangan dan si Kera Sakti. Meski usahanya gagal meredam pemberontakan, Tai Bai Jin Xing tetap dikenang sebagai arketipe penasihat langit yang bijaksana, lambang keyakinan Tao bahwa musyawarah selalu layak dicoba sebelum kekuatan senjata.''',
-    storyEn: '''
-Tai Bai Jin Xing is the deification of the planet Venus, one of the brightest objects in the night sky and an object of worship in China since ancient times, long before the intricate bureaucracy of Heaven ever took shape. As Taoist cosmology developed, this astral being was given human form as a wise celestial advisor, absorbed into the structure of the Heavenly Court as one of the Jade Emperor's most trusted ministers. His status as a primeval star long observed by humankind gives him a natural authority, respected not for martial prowess but for his ancient wisdom in reading the movements of the heavens and the fates of mortals.
-
-His role in Heaven is that of official envoy and personal advisor to the Jade Emperor, dispatched down to earth to observe human affairs, recruit gifted heroes, or deliver important decrees to mortals and lesser gods alike. He is depicted as an elderly man with a long white beard, dressed in simple robes and carrying a peachwood staff or a ruyi scepter as emblems of a wisdom that favors diplomacy and negotiation over force. His calm, patient temperament makes him a frequent mediator in disputes between Heaven and the human world, embodying the Taoist ideal that conflicts are best resolved through wisdom rather than confrontation.
-
-His most prominent appearance comes in Journey to the West, where he repeatedly urges the Jade Emperor to pacify the rampaging Sun Wukong through peaceful means rather than force—first by offering him the minor post of Heavenly stable keeper (Bimawen), then the hollow honorary title "Great Sage Equal to Heaven." Unfortunately, his diplomatic wisdom is undone by Sun Wukong's pride, who feels deeply insulted upon discovering these titles carry no real power, sparking an even greater conflict between Heaven and the Monkey King. Though his efforts ultimately fail to contain the rebellion, Tai Bai Jin Xing remains remembered as the archetype of the wise celestial advisor, a symbol of the Taoist conviction that negotiation is always worth attempting before resorting to arms.''',
-    imageUrl: 'assets/images/Chinese/Court/tai_bai_jin_xing.jpg',
-    category: 'Court',
-  ),
-  God(
-    id: '208',
-    name: 'Wen Chang',
-    mythology: 'Chinese',
-    title: 'Dewa Sastra dan Ujian',
-    titleEn: 'God of Literature and Examinations',
-    symbol: '🖌️',
-    powers: ['Sastra', 'Ilmu Pengetahuan', 'Ujian Kenegaraan', 'Nasib Akademik', 'Restu Pelajar'],
-    powersEn: ['Literature', 'Scholarship', 'Civil Examinations', 'Academic Fortune', 'Student Blessings'],
-    story: '''
-Wen Chang Dijun adalah hasil peleburan dua tokoh yang berbeda asal-usul: dewa bintang dari gugusan Wenchang di dekat rasi Biduk Utara yang telah dipuja sejak masa kuno sebagai pengatur nasib intelektual manusia, dan Zhang Yazi, seorang pejabat-cendekiawan legendaris dari Zitong, Sichuan, yang gugur secara heroik dan kemudian dipuja penduduk setempat sebagai pelindung daerah. Kedua tradisi ini menyatu selama berabad-abad hingga akhirnya Kaisar Dinasti Yuan secara resmi mengesahkannya sebagai satu dewa tunggal, Wen Chang Dijun, pelindung resmi dunia sastra dan pendidikan di seluruh Tiongkok, menjadikannya salah satu dewa dengan proses kanonisasi paling jelas tercatat dalam sejarah.
-
-Sebagai dewa sastra, kebudayaan, dan ujian kenegaraan, Wen Chang menjadi pelindung utama para sarjana, pelajar, dan calon pejabat yang harus melewati ujian kenegaraan yang ketat untuk meniti karier di birokrasi kekaisaran—tradisi ujian yang menjadi jantung mobilitas sosial Tiongkok selama lebih dari seribu tahun. Ia digambarkan mengenakan jubah cendekiawan yang anggun, memegang tongkat ruyi atau kuas tulis, sering didampingi dua pelayan cilik bernama Tianlong dan Dima yang masing-masing melambangkan pemahaman dan daya ingat, dua kualitas penting bagi pelajar yang hendak menempuh ujian. Kuil-kuilnya, yang disebut Wen Miao, menjadi tempat ziarah wajib menjelang musim ujian di berbagai kota.
-
-Legenda mengisahkan bahwa sebelum mencapai kedudukan sebagai dewa, jiwa Zhang Yazi telah bereinkarnasi sebanyak tujuh belas kali, setiap kali menjalani kehidupan sebagai pejabat yang berbudi luhur dan tak pernah menyalahgunakan kekuasaannya, hingga akhirnya layak diangkat menjadi pelindung sastra abadi. Ia juga sering disandingkan dengan Kuixing, dewa bintang ujian yang digambarkan sebagai sosok menyeramkan berdiri di atas seekor ikan sambil memegang kuas, sebagai pasangan pelengkap dalam pemujaan menjelang ujian—Wen Chang mewakili kebajikan dan kebijaksanaan, sementara Kuixing mewakili keberuntungan mentah. Hingga era modern, pelajar Tiongkok yang menghadapi ujian nasional seperti Gaokao masih kerap berziarah ke kuil Wen Chang untuk memohon restu kelulusan.''',
-    storyEn: '''
-Wen Chang Dijun is a fusion of two originally separate figures: an ancient star deity of the Wenchang constellation near the Big Dipper, long worshipped as the arbiter of human intellectual fortune, and Zhang Yazi, a legendary scholar-official from Zitong, Sichuan, who died heroically and was subsequently venerated by locals as a regional guardian spirit. These two traditions gradually merged over centuries until an emperor of the Yuan dynasty formally canonized them as a single deity, Wen Chang Dijun, the official patron of literature and education throughout China—making him one of the few gods whose process of canonization is so clearly documented in historical record.
-
-As god of literature, culture, and the civil examinations, Wen Chang serves as chief patron of scholars, students, and aspiring officials who had to pass grueling state examinations to advance within the imperial bureaucracy—a testing tradition that formed the backbone of social mobility in China for more than a thousand years. He is depicted in elegant scholar's robes, holding a ruyi scepter or a writing brush, often flanked by two child attendants named Tianlong and Dima, who respectively personify comprehension and memory, two qualities essential to any student facing examinations. His temples, called Wen Miao, become essential pilgrimage sites in cities across China as exam season approaches.
-
-Legend holds that before attaining godhood, the soul of Zhang Yazi was reincarnated seventeen times, each life spent as a virtuous official who never abused his position, until he finally earned the right to become the eternal patron of literature. He is also frequently paired with Kuixing, the star god of examinations, depicted as a fearsome figure balancing atop a fish while brandishing a writing brush, serving as his complementary counterpart in exam-related worship—Wen Chang representing virtue and wisdom, Kuixing representing raw luck. Even today, Chinese students facing national examinations such as the Gaokao still make pilgrimages to Wen Chang's temples to pray for success.''',
-    imageUrl: 'assets/images/Chinese/Court/wen_chang.jpg',
-    category: 'Court',
-  ),
-  God(
-    id: '209',
-    name: 'Cai Shen',
-    mythology: 'Chinese',
-    title: 'Dewa Kekayaan',
-    titleEn: 'God of Wealth',
-    symbol: '💰',
-    powers: ['Kekayaan', 'Kemakmuran', 'Keberuntungan Usaha', 'Keadilan Rezeki', 'Berkah Tahun Baru'],
-    powersEn: ['Wealth', 'Prosperity', 'Business Fortune', 'Fair Distribution', 'New Year Blessings'],
-    story: '''
-Meski gelar Cai Shen, Dewa Kekayaan, disandang oleh beberapa tokoh berbeda dalam tradisi Tiongkok, salah satu asal-usul paling dihormati merujuk pada Bi Gan, seorang menteri setia pada akhir masa Dinasti Shang dan paman dari raja tiran terakhir, Zhou Wang. Bi Gan dikenal karena keberaniannya berulang kali menasihati sang raja agar menghentikan kekejaman dan pengaruh buruk selir jelmaan siluman rubah, Daji, meski nasihat itu berulang kali diabaikan. Kesetiaannya yang tanpa pamrih dan keteguhan moralnya di tengah istana yang korup inilah yang kelak menjadi dasar pendewaannya sebagai simbol kejujuran dalam mengelola harta.
-
-Sebagai dewa kekayaan, kemakmuran, dan keberuntungan usaha, Cai Shen dipuja luas oleh pedagang, pengusaha, dan setiap rumah tangga yang mendambakan rezeki berlimpah, dengan gambarnya ditempel di pintu atau altar rumah terutama menjelang Tahun Baru Imlek sebagai bentuk penyambutan keberuntungan. Ia digambarkan mengenakan jubah pejabat mandarin yang mewah, membawa batangan emas (yuanbao) dan tongkat ruyi, sosok yang melambangkan kekayaan sekaligus keadilan dalam mendistribusikan rezeki kepada mereka yang pantas menerimanya. Kepercayaan bahwa ia membagi kekayaan secara adil, tanpa memihak, menjadikannya berbeda dari sekadar dewa keberuntungan biasa.
-
-Kisah paling terkenal tentang Bi Gan berpusat pada akhir hidupnya yang tragis: karena terus-menerus menentang kekejaman Raja Zhou, sang raja yang murka memerintahkan agar hatinya diambil untuk menguji legenda bahwa hati seorang bijak memiliki tujuh lubang. Melalui kekuatan sihir Tao, Bi Gan konon tetap hidup tanpa hati selama beberapa waktu, berkelana tanpa emosi yang memihak—kondisi yang justru menjadi lambang kemampuannya membagi rezeki secara adil kepada siapa pun tanpa pilih kasih. Setelah akhirnya wafat, ia dipuja sebagai Dewa Kekayaan atas keteguhan moral dan pengorbanannya, dan hingga kini ritual "menyambut Dewa Kekayaan" (Ying Caishen) tetap menjadi salah satu tradisi paling meriah dalam perayaan Tahun Baru Imlek di seluruh Tiongkok.''',
-    storyEn: '''
-Although the title Cai Shen, God of Wealth, has been claimed by several different figures across Chinese tradition, one of the most revered origins traces back to Bi Gan, a loyal minister during the final years of the Shang dynasty and uncle to its last tyrannical ruler, King Zhou. Bi Gan was known for repeatedly, and courageously, urging the king to abandon his cruelty and the corrupting influence of his consort Daji, a fox spirit in human form, even though his counsel was consistently ignored. It was this selfless loyalty and moral steadfastness amid a corrupt court that later formed the basis for his deification as a symbol of integrity in the handling of wealth.
-
-As the god of wealth, prosperity, and business fortune, Cai Shen is widely worshipped by merchants, entrepreneurs, and any household hoping for abundance, his image posted on doors and household altars especially before the Lunar New Year as a way of welcoming good fortune. He is depicted in the lavish robes of a mandarin official, carrying gold ingots (yuanbao) and a ruyi scepter, a figure who represents not just wealth itself but fairness in distributing riches to those who deserve them. The belief that he allocates wealth impartially, without favoritism, sets him apart from a mere deity of luck.
-
-The most famous story of Bi Gan centers on his tragic end: for his persistent opposition to King Zhou's cruelty, the enraged king ordered his heart cut out to test the legend that a sage's heart possesses seven openings. Through Taoist magic, Bi Gan is said to have survived for a time without a heart, wandering the land with no emotion left to sway his judgment—a condition that became emblematic of his ability to distribute wealth fairly, without playing favorites. After his eventual death, he was deified as God of Wealth in recognition of his moral integrity and sacrifice, and to this day the ritual of "welcoming the God of Wealth" (Ying Caishen) remains one of the most festive traditions of the Lunar New Year across China.''',
-    imageUrl: 'assets/images/Chinese/Court/cai_shen.jpg',
-    category: 'Court',
-  ),
-  God(
-    id: '210',
-    name: 'Menshen',
-    mythology: 'Chinese',
-    title: 'Dewa Penjaga Pintu',
-    titleEn: 'The Door Guardian Gods',
-    symbol: '🚪',
-    powers: ['Perlindungan Rumah', 'Pengusiran Roh Jahat', 'Penjagaan Pintu', 'Keberanian', 'Kewaspadaan'],
-    powersEn: ['Household Protection', 'Warding Evil Spirits', 'Gate Guardianship', 'Courage', 'Vigilance'],
-    story: '''
-Menshen, para Dewa Penjaga Pintu, paling populer diidentikkan dengan dua jenderal sungguhan dari Dinasti Tang, Qin Shubao dan Yuchi Gong, yang menurut legenda berjaga di depan pintu kamar Kaisar Taizong pada malam hari untuk mengusir hantu yang menghantuinya. Tradisi yang lebih tua bahkan menyebut sepasang penjaga mitos bernama Shen Tu dan Yu Lei, yang menurut Shan Hai Jing berjaga di gerbang pohon persik raksasa penghubung dunia manusia dan dunia roh, menjaga agar roh-roh jahat tidak dapat melintas ke dunia nyata. Kedua tradisi ini akhirnya melebur menjadi satu praktik keagamaan rakyat yang sama: menempelkan gambar penjaga bersenjata di kedua sisi pintu rumah.
-
-Fungsi utama Menshen adalah melindungi rumah tangga dari roh jahat, penyakit, dan nasib buruk yang mencoba masuk melalui pintu utama, dianggap sebagai garda terdepan pertahanan spiritual sebuah keluarga. Mereka digambarkan sebagai dua jenderal berzirah lengkap yang saling berhadapan di kedua panel pintu, menggenggam senjata seperti pedang atau gada, dengan wajah garang dan warna-warna mencolok yang melambangkan keberanian serta kewaspadaan tanpa henti. Selain versi militer yang paling umum, terdapat pula versi Menshen sipil berwujud pejabat atau cendekiawan, biasa dipasang oleh keluarga yang mengharapkan keberuntungan dan kenaikan pangkat alih-alih perlindungan dari kejahatan semata.
-
-Legenda asal-usulnya yang paling terkenal berkisah tentang Kaisar Taizong yang jatuh sakit setelah gagal menepati janji melindungi Raja Naga Sungai Jing dari hukuman mati, sehingga arwah sang naga terus menghantui mimpinya setiap malam. Untuk menenangkan sang kaisar, jenderal Qin Shubao dan Yuchi Gong secara sukarela berjaga bersenjata lengkap di depan pintu kamarnya sepanjang malam, dan seketika gangguan hantu itu pun lenyap. Karena tak tega membiarkan kedua jenderal terus berjaga tanpa istirahat, sang kaisar akhirnya memerintahkan agar potret keduanya dilukis dan ditempelkan di pintu sebagai gantinya—awal mula tradisi menempel gambar Menshen yang bertahan hingga sekarang. Praktik ini kini menjadi salah satu tradisi keagamaan rakyat paling tersebar luas di Tiongkok, terutama menjelang perayaan Tahun Baru Imlek.''',
-    storyEn: '''
-The Menshen, or Door Gods, are most popularly identified with two real Tang-dynasty generals, Qin Shubao and Yuchi Gong, who according to legend stood nightly guard outside Emperor Taizong's bedroom door to drive away a ghost that haunted his sleep. An older tradition instead names a pair of mythic gatekeepers, Shen Tu and Yu Lei, who according to the Classic of Mountains and Seas guarded the gate of a giant peach tree connecting the human world to the realm of spirits, preventing evil ghosts from crossing over. These two traditions eventually merged into the same folk religious practice still followed today: pasting images of armed guardians on either side of a household's front door.
-
-The Menshen's core function is to protect a household from evil spirits, illness, and misfortune attempting to enter through the main door, serving as a family's frontline of spiritual defense. They are depicted as two fully armored generals facing one another across the two door panels, gripping weapons such as swords or maces, their fierce expressions and vivid colors symbolizing courage and unceasing vigilance. Beyond the most common martial version, there is also a civil variant of Menshen portrayed as officials or scholars, favored by households hoping for good fortune and career advancement rather than protection from evil alone.
-
-The most famous origin legend tells of Emperor Taizong falling ill after failing to honor his promise to protect the Dragon King of the Jing River from execution, so that the dragon's ghost tormented his dreams every night. To ease the emperor's suffering, generals Qin Shubao and Yuchi Gong volunteered to stand fully armed guard outside his bedroom door through the night, and the haunting immediately ceased. Unwilling to make the two generals keep this exhausting nightly vigil forever, the emperor eventually had their portraits painted and hung on the doors instead—the origin of the door-god tradition still practiced today. The custom remains one of the most widespread folk religious practices in China, especially in the run-up to the Lunar New Year.''',
-    imageUrl: 'assets/images/Chinese/Court/menshen.jpg',
-    category: 'Court',
-  ),
-  God(
-    id: '211',
-    name: 'Guan Yu',
-    mythology: 'Chinese',
-    title: 'Dewa Perang dan Kesetiaan',
-    titleEn: 'God of War and Loyalty',
-    symbol: '⚔️',
-    powers: ['Perang', 'Kesetiaan', 'Persaudaraan', 'Keadilan', 'Kejujuran Dagang'],
-    powersEn: ['War', 'Loyalty', 'Brotherhood', 'Righteousness', 'Honest Commerce'],
-    story: '''
-Guan Yu adalah tokoh sejarah nyata, seorang jenderal yang mengabdi kepada Liu Bei pada masa akhir Dinasti Han dan era Tiga Kerajaan, hidup dan wafat sekitar tahun 220 Masehi. Bersama Liu Bei dan Zhang Fei, ia mengikat sumpah persaudaraan yang melegenda di Taman Persik seperti yang dikisahkan dalam Kisah Tiga Kerajaan, bersumpah untuk hidup dan mati bersama demi cita-cita menyatukan kembali negeri yang terpecah. Guan Yu dikenal luas atas kesetiaannya yang tak tergoyahkan, keteguhan moralnya, dan kepiawaiannya di medan perang, kualitas-kualitas yang membuatnya dihormati bahkan oleh musuh-musuhnya sekalipun, hingga akhirnya ia gugur setelah kehilangan wilayah Jing dalam pengepungan pasukan Sun Quan.
-
-Melalui berabad-abad pengakuan dari berbagai dinasti dan tradisi keagamaan Buddha, Tao, maupun Konghucu, Guan Yu didewakan sebagai pelindung perang, kesetiaan, dan persaudaraan sumpah, sekaligus secara sinkretis juga dipuja sebagai dewa kekayaan oleh para pedagang yang mengandalkan kejujuran dalam setiap transaksi dan perjanjian dagang. Ia mudah dikenali lewat wajahnya yang merah menyala melambangkan keberanian dan kesetiaan, janggutnya yang panjang terurai, jubah hijaunya, senjata Golok Bulan Sabit Naga Hijau, serta kuda tunggangannya yang terkenal, Kuda Merah. Kuil-kuilnya, yang disebut Guandi Miao, dihormati baik oleh aparat keamanan maupun kelompok-kelompok rahasia sekaligus, menjadikannya salah satu dewa dengan basis penyembah paling beragam di Tiongkok.
-
-Kisahnya yang paling terkenal adalah perjalanan "menunggang seorang diri sejauh seribu li", ketika ia terpisah sementara dari Liu Bei dan terpaksa mengabdi di bawah panglima saingan, Cao Cao, yang berusaha memikatnya dengan kekayaan dan kedudukan tinggi. Begitu mengetahui keberadaan saudara sumpahnya, Guan Yu menolak seluruh tawaran itu dan berangkat menembus lima gerbang penjagaan sambil mengalahkan enam jenderal yang menghalanginya, semata demi bersatu kembali dengan Liu Bei—kisah yang menjadi teladan abadi kesetiaan sejati. Kematiannya kelak, setelah dikhianati dan dikepung pasukan Sun Quan, justru memperkuat citranya sebagai pahlawan tragis yang teguh sampai akhir. Kini Guan Yu adalah salah satu dewa paling luas disembah dalam agama rakyat Tiongkok, dengan kuil-kuilnya tersebar di seluruh dunia.''',
-    storyEn: '''
-Guan Yu was a genuine historical figure, a general who served Liu Bei during the final years of the Han dynasty and the ensuing Three Kingdoms period, living and dying around 220 CE. Together with Liu Bei and Zhang Fei, he swore the legendary Oath of the Peach Garden recounted in Romance of the Three Kingdoms, pledging to live and die together in pursuit of reunifying a fractured empire. Guan Yu became widely known for his unshakable loyalty, moral integrity, and battlefield skill, qualities so admired that even his enemies respected him, until he was ultimately killed after losing Jing Province to a siege by Sun Quan's forces.
-
-Through centuries of recognition across Buddhist, Taoist, and Confucian tradition alike, Guan Yu was deified as protector of war, loyalty, and sworn brotherhood, and syncretically also came to be worshipped as a god of wealth by merchants who relied on honesty in every transaction and contract. He is instantly recognizable by his glowing red face, symbolizing courage and loyalty, his long flowing beard, green robe, the Green Dragon Crescent Blade he wields, and his famous mount, the Red Hare. His temples, known as Guandi Miao, are honored equally by law enforcement and secret societies, making him one of the deities with the broadest and most varied following in China.
-
-His most celebrated story is the journey of "riding alone a thousand li," when he was temporarily separated from Liu Bei and forced to serve under a rival warlord, Cao Cao, who tried to win his loyalty with wealth and high office. The moment he learned of his sworn brother's whereabouts, Guan Yu refused every offer and set out through five heavily guarded passes, defeating six generals who tried to stop him, driven solely by the desire to reunite with Liu Bei—a story that stands as an eternal model of true loyalty. His eventual death, after being betrayed and surrounded by Sun Quan's forces, only reinforced his image as a tragic hero who remained steadfast to the very end. Guan Yu is today one of the most widely worshipped deities in Chinese folk religion, with temples devoted to him found across the world.''',
-    imageUrl: 'assets/images/Chinese/Court/guan_yu.jpg',
+    imageUrl: 'assets/images/Chinese/Court/li_jing.webp',
     category: 'Court',
   ),
   God(
@@ -262,31 +142,7 @@ Zhao Gongming appears in Investiture of the Gods as a powerful hermit who had lo
 As both a god of wealth and a martial deity, Zhao Gongming is depicted riding a powerful black tiger, wielding a dragon-binding whip and the sacred Dingde Sword, and possessing magical pearls capable of unleashing deadly light upon his enemies. After his death, Jiang Ziya elevated him to lead the Gods of Wealth, overseeing four subordinate deities each tasked with bringing treasure, business profit, and fortune to humankind—making him the central figure of the martial lineage of wealth gods (Wu Cai Shen), distinct from the gentler civil version of the deity.
 
 During the war of investiture, Zhao Gongming fought valiantly for the Shang cause, killing several of Jiang Ziya's allies with his deadly magic pearls and at times overwhelming the Zhou forces entirely. He was ultimately defeated not in direct combat but through a ritual of sympathetic magic: Jiang Ziya crafted a straw effigy bearing his name, then shot it with peachwood arrows while chanting incantations for days on end, spiritually weakening and eventually killing Zhao Gongming from afar. Ironically, it was this very death that led Jiang Ziya to elevate him to a far grander divine status, granting him dominion over the wealth of all humankind—a reversal of fortune that made him one of the most widely worshipped gods of wealth, especially in northern China, instantly recognizable by his signature black tiger.''',
-    imageUrl: 'assets/images/Chinese/Court/zhao_gongming.jpg',
-    category: 'Court',
-  ),
-  God(
-    id: '213',
-    name: 'Tu Di Gong',
-    mythology: 'Chinese',
-    title: 'Kakek Penjaga Tanah',
-    titleEn: 'Grandfather Guardian of the Land',
-    symbol: '🌾',
-    powers: ['Perlindungan Tanah', 'Panen', 'Komunitas Lokal', 'Kebajikan Sederhana', 'Mediasi Roh'],
-    powersEn: ['Land Protection', 'Harvests', 'Local Community', 'Humble Virtue', 'Spirit Mediation'],
-    story: '''
-Tu Di Gong berakar dari salah satu lapisan kepercayaan rakyat Tiongkok yang paling tua, berkembang dari tradisi kuno pemujaan altar tanah (She) yang telah ada sejak sebelum agama Tao maupun struktur Kahyangan yang rumit terbentuk. Hampir setiap desa, kampung, bahkan setiap blok kota di Tiongkok tradisional memiliki Tu Di Gong tersendiri, yang menurut kepercayaan setempat sering kali merupakan arwah seorang sesepuh atau leluhur yang dihormati semasa hidupnya dan terus mengawasi kesejahteraan komunitasnya setelah wafat. Karena berasal dari komunitas itu sendiri, Tu Di Gong menjadi dewa yang paling dekat dan paling manusiawi dibandingkan dewa-dewa besar Kahyangan lainnya.
-
-Sebagai penjaga sebidang tanah, desa, atau wilayah tertentu, Tu Di Gong bertugas mengawasi hasil panen, melindungi penduduk dari malapetaka, menengahi perselisihan kecil antarroh setempat, dan menempati posisi paling rendah namun paling menyeluruh dalam birokrasi Kahyangan maupun Alam Baka, melaporkan setiap kejadian di wilayahnya kepada atasan yang lebih tinggi seperti Dewa Kota (Cheng Huang). Ia digambarkan sebagai kakek tua berjanggut putih dengan senyum ramah, mengenakan jubah sederhana, memegang tongkat jalan dan batangan emas kecil, biasanya duduk berdampingan dengan istrinya, Tu Di Po, di kuil-kuil kecil sederhana di pinggir jalan atau sudut ladang.
-
-Tidak seperti dewa-dewa besar lainnya, Tu Di Gong tidak memiliki satu mitos epik tunggal, melainkan hadir dalam ratusan kisah rakyat sederhana tentang petani atau musafir yang menunjukkan kebaikan kecil kepadanya—meninggalkan sesajen, teh, atau dupa di kuil pinggir jalan—dan kemudian diganjar dengan perlindungan, keberuntungan, atau peringatan dini akan bahaya. Ia juga kerap muncul sebagai tokoh birokrat kecil dalam novel-novel klasik seperti Kera Sakti, di mana Sun Wukong berulang kali menginterogasi Tu Di Gong setempat untuk mendapatkan informasi tentang siluman dan bahaya di suatu wilayah, memperlakukannya hampir seperti seorang informan lokal. Kesederhanaan dan kedekatannya inilah yang menjadikan Tu Di Gong dewa paling banyak ditemui dalam kehidupan sehari-hari rakyat Tiongkok, dengan kuil-kuil kecilnya bertebaran di hampir setiap sudut jalan, ladang, dan toko.''',
-    storyEn: '''
-Tu Di Gong belongs to one of the oldest layers of Chinese folk belief, rooted in the ancient tradition of earth-altar (She) worship that predates both organized Taoism and the elaborate bureaucracy of Heaven. Nearly every village, hamlet, and even city block in traditional China maintained its own Tu Di Gong, who according to local belief was often the spirit of a respected elder or ancestor who continues to watch over the community's welfare after death. Because he arises from the community itself, Tu Di Gong stands as the most intimate and human of all deities, in stark contrast to the grand gods of the Heavenly Court.
-
-As guardian of a particular plot of land, village, or district, Tu Di Gong oversees harvests, protects residents from misfortune, mediates minor disputes among local spirits, and occupies the lowest yet most pervasive rung of the bureaucracy shared by Heaven and the underworld, reporting every local occurrence up the chain to higher officials such as the City God (Cheng Huang). He is depicted as a smiling elderly man with a white beard, dressed in simple robes, holding a walking staff and a small gold ingot, usually seated beside his wife, Tu Di Po, in modest roadside shrines or at the edge of a field.
-
-Unlike the grand gods of Heaven, Tu Di Gong has no single epic myth of his own; instead he appears across hundreds of simple folk tales in which farmers or travelers show him small kindnesses—leaving offerings, tea, or incense at a roadside shrine—and are rewarded with protection, good fortune, or early warning of danger. He also frequently appears as a minor bureaucratic figure in classical novels such as Journey to the West, where Sun Wukong repeatedly interrogates the local Tu Di Gong for information about the demons and dangers of a given area, treating him almost like a local informant. This very simplicity and closeness to daily life is what makes Tu Di Gong the most commonly encountered deity in Chinese folk religion, his small shrines scattered across nearly every street corner, farm, and shop.''',
-    imageUrl: 'assets/images/Chinese/Court/tu_di_gong.jpg',
+    imageUrl: 'assets/images/Chinese/Court/zhao_gongming.webp',
     category: 'Court',
   ),
   God(
@@ -310,7 +166,151 @@ According to legend, Zhong Kui was a brilliant scholar of the Tang dynasty who e
 After his death, Zhong Kui vowed to avenge the injustice done to him by becoming a king of ghosts who hunts and controls demons, evil spirits, and troublesome hauntings on Heaven's behalf. He is depicted as a large, fierce figure with a thick beard and bulging eyes, dressed in a combination of scholar's and judicial robes, gripping a sacred sword, sometimes accompanied by a small bat symbolizing fortune or riding a demon steed he has personally subdued. His fearsome yet protective image makes him a unique figure: a god who wards off evil precisely by presenting a face more terrifying than the spirits he hunts.
 
 His most famous tale begins when Emperor Xuanzong of the Tang dynasty fell ill after being tormented in his dreams by a mischievous minor demon; in that same dream, the towering figure of Zhong Kui appeared, captured and destroyed the demon, then introduced himself and pledged eternal service to eliminating evil spirits in gratitude for the honorable burial once granted to him. Upon waking, the emperor recovered immediately and commissioned the renowned court painter Wu Daozi to create his portrait, which was then reproduced widely and hung in homes as a ward against evil spirits. To this day, images and statues of Zhong Kui are still routinely displayed before the Lunar New Year and the Dragon Boat Festival as one of the most popular symbols of protection in Chinese folk life.''',
-    imageUrl: 'assets/images/Chinese/Court/zhong_kui.jpg',
+    imageUrl: 'assets/images/Chinese/Court/zhong_kui.webp',
+    category: 'Court',
+  ),
+  God(
+    id: '240',
+    name: 'Tang Sanzang',
+    mythology: 'Chinese',
+    title: 'Biksu Suci Penempuh Barat',
+    titleEn: 'The Holy Monk of the West',
+    symbol: '🙏',
+    powers: ['Kesalehan', 'Kebijaksanaan', 'Belas Kasih', 'Ketabahan', 'Kepemimpinan Rohani'],
+    powersEn: ['Piety', 'Wisdom', 'Compassion', 'Perseverance', 'Spiritual Leadership'],
+    story: '''
+Tang Sanzang, yang juga dikenal sebagai Tripitaka, adalah sosok yang berakar pada tokoh nyata dalam sejarah Tiongkok, yaitu biksu Xuanzang dari Dinasti Tang yang pada abad ketujuh melakukan perjalanan panjang dan berbahaya ke India untuk mempelajari ajaran Buddha secara langsung dari sumbernya. Dalam legenda Kisah Perjalanan ke Barat, riwayatnya diperkaya dengan unsur mitos: ia digambarkan sebagai reinkarnasi dari murid Buddha yang dihukum turun ke dunia fana karena kelalaiannya mendengarkan khotbah suci. Sejak kecil ia dibesarkan di sebuah biara setelah orang tuanya meninggal dalam keadaan tragis, tumbuh menjadi biksu yang saleh, berbudi luhur, dan dipilih langsung oleh Kaisar Tang untuk memimpin misi suci mengambil kitab-kitab sutra dari Barat demi menyelamatkan jiwa-jiwa di Tiongkok.
+
+Tang Sanzang bukanlah pendekar bertenaga sakti, melainkan seorang pemimpin rohani yang kekuatannya terletak pada kesalehan, keteguhan iman, dan belas kasih yang nyaris tanpa batas terhadap segala makhluk hidup, bahkan kepada siluman yang menyamar sebagai orang lemah. Sifat welas asihnya ini sekaligus menjadi kelemahannya, karena ia kerap tertipu oleh wujud palsu dan salah menilai niat orang-orang di sekitarnya, termasuk menyalahkan muridnya sendiri, Sun Wukong, akibat kesalahpahaman. Meski demikian, ketabahannya menempuh perjalanan sejauh ribuan li melintasi gurun, gunung, dan negeri berbahaya tanpa pernah goyah dari tujuannya menjadikannya teladan keteguhan spiritual, sementara ketiga muridnya, Sun Wukong, Zhu Bajie, dan Sha Wujing, bertugas melindunginya dari bahaya yang tak mampu ia hadapi sendiri.
+
+Sepanjang perjalanan delapan puluh satu rintangan yang harus dilalui rombongan, Tang Sanzang berulang kali diculik oleh siluman yang mempercayai bahwa memakan dagingnya akan memberikan keabadian, namun setiap kali ia diselamatkan berkat kesetiaan dan kesaktian murid-muridnya. Setibanya di India, ia berhasil memperoleh kitab-kitab sutra suci dan kembali ke Tiongkok sebagai pahlawan agama yang menyebarkan ajaran Buddha ke seluruh negeri. Tokoh Tang Sanzang tetap dikenang sebagai lambang keimanan yang tak tergoyahkan dan pengabdian tanpa pamrih, sekaligus pengingat bahwa kepemimpinan sejati tidak selalu ditentukan oleh kekuatan fisik, melainkan oleh keteguhan tujuan dan kemurnian hati.''',
+    storyEn: '''
+Tang Sanzang, also known as Tripitaka, is rooted in a real figure from Chinese history: the Tang Dynasty monk Xuanzang, who in the seventh century undertook a long and perilous journey to India to study Buddhist teachings at their source. In the legend Journey to the West, his story is embellished with myth, casting him as the reincarnation of a disciple of the Buddha banished to the mortal world for inattentiveness during a sacred sermon. Orphaned in tragic circumstances as a child, he was raised in a monastery and grew into a devout and virtuous monk, eventually chosen personally by the Tang Emperor to lead a sacred mission to retrieve sutras from the West and save the souls of China.
+
+Tang Sanzang possesses no combat prowess of his own; his strength lies instead in piety, unwavering faith, and a nearly boundless compassion for all living things, extending even to demons disguised as the helpless. That same compassion is also his great weakness, for he is repeatedly deceived by false appearances and misjudges the intentions of those around him, at times even wrongly blaming his own disciple Sun Wukong. Still, his resolve in traveling thousands of miles across deserts, mountains, and hostile lands without ever abandoning his purpose makes him a model of spiritual steadfastness, while his three disciples, Sun Wukong, Zhu Bajie, and Sha Wujing, shoulder the duty of protecting him from dangers he cannot face alone.
+
+Across the eighty-one trials the pilgrimage must endure, Tang Sanzang is repeatedly kidnapped by demons who believe that eating his flesh will grant them immortality, yet each time he is rescued through the loyalty and power of his disciples. Upon reaching India, he obtains the sacred sutras and returns to China as a religious hero who spreads Buddhist teaching throughout the land. Tang Sanzang endures as a symbol of unshakable faith and selfless devotion, and as a reminder that true leadership is measured not by physical strength but by steadfastness of purpose and purity of heart.''',
+    imageUrl: 'assets/images/Chinese/Hero/tang_sanzang.webp',
+    category: 'Hero',
+  ),
+  God(
+    id: '239',
+    name: 'Sun Wukong',
+    mythology: 'Chinese',
+    title: 'Raja Kera Sakti',
+    titleEn: 'The Monkey King',
+    symbol: '🐒',
+    powers: ['Transformasi', 'Kekuatan Adikodrati', 'Tongkat Ajaib', 'Salto Awan', 'Keabadian'],
+    powersEn: ['Shapeshifting', 'Superhuman Strength', 'Magic Staff', 'Cloud Somersault', 'Immortality'],
+    story: '''
+Sun Wukong lahir bukan dari rahim seorang ibu, melainkan dari sebutir telur batu di puncak Gunung Buah Bunga (Huaguoshan), yang selama berabad-abad menyerap sari langit dan bumi hingga akhirnya pecah dan memunculkan seekor kera batu. Karena keberaniannya melompat menembus air terjun dan menemukan Gua Tirai Air di baliknya, ia diangkat menjadi raja oleh kawanan kera di gunung itu. Namun kegelisahan akan kematian mendorongnya mengembara mencari jalan menuju keabadian, hingga ia berguru kepada seorang pendeta Tao bernama Patriarkh Subhuti, yang mengajarkannya tujuh puluh dua jenis transformasi dan ilmu salto awan yang memungkinkannya menempuh ribuan li dalam sekali lompatan. Dari istana Raja Naga di dasar laut, ia juga merampas sebatang tongkat besi ajaib yang dapat membesar dan mengecil sesuka hati, yang kelak dikenal sebagai Ruyi Jingu Bang.
+
+Dengan kekuatan barunya, Sun Wukong menobatkan dirinya sebagai "Maha Bijak Setara dengan Langit" dan menuntut pengakuan dari para dewa. Ketika Kaisar Giok hanya memberinya jabatan rendahan sebagai penjaga kandang kuda surga, kemarahannya meledak menjadi pemberontakan besar: ia mencuri buah persik keabadian, meminum arak surgawi, dan menelan pil elixir milik dewa alkimia, sebelum akhirnya menghancurkan barisan tentara langit yang dikirim untuk menangkapnya. Kesaktiannya begitu besar sehingga tak seorang dewa pun sanggup menundukkannya, sampai Buddha sendiri turun tangan dan mengurungnya di bawah Gunung Lima Unsur selama lima ratus tahun sebagai hukuman atas keangkuhannya.
+
+Setelah lima abad terkurung, Sun Wukong dibebaskan oleh Dewi Guanyin dengan syarat mengabdi sebagai pengawal bagi biksu Tang Sanzang dalam perjalanan sucinya ke India untuk mengambil kitab suci Buddha. Sebuah ikat kepala emas dipasangkan padanya agar sifat liarnya dapat dikendalikan setiap kali ia melanggar aturan. Sepanjang perjalanan itu, kecerdikan, kekuatan, dan kesaktiannya menjadi tameng utama rombongan dalam menghadapi para siluman dan iblis. Kisah pemberontakan dan penebusannya menjadikan Sun Wukong salah satu tokoh paling dicintai dalam sastra dan budaya populer Tiongkok, melambangkan pemberontakan terhadap kekangan, kecerdasan yang tak terkalahkan, serta perjalanan panjang menuju kedewasaan dan pengabdian.''',
+    storyEn: '''
+Sun Wukong was not born of a mother's womb but hatched from a stone egg atop Flower Fruit Mountain (Huaguoshan), a boulder that had absorbed the essence of heaven and earth for countless ages before cracking open to release a monkey formed of living stone. His courage in leaping through a waterfall to discover the hidden Water Curtain Cave behind it won him the throne among the mountain's monkey clan. Yet a creeping fear of death drove him to wander the world in search of immortality, eventually apprenticing himself to a Taoist master, Patriarch Subhuti, who taught him seventy-two transformations and the art of cloud-somersaulting, a technique letting him cover thousands of miles in a single leap. From the undersea palace of the Dragon King he later seized a magical iron staff that could grow or shrink at will, later famed as the Ruyi Jingu Bang.
+
+Emboldened by his new powers, Sun Wukong crowned himself the "Great Sage Equal to Heaven" and demanded recognition from the celestial court. When the Jade Emperor fobbed him off with the lowly post of stable keeper for the heavenly horses, his fury erupted into open rebellion: he devoured the peaches of immortality, drained jars of heavenly wine, and swallowed the alchemical pills of a god of medicine, before smashing through the ranks of soldiers sent to arrest him. So formidable was his power that no deity could subdue him, until the Buddha himself intervened and trapped him beneath the Mountain of Five Elements for five hundred years as punishment for his arrogance.
+
+After five centuries of imprisonment, Sun Wukong was freed by the bodhisattva Guanyin on condition that he serve as guardian to the monk Tang Sanzang on his sacred pilgrimage to India to retrieve the Buddhist sutras. A golden headband was fitted onto him so his temper could be reined in whenever he strayed. Throughout the journey, his cunning, strength, and magic became the pilgrims' chief defense against the demons and monsters that beset their path. His arc of rebellion and redemption has made Sun Wukong one of the most beloved figures in Chinese literature and popular culture, a symbol of defiance against restraint, unmatched wit, and the long road toward maturity and devotion.''',
+    imageUrl: 'assets/images/Chinese/Hero/sun_wukong.webp',
+    category: 'Hero',
+  ),
+  God(
+    id: '211',
+    name: 'Guan Yu',
+    mythology: 'Chinese',
+    title: 'Dewa Perang dan Kesetiaan',
+    titleEn: 'God of War and Loyalty',
+    symbol: '⚔️',
+    powers: ['Perang', 'Kesetiaan', 'Persaudaraan', 'Keadilan', 'Kejujuran Dagang'],
+    powersEn: ['War', 'Loyalty', 'Brotherhood', 'Righteousness', 'Honest Commerce'],
+    story: '''
+Guan Yu adalah tokoh sejarah nyata, seorang jenderal yang mengabdi kepada Liu Bei pada masa akhir Dinasti Han dan era Tiga Kerajaan, hidup dan wafat sekitar tahun 220 Masehi. Bersama Liu Bei dan Zhang Fei, ia mengikat sumpah persaudaraan yang melegenda di Taman Persik seperti yang dikisahkan dalam Kisah Tiga Kerajaan, bersumpah untuk hidup dan mati bersama demi cita-cita menyatukan kembali negeri yang terpecah. Guan Yu dikenal luas atas kesetiaannya yang tak tergoyahkan, keteguhan moralnya, dan kepiawaiannya di medan perang, kualitas-kualitas yang membuatnya dihormati bahkan oleh musuh-musuhnya sekalipun, hingga akhirnya ia gugur setelah kehilangan wilayah Jing dalam pengepungan pasukan Sun Quan.
+
+Melalui berabad-abad pengakuan dari berbagai dinasti dan tradisi keagamaan Buddha, Tao, maupun Konghucu, Guan Yu didewakan sebagai pelindung perang, kesetiaan, dan persaudaraan sumpah, sekaligus secara sinkretis juga dipuja sebagai dewa kekayaan oleh para pedagang yang mengandalkan kejujuran dalam setiap transaksi dan perjanjian dagang. Ia mudah dikenali lewat wajahnya yang merah menyala melambangkan keberanian dan kesetiaan, janggutnya yang panjang terurai, jubah hijaunya, senjata Golok Bulan Sabit Naga Hijau, serta kuda tunggangannya yang terkenal, Kuda Merah. Kuil-kuilnya, yang disebut Guandi Miao, dihormati baik oleh aparat keamanan maupun kelompok-kelompok rahasia sekaligus, menjadikannya salah satu dewa dengan basis penyembah paling beragam di Tiongkok.
+
+Kisahnya yang paling terkenal adalah perjalanan "menunggang seorang diri sejauh seribu li", ketika ia terpisah sementara dari Liu Bei dan terpaksa mengabdi di bawah panglima saingan, Cao Cao, yang berusaha memikatnya dengan kekayaan dan kedudukan tinggi. Begitu mengetahui keberadaan saudara sumpahnya, Guan Yu menolak seluruh tawaran itu dan berangkat menembus lima gerbang penjagaan sambil mengalahkan enam jenderal yang menghalanginya, semata demi bersatu kembali dengan Liu Bei—kisah yang menjadi teladan abadi kesetiaan sejati. Kematiannya kelak, setelah dikhianati dan dikepung pasukan Sun Quan, justru memperkuat citranya sebagai pahlawan tragis yang teguh sampai akhir. Kini Guan Yu adalah salah satu dewa paling luas disembah dalam agama rakyat Tiongkok, dengan kuil-kuilnya tersebar di seluruh dunia.''',
+    storyEn: '''
+Guan Yu was a genuine historical figure, a general who served Liu Bei during the final years of the Han dynasty and the ensuing Three Kingdoms period, living and dying around 220 CE. Together with Liu Bei and Zhang Fei, he swore the legendary Oath of the Peach Garden recounted in Romance of the Three Kingdoms, pledging to live and die together in pursuit of reunifying a fractured empire. Guan Yu became widely known for his unshakable loyalty, moral integrity, and battlefield skill, qualities so admired that even his enemies respected him, until he was ultimately killed after losing Jing Province to a siege by Sun Quan's forces.
+
+Through centuries of recognition across Buddhist, Taoist, and Confucian tradition alike, Guan Yu was deified as protector of war, loyalty, and sworn brotherhood, and syncretically also came to be worshipped as a god of wealth by merchants who relied on honesty in every transaction and contract. He is instantly recognizable by his glowing red face, symbolizing courage and loyalty, his long flowing beard, green robe, the Green Dragon Crescent Blade he wields, and his famous mount, the Red Hare. His temples, known as Guandi Miao, are honored equally by law enforcement and secret societies, making him one of the deities with the broadest and most varied following in China.
+
+His most celebrated story is the journey of "riding alone a thousand li," when he was temporarily separated from Liu Bei and forced to serve under a rival warlord, Cao Cao, who tried to win his loyalty with wealth and high office. The moment he learned of his sworn brother's whereabouts, Guan Yu refused every offer and set out through five heavily guarded passes, defeating six generals who tried to stop him, driven solely by the desire to reunite with Liu Bei—a story that stands as an eternal model of true loyalty. His eventual death, after being betrayed and surrounded by Sun Quan's forces, only reinforced his image as a tragic hero who remained steadfast to the very end. Guan Yu is today one of the most widely worshipped deities in Chinese folk religion, with temples devoted to him found across the world.''',
+    imageUrl: 'assets/images/Chinese/Court/guan_yu.webp',
+    category: 'Court',
+  ),
+  God(
+    id: '207',
+    name: 'Tai Bai Jin Xing',
+    mythology: 'Chinese',
+    title: 'Bintang Venus yang Bijaksana',
+    titleEn: 'The Wise Venus Star',
+    symbol: '⭐',
+    powers: ['Kebijaksanaan', 'Diplomasi', 'Utusan Langit', 'Ramalan Bintang', 'Penengah Konflik'],
+    powersEn: ['Wisdom', 'Diplomacy', 'Celestial Messenger', 'Astral Insight', 'Mediation'],
+    story: '''
+Tai Bai Jin Xing adalah pendewaan dari planet Venus, salah satu objek langit paling terang yang telah dipuja sejak zaman purba Tiongkok jauh sebelum sistem birokrasi Kahyangan yang rumit terbentuk. Seiring berkembangnya kosmologi Tao, sosok astral ini diberi wujud manusia sebagai seorang penasihat langit yang bijaksana, diserap ke dalam struktur istana surgawi sebagai salah satu menteri tepercaya Kaisar Giok. Statusnya sebagai bintang purba yang telah lama diamati manusia menjadikannya figur dengan wibawa alami, dihormati bukan karena kekuatan tempurnya, melainkan karena kearifan panjangnya dalam mengamati pergerakan langit dan nasib manusia.
+
+Perannya di Kahyangan adalah sebagai utusan resmi dan penasihat pribadi Kaisar Giok, sosok yang dikirim turun ke bumi untuk mengamati urusan manusia, merekrut pahlawan berbakat, atau menyampaikan titah-titah penting kepada makhluk fana maupun dewa rendahan. Ia digambarkan sebagai seorang kakek tua berjanggut putih panjang, mengenakan jubah sederhana, membawa tongkat kayu persik atau tongkat ruyi sebagai lambang kebijaksanaan yang mengutamakan diplomasi dan musyawarah dibanding kekerasan. Wataknya yang tenang dan sabar membuatnya sering menjadi penengah dalam berbagai perselisihan antara Kahyangan dan dunia manusia, mencerminkan cita-cita Tao tentang penyelesaian konflik melalui kebijaksanaan.
+
+Perannya paling menonjol muncul dalam Kera Sakti, ketika ia berulang kali menyarankan Kaisar Giok untuk meredam amukan Sun Wukong dengan cara damai alih-alih kekerasan—pertama dengan menawarkan jabatan remeh sebagai penjaga kuda surgawi (Bimawen), kemudian gelar kehormatan kosong "Dewa Agung yang Setara dengan Langit". Sayangnya, kebijaksanaan diplomatiknya justru terganjal oleh keangkuhan Sun Wukong yang merasa dipermainkan begitu mengetahui gelar-gelar itu tak memiliki kekuasaan nyata, memicu konflik yang lebih besar antara Kahyangan dan si Kera Sakti. Meski usahanya gagal meredam pemberontakan, Tai Bai Jin Xing tetap dikenang sebagai arketipe penasihat langit yang bijaksana, lambang keyakinan Tao bahwa musyawarah selalu layak dicoba sebelum kekuatan senjata.''',
+    storyEn: '''
+Tai Bai Jin Xing is the deification of the planet Venus, one of the brightest objects in the night sky and an object of worship in China since ancient times, long before the intricate bureaucracy of Heaven ever took shape. As Taoist cosmology developed, this astral being was given human form as a wise celestial advisor, absorbed into the structure of the Heavenly Court as one of the Jade Emperor's most trusted ministers. His status as a primeval star long observed by humankind gives him a natural authority, respected not for martial prowess but for his ancient wisdom in reading the movements of the heavens and the fates of mortals.
+
+His role in Heaven is that of official envoy and personal advisor to the Jade Emperor, dispatched down to earth to observe human affairs, recruit gifted heroes, or deliver important decrees to mortals and lesser gods alike. He is depicted as an elderly man with a long white beard, dressed in simple robes and carrying a peachwood staff or a ruyi scepter as emblems of a wisdom that favors diplomacy and negotiation over force. His calm, patient temperament makes him a frequent mediator in disputes between Heaven and the human world, embodying the Taoist ideal that conflicts are best resolved through wisdom rather than confrontation.
+
+His most prominent appearance comes in Journey to the West, where he repeatedly urges the Jade Emperor to pacify the rampaging Sun Wukong through peaceful means rather than force—first by offering him the minor post of Heavenly stable keeper (Bimawen), then the hollow honorary title "Great Sage Equal to Heaven." Unfortunately, his diplomatic wisdom is undone by Sun Wukong's pride, who feels deeply insulted upon discovering these titles carry no real power, sparking an even greater conflict between Heaven and the Monkey King. Though his efforts ultimately fail to contain the rebellion, Tai Bai Jin Xing remains remembered as the archetype of the wise celestial advisor, a symbol of the Taoist conviction that negotiation is always worth attempting before resorting to arms.''',
+    imageUrl: 'assets/images/Chinese/Court/tai_bai_jin_xing.webp',
+    category: 'Court',
+  ),
+  God(
+    id: '213',
+    name: 'Tu Di Gong',
+    mythology: 'Chinese',
+    title: 'Kakek Penjaga Tanah',
+    titleEn: 'Grandfather Guardian of the Land',
+    symbol: '🌾',
+    powers: ['Perlindungan Tanah', 'Panen', 'Komunitas Lokal', 'Kebajikan Sederhana', 'Mediasi Roh'],
+    powersEn: ['Land Protection', 'Harvests', 'Local Community', 'Humble Virtue', 'Spirit Mediation'],
+    story: '''
+Tu Di Gong berakar dari salah satu lapisan kepercayaan rakyat Tiongkok yang paling tua, berkembang dari tradisi kuno pemujaan altar tanah (She) yang telah ada sejak sebelum agama Tao maupun struktur Kahyangan yang rumit terbentuk. Hampir setiap desa, kampung, bahkan setiap blok kota di Tiongkok tradisional memiliki Tu Di Gong tersendiri, yang menurut kepercayaan setempat sering kali merupakan arwah seorang sesepuh atau leluhur yang dihormati semasa hidupnya dan terus mengawasi kesejahteraan komunitasnya setelah wafat. Karena berasal dari komunitas itu sendiri, Tu Di Gong menjadi dewa yang paling dekat dan paling manusiawi dibandingkan dewa-dewa besar Kahyangan lainnya.
+
+Sebagai penjaga sebidang tanah, desa, atau wilayah tertentu, Tu Di Gong bertugas mengawasi hasil panen, melindungi penduduk dari malapetaka, menengahi perselisihan kecil antarroh setempat, dan menempati posisi paling rendah namun paling menyeluruh dalam birokrasi Kahyangan maupun Alam Baka, melaporkan setiap kejadian di wilayahnya kepada atasan yang lebih tinggi seperti Dewa Kota (Cheng Huang). Ia digambarkan sebagai kakek tua berjanggut putih dengan senyum ramah, mengenakan jubah sederhana, memegang tongkat jalan dan batangan emas kecil, biasanya duduk berdampingan dengan istrinya, Tu Di Po, di kuil-kuil kecil sederhana di pinggir jalan atau sudut ladang.
+
+Tidak seperti dewa-dewa besar lainnya, Tu Di Gong tidak memiliki satu mitos epik tunggal, melainkan hadir dalam ratusan kisah rakyat sederhana tentang petani atau musafir yang menunjukkan kebaikan kecil kepadanya—meninggalkan sesajen, teh, atau dupa di kuil pinggir jalan—dan kemudian diganjar dengan perlindungan, keberuntungan, atau peringatan dini akan bahaya. Ia juga kerap muncul sebagai tokoh birokrat kecil dalam novel-novel klasik seperti Kera Sakti, di mana Sun Wukong berulang kali menginterogasi Tu Di Gong setempat untuk mendapatkan informasi tentang siluman dan bahaya di suatu wilayah, memperlakukannya hampir seperti seorang informan lokal. Kesederhanaan dan kedekatannya inilah yang menjadikan Tu Di Gong dewa paling banyak ditemui dalam kehidupan sehari-hari rakyat Tiongkok, dengan kuil-kuil kecilnya bertebaran di hampir setiap sudut jalan, ladang, dan toko.''',
+    storyEn: '''
+Tu Di Gong belongs to one of the oldest layers of Chinese folk belief, rooted in the ancient tradition of earth-altar (She) worship that predates both organized Taoism and the elaborate bureaucracy of Heaven. Nearly every village, hamlet, and even city block in traditional China maintained its own Tu Di Gong, who according to local belief was often the spirit of a respected elder or ancestor who continues to watch over the community's welfare after death. Because he arises from the community itself, Tu Di Gong stands as the most intimate and human of all deities, in stark contrast to the grand gods of the Heavenly Court.
+
+As guardian of a particular plot of land, village, or district, Tu Di Gong oversees harvests, protects residents from misfortune, mediates minor disputes among local spirits, and occupies the lowest yet most pervasive rung of the bureaucracy shared by Heaven and the underworld, reporting every local occurrence up the chain to higher officials such as the City God (Cheng Huang). He is depicted as a smiling elderly man with a white beard, dressed in simple robes, holding a walking staff and a small gold ingot, usually seated beside his wife, Tu Di Po, in modest roadside shrines or at the edge of a field.
+
+Unlike the grand gods of Heaven, Tu Di Gong has no single epic myth of his own; instead he appears across hundreds of simple folk tales in which farmers or travelers show him small kindnesses—leaving offerings, tea, or incense at a roadside shrine—and are rewarded with protection, good fortune, or early warning of danger. He also frequently appears as a minor bureaucratic figure in classical novels such as Journey to the West, where Sun Wukong repeatedly interrogates the local Tu Di Gong for information about the demons and dangers of a given area, treating him almost like a local informant. This very simplicity and closeness to daily life is what makes Tu Di Gong the most commonly encountered deity in Chinese folk religion, his small shrines scattered across nearly every street corner, farm, and shop.''',
+    imageUrl: 'assets/images/Chinese/Court/tu_di_gong.webp',
+    category: 'Court',
+  ),
+  God(
+    id: '208',
+    name: 'Wen Chang',
+    mythology: 'Chinese',
+    title: 'Dewa Sastra dan Ujian',
+    titleEn: 'God of Literature and Examinations',
+    symbol: '🖌️',
+    powers: ['Sastra', 'Ilmu Pengetahuan', 'Ujian Kenegaraan', 'Nasib Akademik', 'Restu Pelajar'],
+    powersEn: ['Literature', 'Scholarship', 'Civil Examinations', 'Academic Fortune', 'Student Blessings'],
+    story: '''
+Wen Chang Dijun adalah hasil peleburan dua tokoh yang berbeda asal-usul: dewa bintang dari gugusan Wenchang di dekat rasi Biduk Utara yang telah dipuja sejak masa kuno sebagai pengatur nasib intelektual manusia, dan Zhang Yazi, seorang pejabat-cendekiawan legendaris dari Zitong, Sichuan, yang gugur secara heroik dan kemudian dipuja penduduk setempat sebagai pelindung daerah. Kedua tradisi ini menyatu selama berabad-abad hingga akhirnya Kaisar Dinasti Yuan secara resmi mengesahkannya sebagai satu dewa tunggal, Wen Chang Dijun, pelindung resmi dunia sastra dan pendidikan di seluruh Tiongkok, menjadikannya salah satu dewa dengan proses kanonisasi paling jelas tercatat dalam sejarah.
+
+Sebagai dewa sastra, kebudayaan, dan ujian kenegaraan, Wen Chang menjadi pelindung utama para sarjana, pelajar, dan calon pejabat yang harus melewati ujian kenegaraan yang ketat untuk meniti karier di birokrasi kekaisaran—tradisi ujian yang menjadi jantung mobilitas sosial Tiongkok selama lebih dari seribu tahun. Ia digambarkan mengenakan jubah cendekiawan yang anggun, memegang tongkat ruyi atau kuas tulis, sering didampingi dua pelayan cilik bernama Tianlong dan Dima yang masing-masing melambangkan pemahaman dan daya ingat, dua kualitas penting bagi pelajar yang hendak menempuh ujian. Kuil-kuilnya, yang disebut Wen Miao, menjadi tempat ziarah wajib menjelang musim ujian di berbagai kota.
+
+Legenda mengisahkan bahwa sebelum mencapai kedudukan sebagai dewa, jiwa Zhang Yazi telah bereinkarnasi sebanyak tujuh belas kali, setiap kali menjalani kehidupan sebagai pejabat yang berbudi luhur dan tak pernah menyalahgunakan kekuasaannya, hingga akhirnya layak diangkat menjadi pelindung sastra abadi. Ia juga sering disandingkan dengan Kuixing, dewa bintang ujian yang digambarkan sebagai sosok menyeramkan berdiri di atas seekor ikan sambil memegang kuas, sebagai pasangan pelengkap dalam pemujaan menjelang ujian—Wen Chang mewakili kebajikan dan kebijaksanaan, sementara Kuixing mewakili keberuntungan mentah. Hingga era modern, pelajar Tiongkok yang menghadapi ujian nasional seperti Gaokao masih kerap berziarah ke kuil Wen Chang untuk memohon restu kelulusan.''',
+    storyEn: '''
+Wen Chang Dijun is a fusion of two originally separate figures: an ancient star deity of the Wenchang constellation near the Big Dipper, long worshipped as the arbiter of human intellectual fortune, and Zhang Yazi, a legendary scholar-official from Zitong, Sichuan, who died heroically and was subsequently venerated by locals as a regional guardian spirit. These two traditions gradually merged over centuries until an emperor of the Yuan dynasty formally canonized them as a single deity, Wen Chang Dijun, the official patron of literature and education throughout China—making him one of the few gods whose process of canonization is so clearly documented in historical record.
+
+As god of literature, culture, and the civil examinations, Wen Chang serves as chief patron of scholars, students, and aspiring officials who had to pass grueling state examinations to advance within the imperial bureaucracy—a testing tradition that formed the backbone of social mobility in China for more than a thousand years. He is depicted in elegant scholar's robes, holding a ruyi scepter or a writing brush, often flanked by two child attendants named Tianlong and Dima, who respectively personify comprehension and memory, two qualities essential to any student facing examinations. His temples, called Wen Miao, become essential pilgrimage sites in cities across China as exam season approaches.
+
+Legend holds that before attaining godhood, the soul of Zhang Yazi was reincarnated seventeen times, each life spent as a virtuous official who never abused his position, until he finally earned the right to become the eternal patron of literature. He is also frequently paired with Kuixing, the star god of examinations, depicted as a fearsome figure balancing atop a fish while brandishing a writing brush, serving as his complementary counterpart in exam-related worship—Wen Chang representing virtue and wisdom, Kuixing representing raw luck. Even today, Chinese students facing national examinations such as the Gaokao still make pilgrimages to Wen Chang's temples to pray for success.''',
+    imageUrl: 'assets/images/Chinese/Court/wen_chang.webp',
     category: 'Court',
   ),
   God(
@@ -334,7 +334,7 @@ Chinese cosmogonic accounts recorded in the Huainanzi and later elaborated by wr
 As the egg cracked open, the light, clear elements rose to form the sky while the heavy, murky elements sank to form the earth. Fearing the two halves might reunite, Pangu planted himself between them, bracing the sky upward with his head and pressing the earth downward with his feet, growing ten feet taller every day for the next eighteen thousand years. Through this unrelenting labor, the gap between heaven and earth widened steadily until it spanned some ninety thousand li, and the basic structure of the cosmos as it is known today began to take shape. Pangu is thus regarded as the first cosmic force to impose form and order on a universe that had previously been without shape.
 
 When his task of holding heaven and earth apart was finally complete, an exhausted Pangu lay down and died, and his death became his greatest act of creation. His final breath became the wind and clouds, his voice became the rolling thunder, his left eye became the sun and his right eye the moon, his limbs formed the cardinal directions and the sacred mountains, his blood became the rivers, and even the small creatures on his body transformed into humankind. This myth of cosmic self-sacrifice places Pangu at the center of Chinese cosmogony, embodying the belief that the universe and humanity alike arose from a single primeval being who gave himself entirely to bring order into existence.''',
-    imageUrl: 'assets/images/Chinese/Primordial/pangu.jpg',
+    imageUrl: 'assets/images/Chinese/Primordial/pangu.webp',
     category: 'Primordial',
   ),
   God(
@@ -358,7 +358,7 @@ Nu Wa is remembered as one of the oldest goddesses in Chinese mythology, portray
 Finding the newly made world silent and empty of inhabitants, Nu Wa gathered yellow clay from the banks of the Yellow River and shaped it into small figures resembling herself, breathing life into them to create the first humans. Because sculpting each figure by hand proved exhausting, she eventually dipped a length of rope into the mud and flicked it through the air, and every fleck of mud that fell to the ground likewise became a living person. According to legend, those carefully hand-molded became the nobility while those formed from flung mud became the common people, and it was also Nu Wa who instituted marriage so that humankind could multiply on its own without depending on her endless labor.
 
 Nu Wa's most celebrated feat follows a cosmic catastrophe in which the water god Gonggong, enraged after losing a battle for heaven's throne, smashed his head into Mount Buzhou, one of the pillars holding up the sky, cracking and tilting the heavens, splitting the earth, and unleashing floods and fires that threatened to destroy all life. To save the world, Nu Wa smelted stones of five colors and used them to patch the broken sky, then cut the four legs from a giant turtle to serve as new pillars propping up the corners of the earth and restoring cosmic balance. For this act she has been venerated ever since as a guardian goddess, the primal mother of humankind, and an enduring symbol of feminine courage in restoring order to a broken world.''',
-    imageUrl: 'assets/images/Chinese/Primordial/nuwa.jpg',
+    imageUrl: 'assets/images/Chinese/Primordial/nuwa.webp',
     category: 'Primordial',
   ),
   God(
@@ -382,7 +382,7 @@ Fuxi is honored as the first of the Three Sovereigns of ancient Chinese legend, 
 As a bringer of civilization, Fuxi studied the patterns of heaven and earth, the movements of the stars, the tracks of birds, and the markings on tortoise shells, distilling his observations into the Eight Trigrams, a system of symbols that would become the foundation of the Yijing, or Book of Changes, and of Chinese divination as a whole. He also taught people to weave nets for hunting and fishing, to domesticate livestock, and he is credited with inventing the se, a stringed musical instrument. Through these teachings, Fuxi led humanity out of a wild, unstructured existence toward a society governed by order, livelihood, and art, earning him recognition as the founding figure of Chinese civilization itself.
 
 One of the best-known stories about Fuxi tells how he and Nu Wa were left as the only two people alive after a great flood engulfed the world, and to ensure humanity's survival the siblings faced the necessity of marrying one another. Uncertain whether heaven would sanction such a union, they tested the will of the gods by rolling two millstones down from the peaks of separate mountains; when the stones came together and fused at the bottom, they took it as a sign of divine approval and married to repopulate the earth. Fuxi remains venerated today as the ancestral founder of Chinese civilization, and the trigrams attributed to him still underlie the philosophy of the Yijing, which continues to be studied and consulted in Chinese divination and cosmological thought.''',
-    imageUrl: 'assets/images/Chinese/Primordial/fuxi.jpg',
+    imageUrl: 'assets/images/Chinese/Primordial/fuxi.webp',
     category: 'Primordial',
   ),
   God(
@@ -406,7 +406,7 @@ Unlike most deities who have a story of birth, Hundun was never born at all but 
 Cosmologically, Hundun stands for the undifferentiated primal unity that existed before Yin and Yang split apart and before heaven and earth acquired any clear boundary, a state often understood as parallel to the cosmic egg that preceded Pangu's emergence. Hundun is neither good nor evil but rather the very absence of distinction, the condition in which light and dark, above and below, self and other had not yet been drawn apart. Because of this seamless wholeness, Hundun frequently serves as a philosophical symbol for the ideal state that exists before any interference imposes artificial order, an idea central to Taoist thought, which prizes natural spontaneity over enforced structure.
 
 Hundun's most famous appearance comes in a parable told by the philosopher Zhuangzi, in which the Emperor of the North Sea, named Hu, and the Emperor of the South Sea, named Shu, frequently visited and were warmly hosted by Hundun, the Emperor of the Center. Wishing to repay their host's kindness, and noticing that he lacked the seven openings that ordinary people use to see, hear, eat, and breathe, the two visiting emperors resolved to carve one opening into him each day. On the seventh day, the moment the final opening was completed, Hundun died, and the parable has since become a celebrated Taoist warning that forcing order and distinction upon a natural unity can destroy the very essence it was meant to improve.''',
-    imageUrl: 'assets/images/Chinese/Primordial/hundun.jpg',
+    imageUrl: 'assets/images/Chinese/Primordial/hundun.webp',
     category: 'Primordial',
   ),
   God(
@@ -430,7 +430,7 @@ Taiyi, whose name means "the Great One" or "Grand Unity," ranks among the oldest
 Cosmologically, Taiyi is understood as the single source from which Yin and Yang emerge and interact to give rise to the ten thousand things that make up the world, making it the underlying principle behind the entire process of creation and cosmic change. In ancient religious practice and astronomy, Taiyi was closely associated with the North Star, or celestial pole, the fixed point in the night sky around which all other stars appear to revolve, and for this reason Taiyi was also worshiped as the supreme ruler of the heavens. During the Han dynasty, Emperor Wu formally established state worship of Taiyi as the highest sky deity, placing it above other gods in official sacrificial ceremonies.
 
 As Taoism developed, Taiyi was absorbed into the Taoist pantheon and venerated under titles such as Taiyi Tianzun, one of the exalted deities closely tied to meditation and inner alchemy practices. Taoist practitioners came to believe that Taiyi resided not only in the heavens as the North Star but also within the human body as an indwelling unity of spirit, so that "becoming one with Taiyi" became a supreme spiritual goal in the pursuit of immortality. To this day, the idea of Taiyi as the Great One, the singular source underlying all diversity, remains a vital philosophical concept shaping Chinese cosmological and spiritual views of the unity that lies beneath the multiplicity of the universe.''',
-    imageUrl: 'assets/images/Chinese/Primordial/taiyi.jpg',
+    imageUrl: 'assets/images/Chinese/Primordial/taiyi.webp',
     category: 'Primordial',
   ),
   God(
@@ -454,7 +454,7 @@ Ao Guang is the eldest of the four Dragon King brothers who govern the Four Seas
 As sovereign of the sea, Ao Guang commands the tides, rainfall, and storms within his domain, while also embodying the wood element and the season of spring associated with the eastern direction. He is typically portrayed as a dignified elderly figure in azure-green dragon robes and a royal crown, though he can transform at will into a colossal scaled dragon wreathed in clouds. Ao Guang commands legions of aquatic creatures and lesser water spirits, and his palace houses numerous legendary treasures, including a sea-anchoring pillar that would later become the signature weapon of a young hero.
 
 His most celebrated episode is the clash with the fearless child-god Nezha in Investiture of the Gods. After Ao Guang's son is killed by Nezha while the boy was playing in the Eastern Sea, the enraged Dragon King threatens to flood Nezha's hometown and brings the matter before the Jade Emperor himself. The conflict culminates in Nezha's self-sacrifice to protect his family, an episode that cements Ao Guang's image as a majestic ruler who must ultimately answer to the order of Heaven. To this day, Ao Guang remains venerated by Chinese fishermen and sailors as a guardian of safe voyages and a bringer of rain for bountiful harvests.''',
-    imageUrl: 'assets/images/Chinese/Nature/ao_guang.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/ao_guang.webp',
     category: 'Nature',
   ),
   God(
@@ -478,7 +478,7 @@ Ao Qin is the second of the Dragon King brothers, entrusted with overseeing the 
 In the Chinese five-element cosmology, the southern direction corresponds to fire and summer, and Ao Qin is accordingly depicted in blazing red robes trimmed with golden scales, a striking contrast to Ao Guang's cooler green hues. He commands typhoons, monsoon rains, and towering waves that batter the southern coastline, and is worshipped as a protector against pirates and sea monsters that threaten merchant vessels. His quick temper, tempered by an equally quick willingness to calm, makes him a figure both feared and respected by sailors who cross his waters.
 
 Ao Qin appears alongside his three brothers in several classical episodes, including Journey to the West, when all four Dragon Kings are summoned to confront Sun Wukong as he searches Ao Guang's undersea armory for a legendary weapon. Though rarely a central figure in his own right, his presence always reinforces the collective authority of the four brothers as guardians of maritime order under the watch of the Jade Emperor. Even today, fishermen along China's southern coast and in Chinese-influenced communities across Southeast Asia offer prayers to Ao Qin before setting sail, seeking protection from the fury of tropical storms.''',
-    imageUrl: 'assets/images/Chinese/Nature/ao_qin.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/ao_qin.webp',
     category: 'Nature',
   ),
   God(
@@ -502,7 +502,7 @@ Ao Run is the third of the four Dragon King brothers, ruling the Western Sea (Xi
 The western direction in Chinese five-element cosmology corresponds to metal and autumn, and Ao Run is often depicted in silvery-white robes adorned with pearls and jade, reflecting the wealth and splendor of the sea he governs. He is venerated as a protector of merchants and pearl divers, believed capable of calming rough waves and guiding lost ships safely back on course. His composed, calculating nature often casts him as the quiet counselor among the Dragon Kings whenever the four brothers must reach a joint decision.
 
 Though individual myths about Ao Run are scarcer than those surrounding Ao Guang, he consistently appears in collective portrayals of the four Dragon Kings, including in Journey to the West, where he joins his brothers in helping Sun Wukong select the most fitting weapon from the undersea treasury. His quieter role only reinforces the image of the Dragon King family as rulers of varied temperament who nonetheless stand united in maintaining balance across the four seas. Scattered coastal shrines in southwestern China still preserve modest devotions to Ao Run as guardian of the ocean's hidden riches.''',
-    imageUrl: 'assets/images/Chinese/Nature/ao_run.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/ao_run.webp',
     category: 'Nature',
   ),
   God(
@@ -526,7 +526,7 @@ Ao Shun is the youngest of the four Dragon King brothers, ruling the Northern Se
 The north in Chinese five-element cosmology is linked to water, the color black, and winter, and Ao Shun is accordingly depicted in dark robes that gleam like ice, his expression sterner and more reserved than his brothers'. He commands blizzards, freezing winds, and the ice-locked seas of the far north, ruling his legions of sea creatures with strict discipline. His stoic, unemotional bearing casts him as something of an enforcer among the Dragon Kings, a figure who ensures Heaven's decrees are carried out without compromise across his forbidding domain.
 
 Ao Shun appears most often as part of the Dragon King quartet in collective scenes, such as when all four brothers are summoned before the Jade Emperor following the incident with Nezha, or when they jointly aid or obstruct Sun Wukong in Journey to the West. The scarcity of stories devoted to him alone only deepens his mystique, casting him as a silent sentinel who rarely strays from his frozen realm. In some folk shrines of northern China, Ao Shun is still venerated as a protector against winter storms and a keeper of balance among the four seas that uphold the order of the world.''',
-    imageUrl: 'assets/images/Chinese/Nature/ao_shun.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/ao_shun.webp',
     category: 'Nature',
   ),
   God(
@@ -550,7 +550,7 @@ Lei Gong, the "Duke of Thunder," is the thunder god of Chinese folk belief and D
 His appearance is distinctive and fearsome: a dark blue-green face with a sharp, birdlike beak, a pair of large bat-like wings, clawed hands and feet, and a muscular body ringed with a chain of drums. He carries a mallet or small chisel to strike these drums, producing the rolling boom of thunder as a warning before he unleashes a deadly lightning bolt upon the guilty. Lei Gong is believed capable of detecting concealed sins invisible to human law, making him a symbol of cosmic justice that shows no mercy toward moral transgressors.
 
 In numerous folk tales, Lei Gong is often paired with Dian Mu, the Mother of Lightning, who first blinds the target with flashes from her mirrors before Lei Gong delivers the fatal thunderbolt. Moral tales about Lei Gong commonly feature wicked individuals—children who abuse their parents, dishonest merchants, or murderers who evaded the law—struck down by lightning as divine retribution. Even today, the phrase "struck by Lei Gong" persists in Chinese culture as a moral warning, reflecting the enduring belief that Heaven's justice will ultimately reach anyone who slips through the justice of the mortal world.''',
-    imageUrl: 'assets/images/Chinese/Nature/lei_gong.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/lei_gong.webp',
     category: 'Nature',
   ),
   God(
@@ -574,7 +574,7 @@ Dian Mu, whose name means "Mother of Lightning," is the lightning goddess of Chi
 Dian Mu is depicted as an elegant woman in brightly colored robes, holding a pair of gleaming mirrors, one in each hand. These mirrors are the source of her power: by aiming them skyward, she casts blinding flashes of light that illuminate a wrongdoer before Lei Gong strikes with his fatal thunderbolt. Her role is essential both functionally and symbolically—without Dian Mu's lightning, Lei Gong cannot clearly see who deserves punishment, so their partnership embodies the principle that true justice requires both the light of truth (lightning) and the force of retribution (thunder) working in harmony.
 
 According to folk legend, Dian Mu was originally a devout mortal woman elevated to divinity after she protested Heaven's intent to punish an innocent person, and was thereafter assigned to accompany Lei Gong so that divine punishment would no longer strike the wrong target due to Heaven's clouded vision. This story makes Dian Mu a symbol of caution and verification before judgment is passed, a value highly esteemed in the Chinese moral conception of celestial justice. She remains venerated today in Daoist temples alongside Lei Gong as the divine pair who ensure that cosmic punishment always finds its rightful mark.''',
-    imageUrl: 'assets/images/Chinese/Nature/dian_mu.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/dian_mu.webp',
     category: 'Nature',
   ),
   God(
@@ -598,7 +598,7 @@ Yu Shi, the "Lord of Rain," is the deity who governs rainfall in Chinese folk be
 Yu Shi is commonly depicted riding a dragon or floating atop thick banks of cloud, carrying a bowl or jar of water that he sprinkles over the earth to bring rain as needed. In some depictions he appears as an elderly, long-bearded man in dark blue robes, while other versions portray him as younger and more vigorous, reflecting the diversity of local traditions that venerate him. His powers extend from gentle, nourishing drizzle for the fields to torrential downpours capable of causing floods should he grow angry or find his worship neglected.
 
 Ancient Chinese farmers regularly held ceremonies invoking Yu Shi ahead of the planting season, especially during prolonged droughts that threatened the harvest, and small shrines dedicated to him were scattered across farming villages throughout China. Yu Shi is also frequently paired with Feng Bo, the wind god, in ancient state rituals seeking favorable weather for the realm, reflecting the old understanding that wind and rain worked together to shape the climate. His legacy persists in traditional Chinese agricultural festivals, where rural communities still pray for rain to bless the coming year with abundant harvests.''',
-    imageUrl: 'assets/images/Chinese/Nature/yu_shi.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/yu_shi.webp',
     category: 'Nature',
   ),
   God(
@@ -622,7 +622,7 @@ Feng Bo, the "Count of the Wind," is the deity who governs the winds in ancient 
 Feng Bo is generally depicted as an elderly man with a long white beard, dressed in yellow or gray robes, carrying a large sack that serves as the source of his power. When the sack is opened, powerful winds rush out; the wider it is opened, the fiercer the wind he unleashes, ranging from a gentle breeze to a raging gale capable of toppling trees and buildings. He is believed to control both the direction and strength of the wind at will, making him a figure whose favor sailors, farmers, and anyone whose life depends on the weather must carefully cultivate.
 
 Feng Bo frequently appears alongside Yu Shi in ancient imperial rituals seeking harmonious weather for the realm, and the two are often mentioned together in classical texts as complementary forces of the atmosphere. In some folk tales, Feng Bo is portrayed as a mischievous figure, occasionally releasing too much wind and causing minor calamities before being persuaded to rein in his power. His worship has endured into the modern era through traditional weather festivals and rural shrines where communities seek protection from typhoons and pray for favorable winds to bless both sailing and agriculture.''',
-    imageUrl: 'assets/images/Chinese/Nature/feng_bo.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/feng_bo.webp',
     category: 'Nature',
   ),
   God(
@@ -646,7 +646,7 @@ He Bo, the "Count of the River," is the deity who governs the Yellow River (Huan
 He Bo is depicted riding a chariot drawn by white turtles, or sometimes dragons, gliding gracefully across the water's surface in flowing blue-white robes symbolizing water itself. He governs the river's rise and fall, including the annual floods that could either enrich the valley with fertile silt or devastate settlements if left unchecked, leading riverside communities to regard him with a mixture of reverence and wariness. Shrines were erected along the Yellow River where locals prayed for He Bo to temper his anger and grant fertility to the surrounding farmland.
 
 One of the most notable historical episodes tied to He Bo is the ancient practice of the "river bride," in which local communities offered a young woman to the river each year to appease He Bo's temper and ward off floods. This custom was ultimately abolished by the official Ximen Bao during the Warring States period, who, according to historian Sima Qian's Records of the Grand Historian (Shiji), ended the practice through a clever ruse that exposed the shamans profiting from it as frauds. This episode makes He Bo not merely a mythological figure but also a meaningful touchstone in the history of ancient Chinese social reform against religious practices that harmed ordinary people.''',
-    imageUrl: 'assets/images/Chinese/Nature/he_bo.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/he_bo.webp',
     category: 'Nature',
   ),
   God(
@@ -670,7 +670,7 @@ Hou Yi is the legendary archer-hero of Chinese mythology, whose story is most fu
 Sent by the Celestial Emperor to resolve the crisis, Hou Yi was renowned for his unrivaled skill in archery, granted a vermilion bow and white arrows by the gods. He is portrayed as a bold and courageous man, a folk hero embodying the courage to confront natural disasters that seemed impossible for an ordinary human to overcome. Beyond the tale of the ten suns, Hou Yi was also celebrated as a formidable hunter who slew numerous monsters and ferocious beasts terrorizing the population of his time, establishing him as a protector of humanity against threats of every kind, not only those from the sky.
 
 In the story's most famous episode, Hou Yi shot down nine of the ten suns, each falling to earth transformed into a three-legged crow, leaving only one sun so the earth would neither fall into darkness nor continue to burn. For saving the world, he was granted the elixir of immortality by Xi Wangmu, the Queen Mother of the West—a gift that would later set in motion the poignant tale of his wife, Chang'e. Hou Yi remains one of the most iconic heroes in Chinese mythology, a symbol of human courage in the face of cosmic disaster far beyond ordinary strength.''',
-    imageUrl: 'assets/images/Chinese/Nature/hou_yi.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/hou_yi.webp',
     category: 'Nature',
   ),
   God(
@@ -694,7 +694,7 @@ Chang'e is the moon goddess of Chinese mythology, wife of the legendary archer H
 In the most popular version of the tale, a greedy disciple of Hou Yi named Peng Meng attempted to steal the elixir while Hou Yi was away hunting, forcing Chang'e to drink it herself rather than let it fall into the wrong hands. The instant she swallowed it, her body grew weightless and she rose into the sky, drifting ever upward until she reached the moon, where she settled alone forever, forever parted from the husband she deeply loved. She is depicted dwelling in the cold, silent Moon Palace, often accompanied by the Jade Rabbit, who eternally pounds the herbs of immortality beneath a cassia tree.
 
 Chang'e's story forms the mythological foundation of the Mid-Autumn Festival (Zhongqiu Jie), one of the most important celebrations in the Chinese cultural calendar, when families gather beneath the full moon to share mooncakes while remembering Chang'e's eternal longing for her husband on earth. Some versions of the tale add that Hou Yi, grieving the loss of his wife, laid out her favorite sweet cakes in his courtyard every full moon as an offering of undying longing. To this day, Chang'e remains one of the most beloved figures in Chinese mythology, embodying beauty, sacrifice, and eternal yearning, celebrated each year by millions of people around the world.''',
-    imageUrl: 'assets/images/Chinese/Nature/chang_e.jpg',
+    imageUrl: 'assets/images/Chinese/Nature/chang_e.webp',
     category: 'Nature',
   ),
   God(
@@ -718,7 +718,7 @@ Yanluo Wang, known in the West as Yama, traces back to the god of death in Hindu
 As the underworld's supreme judge, Yanluo Wang's central task is to weigh the full record of a soul's earthly conduct, compiled meticulously by his scribes, and then determine the form of rebirth that soul deserves. In temple art and popular imagery he appears in imperial red robes and a judge's crown or official's cap, seated on a great throne and holding a jade tablet or gavel of judgment. He is typically flanked by Judge Cui, who records and reads out each soul's sins, and by the ox-headed and horse-headed guardians who escort souls into the courtroom. His hall is also often depicted containing the Mirror of Karma, which reflects back every deed a person committed in life.
 
 Yanluo Wang's best-known episode comes from the classical novel Journey to the West, when Sun Wukong descends into Diyu and strikes his own name, along with the names of all monkey-kind, from the Register of Life and Death, freeing them from death and from Yanluo Wang's jurisdiction. The episode cemented his image as guardian of cosmic order, one whose authority could nonetheless be defied by extraordinary power. To this day, Yanluo Wang's name is invoked in Chinese funeral rites and during the Ghost Festival as a reminder that every deed will ultimately be reckoned before him, making him an enduring symbol of moral justice beyond the boundary of life itself.''',
-    imageUrl: 'assets/images/Chinese/Underworld/yanluo_wang.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/yanluo_wang.webp',
     category: 'Underworld',
   ),
   God(
@@ -742,7 +742,7 @@ Judge Cui, or Cui Panguan, is one of the senior officials of Diyu's bureaucracy 
 Depicted in the dark robes and winged cap of an ancient Chinese magistrate, Judge Cui is invariably shown carrying a writing brush and a thick ledger, standing or seated beside Yanluo Wang's throne as both advisor and court recorder. His duty extends beyond mere transcription: he reads a soul's life history aloud before Yanluo Wang in exacting detail, so that the verdict on reincarnation rests on irrefutable written evidence. Because he alone holds direct custody of the Register of Life and Death, Judge Cui is regarded as the figure who understands the secret workings of human fate most intimately, arguably surpassing even Yanluo Wang in command of the underworld's administrative particulars.
 
 Judge Cui's most famous episode appears in the classical novel Journey to the West, when Emperor Taizong of Tang is mistakenly summoned to Diyu before his appointed time. Owing to an old friendship from their mortal lives, Judge Cui secretly alters the figures in the Register of Life and Death, adding twenty years to the emperor's lifespan so he can be returned to the world of the living. The tale remains one of Chinese literature's most celebrated illustrations of how a record of fate, however absolute it appears, can still be touched by the discretion and personal loyalty of an underworld official. Judge Cui endures today as the popular symbol of an afterlife bureaucracy that is both meticulous and quietly human.''',
-    imageUrl: 'assets/images/Chinese/Underworld/judge_cui.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/judge_cui.webp',
     category: 'Underworld',
   ),
   God(
@@ -766,7 +766,7 @@ Meng Po, whose name literally means "Grandmother Meng," is an elderly goddess in
 Meng Po's central duty is to serve the Five-Flavored Tea, often called the Soup of Forgetfulness, to every soul that has completed its punishment and stands ready for rebirth. The tea is brewed from sweet, sour, bitter, spicy, and salty essences representing the full range of human joys and sorrows, and upon drinking it, a soul's memory of its former life is erased entirely. She is typically pictured as a white-haired old woman seated in a modest pavilion at the foot of Naihe Bridge, calmly and compassionately offering a bowl of tea to each passing soul, for to her, forgetting is not a punishment but a merciful release.
 
 Folk tales tell of souls who refused Meng Po's tea to preserve their memory of a beloved person, resorting to tricks such as spilling the cup or hiding tea behind an ear, a motif that inspired countless stories of love spanning multiple lifetimes in later Chinese literature and drama. Belief in Meng Po offers a folk-philosophical explanation for why humans retain no memory of past lives despite the widespread acceptance of reincarnation, and her name still surfaces in everyday Chinese expressions about forgetfulness. Meng Po remains one of the most beloved figures of the Chinese afterlife, valued for the gentleness of her role amid the otherwise stern and exacting judicial machinery of Diyu.''',
-    imageUrl: 'assets/images/Chinese/Underworld/meng_po.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/meng_po.webp',
     category: 'Underworld',
   ),
   God(
@@ -790,7 +790,7 @@ Black Impermanence is one of a paired duo of underworld messengers charged with 
 Depicted in black robes and a black hat, with a pallid or masked, frightening face, and carrying chains alongside a wooden tablet inscribed with characters reading "Soul Summoner," Black Impermanence patrols the mortal world together with White Impermanence, seeking out souls that have reached the end of their allotted span. In many folk temples across China and Taiwan, the two figures are carved standing side by side as gate guardians, embodying the stern and threatening face of death's arrival. His function is purely that of a frontline underworld enforcer: he does not judge, but ensures that souls due for death actually reach Diyu's court, unable to flee or hide from their fate.
 
 In folk festivals, especially the seventh-month Ghost Festival parades and temple processions in Taiwan, performers portraying Black and White Impermanence often appear as towering puppet figures marching to drive away malevolent spirits while reminding onlookers of life's fragility. Popular superstition holds that carelessly speaking Black Impermanence's name can invite misfortune, so many people avoid mentioning him directly in everyday speech. As a cultural symbol, Black Impermanence reinforces the Buddhist-Taoist conviction that death is no random ending but part of an ordered cosmic system that arrives, without fail, for every living being in its appointed time.''',
-    imageUrl: 'assets/images/Chinese/Underworld/black_impermanence.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/black_impermanence.webp',
     category: 'Underworld',
   ),
   God(
@@ -814,7 +814,7 @@ White Impermanence is the paired counterpart and counterbalance to Black Imperma
 White Impermanence is depicted in a long white robe and a tall hat inscribed with phrases such as "Your Arrival Brings Fortune" or "One Step Higher," his tongue lolling out, his strange face reading as more comical than menacing. Alongside Black Impermanence, he patrols the mortal world for souls whose lives have reached their end and escorts them to Diyu's court, ensuring that no soul evades the reckoning of karma. Their pairing, one black and one white, one stern and one amiable, reflects the Chinese philosophical principle of yin and yang balance extending even into the domain of death.
 
 White Impermanence most often appears alongside Black Impermanence in Ghost Festival parades and City God (Chenghuang) temple processions across southern China and Taiwan, where towering puppet effigies of the two are paraded to drive off malevolent spirits and remind the living of life's impermanence. Unlike most other underworld figures, who read as purely fearsome, White Impermanence is actually venerated by some communities as a bringer of fortune and second chances, with several Taiwanese temples maintaining dedicated altars in his honor. His presence affirms that in Chinese folk belief, death does not wear only a grim face, but can also carry justice, and even a measure of hope.''',
-    imageUrl: 'assets/images/Chinese/Underworld/white_impermanence.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/white_impermanence.webp',
     category: 'Underworld',
   ),
   God(
@@ -838,7 +838,7 @@ Niutou, or Ox-Head, is one of the two most recognizable animal-headed guardians 
 Portrayed with a muscular human body topped by a horned ox's head, typically clad in warrior's armor and wielding a chain-rake or trident, Ox-Head is renowned for his formidable physical strength. Together with Mamian, his duty is to escort, recapture, and restrain souls who attempt to flee Diyu's court or resist the karmic verdict handed down to them. The pair stand watch at the underworld's key gates and along Naihe Bridge, ensuring the flow of souls toward reincarnation proceeds in the orderly manner commanded by Yanluo Wang and the Ten Kings, making them loyal, uncompromising enforcers of underworld law.
 
 Ox-Head and Mamian frequently appear together in classical Chinese literature, including folk tales in which a living person is mistakenly "abducted" to Diyu before their appointed time, with the two guardians typically the ones who correct the administrative error and return the soul to the mortal world. In folk performance arts such as opera and temple sculpture, the pair form the most instantly recognizable visual symbol of Diyu, often placed at temple gates as guardians of the threshold to the world of the dead. Ox-Head's continued presence in modern Chinese popular culture, from film to games, keeps alive his image as a stern yet fundamentally fair enforcer of underworld order.''',
-    imageUrl: 'assets/images/Chinese/Underworld/ox_head.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/ox_head.webp',
     category: 'Underworld',
   ),
   God(
@@ -862,7 +862,7 @@ Mamian, or Horse-Face, is the inseparable partner of Niutou among the guardians 
 Mamian is depicted with an armored human body and a horse's head, wielding weapons such as a chain-rake or spear, and is known for a swiftness that complements Niutou's raw strength. Where Niutou is more associated with the brute force needed to restrain a resisting soul, Mamian is typically understood as the nimble pursuer who chases down souls attempting to flee Diyu's court or escape from Naihe Bridge before undergoing the punishment fitting their sins. Alongside Niutou, he patrols the underworld's gates and passageways, reporting directly to Yanluo Wang and the judges of the Ten Kings on every soul successfully recaptured.
 
 In Chinese literary and folk theatrical tradition, Mamian and Niutou frequently appear together in moral tales reminding audiences that no one escapes the underworld, as well as in lighter stories of administrative mix-ups that end with a soul being restored to the mortal world. Carvings and statues of the pair adorn the gates of City God temples throughout China and Taiwan, standing as a visual marker of the threshold between the world of the living and the world of the dead. As Niutou's eternal partner, Mamian remains one of the most widely recognized symbols of underworld law enforcement, carrying through into modern Chinese popular culture.''',
-    imageUrl: 'assets/images/Chinese/Underworld/horse_face.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/horse_face.webp',
     category: 'Underworld',
   ),
   God(
@@ -886,56 +886,56 @@ The Ten Kings of Hell describes the Chinese belief system dividing Diyu, the und
 Every deceased soul must pass through all ten halls in sequence, beginning at the first court where its life record is initially reviewed, continuing through middle courts each focused on a specific category of wrongdoing such as deceit, disloyalty, or cruelty, and finally arriving at the tenth court, where the King of the Wheel of Rebirth determines the form and status of the soul's next life. It is here, too, that Naihe Bridge is located and where Meng Po serves her tea of forgetting just before a soul is truly reborn into the world. Taken as a whole, the system functions as a thorough, staged engine of karmic accounting, ensuring every good and evil deed of a lifetime is weighed before reincarnation occurs.
 
 The Ten Kings framework is elaborated in detail in the Chinese Buddhist apocryphal text known as the Scripture of the Ten Kings, which became the principal reference for scroll paintings, temple carvings, and folk funerary ritual across the centuries, including the practice of burning paper money and offerings on the seventh day, the forty-ninth day, and annual death anniversaries, believed to ease a soul's passage through the ten courts. The system also shaped classical literature such as Journey to the West and countless folk moral tales. To this day, the ten-court framework remains the most influential structure for imagining the Chinese afterlife, portraying the realm of the dead not merely as a place of punishment but as an ordered, comprehensible system of cosmic justice.''',
-    imageUrl: 'assets/images/Chinese/Underworld/ten_kings.jpg',
+    imageUrl: 'assets/images/Chinese/Underworld/ten_kings.webp',
     category: 'Underworld',
   ),
   God(
-    id: '239',
-    name: 'Sun Wukong',
+    id: '210',
+    name: 'Menshen',
     mythology: 'Chinese',
-    title: 'Raja Kera Sakti',
-    titleEn: 'The Monkey King',
-    symbol: '🐒',
-    powers: ['Transformasi', 'Kekuatan Adikodrati', 'Tongkat Ajaib', 'Salto Awan', 'Keabadian'],
-    powersEn: ['Shapeshifting', 'Superhuman Strength', 'Magic Staff', 'Cloud Somersault', 'Immortality'],
+    title: 'Dewa Penjaga Pintu',
+    titleEn: 'The Door Guardian Gods',
+    symbol: '🚪',
+    powers: ['Perlindungan Rumah', 'Pengusiran Roh Jahat', 'Penjagaan Pintu', 'Keberanian', 'Kewaspadaan'],
+    powersEn: ['Household Protection', 'Warding Evil Spirits', 'Gate Guardianship', 'Courage', 'Vigilance'],
     story: '''
-Sun Wukong lahir bukan dari rahim seorang ibu, melainkan dari sebutir telur batu di puncak Gunung Buah Bunga (Huaguoshan), yang selama berabad-abad menyerap sari langit dan bumi hingga akhirnya pecah dan memunculkan seekor kera batu. Karena keberaniannya melompat menembus air terjun dan menemukan Gua Tirai Air di baliknya, ia diangkat menjadi raja oleh kawanan kera di gunung itu. Namun kegelisahan akan kematian mendorongnya mengembara mencari jalan menuju keabadian, hingga ia berguru kepada seorang pendeta Tao bernama Patriarkh Subhuti, yang mengajarkannya tujuh puluh dua jenis transformasi dan ilmu salto awan yang memungkinkannya menempuh ribuan li dalam sekali lompatan. Dari istana Raja Naga di dasar laut, ia juga merampas sebatang tongkat besi ajaib yang dapat membesar dan mengecil sesuka hati, yang kelak dikenal sebagai Ruyi Jingu Bang.
+Menshen, para Dewa Penjaga Pintu, paling populer diidentikkan dengan dua jenderal sungguhan dari Dinasti Tang, Qin Shubao dan Yuchi Gong, yang menurut legenda berjaga di depan pintu kamar Kaisar Taizong pada malam hari untuk mengusir hantu yang menghantuinya. Tradisi yang lebih tua bahkan menyebut sepasang penjaga mitos bernama Shen Tu dan Yu Lei, yang menurut Shan Hai Jing berjaga di gerbang pohon persik raksasa penghubung dunia manusia dan dunia roh, menjaga agar roh-roh jahat tidak dapat melintas ke dunia nyata. Kedua tradisi ini akhirnya melebur menjadi satu praktik keagamaan rakyat yang sama: menempelkan gambar penjaga bersenjata di kedua sisi pintu rumah.
 
-Dengan kekuatan barunya, Sun Wukong menobatkan dirinya sebagai "Maha Bijak Setara dengan Langit" dan menuntut pengakuan dari para dewa. Ketika Kaisar Giok hanya memberinya jabatan rendahan sebagai penjaga kandang kuda surga, kemarahannya meledak menjadi pemberontakan besar: ia mencuri buah persik keabadian, meminum arak surgawi, dan menelan pil elixir milik dewa alkimia, sebelum akhirnya menghancurkan barisan tentara langit yang dikirim untuk menangkapnya. Kesaktiannya begitu besar sehingga tak seorang dewa pun sanggup menundukkannya, sampai Buddha sendiri turun tangan dan mengurungnya di bawah Gunung Lima Unsur selama lima ratus tahun sebagai hukuman atas keangkuhannya.
+Fungsi utama Menshen adalah melindungi rumah tangga dari roh jahat, penyakit, dan nasib buruk yang mencoba masuk melalui pintu utama, dianggap sebagai garda terdepan pertahanan spiritual sebuah keluarga. Mereka digambarkan sebagai dua jenderal berzirah lengkap yang saling berhadapan di kedua panel pintu, menggenggam senjata seperti pedang atau gada, dengan wajah garang dan warna-warna mencolok yang melambangkan keberanian serta kewaspadaan tanpa henti. Selain versi militer yang paling umum, terdapat pula versi Menshen sipil berwujud pejabat atau cendekiawan, biasa dipasang oleh keluarga yang mengharapkan keberuntungan dan kenaikan pangkat alih-alih perlindungan dari kejahatan semata.
 
-Setelah lima abad terkurung, Sun Wukong dibebaskan oleh Dewi Guanyin dengan syarat mengabdi sebagai pengawal bagi biksu Tang Sanzang dalam perjalanan sucinya ke India untuk mengambil kitab suci Buddha. Sebuah ikat kepala emas dipasangkan padanya agar sifat liarnya dapat dikendalikan setiap kali ia melanggar aturan. Sepanjang perjalanan itu, kecerdikan, kekuatan, dan kesaktiannya menjadi tameng utama rombongan dalam menghadapi para siluman dan iblis. Kisah pemberontakan dan penebusannya menjadikan Sun Wukong salah satu tokoh paling dicintai dalam sastra dan budaya populer Tiongkok, melambangkan pemberontakan terhadap kekangan, kecerdasan yang tak terkalahkan, serta perjalanan panjang menuju kedewasaan dan pengabdian.''',
+Legenda asal-usulnya yang paling terkenal berkisah tentang Kaisar Taizong yang jatuh sakit setelah gagal menepati janji melindungi Raja Naga Sungai Jing dari hukuman mati, sehingga arwah sang naga terus menghantui mimpinya setiap malam. Untuk menenangkan sang kaisar, jenderal Qin Shubao dan Yuchi Gong secara sukarela berjaga bersenjata lengkap di depan pintu kamarnya sepanjang malam, dan seketika gangguan hantu itu pun lenyap. Karena tak tega membiarkan kedua jenderal terus berjaga tanpa istirahat, sang kaisar akhirnya memerintahkan agar potret keduanya dilukis dan ditempelkan di pintu sebagai gantinya—awal mula tradisi menempel gambar Menshen yang bertahan hingga sekarang. Praktik ini kini menjadi salah satu tradisi keagamaan rakyat paling tersebar luas di Tiongkok, terutama menjelang perayaan Tahun Baru Imlek.''',
     storyEn: '''
-Sun Wukong was not born of a mother's womb but hatched from a stone egg atop Flower Fruit Mountain (Huaguoshan), a boulder that had absorbed the essence of heaven and earth for countless ages before cracking open to release a monkey formed of living stone. His courage in leaping through a waterfall to discover the hidden Water Curtain Cave behind it won him the throne among the mountain's monkey clan. Yet a creeping fear of death drove him to wander the world in search of immortality, eventually apprenticing himself to a Taoist master, Patriarch Subhuti, who taught him seventy-two transformations and the art of cloud-somersaulting, a technique letting him cover thousands of miles in a single leap. From the undersea palace of the Dragon King he later seized a magical iron staff that could grow or shrink at will, later famed as the Ruyi Jingu Bang.
+The Menshen, or Door Gods, are most popularly identified with two real Tang-dynasty generals, Qin Shubao and Yuchi Gong, who according to legend stood nightly guard outside Emperor Taizong's bedroom door to drive away a ghost that haunted his sleep. An older tradition instead names a pair of mythic gatekeepers, Shen Tu and Yu Lei, who according to the Classic of Mountains and Seas guarded the gate of a giant peach tree connecting the human world to the realm of spirits, preventing evil ghosts from crossing over. These two traditions eventually merged into the same folk religious practice still followed today: pasting images of armed guardians on either side of a household's front door.
 
-Emboldened by his new powers, Sun Wukong crowned himself the "Great Sage Equal to Heaven" and demanded recognition from the celestial court. When the Jade Emperor fobbed him off with the lowly post of stable keeper for the heavenly horses, his fury erupted into open rebellion: he devoured the peaches of immortality, drained jars of heavenly wine, and swallowed the alchemical pills of a god of medicine, before smashing through the ranks of soldiers sent to arrest him. So formidable was his power that no deity could subdue him, until the Buddha himself intervened and trapped him beneath the Mountain of Five Elements for five hundred years as punishment for his arrogance.
+The Menshen's core function is to protect a household from evil spirits, illness, and misfortune attempting to enter through the main door, serving as a family's frontline of spiritual defense. They are depicted as two fully armored generals facing one another across the two door panels, gripping weapons such as swords or maces, their fierce expressions and vivid colors symbolizing courage and unceasing vigilance. Beyond the most common martial version, there is also a civil variant of Menshen portrayed as officials or scholars, favored by households hoping for good fortune and career advancement rather than protection from evil alone.
 
-After five centuries of imprisonment, Sun Wukong was freed by the bodhisattva Guanyin on condition that he serve as guardian to the monk Tang Sanzang on his sacred pilgrimage to India to retrieve the Buddhist sutras. A golden headband was fitted onto him so his temper could be reined in whenever he strayed. Throughout the journey, his cunning, strength, and magic became the pilgrims' chief defense against the demons and monsters that beset their path. His arc of rebellion and redemption has made Sun Wukong one of the most beloved figures in Chinese literature and popular culture, a symbol of defiance against restraint, unmatched wit, and the long road toward maturity and devotion.''',
-    imageUrl: 'assets/images/Chinese/Hero/sun_wukong.jpg',
-    category: 'Hero',
+The most famous origin legend tells of Emperor Taizong falling ill after failing to honor his promise to protect the Dragon King of the Jing River from execution, so that the dragon's ghost tormented his dreams every night. To ease the emperor's suffering, generals Qin Shubao and Yuchi Gong volunteered to stand fully armed guard outside his bedroom door through the night, and the haunting immediately ceased. Unwilling to make the two generals keep this exhausting nightly vigil forever, the emperor eventually had their portraits painted and hung on the doors instead—the origin of the door-god tradition still practiced today. The custom remains one of the most widespread folk religious practices in China, especially in the run-up to the Lunar New Year.''',
+    imageUrl: 'assets/images/Chinese/Court/menshen.webp',
+    category: 'Court',
   ),
   God(
-    id: '240',
-    name: 'Tang Sanzang',
+    id: '209',
+    name: 'Cai Shen',
     mythology: 'Chinese',
-    title: 'Biksu Suci Penempuh Barat',
-    titleEn: 'The Holy Monk of the West',
-    symbol: '🙏',
-    powers: ['Kesalehan', 'Kebijaksanaan', 'Belas Kasih', 'Ketabahan', 'Kepemimpinan Rohani'],
-    powersEn: ['Piety', 'Wisdom', 'Compassion', 'Perseverance', 'Spiritual Leadership'],
+    title: 'Dewa Kekayaan',
+    titleEn: 'God of Wealth',
+    symbol: '💰',
+    powers: ['Kekayaan', 'Kemakmuran', 'Keberuntungan Usaha', 'Keadilan Rezeki', 'Berkah Tahun Baru'],
+    powersEn: ['Wealth', 'Prosperity', 'Business Fortune', 'Fair Distribution', 'New Year Blessings'],
     story: '''
-Tang Sanzang, yang juga dikenal sebagai Tripitaka, adalah sosok yang berakar pada tokoh nyata dalam sejarah Tiongkok, yaitu biksu Xuanzang dari Dinasti Tang yang pada abad ketujuh melakukan perjalanan panjang dan berbahaya ke India untuk mempelajari ajaran Buddha secara langsung dari sumbernya. Dalam legenda Kisah Perjalanan ke Barat, riwayatnya diperkaya dengan unsur mitos: ia digambarkan sebagai reinkarnasi dari murid Buddha yang dihukum turun ke dunia fana karena kelalaiannya mendengarkan khotbah suci. Sejak kecil ia dibesarkan di sebuah biara setelah orang tuanya meninggal dalam keadaan tragis, tumbuh menjadi biksu yang saleh, berbudi luhur, dan dipilih langsung oleh Kaisar Tang untuk memimpin misi suci mengambil kitab-kitab sutra dari Barat demi menyelamatkan jiwa-jiwa di Tiongkok.
+Meski gelar Cai Shen, Dewa Kekayaan, disandang oleh beberapa tokoh berbeda dalam tradisi Tiongkok, salah satu asal-usul paling dihormati merujuk pada Bi Gan, seorang menteri setia pada akhir masa Dinasti Shang dan paman dari raja tiran terakhir, Zhou Wang. Bi Gan dikenal karena keberaniannya berulang kali menasihati sang raja agar menghentikan kekejaman dan pengaruh buruk selir jelmaan siluman rubah, Daji, meski nasihat itu berulang kali diabaikan. Kesetiaannya yang tanpa pamrih dan keteguhan moralnya di tengah istana yang korup inilah yang kelak menjadi dasar pendewaannya sebagai simbol kejujuran dalam mengelola harta.
 
-Tang Sanzang bukanlah pendekar bertenaga sakti, melainkan seorang pemimpin rohani yang kekuatannya terletak pada kesalehan, keteguhan iman, dan belas kasih yang nyaris tanpa batas terhadap segala makhluk hidup, bahkan kepada siluman yang menyamar sebagai orang lemah. Sifat welas asihnya ini sekaligus menjadi kelemahannya, karena ia kerap tertipu oleh wujud palsu dan salah menilai niat orang-orang di sekitarnya, termasuk menyalahkan muridnya sendiri, Sun Wukong, akibat kesalahpahaman. Meski demikian, ketabahannya menempuh perjalanan sejauh ribuan li melintasi gurun, gunung, dan negeri berbahaya tanpa pernah goyah dari tujuannya menjadikannya teladan keteguhan spiritual, sementara ketiga muridnya, Sun Wukong, Zhu Bajie, dan Sha Wujing, bertugas melindunginya dari bahaya yang tak mampu ia hadapi sendiri.
+Sebagai dewa kekayaan, kemakmuran, dan keberuntungan usaha, Cai Shen dipuja luas oleh pedagang, pengusaha, dan setiap rumah tangga yang mendambakan rezeki berlimpah, dengan gambarnya ditempel di pintu atau altar rumah terutama menjelang Tahun Baru Imlek sebagai bentuk penyambutan keberuntungan. Ia digambarkan mengenakan jubah pejabat mandarin yang mewah, membawa batangan emas (yuanbao) dan tongkat ruyi, sosok yang melambangkan kekayaan sekaligus keadilan dalam mendistribusikan rezeki kepada mereka yang pantas menerimanya. Kepercayaan bahwa ia membagi kekayaan secara adil, tanpa memihak, menjadikannya berbeda dari sekadar dewa keberuntungan biasa.
 
-Sepanjang perjalanan delapan puluh satu rintangan yang harus dilalui rombongan, Tang Sanzang berulang kali diculik oleh siluman yang mempercayai bahwa memakan dagingnya akan memberikan keabadian, namun setiap kali ia diselamatkan berkat kesetiaan dan kesaktian murid-muridnya. Setibanya di India, ia berhasil memperoleh kitab-kitab sutra suci dan kembali ke Tiongkok sebagai pahlawan agama yang menyebarkan ajaran Buddha ke seluruh negeri. Tokoh Tang Sanzang tetap dikenang sebagai lambang keimanan yang tak tergoyahkan dan pengabdian tanpa pamrih, sekaligus pengingat bahwa kepemimpinan sejati tidak selalu ditentukan oleh kekuatan fisik, melainkan oleh keteguhan tujuan dan kemurnian hati.''',
+Kisah paling terkenal tentang Bi Gan berpusat pada akhir hidupnya yang tragis: karena terus-menerus menentang kekejaman Raja Zhou, sang raja yang murka memerintahkan agar hatinya diambil untuk menguji legenda bahwa hati seorang bijak memiliki tujuh lubang. Melalui kekuatan sihir Tao, Bi Gan konon tetap hidup tanpa hati selama beberapa waktu, berkelana tanpa emosi yang memihak—kondisi yang justru menjadi lambang kemampuannya membagi rezeki secara adil kepada siapa pun tanpa pilih kasih. Setelah akhirnya wafat, ia dipuja sebagai Dewa Kekayaan atas keteguhan moral dan pengorbanannya, dan hingga kini ritual "menyambut Dewa Kekayaan" (Ying Caishen) tetap menjadi salah satu tradisi paling meriah dalam perayaan Tahun Baru Imlek di seluruh Tiongkok.''',
     storyEn: '''
-Tang Sanzang, also known as Tripitaka, is rooted in a real figure from Chinese history: the Tang Dynasty monk Xuanzang, who in the seventh century undertook a long and perilous journey to India to study Buddhist teachings at their source. In the legend Journey to the West, his story is embellished with myth, casting him as the reincarnation of a disciple of the Buddha banished to the mortal world for inattentiveness during a sacred sermon. Orphaned in tragic circumstances as a child, he was raised in a monastery and grew into a devout and virtuous monk, eventually chosen personally by the Tang Emperor to lead a sacred mission to retrieve sutras from the West and save the souls of China.
+Although the title Cai Shen, God of Wealth, has been claimed by several different figures across Chinese tradition, one of the most revered origins traces back to Bi Gan, a loyal minister during the final years of the Shang dynasty and uncle to its last tyrannical ruler, King Zhou. Bi Gan was known for repeatedly, and courageously, urging the king to abandon his cruelty and the corrupting influence of his consort Daji, a fox spirit in human form, even though his counsel was consistently ignored. It was this selfless loyalty and moral steadfastness amid a corrupt court that later formed the basis for his deification as a symbol of integrity in the handling of wealth.
 
-Tang Sanzang possesses no combat prowess of his own; his strength lies instead in piety, unwavering faith, and a nearly boundless compassion for all living things, extending even to demons disguised as the helpless. That same compassion is also his great weakness, for he is repeatedly deceived by false appearances and misjudges the intentions of those around him, at times even wrongly blaming his own disciple Sun Wukong. Still, his resolve in traveling thousands of miles across deserts, mountains, and hostile lands without ever abandoning his purpose makes him a model of spiritual steadfastness, while his three disciples, Sun Wukong, Zhu Bajie, and Sha Wujing, shoulder the duty of protecting him from dangers he cannot face alone.
+As the god of wealth, prosperity, and business fortune, Cai Shen is widely worshipped by merchants, entrepreneurs, and any household hoping for abundance, his image posted on doors and household altars especially before the Lunar New Year as a way of welcoming good fortune. He is depicted in the lavish robes of a mandarin official, carrying gold ingots (yuanbao) and a ruyi scepter, a figure who represents not just wealth itself but fairness in distributing riches to those who deserve them. The belief that he allocates wealth impartially, without favoritism, sets him apart from a mere deity of luck.
 
-Across the eighty-one trials the pilgrimage must endure, Tang Sanzang is repeatedly kidnapped by demons who believe that eating his flesh will grant them immortality, yet each time he is rescued through the loyalty and power of his disciples. Upon reaching India, he obtains the sacred sutras and returns to China as a religious hero who spreads Buddhist teaching throughout the land. Tang Sanzang endures as a symbol of unshakable faith and selfless devotion, and as a reminder that true leadership is measured not by physical strength but by steadfastness of purpose and purity of heart.''',
-    imageUrl: 'assets/images/Chinese/Hero/tang_sanzang.jpg',
-    category: 'Hero',
+The most famous story of Bi Gan centers on his tragic end: for his persistent opposition to King Zhou's cruelty, the enraged king ordered his heart cut out to test the legend that a sage's heart possesses seven openings. Through Taoist magic, Bi Gan is said to have survived for a time without a heart, wandering the land with no emotion left to sway his judgment—a condition that became emblematic of his ability to distribute wealth fairly, without playing favorites. After his eventual death, he was deified as God of Wealth in recognition of his moral integrity and sacrifice, and to this day the ritual of "welcoming the God of Wealth" (Ying Caishen) remains one of the most festive traditions of the Lunar New Year across China.''',
+    imageUrl: 'assets/images/Chinese/Court/cai_shen.webp',
+    category: 'Court',
   ),
   God(
     id: '241',
@@ -958,7 +958,7 @@ Before becoming the pig-headed figure familiar from legend, Zhu Bajie was a cele
 As Tang Sanzang's second disciple, Zhu Bajie is defined by a bundle of contradictions: gluttonous, lazy, and easily seduced by worldly pleasures, especially food and beauty, yet possessed of tremendous physical strength and genuine combat skill wielded through a heavy nine-toothed rake, a relic of his glory days in heaven. His shapeshifting abilities pale beside Sun Wukong's, making him a frequent target of his fellow disciples' teasing, but his humor and buffoonery provide welcome relief amid a journey fraught with peril. Though he often grumbles and threatens to return home, he never truly abandons his master when danger is at its worst.
 
 Across many episodes of the legend, Zhu Bajie's weakness for temptation repeatedly lands him in trouble, whether lured by a demon disguised as a beautiful woman or caught quietly skimming alms for himself. Yet in moments of true crisis, his loyalty to the sacred mission and his courage against demons never truly fail him. His enduring popularity in Chinese culture rests on his portrayal of flawed humanity still worthy of redemption, a figure who teaches that weakness and good-heartedness can coexist within a single soul.''',
-    imageUrl: 'assets/images/Chinese/Hero/zhu_bajie.jpg',
+    imageUrl: 'assets/images/Chinese/Hero/zhu_bajie.webp',
     category: 'Hero',
   ),
   God(
@@ -982,7 +982,7 @@ Sha Wujing, better known as the Sand Monk, was once a celestial general titled t
 Unlike his more flamboyant fellow disciples, Sha Wujing is known as a calm, humble figure who causes the least trouble throughout the journey. He rarely complains, is untempted by worldly pleasures the way Zhu Bajie is, and harbors none of Sun Wukong's grand ambition, yet his loyalty to Tang Sanzang is never in question. Armed with a long-handled monk's spade, a tool-like weapon that proves deadly in his hands, he fights skillfully on both land and water, fitting for one born of a river. Within the group he often serves as the peacemaker who calms disputes between Sun Wukong and Zhu Bajie, as well as the steady keeper of provisions and a dependable protector.
 
 Though rarely the center of attention compared to his brothers, Sha Wujing plays a crucial role in numerous battles against demons throughout the journey west, particularly when the pilgrims must cross the many treacherous rivers that fall within his expertise. Upon reaching India, his quiet and consistent dedication earns him spiritual enlightenment just as it does his companions. In Chinese culture, Sha Wujing is remembered as an emblem of unspoken loyalty, a hardworking figure who reminds us that the success of any great mission often rests on those who labor quietly without demanding the spotlight.''',
-    imageUrl: 'assets/images/Chinese/Hero/sha_wujing.jpg',
+    imageUrl: 'assets/images/Chinese/Hero/sha_wujing.webp',
     category: 'Hero',
   ),
   God(
@@ -1006,7 +1006,7 @@ Mulan is the legendary heroine whose story was first told in the Ballad of Mulan
 Over twelve years of military service, Mulan marched thousands of miles across mountains and rivers with the army, fighting battle after battle without her true identity ever being discovered by her fellow soldiers. She displayed courage, skill in horsemanship and archery, and tactical intelligence that earned her respect as a formidable warrior, indistinguishable from the men around her. The original ballad emphasizes that her prowess on the battlefield sprang not from supernatural power but from the resolve, training, and cunning of an ordinary person who refused to be confined by the gender role society had assigned her.
 
 When the war ended, the Emperor sought to reward her service with a high court position, but Mulan declined every honor and asked only for permission to return home and care for her aging parents. When she once again appeared before her stunned comrades dressed as a woman, they realized the soldier who had fought beside them for years all along had been female, and her story passed into eternal legend. Mulan is remembered around the world today as a symbol of filial devotion, courage that transcends the boundaries of gender, and honor upheld without expectation of reward, making her one of the most beloved heroines in Chinese culture.''',
-    imageUrl: 'assets/images/Chinese/Hero/mulan.jpg',
+    imageUrl: 'assets/images/Chinese/Hero/mulan.webp',
     category: 'Hero',
   ),
   God(
@@ -1030,7 +1030,7 @@ The Eight Immortals, or Ba Xian, are a group of eight legendary figures in Chine
 What unites these eight remarkably diverse figures is not their origin but their shared achievement: immortality attained through spiritual discipline, compassion, or divine favor, and each is invariably depicted carrying a signature treasure that serves as both identifying mark and symbol of their particular magic, ranging from a fan and a staff to a flute and a basket of flowers. As a group, they represent the many different paths toward Taoist enlightenment, for among them are men and women, young and old, nobles and commoners, the disfigured and the mighty, affirming that immortality and wisdom take no account of one's background.
 
 The most famous tale of the Eight Immortals is the legend of "The Eight Immortals Cross the Sea, Each Revealing Their Own Power," which recounts how, traveling to a banquet of the gods, they refused an ordinary boat and instead crossed the vast ocean relying solely on their individual magical treasures, each conjuring a different miracle and proving that every individual possesses a unique way of overcoming great obstacles. The phrase itself has become a popular Chinese idiom describing situations where each person displays their own distinct ability. As a group, the Eight Immortals remain one of the most iconic images in Taoist iconography, frequently depicted in paintings, ceramics, and folk festivals as bringers of longevity and good fortune.''',
-    imageUrl: 'assets/images/Chinese/Hero/eight_immortals.jpg',
+    imageUrl: 'assets/images/Chinese/Hero/eight_immortals.webp',
     category: 'Hero',
   ),
   God(
@@ -1054,7 +1054,7 @@ Lu Dongbin was born Lu Yan during the Tang Dynasty into a learned family who exp
 That brief but vivid Yellow Millet Dream shook Lu Dongbin to his core, revealing to him that worldly ambitions such as rank, riches, and fame were ultimately fleeting and empty. He abandoned his aspirations of becoming an official and apprenticed himself to Zhongli Quan to study the way of the Tao, enduring a series of grueling inner trials before finally attaining enlightenment and immortality. As an immortal, Lu Dongbin is known for carrying a sacred sword capable of driving away evil spirits and severing all manner of worldly sorrow, and he is widely venerated as a protector and healer who descends among ordinary people to cure the sick and guide those who have lost their way.
 
 Among the Eight Immortals, Lu Dongbin is the most popular and most widely worshipped in Chinese folk temples, revered as the patron of scholars preparing for the state examinations as well as the patron of the sick seeking a cure. He frequently appears in folk tales as a mysterious wanderer disguised as an ordinary person, testing the character and sincerity of those he meets before offering miraculous aid. His legacy lives on in the expression "dreaming of millet porridge," still used in Chinese today to describe a sudden awakening to the vanity of worldly ambition, making Lu Dongbin an enduring symbol of enlightenment born of humility.''',
-    imageUrl: 'assets/images/Chinese/Hero/lu_dongbin.jpg',
+    imageUrl: 'assets/images/Chinese/Hero/lu_dongbin.webp',
     category: 'Hero',
   ),
   God(
@@ -1078,7 +1078,7 @@ Jigong is rooted in a real historical figure, Daoji, a Chan Buddhist monk who li
 What set Jigong apart from other monks was not outward piety but the sincerity hidden beneath his jesting. He used his powers quietly to heal the sick, exorcise evil spirits, and aid the poor who suffered under corrupt officials and greedy landlords, often through comic and unexpected methods that led those around him to underestimate him at first. He was also said to possess the gift of foresight and the ability to see the hidden truth behind a person's outward appearance, allowing him to expose wrongdoing carefully concealed beneath a mask of respectability or false piety.
 
 Folk tales about Jigong recount how he cured illnesses no physician could treat, saved a temple from fire through miraculous means, or punished a tyrannical official through clever trickery rather than violence. His popularity endures today in opera, television dramas, and Chinese folklore as a symbol that true virtue is not always found in obedience to formal rules or an outwardly pious appearance, but in sincerity of heart and genuine solidarity with the weak. Jigong is beloved precisely because he breaks convention, making him one of the most singular figures among China's folk heroes.''',
-    imageUrl: 'assets/images/Chinese/Hero/jigong.jpg',
+    imageUrl: 'assets/images/Chinese/Hero/jigong.webp',
     category: 'Hero',
   ),
   God(
@@ -1102,7 +1102,7 @@ The Chinese dragon, or Long, is portrayed as a long, serpentine creature with fo
 As master of the water element, Long was believed to command rain, floods, rivers, and oceans, which led traditional Chinese farmers to worship the Dragon Kings (Longwang) for a season blessed with adequate rainfall. Its power embodies yang, the active, masculine principle of heaven, and since the Han Dynasty, Long became the exclusive emblem of the Chinese emperor—the throne itself was called the "Dragon Throne," and imperial robes bore five-clawed dragons, while officials and commoners were restricted to four- or three-clawed designs. Long also symbolizes good fortune, strength, nobility, and courage, standing far from the malevolent image attached to dragons in European mythology. Within Chinese cosmology, the dragon holds the highest rank among the four sacred creatures, alongside the fenghuang, the qilin, and the tortoise.
 
 One of the most famous legends tells of Yu the Great, who tamed a catastrophic flood with the help of river dragons that carved channels to save ancient China from disaster. Long also appears in the story of the "Dragon Gate" (Longmen), where a koi fish that successfully leaps up a waterfall transforms into a dragon—a beloved metaphor for hard work rewarded with success. Today, Long remains China's most recognizable national symbol, featured in dragon dances during Lunar New Year and the Dragon Boat Festival, carved into temples and palaces, and used to mark a birth year in the Chinese zodiac. Those born in the Year of the Dragon are believed to carry natural charisma, strength, and good fortune.''',
-    imageUrl: 'assets/images/Chinese/Creature/long_dragon.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/long_dragon.webp',
     category: 'Creature',
   ),
   God(
@@ -1126,7 +1126,7 @@ Fenghuang is a majestic mythological bird often called the "Chinese phoenix," th
 Fenghuang embodies supreme virtue, grace, and refined conduct, and since antiquity has been paired with Long as the emblem of the empress or a female sovereign, while the dragon represents the emperor—a pairing still found on palace gates, royal embroidery, and bridal ornaments today. It was said to appear only in times of peace and prosperity, or when a wise and just ruler governed the land, making its appearance an exceptionally rare and auspicious omen. Fenghuang was believed never to harm any living creature, perching only in the sacred paulownia tree and drinking pure dew, reflecting an ideal of purity and freedom from greed held up as a moral example for humankind.
 
 Classical texts such as the Shan Hai Jing place Fenghuang's home on the distant southern Mount Danxue, and the patterns within its feathers were said to spell out five virtues: loyalty, righteousness, propriety, wisdom, and compassion. Popular legend also links its appearance to the birth of great sages, including Confucius. Today, the Fenghuang motif remains one of the most beloved symbols in Chinese art, appearing on traditional wedding gowns, temple carvings, provincial emblems, and modern logos alike, representing hopes for good fortune, a harmonious marriage, and renewal after hardship—making it a feminine symbol of beauty and virtue equal in importance to the dragon.''',
-    imageUrl: 'assets/images/Chinese/Creature/fenghuang.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/fenghuang.webp',
     category: 'Creature',
   ),
   God(
@@ -1150,7 +1150,7 @@ The qilin is a four-legged creature combining features of a deer, a horse, and a
 The qilin is regarded as the most virtuous of all creatures, for it refuses to harm any living thing—it will not so much as tread on an insect, and eats no meat, subsisting on plants alone. Though its horn looks formidable, the qilin uses its power only to punish wrongdoers or protect the oppressed, making it a symbol of justice, compassion, and perfect wisdom. Its appearance was considered an extremely rare and sacred omen, signaling that a just ruler governed the land or that a great sage was about to be born or had just passed away. Owing to its rarity and purity, the qilin is also linked to longevity, prosperity, and the arrival of noble offspring in families it blesses.
 
 In the most famous legend, a qilin appeared before Confucius's mother prior to his birth, disgorging a jade tablet that foretold the philosopher's future greatness, and another qilin was reportedly wounded shortly before Confucius died, an omen believed to mark the end of an era. Because of its reputation as a herald of noble births, statues of the qilin are still placed outside schools and homes, or given as wedding gifts so that a couple might be blessed with intelligent, virtuous children—a tradition known as "the qilin delivers a son." Today, the qilin remains a beloved figure in temple carvings, feng shui charms, and East Asian festivals as an enduring symbol of hope, wisdom, and peace.''',
-    imageUrl: 'assets/images/Chinese/Creature/qilin.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/qilin.webp',
     category: 'Creature',
   ),
   God(
@@ -1174,7 +1174,7 @@ The jiangshi is a corpse that rises from its grave when the vital energy within 
 The jiangshi sustains itself by draining qi, the vital breath of life, from living humans, leaving its victims weakened and slowly dying after an attack. It typically hunts at night and relies on the scent of human breath since its eyesight is poor, leading to the folk belief that holding one's breath could allow a person to escape its pursuit. A jiangshi can be repelled and controlled with a yellow paper talisman inscribed with a Taoist spell and pasted to its forehead, a bagua mirror, sticky rice, or black silk thread tied by a Taoist priest's hook—ritual tools that define the folk-horror tradition of confrontations between priests and reanimated corpses.
 
 Jiangshi lore flourished during the Qing Dynasty through collections of folk tales, and reached peak modern popularity through the Hong Kong film genre of the 1980s, most notably the "Mr. Vampire" series, which introduced the jiangshi-hunting Taoist priest, complete with talismans and bronze bell, to audiences worldwide. Because of its rigid hopping gait, Western media often dubbed the jiangshi the "hopping Chinese vampire," though it is in truth much closer to the zombie tradition of Chinese folklore than to the European vampire. Today, the jiangshi remains a popular icon in horror-comedy films, video games, and Halloween costumes across East Asia, symbolizing traditional fears of an unquiet death and the importance of proper burial rites.''',
-    imageUrl: 'assets/images/Chinese/Creature/jiangshi.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/jiangshi.webp',
     category: 'Creature',
   ),
   God(
@@ -1198,7 +1198,7 @@ Huli jing are fox spirits that have lived for hundreds of years and gathered eno
 Huli jing are renowned for their skill at disguise and enchantment, often slipping into a household as a wife, lover, or servant to gather more life-energy from humans drawn to them, and many tales cast them as beguiling temptresses who ensnare men with beauty and wit before slowly draining their vitality. Yet the huli jing is far from a simple villain—in numerous folk variants she is instead loyal, intelligent, and capable of genuinely falling in love with a human, even sacrificing her own power for the one she loves. This very ambiguity makes her one of the most complex archetypes in Chinese mythology, at once a cautionary symbol of the dangers of temptation and deceptive appearances.
 
 The huli jing is most famously chronicled in Pu Songling's seventeenth-century classic "Strange Tales from a Chinese Studio" (Liaozhai), which collects dozens of stories about fox spirits—some cunning temptresses who bring ruin, others devoted friends or sincere lovers who instead rescue human protagonists from hardship. These tales turned the huli jing into a mirror of human nature itself: charm can bring either blessing or disaster, depending on the intent behind it. Today, the huli jing remains a beloved figure in East Asian dramas, novels, and films, frequently portrayed as a mysterious, clever, and free-spirited female character, carrying forward a long folkloric tradition about the thin line between allure and danger.''',
-    imageUrl: 'assets/images/Chinese/Creature/huli_jing.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/huli_jing.webp',
     category: 'Creature',
   ),
   God(
@@ -1222,7 +1222,7 @@ Taotie is one of the oldest motifs in Chinese art, appearing as early as the Sha
 Taotie embodies gluttony, greed, and boundless appetite—one of the Four Fiends (Si Xiong) of ancient Chinese mythology representing base human vices, alongside Hundun (chaos), Qiongqi (malice), and Taowu (arrogance). Its presence on ritual bronze vessels was no accident: ancient nobles placed the taotie face on their dining and sacrificial vessels as a deliberate warning against falling into the sin of gluttony while enjoying prosperity and power. The motif served a dual purpose—warding off evil spirits while also acting as a moral mirror for its owner, a reminder that unchecked greed ultimately destroys itself, just as taotie consumed its own body.
 
 Though taotie lacks a single narrative myth the way Long or Qilin do, its image became one of the most iconic figures in Chinese archaeology and ancient art, found on thousands of ceremonial bronze artifacts over three thousand years old now displayed in major museums worldwide. In later literature, the very name "taotie" entered everyday Mandarin as a term for someone extremely gluttonous or obsessed with food, akin to an uncontrollable food lover. In the modern era, the taotie's distinctive face continues to inspire architectural design, logos, and contemporary Chinese art as a tribute to Bronze Age aesthetic heritage, all while still carrying its ancient moral warning about the dangers of unchecked desire.''',
-    imageUrl: 'assets/images/Chinese/Creature/taotie.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/taotie.webp',
     category: 'Creature',
   ),
   God(
@@ -1246,7 +1246,7 @@ Peng is a bird of unimaginable scale, first described in the opening chapter of 
 Peng is more than a creature of vast size; it is a key philosophical symbol in Taoist thought representing absolute freedom (xiaoyao you, "carefree wandering") and boundless transformation. Its shift from the fish Kun in the ocean depths to the bird Peng in the sky illustrates that anything in the universe can change form and transcend the limits of its original existence, provided it reaches the right scale and maturity. Zhuangzi used the tale of Peng to critique the narrow-mindedness of small creatures who mock great ambitions simply because they cannot conceive of a scale far beyond their own experience—an allegory for shedding limited perspective in pursuit of true freedom and a broader understanding of existence.
 
 The story of Kun and Peng, found in the chapter "Free and Easy Wandering" (Xiaoyao You), remains one of the most frequently cited allegories in the history of Chinese philosophy, still taught today as a foundational introduction to Taoist ideas about the relativity of size, time, and understanding. The phrase "flying ninety thousand li" (peng cheng wan li) became a popular Mandarin expression wishing someone great success or a brilliant future, often spoken as a blessing at graduations or weddings. Peng's image has also inspired countless works of literature and painting, and even the names of modern Chinese companies and aircraft, symbolizing vast ambition, limitless potential, and the courage to transcend limits that ordinary people consider impossible.''',
-    imageUrl: 'assets/images/Chinese/Creature/peng.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/peng.webp',
     category: 'Creature',
   ),
   God(
@@ -1270,7 +1270,7 @@ Pixiu is a winged hybrid creature combining the powerful form of a lion with a b
 Because it can only swallow wealth and never expel it, Pixiu has become one of the most revered symbols of prosperity in Chinese feng shui practice, believed to draw fortune, gold, and financial luck into its owner's home or business while permanently retaining it. Beyond attracting wealth, Pixiu is also credited with the power to repel malevolent energy, protecting its owner from misfortune, illness, and negative influences, making it a dual-purpose creature that functions as both a prosperity charm and a guardian. Specific customs govern how a Pixiu statue should be treated—it must be symbolically "fed" by touching or stroking it, but its mouth should never be touched directly by just anyone, as doing so is believed to weaken its power.
 
 Pixiu's popularity surged from the late twentieth century onward alongside China's booming tourism and jade trade, with jade Pixiu bracelets and pendants becoming some of the best-selling charms marketed to businesspeople, investors, and anyone seeking financial luck. Large Pixiu statues are also commonly placed at the entrances of banks, casinos, shops, and offices throughout East and Southeast Asia, typically in pairs facing outward to draw in fortune while warding off harmful energy from outside. Belief in Pixiu as a guardian of modern wealth has spread far beyond China, making it one of the most commercially recognized Chinese mythological creatures in the world today, known even to those otherwise unfamiliar with Chinese mythology at large.''',
-    imageUrl: 'assets/images/Chinese/Creature/pixiu.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/pixiu.webp',
     category: 'Creature',
   ),
   God(
@@ -1294,7 +1294,7 @@ Bixie is a winged guardian creature whose form closely resembles Pixiu's—a mus
 As a guardian, Bixie is believed to hold the power to repel and restrain ghosts, evil spirits, plague, and negative influences from a given place, making it a deeply respected protective creature since the Han Dynasty. Unlike Pixiu, commonly kept as a small personal ornament, Bixie traditionally appears as a large, immovable statue, since its protective power is believed to be bound to the specific site it guards. Bixie symbolizes courage, martial strength, and resistance to evil, reflecting ancient nobles' and rulers' hope that their domains, as well as their final resting places, would remain safe from malevolent spirits and tomb robbers for all time.
 
 The most famous colossal Bixie statues stand in rows along the "Spirit Way" leading to the tombs of Han-dynasty and Southern-dynasty emperors and nobles, serving as eternal guardians escorting the souls of the deceased safely into the afterlife. Many of these ancient stone statues still stand today in Jiangsu province, forming an important archaeological legacy that illustrates ancient Chinese beliefs about the necessity of spiritual protection for the dead. In the modern era, replicas of Bixie are still placed in front of government buildings, museums, and historic sites as symbols of protection and reverence for ancestral tradition, carrying forward its ancient role as a guardian that wards off evil across generations.''',
-    imageUrl: 'assets/images/Chinese/Creature/bixie.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/bixie.webp',
     category: 'Creature',
   ),
   God(
@@ -1318,7 +1318,7 @@ Baihu, the White Tiger, is one of the Four Symbols guarding the cardinal directi
 Baihu symbolizes martial strength, courage, and resolve, and since antiquity Chinese military banners and insignia have carried its image as an emblem of valor in battle. It is associated with autumn, the season when nature begins to wither and the cold sets in, and with the metal element within the five-elements system (wu xing)—an element representing sharpness, cutting, and the power of weapons. White in Chinese symbolism does not signify purity as it often does in Western culture, but instead carries associations with death, violence, and the battlefield, so Baihu is often regarded as a harsh, fearsome force, even as it remains a steadfast protector of the territory and people under its watch.
 
 Baihu is one of four celestial guardians that together form the ancient Chinese cosmological system of the cardinal directions: Qinglong the Azure Dragon guards the east and spring, Zhuque the Vermilion Bird guards the south and summer, Baihu itself guards the west and autumn, and Xuanwu the Black Tortoise guards the north and winter—the four encircling the center of the sky where the emperor symbolically resided. This Four Symbols system has long been applied in astronomy, feng shui, city and palace layout, and martial arts, with Baihu specifically positioned on the western side of a building or tomb as a guardian warding off danger, embodying the cosmic balance between the wild strength of the west and the three other directional guardians.''',
-    imageUrl: 'assets/images/Chinese/Creature/white_tiger.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/white_tiger.webp',
     category: 'Creature',
   ),
   God(
@@ -1342,7 +1342,7 @@ Qinglong, the Azure Dragon (sometimes rendered the Green Dragon), is one of the 
 Qinglong symbolizes vital energy, growth, and new beginnings, naturally linking it to spring, the season when nature awakens from its winter slumber and fresh shoots begin to unfurl. Within the five-elements system, Qinglong corresponds to the wood element, representing growth, flexibility, and ever-expanding vitality—a sharp contrast to the hard, cutting nature of the metal element held by Baihu in the west. Owing to its position as guardian of the east and bearer of yang energy, Qinglong is often considered the most exalted and dignified of the Four Symbols, reflecting the dragon's own standing as the supreme sacred creature in Chinese cosmology at large, beyond its specific role as a directional guardian.
 
 Qinglong stands alongside the three other celestial guardians to form the ancient Chinese cosmological system of the Four Symbols: Zhuque the Vermilion Bird guards the south and summer, Baihu the White Tiger guards the west and autumn, Xuanwu the Black Tortoise guards the north and winter, while Qinglong itself guards the east and spring—together forming a protective circle around the center of the sky. In feng shui practice, the eastern side of a home or building is ideally anchored by a taller feature or structure to represent Qinglong's presence, believed to bring good fortune, career growth, and positive energy to its occupants, completing the role of the other three directional guardians in maintaining cosmic balance across all four quarters of the heavens.''',
-    imageUrl: 'assets/images/Chinese/Creature/azure_dragon.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/azure_dragon.webp',
     category: 'Creature',
   ),
   God(
@@ -1366,7 +1366,7 @@ Xuanwu, the Black Tortoise, is the guardian of the north within the Four Symbols
 Xuanwu is associated with winter, the water element within the five-elements system, and the north, a direction traditionally regarded as cold, dark, and mysterious. As a symbol of longevity—tortoises being known to live for centuries—Xuanwu represents endurance, profound wisdom, and ancient knowledge accumulated across generations. Over time, veneration of Xuanwu grew well beyond its role as a mere guardian constellation; it was elevated into a martial deity titled Zhenwu, or the Perfected Warrior Emperor, worshipped as a valiant protector against evil, with major temples built in its honor, most notably on Mount Wudang, which became one of the most important Taoist pilgrimage sites in China.
 
 Xuanwu completes the Four Symbols system alongside Qinglong the Azure Dragon guarding the east and spring, Zhuque the Vermilion Bird guarding the south and summer, and Baihu the White Tiger guarding the west and autumn—together forming a cosmic map of the night sky that has guided navigation, agricultural calendars, and city planning for thousands of years. As guardian of the north, Xuanwu was traditionally positioned at the rear of a home, temple, or tomb, often represented through water features or protective structures such as hills and tall walls. Xuanwu's legacy as both directional guardian and martial deity is still honored today through Taoist festivals, traditional temple architecture, and Wudang martial arts, which hold it up as a symbol of hidden strength beneath outward stillness.''',
-    imageUrl: 'assets/images/Chinese/Creature/black_tortoise.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/black_tortoise.webp',
     category: 'Creature',
   ),
   God(
@@ -1390,7 +1390,7 @@ Zhuque, the Vermilion Bird, is the guardian of the south within the Four Symbols
 Zhuque is associated with summer, the peak of yang energy among the four seasons, and the fire element within the five-elements system—an element representing passion, transformation, and rapid renewal. As guardian of the south, a direction traditionally linked to light, warmth, and prosperity, Zhuque is regarded as carrying the brightest and most passionate energy of the four celestial guardians, symbolizing the peak of life and vitality before nature's cycle turns toward the dimmer months of autumn and winter. The blazing red associated with Zhuque carries strong positive connotations in Chinese culture, signifying good fortune, spirit, and celebration, making it an especially vibrant and energetic symbol compared to the other three celestial guardians.
 
 Zhuque completes the Four Symbols system alongside Qinglong the Azure Dragon guarding the east and spring, Baihu the White Tiger guarding the west and autumn, and Xuanwu the Black Tortoise guarding the north and winter, the four together forming a cosmic protective circle around the sky, used as a map for navigation, calendars, and the foundations of feng shui for thousands of years. In traditional Chinese city and palace layouts, the southern side of a building was ideally left open and low to represent Zhuque, allowing beneficial energy and light to enter freely—a principle still applied in modern feng shui today. Together with the three other directional guardians, Zhuque stands as testament to how ancient Chinese society mapped the night sky into a comprehensive cosmological system that remains relevant across generations.''',
-    imageUrl: 'assets/images/Chinese/Creature/vermilion_bird.jpg',
+    imageUrl: 'assets/images/Chinese/Creature/vermilion_bird.webp',
     category: 'Creature',
   ),
   God(
@@ -1414,7 +1414,7 @@ Tiānting, the Heavenly Court, crowns the very summit of Chinese cosmology, a ce
 The Jade Heaven is organized as a flawless mirror of the earthly imperial court, complete with ministries, celestial generals, heavenly bureaucrats, and legions of envoys overseeing every facet of existence—rainfall, harvests, and the fates of mortals alike. The Jade Emperor presides over assemblies of the gods, granting titles and offices to meritorious spirits while receiving reports from kitchen gods and local earth deities who monitor every household on earth. Beneath him serve great deities such as Erlang Shen, Nezha, and a host of heavenly generals charged with maintaining cosmic order, ready to be dispatched at the first sign of chaos on Earth or rebellion among spirits. Every decree issued from the Jade Heaven ripples outward through all Three Realms, making it the unrivaled seat of ultimate authority.
 
 The most famous episode set within the Jade Heaven is the rebellion of Sun Wukong in Journey to the West. After mastering formidable powers, the Monkey King was summoned to the Jade Heaven and given the trivial post of stable keeper, an insult that provoked him to wreck the Feast of Immortal Peaches and defy the entire pantheon. The uproar was quelled only when the Buddha intervened, trapping him beneath Five Finger Mountain for five hundred years. The tale cemented the Jade Heaven as a symbol of cosmic order not to be trifled with, while portraying its bureaucracy as strikingly human—rife with intrigue, jealousy, and rigid protocol. To this day, the image of a bureaucratic palace suspended in the sky remains the blueprint by which Chinese folk temples picture the structure of the unseen world.''',
-    imageUrl: 'assets/images/Chinese/Cosmology/jade_heaven.jpg',
+    imageUrl: 'assets/images/Chinese/Cosmology/jade_heaven.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1438,7 +1438,7 @@ Diyu is the subterranean underworld of Chinese cosmology, an afterlife realm bur
 Every soul arriving in Diyu passes through the ten courts in sequence, where its good and bad deeds in life are weighed against entries recorded in the Register of Life and Death. This process serves as both moral purification and the determinant of the soul's next fate, whether ascent to a better realm or rebirth in a form befitting its karma. The tenth court is specifically charged with overseeing reincarnation, assigning each soul its new form of life before it crosses the Naihe Bridge. The infernal kings are portrayed as stern yet fair, more administrative judges than tormentors, reflecting the Chinese conviction that the underworld mirrors the legal and moral order of the human world.
 
 One of the best-known tales involving Diyu appears in Journey to the West, when Emperor Taizong of Tang dies momentarily and is led through the underworld by Judge Cui, who secretly adds twenty years to his life ledger so the emperor may return to the living. Another tells of Sun Wukong forcing his way into Diyu and striking his own name from the Register of Life and Death, freeing himself from death entirely. Such stories affirm the belief that one's afterlife fate could be contested or altered through courage or cunning rather than accepted as absolute. Even today, the image of Diyu shapes the Qingming Festival tradition of burning paper money for ancestors, an enduring expression of the living's concern for the wellbeing of departed souls.''',
-    imageUrl: 'assets/images/Chinese/Cosmology/diyu.jpg',
+    imageUrl: 'assets/images/Chinese/Cosmology/diyu.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1462,7 +1462,7 @@ Mount Kunlun is the legendary sacred mountain believed to serve as the axis mund
 Atop Kunlun resides Xiwangmu, the Queen Mother of the West, sovereign of immortality who tends an orchard of magical peaches that ripen only once every several thousand years yet grant eternal life to whoever tastes them. The mountain is home to the xian, mortals who attained immortality through Taoist cultivation and alchemy, and is guarded by mythical beings such as a nine-headed bird and a tiger-bodied gatekeeper of the western pass. Kunlun functions as both a counterpart and complement to the Jade Heaven, a place where gods and immortals gather far from the bureaucratic bustle of the Jade Emperor's court, savoring eternity amid its enchanted gardens.
 
 The most celebrated tale set on Kunlun is the Feast of Immortal Peaches, hosted by Xiwangmu once every few thousand years, at which the gods are invited to eat the magical life-extending fruit. In Journey to the West, the uninvited Sun Wukong sneaks into the orchard, devours nearly every ripe peach, and wrecks the banquet in an escapade that eventually leads to his capture by the Buddha. Kunlun also appears as a resting place for the Yellow Emperor, Huangdi, during his legendary quest for wisdom. To this day, Kunlun endures as a symbol of immortality and spiritual pursuit in Chinese culture, its peach motif still used to signify longevity in art, carvings, and traditional birthday celebrations.''',
-    imageUrl: 'assets/images/Chinese/Cosmology/kunlun_mountain.jpg',
+    imageUrl: 'assets/images/Chinese/Cosmology/kunlun_mountain.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1486,7 +1486,7 @@ The Three Realms, or San Jie, form the fundamental cosmic structure underlying t
 Within the San Jie order, every being—from the Jade Emperor ruling at its summit to the smallest wandering spirit of the underworld—holds a clearly defined place within this cosmic hierarchy. Gods and immortals govern Heaven, humans and nature spirits inhabit Earth, and infernal kings such as Yanluo Wang administer the Underworld. Movement between realms is possible through spiritual cultivation, divine punishment, karma, or certain feats of magic, but it is always closely monitored to preserve cosmic balance. Legendary figures like Sun Wukong earned the title of one who could "shake the Three Realms" precisely because his power exceeded the boundaries that normally bind other beings, making him both a marvel and a menace to the existing order.
 
 The most iconic challenge to the San Jie order is Sun Wukong's rebellion, in which he forces his way into the Underworld to strike his name from the Register of Life and Death, then ascends to Heaven demanding recognition as an equal of the gods under the title "Great Sage Equal to Heaven." His defiance shattered the assumption that the boundaries of the Three Realms were absolute, compelling the entire heavenly pantheon to concede that cosmic order could be contested by sufficient will and power. The concept of San Jie also gave rise to the popular phrase "Three Realms and Six Paths," still widely used across Chinese literature, opera, and popular culture to describe the totality of the universe and every being within it.''',
-    imageUrl: 'assets/images/Chinese/Cosmology/three_realms.jpg',
+    imageUrl: 'assets/images/Chinese/Cosmology/three_realms.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1510,7 +1510,7 @@ Huaguo Shan, the Mountain of Flowers and Fruit, is a paradisiacal island peak ri
 It was on this mountain that a magical stone, having absorbed the essence of Heaven and Earth for countless ages, cracked open to release a stone egg from which Sun Wukong, the Monkey, was born. He later discovered the Water Curtain Cave (Shuilian Dong) hidden behind a waterfall, a natural palace sheltered from wind and rain, and for his courage in braving the falls to find it, the mountain's monkeys crowned him the Handsome Monkey King. Under his rule, Huaguo Shan became a kingdom of monkeys living in free and harmonious independence, untouched by the rigid hierarchies and obligations binding beings throughout the rest of the Three Realms.
 
 Huaguo Shan serves as the opening stage of the epic Journey to the West, the place Sun Wukong ruled before his dread of mortality drove him to leave in search of the Patriarch Subhuti, from whom he learned the secrets of immortality and supernatural power. Having mastered seventy-two transformations and other formidable abilities, he returned to Huaguo Shan an infinitely more powerful sovereign, ready to defy the order of the Three Realms itself. The mountain endures as a lasting symbol of untamed freedom and rebellion against imposed authority, a quality that has long endeared it to readers. Today, Huaguo Mountain in Lianyungang, Jiangsu Province, is regarded as the real-world site that inspired the tale and remains a popular cultural tourist destination.''',
-    imageUrl: 'assets/images/Chinese/Cosmology/flower_fruit_mountain.jpg',
+    imageUrl: 'assets/images/Chinese/Cosmology/flower_fruit_mountain.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1534,7 +1534,7 @@ The Naihe Bridge marks the final threshold of the afterlife journey in Chinese b
 At the foot of the bridge stands Meng Po, an elderly guardian who offers every soul about to cross a bowl of the Tea (or Soup) of Forgetfulness, Meng Po Tang. Once drunk, it erases all memory of the soul's past life, ensuring each spirit begins its new incarnation free of former burdens and unresolved attachments. Souls said to have committed grave wrongs in life are sometimes described as failing to cross the bridge cleanly, falling instead into the river below as part of their karmic purification. In this way, the Naihe Bridge serves a dual role, marking both the definitive close of one life and the opening gate to the next.
 
 Chinese folklore is rich with tales of souls who attempt to refuse the Tea of Forgetfulness in order to remember loved ones from a past life, making the Naihe Bridge a recurring setting for stories of love and longing that outlast death itself, including the legend of the Stone of Three Lives (San Sheng Shi), where lovers vow to reunite in a future incarnation. This motif continues to appear throughout Chinese literature, drama, and modern film as a vehicle for exploring fate, memory, and the cycle of rebirth. Far from being merely a grim mythological device, the Naihe Bridge offers the Chinese imagination a note of quiet comfort: that death is not an absolute end, but a silent pause before the soul begins a new chapter of life.''',
-    imageUrl: 'assets/images/Chinese/Cosmology/naihe_bridge.jpg',
+    imageUrl: 'assets/images/Chinese/Cosmology/naihe_bridge.webp',
     category: 'Cosmology',
   ),
 ];

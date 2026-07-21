@@ -22,7 +22,7 @@ Shiva is one of the three principal deities of the Trimurti, alongside Brahma an
 As the dissolver, Shiva brings the universe to an end at the close of each cosmic cycle to clear the way for the next creation, so that destruction in his hands always signifies transformation rather than mere annihilation. He is depicted with a third eye on his forehead symbolizing wisdom and the power to destroy illusion, a crescent moon in his matted hair (jata), the river Ganga flowing from his head, the serpent Vasuki coiled around his neck, a trident (trishula) and small drum (damaru) in his hands, and the bull Nandi as his mount. As Nataraja he performs the cosmic dance that balances creation and destruction, and as Adiyogi he is honored as the first yogi and patron of meditation and asceticism.
 
 One of the most famous episodes involving Shiva is his role in the Samudra Manthan, the churning of the cosmic ocean of milk by gods and demons in search of Amrita, the nectar of immortality; when the lethal poison Halahala emerged and threatened to destroy all beings, Shiva drank it and held it in his throat, turning it blue and earning him the name Neelakantha. He married the goddess Parvati, a reincarnation of his first wife Sati, and became the father of Ganesha and Kartikeya. Shiva is widely worshipped through the festival of Maha Shivaratri and through the twelve Jyotirlinga shrines across India, including Kashi Vishwanath and Kedarnath, and remains one of the most widely venerated deities in Hinduism today.''',
-        imageUrl: 'assets/images/Hindu/Trimurti/shiva.jpg',
+        imageUrl: 'assets/images/Hindu/Trimurti/shiva.webp',
     category: 'Trimurti',
   ),
   God(
@@ -46,7 +46,7 @@ Vishnu is one of the three principal deities of the Trimurti, responsible for pr
 Vishnu's central task is to uphold cosmic order and descend to earth in avatar form whenever evil threatens to overwhelm righteousness. He is depicted with blue skin and four arms holding a conch shell (Panchajanya), a discus (Sudarshana Chakra), a mace (Kaumodaki), and a lotus, wearing the Kaustubha jewel and yellow garments (Pitambara), and riding the eagle Garuda. His character is calm and compassionate, consistently siding with truth and the welfare of living beings.
 
 One of the best-known episodes involving Vishnu is his teaching of the Bhagavad Gita within the epic Mahabharata, when he descends as Krishna to guide Arjuna on dharma, devotion (bhakti), and the true nature of the self before the great battle of Kurukshetra. The concept of his ten avatars, the Dashavatara, forms one of the central pillars of Vaishnavism. He is widely worshipped through festivals such as Diwali, linked to Rama's return, and Janmashtami, marking Krishna's birth, as well as through major temples such as Tirupati Venkateswara and Jagannath Puri, with the Vishnu Sahasranama, his thousand names, recited as an act of devotion.''',
-        imageUrl: 'assets/images/Hindu/Trimurti/vishnu.jpg',
+        imageUrl: 'assets/images/Hindu/Trimurti/vishnu.webp',
     category: 'Trimurti',
   ),
   God(
@@ -70,7 +70,7 @@ Brahma is the creator deity of the Trimurti, responsible for bringing the univer
 As creator, Brahma presides over knowledge, the Vedas, destiny, and the passage of cosmic time. He is depicted with four heads, symbolizing the four Vedas and the four cardinal directions, and four arms holding the Vedic scriptures, a rosary (mala), a sacred water pot (kamandalu), and a ritual ladle (sruk), and he rides the swan or goose (Hamsa), a symbol of the ability to discern truth from falsehood. His consort, the goddess Saraswati, is the deity of knowledge who in some versions of the myth is said to have arisen from him.
 
 The story explaining why Brahma is rarely worshipped independently concerns a curse he received: one of his original five heads was severed by Shiva as punishment for his arrogance and dishonesty, and he was further cursed over the manner in which he treated Saraswati at the moment of creation. As a result, temples dedicated specifically to him are extremely rare, with the Brahma Temple in Pushkar, Rajasthan, standing as one of the few well-known sites of his worship. He nonetheless remains central to Hindu cosmology, particularly through the concept of a "Day of Brahma" (kalpa), which describes a cosmic time cycle lasting 4.32 billion human years.''',
-        imageUrl: 'assets/images/Hindu/Trimurti/brahma.jpg',
+        imageUrl: 'assets/images/Hindu/Trimurti/brahma.webp',
     category: 'Trimurti',
   ),
   God(
@@ -94,7 +94,7 @@ Durga is a manifestation of Shakti, or Devi, in warrior form, combining the comb
 As the goddess of cosmic strength, Durga protects the universe from evil forces and is invoked for strength and victory. She is depicted with ten arms (Dashabhuja), each bearing a weapon gifted by a different god, including a trident from Shiva and a discus from Vishnu, and she rides a lion or tiger. She combines gentle, protective motherhood with unconquerable warrior power, making her a dual figure: a compassionate mother and an unyielding warrior at once.
 
 The most famous story of Durga is her nine-day, nine-night battle against Mahishasura, culminating in his death, an episode known as Mahishasuramardini. This story is commemorated annually through the festivals of Navaratri and Durga Puja, celebrated most elaborately in Bengal, culminating in Vijayadashami or Dussehra, which marks the victory of good over evil. The Devi Mahatmya is traditionally recited during these celebrations, and temples such as Kalighat remain important centers of her worship today.''',
-        imageUrl: 'assets/images/Hindu/Devi/durga.jpg',
+        imageUrl: 'assets/images/Hindu/Devi/durga.webp',
     category: 'Devi',
   ),
   God(
@@ -118,7 +118,7 @@ Kali is the most fearsome form of Devi, or Shakti, closely associated with time,
 As goddess of time and death, Kali embodies kala, time that consumes all things, and represents the path to liberation (moksha) through the destruction of illusion (maya) and ego. She is depicted with dark, blue-black skin, wearing a garland of skulls or severed heads (mundamala) and a skirt of severed arms, with her tongue protruding, carrying a sword and a severed head, and often shown standing or dancing upon the body of Shiva. Her terrifying appearance is symbolic, representing victory over the fear of death and the ultimate reality that lies beneath the world of illusion.
 
 The most famous story of Kali is her battle against Raktabija, a demon capable of multiplying himself from every drop of his blood that touched the ground; Kali drank his blood before it could fall in order to prevent this replication, but then danced in an uncontrollable frenzy until Shiva lay beneath her feet to calm her, a moment depicted by her tongue protruding in shock. Kali is a central figure of worship within Shaktism and the Tantric tradition, especially in Bengal through the Kalighat and Dakshineswar temples, and is celebrated through Kali Puja, held on the same night as Diwali. Notable spiritual figures such as Ramakrishna Paramahamsa were renowned devotees of Kali worship.''',
-        imageUrl: 'assets/images/Hindu/Devi/kali.jpg',
+        imageUrl: 'assets/images/Hindu/Devi/kali.webp',
     category: 'Devi',
   ),
   God(
@@ -142,7 +142,7 @@ Ganesha is the son of Shiva and Parvati, the elephant-headed deity known through
 As Vighnaharta, the remover of obstacles, Ganesha is always worshipped first before beginning any undertaking, ceremony, or journey, and he is also regarded as the patron of wisdom, the arts, and knowledge. He is depicted with an elephant's head, large ears symbolizing the capacity to listen, a single broken tusk, used to transcribe the Mahabharata, a rounded belly said to contain the universe within it, and he rides a mouse (Mushika), symbolizing the conquest of desire despite the great difference in size. He is frequently shown holding a modak, a sweet representing the rewards of spiritual effort.
 
 One of the most famous stories about Ganesha tells how he broke off his own tusk to use as a pen to transcribe the epic Mahabharata as it was dictated by the sage Vyasa. Another story recounts a race between him and his brother Kartikeya around the universe, which Ganesha won simply by circling his own parents, declaring that they were equivalent to the entire universe. Ganesh Chaturthi is a major festival celebrated widely, especially in Maharashtra, with processions and the ritual immersion (visarjan) of Ganesha idols, and he is invariably worshipped first before rituals, weddings, or the start of new ventures.''',
-        imageUrl: 'assets/images/Hindu/Devas/ganesha.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/ganesha.webp',
     category: 'Devas',
   ),
   God(
@@ -166,32 +166,32 @@ Krishna is the eighth avatar of Vishnu, born to Devaki and Vasudeva in Mathura b
 As the embodiment of divine love, Krishna is known for a youth filled with playfulness and affection alongside Radha and the gopis of Vrindavan, and equally as a wise counselor and strategist in the Mahabharata during his adult years. He is depicted with dark blue skin, a crown of peacock feathers, a flute whose music enchants all who hear it, and the Kaustubha jewel and yellow garments. He is mischievous and playful as a child, known as Makhan Chor, the butter thief, yet appears wise and composed as an adviser in adulthood.
 
 The most celebrated story of Krishna is his delivery of the Bhagavad Gita to Arjuna on the battlefield of Kurukshetra in the Mahabharata, teaching dharma, the path of devotion (bhakti yoga), and the true nature of the self. He is also known for slaying Kamsa, the tyrannical uncle who had threatened his life since birth. Krishna is a central figure of Vaishnavism and is widely worshipped through the festivals of Janmashtami and Holi, the latter linked to his love story with Radha, with major temples such as Dwarkadhish and the pilgrimage sites of Vrindavan and Mathura continuing to draw devotees to this day.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/krishna.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/krishna.webp',
     category: 'Avatar',
   ),
   God(
-    id: '35',
-    name: 'Lakshmi',
+    id: '152',
+    name: 'Buddha',
     mythology: 'Hindu',
-    title: 'Dewi Kekayaan & Keberuntungan',
-    titleEn: 'Goddess of Wealth & Fortune',
-    symbol: '🌸',
-    powers: ['Kekayaan', 'Keberuntungan', 'Kemakmuran', 'Kecantikan', 'Kesuburan'],
-    powersEn: ['Wealth', 'Fortune', 'Prosperity', 'Beauty', 'Fertility'],
+    title: 'Siddhartha Gautama (Avatar Vishnu)',
+    titleEn: 'Siddhartha Gautama (Avatar of Vishnu)',
+    symbol: '🧘',
+    powers: ['Pencerahan', 'Kasih Sayang', 'Kebijaksanaan', 'Meditasi', 'Nirwana'],
+    powersEn: ['Enlightenment', 'Compassion', 'Wisdom', 'Meditation', 'Nirvana'],
     story: '''
-Lakshmi adalah istri Wisnu dan salah satu dari Tridevi, muncul dari Samudra Manthan, pengadukan lautan susu kosmik oleh para dewa dan asura, sambil memegang bunga teratai. Sejak saat itu ia menjadi pendamping abadi Wisnu dan selalu menjelma bersamanya di setiap avatarnya, misalnya sebagai Sita ketika Wisnu menjelma sebagai Rama.
+Dalam tradisi Hindu Waisnawa, Buddha—yang diidentikkan dengan Siddhartha Gautama yang bersejarah—dipandang sebagai avatar kesembilan Wisnu dalam Dashavatara, yang menurut sejumlah Purana (termasuk Bhagavata Purana), hadir pada zaman kemudian untuk membimbing makhluk hidup menuju welas asih dan menjauhkan mereka dari penyalahgunaan ritual kekerasan, khususnya pengorbanan hewan yang dilakukan atas nama otoritas Weda.
 
-Sebagai dewi kekayaan, keberuntungan, kemakmuran, kecantikan, dan kesuburan, Lakshmi melambangkan kelimpahan baik dalam bentuk materi maupun spiritual. Ia digambarkan duduk atau berdiri di atas bunga teratai, memiliki empat lengan yang memegang bunga teratai dan kendi emas yang mengalirkan koin, serta sering diapit oleh dua gajah (Gaja Lakshmi) yang menuangkan air sebagai lambang kekuasaan dan kemakmuran. Ia berkulit keemasan dan mengenakan busana berwarna merah.
+Dalam kerangka pandangan Waisnawa ini, Buddha melambangkan kebijaksanaan, tanpa kekerasan (ahimsa), welas asih, meditasi, dan jalan menuju pencerahan (bodhi) serta pembebasan nirwana, mengarahkan pengabdian dari ritual lahiriah menuju pemahaman spiritual batin. Ia digambarkan dalam wujud tenang dan meditatif yang dikenal luas dalam seni Buddha—duduk dalam posisi meditasi, mata setengah terpejam yang tenang, mengenakan jubah sederhana, dengan tangan membentuk mudra pengajaran atau meditasi—dan turut dimasukkan dalam pahatan serta patung Dashavatara di kuil-kuil bersama avatar-avatar Wisnu lainnya.
 
-Kisah kemunculannya dari Samudra Manthan bersama Amerta dan berbagai harta lainnya, sebelum akhirnya memilih Wisnu sebagai suaminya, menjadi salah satu kisah asal-usul terpenting dalam mitologi Hindu. Diwali (Deepavali) adalah perayaan utamanya, saat rumah-rumah dibersihkan dan dihiasi lampu untuk menyambut kedatangannya membawa kemakmuran. Ia dipuja secara luas di setiap rumah tangga Hindu, khususnya oleh para pedagang melalui Lakshmi Puja pada malam Diwali, dan dikenal pula dalam delapan wujud (Ashta Lakshmi) yang masing-masing mewakili aspek kekayaan yang berbeda.''',
+Sumber-sumber Purana memberikan alasan yang berbeda-beda mengenai avatar ini: sebagian menggambarkan ajaran Buddha sebagai koreksi penuh welas asih terhadap pengorbanan hewan Weda yang berlebihan, sementara sejumlah bagian Purana lain yang lebih skeptis menggambarkan avatar ini sebagai ajaran yang sengaja menyesatkan, dikirim untuk mengalihkan makhluk-makhluk yang tidak layak atau bersifat jahat dari kebenaran Weda—sebuah penggambaran yang diperdebatkan secara teologis dan tidak mencerminkan bagaimana umat Buddha sendiri memahami kehidupan dan ajaran Buddha. Avatar ini mencerminkan proses historis ketika tradisi Hindu berusaha memahami dan menempatkan kemunculan agama Buddha dalam kerangka kosmologisnya sendiri. Beberapa tradisi Waisnawa modern justru mengidentifikasi Baladewa, saudara Krishna, sebagai avatar kesembilan dan menempatkan Buddha secara berbeda, mencerminkan keberagaman interpretasi yang terus berlangsung dalam Hindu; terlepas dari itu, masuknya Buddha dalam daftar Dashavatara tetap menjadi contoh yang banyak dikutip mengenai keterlibatan historis teologi Hindu dengan agama Buddha.''',
     storyEn: '''
-Lakshmi is the consort of Vishnu and one of the Tridevi, who emerged from the Samudra Manthan, the churning of the cosmic ocean of milk by gods and demons, holding a lotus. From that moment she became Vishnu's eternal companion, incarnating alongside him in each of his avatars, appearing for instance as Sita when Vishnu descended as Rama.
+Within Vaishnava Hindu tradition, Buddha, identified with the historical Siddhartha Gautama, is regarded as the ninth avatar of Vishnu's Dashavatara, appearing in a later age, according to several Puranic accounts including the Bhagavata Purana, to guide beings toward compassion and away from the misuse of ritual violence, particularly animal sacrifice performed in the name of Vedic authority.
 
-As the goddess of wealth, fortune, prosperity, beauty, and fertility, Lakshmi represents abundance in both material and spiritual form. She is depicted seated or standing upon a lotus, with four arms holding lotus blossoms and a golden pot pouring out coins, often flanked by two elephants (Gaja Lakshmi) pouring water as a symbol of sovereignty and prosperity. She has a golden complexion and wears red garments.
+Within this Vaishnava framing, Buddha embodies wisdom, non-violence (ahimsa), compassion, meditation, and the path toward enlightenment (bodhi) and the liberation of nirvana, redirecting devotion away from external ritual and toward inner spiritual insight. He is depicted in the serene, meditative form familiar from Buddhist art, seated in meditation posture with calm, half-closed eyes, wearing simple robes, with his hands forming a mudra of teaching or meditation, and is included among the temple carvings and sculptures depicting the Dashavatara alongside Vishnu's other avatars.
 
-The story of her emergence from the Samudra Manthan, alongside Amrita and various other treasures, before ultimately choosing Vishnu as her husband, is one of the most important origin stories in Hindu mythology. Diwali (Deepavali) is her principal festival, when homes are cleaned and lit with lamps to welcome her arrival and the prosperity she brings. She is worshipped widely in every Hindu household, particularly by merchants through Lakshmi Puja on the night of Diwali, and is also known in eight forms (Ashta Lakshmi), each representing a different aspect of wealth.''',
-        imageUrl: 'assets/images/Hindu/Tridevi/lakshmi.jpg',
-    category: 'Tridevi',
+Puranic sources offer differing rationales for this avatar: some frame Buddha's teaching as a compassionate correction of excessive Vedic animal sacrifice, while other, more skeptical Puranic passages describe this avatar as a deliberately delusive teaching sent to mislead unworthy or demonic beings away from Vedic truth, a theologically debated portrayal that does not reflect how Buddhists themselves understand the Buddha's life and teaching. This avatar reflects the historical process by which Hindu tradition sought to understand and situate the rise of Buddhism within its own cosmological framework. Some modern Vaishnava traditions instead identify Balarama, Krishna's brother, as the ninth avatar and place Buddha differently, reflecting the ongoing diversity of interpretation within Hinduism; regardless, the inclusion of Buddha within the Dashavatara list remains a widely cited example of Hindu theology's historical engagement with Buddhism.''',
+        imageUrl: 'assets/images/Hindu/Dashavatara/buddha.webp',
+    category: 'Avatar',
   ),
   God(
     id: '36',
@@ -214,7 +214,7 @@ Saraswati is the consort of Brahma, said in some accounts to have arisen from hi
 As patroness of every form of knowledge, academic, musical, artistic, and spiritual, Saraswati is depicted wearing white garments symbolizing purity, seated upon a white lotus or a swan (Hamsa), which represents the ability to discern good from bad. Her four arms hold the stringed instrument veena, a book or manuscript, a rosary, and a water pot. Her character is serene and unattached to worldly wealth, in contrast to Lakshmi, who is identified with material prosperity.
 
 Originally worshipped as a sacred river goddess in the Rigveda, Saraswati was later personified as the goddess of speech and wisdom. Basant Panchami (Vasant Panchami) is her main festival, when students and artists place books and musical instruments before her image, and children are traditionally introduced to reading and writing on this day (Vidyarambham). She is widely worshipped in schools, colleges, and by musicians before performances, with temples such as the one at Basar remaining well-known centers of her worship.''',
-        imageUrl: 'assets/images/Hindu/Tridevi/saraswati.jpg',
+        imageUrl: 'assets/images/Hindu/Tridevi/saraswati.webp',
     category: 'Tridevi',
   ),
 
@@ -239,7 +239,7 @@ Parvati is the daughter of Himavan, the god of the Himalayan mountains, and Mena
 As the goddess of motherhood, devotion, love, and harmony, Parvati also embodies the shakti that awakens Shiva's dormant ascetic energy while he sits in silent meditation. She is frequently depicted alongside Shiva and their two sons, Ganesha and Kartikeya, with a fair, golden complexion, holding a lotus, and sometimes bearing a trident. Through her union with Shiva, she symbolizes the balance between the ascetic life and the worldly life of the householder.
 
 The best-known story of Parvati is her arduous penance in the Himalayas to win the heart of the grieving, meditating Shiva, aided by Kamadeva, the god of desire, who was burned to ash by Shiva's third eye for disturbing his meditation before being revived at Parvati's plea. Their marriage produced Ganesha and Kartikeya. Parvati is worshipped in numerous forms across India, such as Gauri, Annapurna, and Meenakshi, as well as in fiercer forms as Durga and Kali, and is celebrated especially through the festival of Teej, which honors devotion within marriage.''',
-        imageUrl: 'assets/images/Hindu/Tridevi/parvati.jpg',
+        imageUrl: 'assets/images/Hindu/Tridevi/parvati.webp',
     category: 'Tridevi',
   ),
   God(
@@ -263,7 +263,7 @@ Radha is the chief beloved and consort of Krishna, a figure deeply revered withi
 Radha embodies the highest form of divine love (prema) and devotion (bhakti), representing the individual soul's longing to unite with the divine. She is depicted as a young gopi, a cowherd woman, of Vrindavan or Barsana, often shown paired with Krishna as "Radha-Krishna," dressed in fine garments, sometimes holding a lotus, radiating beauty, grace, and bliss (ananda), and embodying loyalty and selfless love without expectation of return.
 
 Her love story with Krishna in the groves of Vrindavan, particularly through the Raas Leela, the divine dance, symbolizes the soul's yearning for the divine rather than a merely worldly romance. In some traditions she is described as married to another, yet her devotion to Krishna transcends this worldly boundary, making her the principal theological model for the concept of bhakti. The Gaudiya Vaishnava movement founded by Chaitanya Mahaprabhu placed the worship of Radha-Krishna at the very center of its theology, and she is celebrated through the festival of Radhashtami and through Holi, including the Lath Mar Holi of Barsana, which specifically honors her.''',
-        imageUrl: 'assets/images/Hindu/Devas/radha.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/radha.webp',
     category: 'Devas',
   ),
   God(
@@ -287,7 +287,7 @@ Matsya is the first avatar of Vishnu's Dashavatara, taken to rescue King Manu, V
 As rescuer, Matsya represents divine protection of knowledge and life amid catastrophe, and is closely tied to cosmology and the cyclical renewal of the universe. He is depicted either as a giant fish or, at times, as a being half human and half fish, with a human upper body and a fish's tail, often shown towing a boat. He symbolizes steadfast guidance and protection amid chaos, and the preservation of dharma across cosmic cycles.
 
 According to the Matsya Purana and the Shatapatha Brahmana, Manu found a small fish that asked for his protection; the fish grew immense under his care, then warned him of the coming flood and instructed him to build a boat and gather the seven sages (Saptarishi) along with the seeds of all life. Matsya then towed the boat to safety with his horn while imparting the Vedic teachings so that they would be preserved. This story bears notable parallels to flood narratives found across many world mythologies, and Matsya remains honored in the Vaishnava tradition as the first of Vishnu's ten avatars, frequently depicted in temple carvings portraying the Dashavatara.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/matsya.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/matsya.webp',
     category: 'Avatar',
   ),
   God(
@@ -311,7 +311,7 @@ Kurma is the second avatar of Vishnu's Dashavatara, a giant tortoise form taken 
 As supporter, Kurma represents patience, stability, and unwavering support, providing the solid foundation that allows a great cosmic undertaking to be accomplished. He is depicted as an enormous tortoise, at times with a human upper body emerging from the shell, bearing the weight of Mount Mandara on his back while the serpent Vasuki is coiled around the mountain to serve as the churning rope. He symbolizes endurance and the capacity to bear immense burdens without wavering.
 
 According to the Bhagavata Purana and the Vishnu Purana, the gods and demons used Mount Mandara as a churning rod and the serpent Vasuki as its rope to churn the ocean of milk in search of Amrita, the nectar of immortality; when the mountain began sinking to the ocean floor, Vishnu assumed the form of Kurma and dove beneath it to bear its weight on his back, allowing the churning to continue and eventually yield a series of treasures, including the goddess Lakshmi, the moon, the elephant Airavata, the poison Halahala later drunk by Shiva, and finally Amrita itself. Kurma remains honored as a symbol of stability and is depicted in temple architecture, most notably at the Sri Kurmam Temple in Andhra Pradesh, one of the very few temples dedicated specifically to this avatar.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/kurma.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/kurma.webp',
     category: 'Avatar',
   ),
   God(
@@ -335,7 +335,7 @@ Varaha is the third avatar of Vishnu's Dashavatara, a boar form taken to rescue 
 As rescuer, Varaha represents raw strength, courage, and the restorative power to lift and save the earth, and by extension dharma itself, from submersion in chaos. He is depicted either as a complete boar or, more commonly in temple sculpture, as a muscular human body with a boar's head, raising the earth, personified as Bhudevi, upon his tusks above the surface of the cosmic ocean. He symbolizes fierce protective strength paired with tenderness toward what he rescues.
 
 According to the Vishnu Purana and the Bhagavata Purana, the demon Hiranyaksha seized the earth and hid it at the bottom of the cosmic ocean; Vishnu then assumed the form of Varaha, dove into the depths, fought and slew Hiranyaksha in a fierce battle lasting a thousand years, and then lifted the earth on his tusks and restored it to its rightful place in the universe. This episode is closely connected to the subsequent story of Hiranyakashipu, Hiranyaksha's brother, who is later slain by Narasimha as a continuation of the same demonic lineage's arc. Varaha is commemorated in numerous major temple carvings across India, most notably the colossal Varaha sculptures at the Udayagiri Caves and Mahabalipuram.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/varaha.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/varaha.webp',
     category: 'Avatar',
   ),
   God(
@@ -359,7 +359,7 @@ Narasimha is the fourth avatar of Vishnu's Dashavatara, a fierce half-man, half-
 As protector, Narasimha embodies divine fury unleashed in defense of a faithful devotee and in enforcement of justice against tyranny that seeks to exploit loopholes in cosmic law. He is depicted with a lion's head and a man's upper body, or in fully leonine form, often shown disemboweling Hiranyakashipu with his claws, with fierce eyes and a thick mane, sometimes with multiple arms bearing weapons; he is also frequently shown accompanied by Lakshmi, as Lakshmi Narasimha, to pacify his rage. He symbolizes the idea that divine protection can transcend and dissolve even the most rigid boundaries.
 
 According to the Bhagavata Purana, the demon king Hiranyakashipu obtained a boon that made him nearly invincible: he could not be killed by man or beast, by day or by night, indoors or outdoors, on the earth or in the sky, nor by any weapon. When he sought to kill his own son Prahlada for his devotion to Vishnu, Vishnu emerged from a palace pillar at twilight as Narasimha, neither fully man nor beast, and killed the demon upon his lap, neither earth nor sky, at the threshold, neither indoors nor outdoors, using his claws rather than a weapon, thereby satisfying every condition of the boon while destroying evil. Narasimha Jayanti is celebrated as his dedicated festival, with prominent temples such as Ahobilam in Andhra Pradesh serving as centers of his worship.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/narashima.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/narashima.webp',
     category: 'Avatar',
   ),
   God(
@@ -383,7 +383,7 @@ Vamana is the fifth avatar of Vishnu's Dashavatara, taking the form of a short b
 Vamana represents humility as both a moral and strategic virtue, his modest appearance forming a kind of divine illusion (maya) that conceals his truly infinite nature, and embodies the use of wisdom and clever restraint rather than brute force to correct cosmic imbalance. He is depicted as a short, humble brahmin youth carrying a staff, an umbrella, and a water pot (kamandalu), who then transforms into the immense cosmic form of Trivikrama, with one foot spanning the earth and the other the heavens. He symbolizes the idea that even the smallest, humblest form can contain infinite divine power.
 
 According to the Bhagavata Purana and the Vamana Purana, King Bali, grandson of Prahlada, had grown so powerful through his generosity and righteous rule that he threatened the dominance of the gods; Vishnu approached him as the dwarf Vamana and asked only for as much land as he could cover in three steps. Bali granted the request despite the warning of his guru, Shukracharya, whereupon Vamana expanded into the colossal Trivikrama, covering the earth with one step and the heavens with the second; finding no space remaining for a third step, the humble yet still generous Bali offered his own head, and Vishnu, moved by his devotion, granted him sovereignty over the netherworld (Patala) and the promise of future rebirth as Indra. This story underlies the Onam festival in Kerala, which commemorates Bali's benevolent reign and his symbolic annual return to visit his people.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/vamana.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/vamana.webp',
     category: 'Avatar',
   ),
 
@@ -409,7 +409,7 @@ Parashurama, "Rama with the axe," is the sixth avatar of Vishnu's Dashavatara, b
 Parashurama embodies righteous martial strength wielded in the service of justice, particularly against corrupt authority, and is unique among the avatars in being simultaneously a brahmin sage and a peerless warrior, blending intellect with combat prowess. He is depicted carrying a battle axe (parashu) given to him by Shiva after intense penance, along with a bow and arrows, often shown with a stern, resolute expression reflecting his uncompromising sense of duty. He is known as one of the few avatars of Vishnu considered immortal (Chiranjivi), believed to still be living in penance in the present age.
 
 After the sons of King Kartavirya Arjuna killed his father Jamadagni in a dispute over the wish-granting cow Kamadhenu, or Surabhi, Parashurama vowed vengeance and is said to have rid the earth of oppressive Kshatriya rulers twenty-one times over, before eventually granting the conquered lands to brahmins and retiring to penance on Mount Mahendra. He appears across multiple epics as a linking figure, training both Bhishma and Karna in the Mahabharata, and famously confronting Rama in the Ramayana after Rama broke Shiva's bow at Sita's wedding contest, challenging him to string the bow of Vishnu before acknowledging him as a fellow avatar and withdrawing from the world. His legacy is honored in the coastal traditions of Kerala and the Konkan, which credit him with reclaiming that coastal land from the sea, and Parashurama Jayanti is observed as his festival.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/parashurama.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/parashurama.webp',
     category: 'Avatar',
   ),
   God(
@@ -433,32 +433,32 @@ Rama is the seventh avatar of Vishnu's Dashavatara, born as the eldest son of Ki
 Rama embodies dharma in its most complete form as an ideal son, husband, brother, and king, upholding truth, justice, and duty even at great personal cost. He is depicted as a composed prince with dark or blue-hued skin, carrying a bow and arrows, often shown alongside his wife Sita, his brother Lakshmana, and his devoted follower Hanuman; his calm bearing and unwavering commitment to righteous conduct define his character throughout the epic tradition.
 
 The epic Ramayana, composed by the sage Valmiki, recounts his fourteen years of exile, accepted in order to honor his father's promise to his stepmother Kaikeyi, the abduction of his wife Sita by Ravana, his alliance with the vanara (monkey) king Sugriva and his devoted follower Hanuman, the building of a bridge (Rama Setu) to Lanka, and his eventual victory over Ravana in battle before returning to be crowned king, inaugurating the just and prosperous era known as Rama Rajya. His return to Ayodhya is commemorated as Diwali, the festival of lights, while Dussehra (Vijayadashami) celebrates his victory over Ravana; major temples such as the Ram Mandir in Ayodhya and Rameswaram remain centers of his worship, and the Ramayana continues to be one of the most widely retold epics across South and Southeast Asia.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/rama.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/rama.webp',
     category: 'Avatar',
   ),
   God(
-    id: '152',
-    name: 'Buddha',
+    id: '35',
+    name: 'Lakshmi',
     mythology: 'Hindu',
-    title: 'Siddhartha Gautama (Avatar Vishnu)',
-    titleEn: 'Siddhartha Gautama (Avatar of Vishnu)',
-    symbol: '🧘',
-    powers: ['Pencerahan', 'Kasih Sayang', 'Kebijaksanaan', 'Meditasi', 'Nirwana'],
-    powersEn: ['Enlightenment', 'Compassion', 'Wisdom', 'Meditation', 'Nirvana'],
+    title: 'Dewi Kekayaan & Keberuntungan',
+    titleEn: 'Goddess of Wealth & Fortune',
+    symbol: '🌸',
+    powers: ['Kekayaan', 'Keberuntungan', 'Kemakmuran', 'Kecantikan', 'Kesuburan'],
+    powersEn: ['Wealth', 'Fortune', 'Prosperity', 'Beauty', 'Fertility'],
     story: '''
-Dalam tradisi Hindu Waisnawa, Buddha—yang diidentikkan dengan Siddhartha Gautama yang bersejarah—dipandang sebagai avatar kesembilan Wisnu dalam Dashavatara, yang menurut sejumlah Purana (termasuk Bhagavata Purana), hadir pada zaman kemudian untuk membimbing makhluk hidup menuju welas asih dan menjauhkan mereka dari penyalahgunaan ritual kekerasan, khususnya pengorbanan hewan yang dilakukan atas nama otoritas Weda.
+Lakshmi adalah istri Wisnu dan salah satu dari Tridevi, muncul dari Samudra Manthan, pengadukan lautan susu kosmik oleh para dewa dan asura, sambil memegang bunga teratai. Sejak saat itu ia menjadi pendamping abadi Wisnu dan selalu menjelma bersamanya di setiap avatarnya, misalnya sebagai Sita ketika Wisnu menjelma sebagai Rama.
 
-Dalam kerangka pandangan Waisnawa ini, Buddha melambangkan kebijaksanaan, tanpa kekerasan (ahimsa), welas asih, meditasi, dan jalan menuju pencerahan (bodhi) serta pembebasan nirwana, mengarahkan pengabdian dari ritual lahiriah menuju pemahaman spiritual batin. Ia digambarkan dalam wujud tenang dan meditatif yang dikenal luas dalam seni Buddha—duduk dalam posisi meditasi, mata setengah terpejam yang tenang, mengenakan jubah sederhana, dengan tangan membentuk mudra pengajaran atau meditasi—dan turut dimasukkan dalam pahatan serta patung Dashavatara di kuil-kuil bersama avatar-avatar Wisnu lainnya.
+Sebagai dewi kekayaan, keberuntungan, kemakmuran, kecantikan, dan kesuburan, Lakshmi melambangkan kelimpahan baik dalam bentuk materi maupun spiritual. Ia digambarkan duduk atau berdiri di atas bunga teratai, memiliki empat lengan yang memegang bunga teratai dan kendi emas yang mengalirkan koin, serta sering diapit oleh dua gajah (Gaja Lakshmi) yang menuangkan air sebagai lambang kekuasaan dan kemakmuran. Ia berkulit keemasan dan mengenakan busana berwarna merah.
 
-Sumber-sumber Purana memberikan alasan yang berbeda-beda mengenai avatar ini: sebagian menggambarkan ajaran Buddha sebagai koreksi penuh welas asih terhadap pengorbanan hewan Weda yang berlebihan, sementara sejumlah bagian Purana lain yang lebih skeptis menggambarkan avatar ini sebagai ajaran yang sengaja menyesatkan, dikirim untuk mengalihkan makhluk-makhluk yang tidak layak atau bersifat jahat dari kebenaran Weda—sebuah penggambaran yang diperdebatkan secara teologis dan tidak mencerminkan bagaimana umat Buddha sendiri memahami kehidupan dan ajaran Buddha. Avatar ini mencerminkan proses historis ketika tradisi Hindu berusaha memahami dan menempatkan kemunculan agama Buddha dalam kerangka kosmologisnya sendiri. Beberapa tradisi Waisnawa modern justru mengidentifikasi Baladewa, saudara Krishna, sebagai avatar kesembilan dan menempatkan Buddha secara berbeda, mencerminkan keberagaman interpretasi yang terus berlangsung dalam Hindu; terlepas dari itu, masuknya Buddha dalam daftar Dashavatara tetap menjadi contoh yang banyak dikutip mengenai keterlibatan historis teologi Hindu dengan agama Buddha.''',
+Kisah kemunculannya dari Samudra Manthan bersama Amerta dan berbagai harta lainnya, sebelum akhirnya memilih Wisnu sebagai suaminya, menjadi salah satu kisah asal-usul terpenting dalam mitologi Hindu. Diwali (Deepavali) adalah perayaan utamanya, saat rumah-rumah dibersihkan dan dihiasi lampu untuk menyambut kedatangannya membawa kemakmuran. Ia dipuja secara luas di setiap rumah tangga Hindu, khususnya oleh para pedagang melalui Lakshmi Puja pada malam Diwali, dan dikenal pula dalam delapan wujud (Ashta Lakshmi) yang masing-masing mewakili aspek kekayaan yang berbeda.''',
     storyEn: '''
-Within Vaishnava Hindu tradition, Buddha, identified with the historical Siddhartha Gautama, is regarded as the ninth avatar of Vishnu's Dashavatara, appearing in a later age, according to several Puranic accounts including the Bhagavata Purana, to guide beings toward compassion and away from the misuse of ritual violence, particularly animal sacrifice performed in the name of Vedic authority.
+Lakshmi is the consort of Vishnu and one of the Tridevi, who emerged from the Samudra Manthan, the churning of the cosmic ocean of milk by gods and demons, holding a lotus. From that moment she became Vishnu's eternal companion, incarnating alongside him in each of his avatars, appearing for instance as Sita when Vishnu descended as Rama.
 
-Within this Vaishnava framing, Buddha embodies wisdom, non-violence (ahimsa), compassion, meditation, and the path toward enlightenment (bodhi) and the liberation of nirvana, redirecting devotion away from external ritual and toward inner spiritual insight. He is depicted in the serene, meditative form familiar from Buddhist art, seated in meditation posture with calm, half-closed eyes, wearing simple robes, with his hands forming a mudra of teaching or meditation, and is included among the temple carvings and sculptures depicting the Dashavatara alongside Vishnu's other avatars.
+As the goddess of wealth, fortune, prosperity, beauty, and fertility, Lakshmi represents abundance in both material and spiritual form. She is depicted seated or standing upon a lotus, with four arms holding lotus blossoms and a golden pot pouring out coins, often flanked by two elephants (Gaja Lakshmi) pouring water as a symbol of sovereignty and prosperity. She has a golden complexion and wears red garments.
 
-Puranic sources offer differing rationales for this avatar: some frame Buddha's teaching as a compassionate correction of excessive Vedic animal sacrifice, while other, more skeptical Puranic passages describe this avatar as a deliberately delusive teaching sent to mislead unworthy or demonic beings away from Vedic truth, a theologically debated portrayal that does not reflect how Buddhists themselves understand the Buddha's life and teaching. This avatar reflects the historical process by which Hindu tradition sought to understand and situate the rise of Buddhism within its own cosmological framework. Some modern Vaishnava traditions instead identify Balarama, Krishna's brother, as the ninth avatar and place Buddha differently, reflecting the ongoing diversity of interpretation within Hinduism; regardless, the inclusion of Buddha within the Dashavatara list remains a widely cited example of Hindu theology's historical engagement with Buddhism.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/buddha.jpg',
-    category: 'Avatar',
+The story of her emergence from the Samudra Manthan, alongside Amrita and various other treasures, before ultimately choosing Vishnu as her husband, is one of the most important origin stories in Hindu mythology. Diwali (Deepavali) is her principal festival, when homes are cleaned and lit with lamps to welcome her arrival and the prosperity she brings. She is worshipped widely in every Hindu household, particularly by merchants through Lakshmi Puja on the night of Diwali, and is also known in eight forms (Ashta Lakshmi), each representing a different aspect of wealth.''',
+        imageUrl: 'assets/images/Hindu/Tridevi/lakshmi.webp',
+    category: 'Tridevi',
   ),
   God(
     id: '153',
@@ -481,7 +481,7 @@ Kalki is regarded as the tenth and final avatar of Lord Vishnu, prophesied in th
 As the one destined to close the current cycle of ages, Kalki is depicted riding a white horse named Devadatta and wielding a blazing sword that shines like a comet, symbolizing an uncompromising divine justice that cuts through corruption and evil. In some iconographic traditions he is shown with four arms, carrying Vishnu's familiar attributes such as the discus and mace alongside his sword, affirming that he remains an expression of the same cosmic power that sustains the universe. His coming is understood not merely as destruction for its own sake but as renewal, since the devastation he brings is meant to clear the way for the rebirth of a sacred order.
 
 According to the prophecies recorded across the Puranas, Kalki will descend to defeat tyrannical rulers and the forces of evil that dominate the closing days of Kali Yuga, allowing the world to be purified and to enter a new Satya Yuga, an age of truth and perfect harmony. His figure embodies the central Hindu teaching that whenever dharma is on the verge of collapse, a divine power will descend to restore it, echoing the very promise Krishna makes in the Bhagavad Gita. Kalki remains a keenly anticipated figure in the religious imagination of many Hindus today, frequently invoked in discussions of the end times and spiritual renewal, even though temples specifically dedicated to him remain notably rare compared with those of Vishnu's other avatars.''',
-        imageUrl: 'assets/images/Hindu/Dashavatara/kalki.jpg',
+        imageUrl: 'assets/images/Hindu/Dashavatara/kalki.webp',
     category: 'Avatar',
   ),
   God(
@@ -505,7 +505,7 @@ Kartikeya is the son of Lord Shiva and Goddess Parvati and the younger brother o
 As commander-in-chief of the celestial host, Kartikeya wields a sacred spear called the Vel, given to him by Goddess Parvati, and is traditionally depicted riding a peacock named Paravani as his vahana, a symbol of grace triumphing over pride and the world's poisons. In certain traditions he is shown with six faces, known as Shanmukha, so that he could nurse from all six of his foster mothers at once, though the six faces are also interpreted as representing mastery over the six senses or six virtues expected of a great leader. These attributes reinforce his identity as the god of war, leadership, and victory, perpetually honored by soldiers and by anyone who seeks courage and agility.
 
 His best-known feat is his battle against the demon Tarakasura in the Sanskrit tradition, or Surapadman in the Tamil epic Kanda Puranam, an asura who had secured a boon that only a son of Shiva could ever defeat him; Kartikeya's very birth was in fact orchestrated by the gods specifically to produce the foretold conqueror. Following his victory, Kartikeya came to be worshipped with extraordinary devotion in Tamil Nadu as Murugan, with six principal shrines known collectively as the Arupadaiveedu, and is celebrated in the vibrant Thaipusam festival, which has since become a major tradition in Malaysia, Singapore, and Mauritius as well. He continues to be revered today as the protector of soldiers and youth, a lasting emblem of fearless courage in the defense of righteousness.''',
-        imageUrl: 'assets/images/Hindu/Devas/kartikeya.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/kartikeya.webp',
     category: 'Devas',
   ),
   God(
@@ -529,7 +529,7 @@ Indra is the king of the Devas and ruler of Svarga, the heavenly realm of Hindu 
 As the god of thunder, sky, and rain, Indra carries the mighty weapon known as the Vajra, a thunderbolt that myth says was forged from the bones of the sage Dadhichi, who willingly sacrificed his own body for the benefit of the gods, and he is traditionally depicted riding the great white elephant Airavata. Thunder and the rains that accompany the growing season are closely associated with his power, making Indra also a deity intimately tied to soil fertility and successful harvests within ancient agrarian society. Strength in battle, valor, and triumph over one's enemies are the qualities most closely bound to his character.
 
 His most celebrated feat is the epic battle against Vritra, a monstrous serpent who held back all the world's waters and caused a devastating drought, whom Indra slew with the Vajra, earning the epithet Vritrahan, "slayer of Vritra," and releasing the rivers to flow once more for the benefit of humankind. Even so, several Puranic tales also depict his pride and his falls from grace, such as his affair with Ahalya, wife of the sage Gautama, and the episode in which Krishna lifted Mount Govardhana to shelter the people of Vrindavan from the furious storm Indra unleashed in wounded pride, an event that ultimately led Indra to acknowledge Krishna's supremacy. Although his standing as king of the gods was gradually eclipsed by the later Trimurti of Brahma, Vishnu, and Shiva, Indra continues to be honored as guardian of the eastern direction and remains a vital presence in Hindu ritual and literature to this day.''',
-        imageUrl: 'assets/images/Hindu/Devas/indra.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/indra.webp',
     category: 'Devas',
   ),
   God(
@@ -553,7 +553,7 @@ Agni is the god of fire, one of the oldest and most venerated deities of the Ved
 As the god of fire and sacred sacrifice, Agni is depicted with seven tongues of flame licking at the offerings during the yajna ritual, and is commonly portrayed with a fiery red complexion, riding upon a ram. His role as intermediary is essential, since every offering burned in the sacred fire is believed to be carried directly by Agni to the intended deity, effectively making him a sacred messenger and conduit between the two realms. The purifying nature of fire also makes Agni a symbol of spiritual cleansing and inner enlightenment, since fire is believed capable of consuming impurity and darkness alike.
 
 One of the most famous stories involving Agni appears in the Mahabharata, in which he suffers from a debilitating illness caused by consuming too much sacred clarified butter, and appeals to Arjuna and Krishna for help in devouring the entire Khandava Forest to restore his strength; from this episode Arjuna receives the divine bow Gandiva and Krishna receives the discus Sudarshana as gifts from the grateful gods. To this day, Agni remains a living presence in Hindu religious life through every homa or havan ceremony, including traditional weddings in which the couple circles the sacred fire as witness to their vows, making Agni one of the deities whose worship has continued most unbroken from Vedic times to the present day.''',
-        imageUrl: 'assets/images/Hindu/Devas/agni.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/agni.webp',
     category: 'Devas',
   ),
   God(
@@ -577,7 +577,7 @@ Vayu is the god of wind, one of the oldest deities in the Vedic pantheon, whose 
 As the ruler of wind, speed, and movement, Vayu is traditionally depicted riding a chariot drawn by swift horses, or sometimes mounted upon a deer, carrying a fluttering banner as an emblem of a power that is invisible yet felt in every direction. He is honored as one of the Dikpalas, guardian of the northwestern direction, and is regarded as the vital force that drives the clouds, carries fragrance across the land, and sustains the breath of every living creature in the universe. His presence, unseen yet ever felt, makes Vayu a symbol of life itself, for without wind and breath no living thing could endure.
 
 The most prominent stories concerning Vayu are woven into the births of his two sons: he blessed the ascetic apsara Anjana so that the extraordinarily powerful Hanuman was born, and it was also he who bestowed immense strength upon Bhima, son of Kunti, making Bhima renowned as one of the mightiest warriors of the Mahabharata. Through these two sons, Vayu's power continues to be carried forward in the great epics of Hindu tradition, and his veneration as the source of life and breath remains directly relevant in the practices of yoga and pranayama observed by Hindus to this day.''',
-        imageUrl: 'assets/images/Hindu/Devas/vayu.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/vayu.webp',
     category: 'Devas',
   ),
 
@@ -603,7 +603,7 @@ Varuna is one of the oldest deities among the Adityas, regarded in the earliest 
 As god of the sea and cosmic law, Varuna is depicted riding the mythical sea creature Makara and carrying a sacred noose called the Varunapasha, believed capable of binding and punishing anyone who violates the truth or breaks a sworn oath. He is honored as one of the Dikpalas, guardian of the western direction, and is perpetually associated with the concept of universal justice that observes human conduct even when no other witness is present. Water, the element he governs, is regarded as both a purifying substance and a life-sustaining force subject to the cosmic order he protects.
 
 One of the most celebrated stories concerning Varuna is found in the legend of King Harishchandra, who vowed to offer his own son, Rohita, to Varuna in exchange for the blessing of offspring, but repeatedly postponed the sacrifice until a substitute, Shunahshepa, was ultimately offered instead, a tale that tests the limits of human honesty and integrity before the very god of truth. Varuna is also said to have played a role, together with Mitra, in the birth of the great sage Vasishtha through the celestial nymph Urvashi, linking him to the lineage of India's revered seers. Varuna continues to be worshipped today, especially in rituals connected with water, the sea, and seafaring, remaining an enduring symbol of unshakable truth and justice within Hindu cosmology.''',
-        imageUrl: 'assets/images/Hindu/Devas/varuna.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/varuna.webp',
     category: 'Devas',
   ),
   God(
@@ -627,7 +627,7 @@ Surya is the sun god, one of the principal deities worshipped since Vedic times 
 As the god of the sun, light, and life, Surya is depicted riding a magnificent chariot drawn by seven horses, often interpreted as representing the seven colors of light or the seven poetic meters of the Vedas, with Aruna, brother of Garuda, serving as his charioteer as he crosses the sky from east to west each day. His presence is closely tied to health and vitality, for sunlight is believed to carry healing power and spiritual illumination for anyone who worships him sincerely each morning. The lotus he often holds symbolizes purity and continual renewal, much as the sun rises anew every single day.
 
 Surya is known as the father of several important figures in Hindu literature, including Karna in the Mahabharata, born to Kunti before her marriage, as well as Yama, Yami, and the twin Ashwins, born of his wife Sanjna. His worship is enacted in tangible practice through Surya Namaskar, performed by millions of people every day, through the grand Chhath Puja festival celebrated with great fervor in Bihar and its surrounding regions, and through magnificent temples dedicated to him, such as the Konark Sun Temple in Odisha, which is recognized today as a World Heritage site.''',
-        imageUrl: 'assets/images/Hindu/Devas/surya.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/surya.webp',
     category: 'Devas',
   ),
   God(
@@ -651,7 +651,7 @@ Chandra, also known as Soma, is the moon god in Hindu tradition, who according t
 As the god of the moon, fertility, and cycles, Chandra is depicted riding a chariot drawn by ten white horses, carrying the crescent moon as his most distinctive emblem, and is closely associated with the mind, or manas, in Hindu philosophy, since the moon is believed to influence human mood and emotion. His gentle light stands as a symbol of beauty, serenity, and the endlessly turning cycle of life, much as the moon itself continually changes shape from crescent to full. His influence over the tides of the sea and the cycles of agriculture also makes him a deity closely tied to the fertility of the land and the continuation of life.
 
 One of the most famous stories about Chandra tells of his marriage to the twenty-seven Nakshatras, daughters of Daksha who personify the lunar constellations, but his excessive love for one wife, Rohini, led him to neglect the others, provoking Daksha's fury and a curse that caused his light to steadily wane, a curse later modified into the familiar waxing and waning cycle of the moon we observe today. Chandra is also said to be the father of Budha, deity of the planet Mercury, through his union with Tara, the wife of Brihaspati. His worship remains very much alive today through observances such as Karva Chauth and the many rituals performed on the night of the full moon.''',
-        imageUrl: 'assets/images/Hindu/Devas/chandra.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/chandra.webp',
     category: 'Devas',
   ),
   God(
@@ -675,7 +675,7 @@ Yama is the god of death and justice in Hindu tradition, son of the sun god Sury
 As the god of death and justice, Yama is depicted with dark green skin, riding a black buffalo, carrying a mace called the danda and a noose called the pasha with which to claim human souls, and is accompanied by Chitragupta, the sacred scribe who keeps a complete record of every good and bad deed a person performs during their lifetime. He acts as an impartial judge in the afterlife, weighing each soul's deeds to determine its subsequent fate, regardless of a person's status or wealth during life. His role as enforcer of cosmic law makes him a symbol of a justice that no one can ultimately escape.
 
 Yama's most celebrated story appears in the Katha Upanishad, in which a boy named Nachiketa is sent by his father to Yama's abode and there is taught about the nature of the atman, the eternal soul, and the distinction between fleeting pleasure and true goodness. Another equally famous tale is the legend of Savitri and Satyavan, in which Savitri follows Yama as he carries away her husband's life, and through her wisdom and devotion persuades Yama to restore Satyavan to life. His relationship with his sister Yami is also commemorated in the festival of Yama Dwitiya, known in many parts of India as Bhai Dooj, a celebration honoring the bond of affection between brothers and sisters that continues to this day.''',
-        imageUrl: 'assets/images/Hindu/Devas/yama.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/yama.webp',
     category: 'Devas',
   ),
   God(
@@ -699,7 +699,7 @@ Kubera is the god of wealth in Hindu tradition and treasurer of the gods, son of
 As the god of wealth and prosperity, Kubera is often depicted as stout and pot-bellied, with one damaged eye and an imperfect leg as the result of a curse, yet he is still honored as guardian of the northern direction among the Dikpalas. He is associated with symbols of riches such as sacks of gold and jewels, and is believed to store the entirety of the world's treasures within his glittering palace. His role as protector of wealth makes him a deity worshipped alongside Goddess Lakshmi in many rituals connected with household prosperity.
 
 The most famous story about Kubera tells of how he once ruled Lanka splendidly, complete with the magical flying chariot known as the Pushpaka, before his kingdom and his vehicle were forcibly seized by his half-brother Ravana, compelling Kubera to relocate and establish a new kingdom elsewhere. Despite losing Lanka, his standing as god of wealth was never diminished, and he continues to be widely worshipped, especially during the festival of Diwali alongside Goddess Lakshmi, when Hindus pray for blessings of prosperity and protection over their wealth in the year to come.''',
-        imageUrl: 'assets/images/Hindu/Devas/kubera.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/kubera.webp',
     category: 'Devas',
   ),
   God(
@@ -723,7 +723,7 @@ Hanuman is the monkey-formed god who is the son of the wind god Vayu and the aps
 As the god of strength and devotion, Hanuman is depicted with a monkey's face atop a muscular human body, typically colored reddish orange, often carrying a great mace as his weapon and sometimes shown bearing an entire mountain of medicinal herbs in his hand. In a widely popular iconographic motif, his chest is shown torn open to reveal the images of Rama and Sita enshrined within his heart, symbolizing the boundless devotion that defines his character. His extraordinary physical strength is always tempered by humility and absolute loyalty to Rama, making him the foremost exemplar of bhakti, or devotional worship, within Hindu teaching.
 
 His most famous exploits occur in the Ramayana, when Hanuman leaps across the vast ocean in a single bound to find Sita held captive in the Ashoka Vatika in Lanka, then sets the city of Lanka ablaze with his own tail, which Ravana's forces had set on fire as punishment, and most memorably, when he flies carrying an entire Himalayan mountain bearing the sanjeevani herb to save the life of Lakshmana, gravely wounded in battle. His devotion to Rama makes him the ultimate symbol of selfless service, and he continues to be worshipped widely across India today, particularly on Tuesdays and Saturdays, with the recitation of the Hanuman Chalisa, composed by the poet Tulsidas, remaining one of the most frequently recited prayers among Hindus worldwide.''',
-        imageUrl: 'assets/images/Hindu/Devas/hanuman.jpg',
+        imageUrl: 'assets/images/Hindu/Devas/hanuman.webp',
     category: 'Devas',
   ),
   God(
@@ -747,7 +747,7 @@ Ravana is the renowned king of Lanka, son of the sage Vishrava and the Rakshasa 
 His most recognizable feature is his ten heads and twenty arms, which tradition holds represent his mastery of the four Vedas and the six Shastras, affirming his reputation as both a great scholar and a devoted worshipper of Shiva, to whom he is even believed to have composed the hymn known as the Shiva Tandava Stotra. He received an extraordinary boon from Lord Brahma that rendered him nearly invincible against gods, asuras, and other supernatural beings, for in his pride he neglected to seek protection from humans and monkeys, whom he considered far too lowly to pose any threat. Through his might and military strategy, he even seized the kingdom of Lanka along with the flying chariot Pushpaka from his own half-brother, Kubera.
 
 The most famous episode concerning Ravana is his abduction of Sita, Rama's wife, which sparked the great war between Rama's forces and Lanka, and he was ultimately slain by Rama after his own brother Vibhishana revealed the secret of his hidden vulnerability, concealed within his navel. His defeat continues to be celebrated today through the festival of Dussehra, or Vijayadashami, when enormous effigies of Ravana are burned across much of India as a symbol of good triumphing over evil, even though in certain other regions, including Sri Lanka and some communities in India, he is still honored for his intellect, his scholarship, and his profound devotion to Shiva.''',
-        imageUrl: 'assets/images/Hindu/Figures/ravana.jpg',
+        imageUrl: 'assets/images/Hindu/Figures/ravana.webp',
     category: 'Figures',
   ),
   God(
@@ -771,7 +771,7 @@ Mount Meru is a mythological golden mountain regarded in Hindu cosmology as the 
 As the cosmic axis, Mount Meru is described as being of extraordinary height, encircled by seven concentric continents each with its own surrounding ocean, and serving as the abode of the gods, including Indra's city of Amaravati and Brahmapuri, Brahma's own residence enthroned at its highest summit. The sun, moon, and stars are believed to revolve around Meru in their passage across the sky, meaning the mountain functions quite literally as the world's axis within ancient cosmological understanding. The color and material composing each of its sides are also said to differ, symbolizing the diversity of elements united within a single sacred center.
 
 The idea of Mount Meru as the world's axis has left a tangible imprint on the architecture of both Hindu and Buddhist temples, since the main tower or shikhara found atop nearly every temple is designed to represent the form of Meru as a link between earth and the divine realm. Great temple complexes across Southeast Asia, such as Angkor Wat in Cambodia and Prambanan in Indonesia, were built following Meru's cosmology, with the central shrine representing its summit and the surrounding shrines representing the continents and oceans encircling it. Some traditions even symbolically identify Mount Meru with Mount Kailash in Tibet, making it one of the Hindu cosmological concepts whose influence can still be traced within the religious landscape today.''',
-        imageUrl: 'assets/images/Hindu/Cosmology/meru.jpg',
+        imageUrl: 'assets/images/Hindu/Cosmology/meru.webp',
     category: 'Cosmology',
   ),
   God(
@@ -795,7 +795,7 @@ Triloka is the concept of the three worlds that make up the structure of the uni
 Each of the three worlds within the Triloka has its own inhabitants and characteristics, with the gods enjoying eternal bliss in Svarga, humans and mortal beings working through karma in Bhuloka, and nagas and asuras dwelling among the hidden treasures of Patala deep within the earth. The idea of the three worlds is embedded even in one of the most sacred mantras in Hinduism, the Gayatri Mantra, which names these three realms as Bhur, Bhuvah, and Svah in the daily prayers recited by Hindus. Lord Shiva himself bears the title Tryambakam, lord of the three worlds, underscoring just how central this concept is to upholding cosmic order as a whole.
 
 One of the most famous stories associated with the Triloka is the legend of Vamana, the dwarf avatar of Vishnu, who measured the three worlds in just three strides to reclaim the universe from the mighty yet prideful King Bali, a tale recorded in the Bhagavata Purana that earned Vishnu the epithet Trivikrama, "conqueror of the three worlds." The concept of Triloka continues to be used today as a foundational framework for understanding the relationship between heaven, earth, and the netherworld within Hindu teaching and everyday prayer.''',
-        imageUrl: 'assets/images/Hindu/Cosmology/triloka.jpg',
+        imageUrl: 'assets/images/Hindu/Cosmology/triloka.webp',
     category: 'Cosmology',
   ),
 
@@ -821,7 +821,7 @@ The Naga are a race of divine serpent beings in Hindu mythology, descendants of 
 As wise beings possessing serpent power, the Nagas are often depicted as half-human, half-serpent, or as multi-headed snakes, with Shesha, also called Ananta, the thousand-headed cosmic serpent, standing as the most exalted among them, the very being upon whom Vishnu reclines while floating on the cosmic ocean of milk and who is also believed to bear the weight of the earth upon his many heads. Another equally significant serpent king is Vasuki, who was used as the churning rope during the great event of the Samudra Manthan. The Nagas are generally regarded as guardians of waters, subterranean treasures, and secret knowledge passed down through generations.
 
 The most widely known story concerning the Nagas is the subjugation of Kaliya, a venomous serpent poisoning the Yamuna River, by Lord Krishna, who danced upon Kaliya's many hoods until the serpent surrendered and agreed to depart, a victory celebrated as a symbol of goodness triumphing over the poison of evil. The Nagas continue to be honored today through the festival of Nag Panchami, when Hindus across various regions of India worship living snakes as well as serpent images as an act of reverence, and their imagery continues to appear as sacred guardians at temple gateways throughout South and Southeast Asia.''',
-        imageUrl: 'assets/images/Hindu/Creatures/naga.jpg',
+        imageUrl: 'assets/images/Hindu/Creatures/naga.webp',
     category: 'Creature',
   ),
   God(
@@ -845,7 +845,7 @@ Garuda is the divine giant bird of Hindu mythology, son of the sage Kashyapa and
 As the giant bird who rules the skies, Garuda is depicted with the head and wings of an eagle atop a humanlike body, possessing tremendous flying speed that allows him to cover vast distances in remarkably little time. He is known as the sworn enemy of the Nagas, yet is equally honored as a protector, for he would later become the permanent vahana of Lord Vishnu and the emblem adorning the banner of the god who sustains the universe. His speed, strength, and loyalty make Garuda a symbol of divine protection for anyone who comes under his shelter.
 
 His most famous story tells of how Garuda stole Amrita, the nectar of immortality belonging to the gods, in order to free his mother from her enslavement under the Nagas, an endeavor demanding extraordinary strength and cunning to overcome the guardian fire and the spinning blades protecting the sacred nectar. Following his success, Indra negotiated to reclaim the Amrita, and in return Vishnu granted Garuda immortality without needing to drink it and elevated him to become his eternal mount. Garuda's legacy remains very much alive today, evident in Indonesia's national emblem, Garuda Pancasila, as well as in the Garuda Purana, an important text addressing death and the afterlife within Hindu tradition.''',
-        imageUrl: 'assets/images/Hindu/Creatures/garuda.jpg',
+        imageUrl: 'assets/images/Hindu/Creatures/garuda.webp',
     category: 'Creature',
   ),
   God(
@@ -869,7 +869,7 @@ Nandi is the bull deity of Hindu tradition, the principal mount and gatekeeper o
 As the bull vehicle of Shiva, Nandi is depicted in pure white, typically shown seated or reclining facing directly toward the Shiva lingam in almost every Shiva temple, adorned with garlands and a small bell at his neck. His constant presence at the entrance of every temple makes him a symbol of strength, patience, and wisdom joined with absolute loyalty, since Nandi is believed to be the first guardian who must be honored before one may approach Shiva directly. He is also known as the leader of the ganas, Shiva's loyal band of attendants.
 
 One of the most widely known traditions observed to this day is the practice of devotees whispering their prayers and wishes into the ears of Nandi's statue, in the belief that he will convey those petitions directly to Shiva. Nandi is also honored as a teacher of dance and music, a role reflected in the Nandikeshvara text, which addresses the sacred performing arts within Hindu tradition. His presence, inseparable from every Shiva temple, makes Nandi one of the most recognized and revered companion figures in everyday Hindu religious practice.''',
-        imageUrl: 'assets/images/Hindu/Creatures/nandi.jpg',
+        imageUrl: 'assets/images/Hindu/Creatures/nandi.webp',
     category: 'Creature',
   ),
   God(
@@ -893,7 +893,7 @@ The Asuras are a broad class of immensely powerful beings within Vedic and Puran
 The Asuras are generally described as possessing extraordinary strength along with mastery of mystical arts and maya, the power to create illusion, and many among them are also renowned for their prowess in austerity and the art of warfare. In many stories they are portrayed as consumed by arrogance and ambition that drive them toward destruction and darkness, yet it is important to note that this class of beings is not uniform in character or morality, since a number of Asura figures are instead remembered for their justice, generosity, or wisdom. It is precisely this moral complexity that distinguishes the concept of the Asura from a simple depiction of absolute evil.
 
 The most famous story involving the Asuras is the Samudra Manthan, when they joined forces with the Devas to churn the cosmic ocean of milk using Mount Mandara and the serpent Vasuki in order to obtain Amrita, only to be ultimately deceived by Vishnu in his form as Mohini, who distributed the nectar of immortality solely to the Devas, sparking an enduring enmity between the two sides. Among the Asura figures remembered in a particularly favorable light is King Mahabali, who despite his Asura lineage is honored for his generosity and justice, his yearly return celebrated with great festivity during the Onam festival in Kerala, while other figures such as Hiranyakashipu and Ravana are better known as embodiments of arrogance and destruction who were ultimately overcome by divine power.''',
-        imageUrl: 'assets/images/Hindu/Creatures/asura.jpg',
+        imageUrl: 'assets/images/Hindu/Creatures/asura.webp',
     category: 'Creature',
   ),
   God(
@@ -917,7 +917,7 @@ Yuga is the concept of cyclical ages within Hindu cosmology, consisting of four 
 Each age within the Yuga cycle marks a gradual decline in dharma, often symbolically represented as a bull standing on four full legs during Satya Yuga, the age of truth and perfection, but losing one leg with each successive age until it stands on only a single leg in Kali Yuga, the age of conflict, ignorance, and profound moral decline. As dharma declines, human lifespan and strength are also believed to diminish correspondingly from one yuga to the next. This idea provides a powerful moral framework through which Hindus understand the passage of history and the challenges of the age they inhabit.
 
 Each avatar of Vishnu is traditionally associated with a particular yuga, for example Rama, who appeared during Treta Yuga, and Krishna, who appeared during the transition toward Dvapara and Kali Yuga, while Kalki is prophesied to descend to close Kali Yuga and restore dharma at the very end of this age. According to Hindu belief widely held to this day, the present age is understood to be Kali Yuga, believed to have begun around the time of Krishna's departure from the world and the conclusion of the great Kurukshetra war recounted in the Mahabharata, and this cyclical concept of ages continues to shape the religious and philosophical outlook of Hindus in understanding the state of the world even now.''',
-        imageUrl: 'assets/images/Hindu/Cosmology/yuga.jpg',
+        imageUrl: 'assets/images/Hindu/Cosmology/yuga.webp',
     category: 'Cosmology',
   ),
 
@@ -942,7 +942,7 @@ Vishwakarma is the divine architect and master craftsman of the gods in Hindu tr
 As lord of architecture, craftsmanship, and engineering, Vishwakarma is credited with designing and constructing most of the great cities, palaces, weapons, and divine vehicles found in Hindu mythology, including the golden city of Lanka later inhabited by Ravana, the city of Dwarka that became Krishna's capital, and the Pushpaka Vimana, the legendary flying chariot. He is depicted as an elderly, bearded figure holding tools of the craftsman's trade such as an axe (parashu), a hammer, and measuring instruments, sometimes crowned and adorned with jewelry, symbolizing the union of divine sanctity and technical mastery. He is also known as the smith who forged the sacred weapons of the gods, including Shiva's trident and Vishnu's Sudarshana Chakra, and is thus widely venerated as the patron of architects, engineers, builders, and artisans.
 
 One of the most famous stories about Vishwakarma is his construction of the city of Lanka as a wedding gift for the god Kubera, a city later seized by his half-brother Ravana and central to the narrative of the Ramayana. In the Mahabharata, he is credited as the designer of the magnificent city of Dwarka, built to be secure from the sea for Krishna and the Yadava people. Because of his legacy as the creator of architectural marvels and divine weaponry, Vishwakarma is honored specifically by laborers, engineers, and artisans across India and Nepal through the annual festival of Vishwakarma Puja, usually held in September, during which tools and machinery are blessed in recognition of skilled work as a sacred act.''',
-    imageUrl: 'assets/images/Hindu/Devas/vishwakarma.jpg',
+    imageUrl: 'assets/images/Hindu/Devas/vishwakarma.webp',
     category: 'Devas',
   ),
   God(
@@ -966,7 +966,7 @@ Kamadeva is the god of love, desire, and romantic attraction in Hindu mythology,
 As the god of desire, Kamadeva awakens love and passion in living beings, a role considered essential to the continuation of creation itself. He is depicted as a handsome youth carrying a bow made of sugarcane strung with a line of buzzing bees, and five flower-tipped arrows, each representing a different kind of longing; he rides a parrot and is frequently accompanied by his wife, Rati, goddess of desire and pleasure, and his companion Vasanta, the god of spring. His arrows do not wound the body but pierce the heart and mind, awakening deep love or yearning in whoever they strike.
 
 The most famous story concerning Kamadeva involves his mission to rouse Shiva from deep meditation so that he would fall in love with Parvati, a task entrusted to him by the gods because only a son of Shiva could defeat the demon Tarakasura. When Kamadeva loosed his arrow at the meditating Shiva, the god was disturbed and enraged, opening his third eye and burning Kamadeva to ashes. At the grieving Rati's plea, Shiva restored his existence, though in many versions he returns without physical form as Ananga, "the bodiless one," present as an unseen but ever-felt force of desire throughout the universe to this day.''',
-    imageUrl: 'assets/images/Hindu/Devas/kamadeva.jpg',
+    imageUrl: 'assets/images/Hindu/Devas/kamadeva.webp',
     category: 'Devas',
   ),
   God(
@@ -990,7 +990,7 @@ The Ashwini Kumaras are a pair of twin gods in Hindu mythology who serve as phys
 As divine physicians, the Ashwini Kumaras are masters of medicine, healing, and restoration, and are regarded in Hindu tradition as forerunners of Ayurveda. In the hymns of the Rigveda they are depicted riding a golden chariot drawn by horses or birds, crossing the sky each dawn as bringers of light and swift aid to those in distress, and are frequently associated with horse-headed or strongly horse-linked iconography. They are renowned for their extraordinary speed in coming to the aid of anyone who calls upon them in danger, making them emblematic of emergency rescue and miraculous healing.
 
 The Rigveda records numerous miraculous cures performed by the Ashwini Kumaras, including restoring youth to the aged sage Chyawana, fitting the warrior Vishpala with an iron leg after she lost her own in battle, and restoring sight to the blind. In the Mahabharata, the twins become the divine fathers of two of the Pandava brothers, Nakula and Sahadeva, after Kunti invokes them at Madri's request using the mantra granted to her by the sage Durvasa. Because of their reputation as the swiftest and most potent healers among the gods, the name of the Ashwini Kumaras remains a symbolic touchstone in Indian medicine and traditional healing to this day.''',
-    imageUrl: 'assets/images/Hindu/Devas/ashwini.jpg',
+    imageUrl: 'assets/images/Hindu/Devas/ashwini.webp',
     category: 'Devas',
   ),
   God(
@@ -1014,7 +1014,7 @@ Karna is one of the most tragic figures in the epic Mahabharata, born as the son
 As a warrior, Karna was renowned for his extraordinary skill in archery, considered nearly equal to, and by some accounts rivaling, Arjuna, and for the divine armor and earrings born with him, which made him almost unbeatable in combat. He studied under the sage Parashurama by disguising himself as a brahmin to learn advanced weaponry then forbidden to those outside the brahmin or kshatriya classes, and was later cursed for this deception, causing him to forget a crucial mantra at the moment he needed it most. He is widely regarded as a symbol of boundless generosity (dana), particularly for his habit of never refusing any request made of him, a trait later exploited by the god Indra to strip him of his protective armor.
 
 His friendship with Duryodhana, who made him king of Anga to grant him honor amid the scorn heaped on him by fellow kshatriyas over his birth status, bound him as a loyal ally of the Kaurava family until his death, even after he later learned his true identity as the eldest of the Pandava brothers. In the great war of Kurukshetra, Karna fought against his own unknowing half-brothers, and was ultimately slain by Arjuna after his chariot wheel became stuck in the mud and he lost the protection of Parashurama's curse at the critical moment. His life story, marked by fate's betrayals, unconditional loyalty, and unmatched generosity, makes Karna one of the most beloved and mourned figures in Hindu literature.''',
-    imageUrl: 'assets/images/Hindu/Figures/karna.jpg',
+    imageUrl: 'assets/images/Hindu/Figures/karna.webp',
     category: 'Figures',
   ),
   God(
@@ -1038,7 +1038,7 @@ Arjuna is the third of the five Pandava brothers in the epic Mahabharata, born t
 As a warrior, Arjuna is widely regarded as one of the greatest archers in all of Hindu literature, wielding the divine bow Gandiva as his primary weapon, a gift from the fire god Agni along with a pair of inexhaustible quivers. He mastered numerous weapons and battle strategies, including the ability to shoot arrows with either hand, earning him the epithet Savyasachi, and he received a range of celestial weapons from the gods, including the Pashupatastra from Shiva after undertaking severe austerities in the Himalayas. His character combined battlefield courage with deep moral sensitivity, a trait that would later become central to one of the most important episodes in Hindu spiritual history.
 
 The most defining episode of Arjuna's life takes place on the battlefield of Kurukshetra, where he is overcome with profound doubt about fighting his own relatives, teachers, and friends arrayed on the Kaurava side; it is at this moment that Krishna, serving as his charioteer, delivers the teachings of the Bhagavad Gita, one of Hinduism's most important scriptures, addressing dharma, devotion, and the eternal nature of the soul. Arjuna is also known for winning the archery contest that secured Draupadi's hand in marriage, as well as for numerous adventures during his brothers' period of exile, including obtaining celestial weapons from the heavens. His legacy as a symbol of devotion to dharma amid profound moral crisis makes Arjuna one of the most revered figures in Hindu tradition, and the teaching he received from Krishna remains widely studied today as a guide to ethics and spirituality.''',
-    imageUrl: 'assets/images/Hindu/Figures/arjuna.jpg',
+    imageUrl: 'assets/images/Hindu/Figures/arjuna.webp',
     category: 'Figures',
   ),
   God(
@@ -1062,7 +1062,7 @@ Bhishma, born Devavrata, is the ancestral patriarch of the Kuru dynasty in the e
 Bhishma's life changed decisively when Shantanu fell in love with Satyavati, a fisherwoman whose father demanded assurance that only her descendants would inherit the throne. For his father's happiness, Devavrata took an extraordinary vow, renouncing his claim to the throne and pledging lifelong celibacy so that none of his descendants could ever contest the succession, a vow so formidable that it earned him the name Bhishma, "he of the terrible oath." In return, the gods and his father granted him the boon of Iccha Mrityu, the ability to choose the moment of his own death, making him nearly invincible in battle and deeply revered for his self-discipline and unwavering loyalty to dharma and to his word.
 
 Although he loved the five Pandavas as his own grandnephews, Bhishma remained bound by his vow of loyalty to the throne of Hastinapura and so commanded the Kaurava army as its supreme general for the first ten days of the Kurukshetra War. He was ultimately brought down through a strategy devised by Arjuna, who placed Shikhandi, in a previous life a woman named Amba who had sworn vengeance against Bhishma, in front of his chariot as a shield, since Bhishma had vowed never to strike anyone who had ever been born a woman. Mortally pierced by hundreds of arrows and left resting upon a "bed of arrows" (Sharashayya), he used his boon of chosen death to delay his passing until the sun entered Uttarayana, and during that time delivered extensive teachings on dharma, statecraft, and ethics to Yudhishthira, recorded in the Mahabharata as the Shanti Parva and Anushasana Parva, cementing Bhishma as an enduring symbol of wisdom, sacrifice, and unwavering fidelity to one's vow.''',
-    imageUrl: 'assets/images/Hindu/Figures/bhishma.jpg',
+    imageUrl: 'assets/images/Hindu/Figures/bhishma.webp',
     category: 'Figures',
   ),
 ];

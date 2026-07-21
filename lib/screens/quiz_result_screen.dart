@@ -4,7 +4,6 @@ import '../data/gods_data.dart';
 import '../models/god_model.dart';
 import '../widgets/god_card.dart';
 import '../l10n/language_provider.dart';
-import '../l10n/app_strings.dart';
 
 class QuizResultScreen extends StatelessWidget {
   final String zodiac;
@@ -102,195 +101,349 @@ class QuizResultScreen extends StatelessWidget {
   // than generic mythology trivia, so a god can carry more than one trait when their
   // stated powers clearly span more than one archetype (e.g. Shiva's meditation/yoga
   // powers read as calm, while his destruction powers read as passionate).
-  static const _personalityMap = {
+    static const _personalityMap = {
     'brave': {
-      'zeus', 'ares', 'thor', 'indra', 'horus', 'ra', 'seth', 'durga', 'artemis',
-      'atlas', 'helios', 'cerberus', 'triton', 'heracles', 'perseus', 'theseus', 'cyclops', 'achilles',
-      'sobek',
-      'tyr', 'ullr', 'hrungnir', 'sleipnir', 'valkyrie', 'skadi',
-      'varaha', 'narasimha', 'rama', 'kalki', 'kartikeya', 'vayu', 'surya', 'hanuman', 'garuda',
-      'matsya', 'parashurama',
+      'achilles', 'ammit', 'anubis', 'apollo', 'ares',
+      'arjuna', 'artemis', 'athena', 'atlas', 'baku',
+      'bellerophon', 'benkei', 'bes', 'bhishma', 'bishamonten',
+      'bixie', 'cerberus', 'chimera', 'cyclops', 'dragon king of the north (ao shun)',
+      'draugr', 'durga', 'echidna', 'erlang shen', 'fenrir',
+      'freya', 'futsunushi', 'garuda', 'guan yu', 'hachiman',
+      'hanuman', 'heimdall', 'heracles', 'horse-face', 'horus',
+      'hou yi', 'hrungnir', 'indra', 'jigong', 'kappa',
+      'karna', 'kartikeya', 'kintaro', 'lei gong', 'li jing',
+      'long (dragon)', 'lu dongbin', 'marishiten', 'menshen', 'minamoto no yoshitsune',
+      'minotaur', 'mnevis', 'momotaro', 'mulan', 'naga',
+      'nandi', 'narasimha', 'nu wa', 'odin', 'oni',
+      'ox-head', 'pangu', 'parashurama', 'perseus', 'pixiu',
+      'rama', 'scylla & charybdis', 'sekhmet', 'serqet', 'seth',
+      'sha wujing', 'sleipnir', 'sobek', 'sphinx', 'sun wukong',
+      'surtr', 'takemikazuchi', 'takeminakata', 'taotie', 'tartarus',
+      'taweret', 'tengu', 'theseus', 'thor', 'thrym',
+      'typhon', 'tyr', 'ullr', 'urashima taro', 'utgard-loki',
+      'valkyrie', 'varaha', 'vidar', 'vili & vé', 'wadjet',
+      'wepwawet', 'white tiger', 'yamato takeru', 'zhao gongming', 'zhong kui',
+      'zhu bajie',
     },
     'wise': {
-      'zeus', 'athena', 'odin', 'thoth', 'vishnu', 'brahma', 'heimdall', 'krishna', 'apollo',
-      'hyperion', 'coeus', 'themis', 'mnemosyne', 'nereus', 'odysseus', 'theia', 'phoebe',
-      'isis', 'amun', 'atum', "ma'at", 'seshat', 'pharaoh',
-      'tyr', 'mimir', 'vili & vé', 'norns',
-      'vamana', 'varuna', 'ganesha', 'saraswati', 'matsya', 'rama', 'buddha', 'surya', 'yama', 'ravana', 'nandi',
+      'agni', 'amaterasu', 'amenotokotachi', 'angrboda', 'apollo',
+      'athena', 'baldur', 'benzaiten', 'bhishma', 'bishamonten',
+      'black tortoise', 'bragi', 'brahma', 'buddha', 'coeus',
+      'cronus', 'dian mu', 'dragon king of the west (ao run)', 'eight immortals', 'emma-o',
+      'epimetheus', 'erinyes (furies)', 'forseti', 'frigg', 'fukurokuju',
+      'fuxi', 'ganesha', 'hel', 'huginn & muninn', 'huli jing',
+      'isis', 'izanami', 'jade emperor', 'jigong', 'judge cui',
+      'jurojin', 'kalki', 'kitsune', 'krishna', 'kurma',
+      'lei gong', 'lu dongbin', 'ma\'at', 'matsya', 'meng po',
+      'mimir', 'minamoto no yoshitsune', 'momotaro', 'naga', 'nandi',
+      'narasimha', 'nereus', 'norns', 'nu wa', 'nyx',
+      'odin', 'parashurama', 'parvati', 'phoebe', 'proteus',
+      'qilin', 'rama', 'ravana', 'saraswati', 'seshat',
+      'sha wujing', 'shiva', 'sphinx', 'surya', 'tai bai jin xing',
+      'taiyi', 'takamimusubi', 'tang sanzang', 'ten kings of hell', 'thanatos',
+      'themis', 'thetis', 'thoth', 'tyr', 'valkyrie',
+      'vamana', 'varuna', 'yama', 'yamato takeru', 'yanluo wang',
+      'zeus', 'zhong kui',
     },
     'creative': {
-      'athena', 'aphrodite', 'bastet', 'apollo', 'loki',
-      'hephaestus', 'prometheus', 'sirens', 'mnemosyne', 'cyclops',
-      'hathor', 'ptah', 'bes', 'khnum',
-      'bragi', 'odin', 'hermes',
-      'krishna', 'brahma', 'saraswati', 'dionysus',
+      'ame-no-uzume', 'amun', 'apollo', 'asura', 'athena',
+      'atum', 'bastet', 'bennu', 'benzaiten', 'bes',
+      'bragi', 'brahma', 'chaos', 'cyclops', 'eight immortals',
+      'epimetheus', 'erlang shen', 'fuxi', 'gaia', 'ganesha',
+      'hapi', 'hathor', 'hephaestus', 'hotei', 'huli jing',
+      'iapetus', 'izanagi', 'izanami', 'jorōgumo', 'kali',
+      'kappa', 'khepri', 'khnum', 'kitsune', 'krishna',
+      'matsya', 'mnemosyne', 'nu wa', 'odin', 'odysseus',
+      'orpheus', 'pangu', 'peng', 'prometheus', 'proteus',
+      'ptah', 'ra', 'saraswati', 'shikome', 'shiva',
+      'sokar', 'sun wukong', 'takamimusubi', 'tanuki', 'tengu',
+      'uranus', 'vermilion bird', 'vili & vé', 'vishwakarma', 'wen chang',
+      'wepwawet', 'white impermanence', 'ymir', 'zhu bajie',
     },
     'calm': {
-      'poseidon', 'osiris', 'ganesha', 'brahma', 'hera', 'bastet', 'vishnu', 'shiva', 'lakshmi', 'demeter',
-      'oceanus', 'rhea', 'tethys', 'epimetheus', 'hestia', 'gaia', 'selene', 'amphitrite', 'hypnos', 'thanatos',
-      'shu', 'tefnut', 'geb', 'khonsu', 'hapi', 'taweret',
-      'idun', 'sif', 'freyr', 'njord', 'baldur', 'frigg',
-      'parvati', 'kurma', 'buddha', 'chandra', 'kubera', 'nandi',
+      'amphitrite', 'angrboda', 'aphrodite', 'apollo', 'ashwini kumaras',
+      'aten', 'baku', 'bastet', 'black tortoise', 'cai shen',
+      'chandra', 'crius', 'cronus', 'daikokuten', 'demeter',
+      'dionysus', 'dragon king of the east (ao guang)', 'dragon king of the north (ao shun)', 'dragon king of the south (ao qin)', 'dragon king of the west (ao run)',
+      'ebisu', 'echidna', 'erebus', 'fenghuang', 'forseti',
+      'freya', 'freyr', 'fukurokuju', 'gaia', 'geb',
+      'hapi', 'he bo', 'helios', 'hera', 'hermes',
+      'hestia', 'hotei', 'hyperion', 'hypnos', 'idun',
+      'inari', 'isis', 'izanagi', 'jiangshi', 'jigong',
+      'jorōgumo', 'jurojin', 'kamimusubi', 'kappa', 'khnum',
+      'khonsu', 'kintaro', 'konohanasakuya', 'kubera', 'kuraokami',
+      'lakshmi', 'long (dragon)', 'lu dongbin', 'min', 'mnevis',
+      'morpheus', 'nefertem', 'njord', 'nut', 'oceanus',
+      'osiris', 'qilin', 'queen mother of the west', 'raijin', 'rhea',
+      'sekhmet', 'selene', 'serqet', 'shinatsuhiko', 'shu',
+      'sif', 'sobek', 'suijin', 'takeminakata', 'taweret',
+      'tefnut', 'tethys', 'thanatos', 'theia', 'triton',
+      'tu di gong', 'umashiashikabihikoji', 'vayu', 'vishnu', 'watatsumi',
+      'yu shi', 'yuki-onna', 'ōkuninushi',
     },
     'passionate': {
-      'ares', 'shiva', 'seth', 'durga', 'kali', 'aphrodite', 'poseidon', 'freya',
-      'dionysus', 'menoetius', 'eros', 'minotaur', 'chimera', 'hathor',
-      'sekhmet', 'min',
-      'surtr', 'fenrir',
-      'parashurama', 'agni', 'asura', 'narasimha', 'radha',
+      'achilles', 'aegir & rán', 'agni', 'aphrodite', 'arjuna',
+      'baldur', 'bellerophon', 'bixie', 'chandra', 'chang\'e',
+      'chimera', 'dian mu', 'dragon king of the east (ao guang)', 'dragon king of the south (ao qin)', 'eros',
+      'feng bo', 'freya', 'frigg', 'fujin', 'hachiman',
+      'hanuman', 'hathor', 'hephaestus', 'heracles', 'huli jing',
+      'hydra', 'indra', 'izanami', 'jorōgumo', 'jörmungandr',
+      'kamadeva', 'kintaro', 'kitsune', 'konohanasakuya', 'krishna',
+      'lakshmi', 'lei gong', 'menoetius', 'menshen', 'momotaro',
+      'mulan', 'nefertem', 'nezha', 'nidhogg', 'nue',
+      'oni', 'orpheus', 'parashurama', 'parvati', 'perseus',
+      'poseidon', 'prometheus', 'radha', 'raijin', 'raiju',
+      'ryujin', 'sekhmet', 'serqet', 'seth', 'sif',
+      'sirens', 'surtr', 'susanoo', 'takemikazuchi', 'taotie',
+      'theseus', 'thor', 'typhon', 'varaha', 'vermilion bird',
+      'wadjet', 'yamata no orochi', 'yuki-onna',
     },
     'mysterious': {
-      'hades', 'anubis', 'kali', 'frigg', 'loki', 'amun',
-      'cronus', 'crius', 'chaos', 'uranus', 'tartarus', 'nyx', 'erebus',
-      'persephone', 'thanatos', 'charon', 'medusa', 'hydra', 'sphinx', 'sirens', 'iapetus',
-      'nut', 'nephthys', 'ammit', 'apep',
-      'vidar', 'ymir', 'angrboda', 'aegir & rán', 'jörmungandr', 'hel', 'nidhogg', 'draugr', 'thrym',
-      'yama', 'naga', 'asura',
+      'amenominakanushi', 'amun', 'angrboda', 'anubis', 'apep',
+      'apollo', 'asura', 'azure dragon', 'black impermanence', 'chaos',
+      'charon', 'coeus', 'emma-o', 'erebus', 'erinyes (furies)',
+      'freya', 'frigg', 'gashadokuro', 'hades', 'hecate',
+      'hel', 'huli jing', 'hundun', 'iapetus', 'izanami',
+      'kali', 'kappa', 'khepri', 'khonsu', 'kitsune',
+      'loki', 'medusa', 'menoetius', 'mimir', 'morpheus',
+      'naga', 'nekhbet', 'nephthys', 'nereus', 'nidhogg',
+      'norns', 'nue', 'nyx', 'odin', 'orpheus',
+      'osiris', 'peng', 'persephone', 'pharaoh', 'phoebe',
+      'proteus', 'ratatoskr', 'selene', 'seth', 'shikome',
+      'shinigami', 'shiva', 'sirens', 'skadi', 'sokar',
+      'sphinx', 'susanoo', 'tanuki', 'tartarus', 'ten kings of hell',
+      'thanatos', 'themis', 'thetis', 'tsukuyomi', 'typhon',
+      'utgard-loki', 'vamana', 'vermilion bird', 'white impermanence', 'yama',
+      'yanluo wang', 'ymir', 'yomotsu hirasaka',
     },
   };
-
-  // ── Element → matching gods ──
-  static const _elementMap = {
+// ── Element → matching gods ──
+    static const _elementMap = {
     'fire': {
-      'zeus', 'ra', 'thor', 'apollo', 'ares',
-      'hephaestus', 'prometheus', 'hestia', 'eros', 'heracles', 'achilles', 'chimera', 'cyclops',
-      'sekhmet', 'bes',
-      'surtr',
-      'narasimha', 'parashurama', 'kartikeya', 'agni', 'ravana', 'asura',
+      'aegir & rán', 'agni', 'aten', 'chimera', 'dian mu',
+      'dragon king of the east (ao guang)', 'dragon king of the south (ao qin)', 'feng bo', 'fujin', 'hephaestus',
+      'indra', 'kitsune', 'lei gong', 'nezha', 'poseidon',
+      'prometheus', 'raijin', 'raiju', 'ryujin', 'seth',
+      'surtr', 'susanoo', 'takemikazuchi', 'thor', 'typhon',
+      'vermilion bird', 'wadjet', 'yuki-onna', 'zeus',
     },
     'water': {
-      'poseidon', 'ganesha',
-      'oceanus', 'tethys', 'amphitrite', 'triton', 'nereus', 'odysseus', 'hydra', 'sirens',
-      'isis', 'tefnut', 'sobek', 'hapi', 'taweret', 'khnum',
-      'mimir', 'njord', 'aegir & rán', 'jörmungandr',
-      'radha', 'matsya', 'kurma', 'varuna', 'naga',
+      'aegir & rán', 'agni', 'amphitrite', 'athena', 'benzaiten',
+      'bishamonten', 'black tortoise', 'crius', 'demeter', 'dragon king of the east (ao guang)',
+      'dragon king of the north (ao shun)', 'dragon king of the south (ao qin)', 'dragon king of the west (ao run)', 'emma-o', 'erinyes (furies)',
+      'erlang shen', 'forseti', 'hapi', 'he bo', 'hestia',
+      'inari', 'jade emperor', 'jiangshi', 'judge cui', 'jörmungandr',
+      'kalki', 'kappa', 'kuraokami', 'kurma', 'lei gong',
+      'long (dragon)', 'ma\'at', 'momotaro', 'narasimha', 'nereus',
+      'nezha', 'njord', 'oceanus', 'pangu', 'parashurama',
+      'poseidon', 'proteus', 'qilin', 'raijin', 'rama',
+      'ryujin', 'scylla & charybdis', 'sha wujing', 'sif', 'sirens',
+      'sobek', 'suijin', 'susanoo', 'takeminakata', 'tefnut',
+      'tethys', 'themis', 'thetis', 'triton', 'tyr',
+      'varuna', 'watatsumi', 'yama', 'yamato takeru', 'ymir',
+      'yomotsu hirasaka', 'yu shi', 'zeus', 'zhong kui',
     },
     'earth': {
-      'demeter',
-      'dionysus', 'cronus', 'iapetus', 'rhea', 'themis', 'mnemosyne', 'atlas', 'epimetheus',
-      'gaia', 'persephone', 'theseus', 'medusa', 'minotaur',
-      'ptah', 'geb', 'min', 'sphinx',
-      'idun', 'vidar', 'sif', 'ullr', 'vili & vé', 'ymir', 'thrym', 'hrungnir',
-      'parvati', 'varaha', 'vamana', 'kubera', 'nandi',
+      'achilles', 'amenominakanushi', 'amenotokotachi', 'angrboda', 'apep',
+      'aphrodite', 'ares', 'arjuna', 'asura', 'azure dragon',
+      'bastet', 'bellerophon', 'benkei', 'bes', 'bhishma',
+      'bixie', 'bragi', 'brahma', 'cerberus', 'chandra',
+      'chaos', 'coeus', 'cronus', 'cyclops', 'daikokuten',
+      'demeter', 'dionysus', 'dragon king of the west (ao run)', 'draugr', 'durga',
+      'ebisu', 'echidna', 'eight immortals', 'epimetheus', 'eros',
+      'fenghuang', 'fenrir', 'freya', 'freyr', 'frigg',
+      'fukurokuju', 'futsunushi', 'fuxi', 'gaia', 'ganesha',
+      'geb', 'guan yu', 'hachiman', 'hanuman', 'hapi',
+      'hathor', 'he bo', 'hera', 'heracles', 'hermes',
+      'hestia', 'horse-face', 'hotei', 'hou yi', 'hrungnir',
+      'huli jing', 'hundun', 'hydra', 'idun', 'inari',
+      'isis', 'izanagi', 'jigong', 'jorōgumo', 'jurojin',
+      'kamadeva', 'kamimusubi', 'karna', 'kartikeya', 'khnum',
+      'khonsu', 'kintaro', 'konohanasakuya', 'krishna', 'kubera',
+      'kuraokami', 'lakshmi', 'li jing', 'loki', 'lu dongbin',
+      'matsya', 'menshen', 'mimir', 'min', 'minamoto no yoshitsune',
+      'minotaur', 'mnemosyne', 'mnevis', 'mulan', 'nandi',
+      'nekhbet', 'nidhogg', 'norns', 'nue', 'odysseus',
+      'oni', 'osiris', 'ox-head', 'pangu', 'parvati',
+      'persephone', 'perseus', 'pharaoh', 'pixiu', 'poseidon',
+      'ptah', 'queen mother of the west', 'radha', 'ratatoskr', 'ravana',
+      'rhea', 'saraswati', 'sekhmet', 'serqet', 'seshat',
+      'shinatsuhiko', 'shiva', 'sif', 'skadi', 'sleipnir',
+      'sobek', 'sphinx', 'suijin', 'tai bai jin xing', 'taiyi',
+      'takamimusubi', 'takeminakata', 'tang sanzang', 'tanuki', 'taotie',
+      'tartarus', 'taweret', 'tefnut', 'theia', 'theseus',
+      'thrym', 'tu di gong', 'ullr', 'umashiashikabihikoji', 'urashima taro',
+      'utgard-loki', 'vamana', 'varaha', 'vidar', 'vili & vé',
+      'vishnu', 'vishwakarma', 'wen chang', 'wepwawet', 'white tiger',
+      'yamata no orochi', 'yu shi', 'zhao gongming', 'zhu bajie', 'ōkuninushi',
     },
     'air': {
-      'hermes', 'heimdall', 'freya',
-      'hera', 'crius', 'coeus', 'uranus', 'sphinx',
-      'amun', 'shu', "ma'at", 'seshat',
-      'bragi',
-      'buddha', 'vayu', 'hanuman', 'garuda',
+      'amun', 'atlas', 'cai shen', 'feng bo', 'fujin',
+      'garuda', 'horus', 'huginn & muninn', 'hyperion', 'indra',
+      'medusa', 'nezha', 'njord', 'nu wa', 'nut',
+      'pangu', 'peng', 'ra', 'shinatsuhiko', 'shu',
+      'sun wukong', 'takeminakata', 'tengu', 'uranus', 'valkyrie',
+      'vayu', 'yu shi', 'zeus',
     },
     'lightning': {
-      'zeus', 'seth', 'thor',
-      'menoetius', 'perseus',
-      'sleipnir', 'valkyrie',
-      'kalki',
+      'dian mu', 'indra', 'lei gong', 'raijin', 'raiju',
+      'takemikazuchi', 'thor', 'zeus',
     },
     'death': {
-      'hades', 'anubis', 'kali',
-      'chaos', 'tartarus', 'erebus', 'thanatos', 'charon', 'cerberus',
-      'nephthys', 'ammit', 'apep',
-      'angrboda', 'fenrir', 'hel', 'nidhogg', 'draugr',
-      'yama',
+      'ammit', 'anubis', 'black impermanence', 'charon', 'emma-o',
+      'erebus', 'erinyes (furies)', 'freya', 'hades', 'hecate',
+      'hel', 'iapetus', 'izanami', 'kali', 'ma\'at',
+      'medusa', 'meng po', 'menoetius', 'naga', 'nephthys',
+      'odin', 'orpheus', 'osiris', 'persephone', 'shikome',
+      'shinigami', 'sirens', 'sokar', 'ten kings of hell', 'thanatos',
+      'thoth', 'valkyrie', 'white impermanence', 'yama', 'yanluo wang',
+      'yomotsu hirasaka',
     },
     'sun': {
-      'apollo', 'ra', 'krishna',
-      'hyperion', 'theia', 'helios',
-      'hathor', 'atum', 'pharaoh',
-      'freyr', 'baldur',
-      'rama', 'surya',
+      'agni', 'amaterasu', 'ame-no-uzume', 'amun', 'apollo',
+      'ashwini kumaras', 'aten', 'atum', 'baldur', 'bennu',
+      'buddha', 'dian mu', 'garuda', 'heimdall', 'helios',
+      'huginn & muninn', 'hyperion', 'khepri', 'lei gong', 'marishiten',
+      'mnevis', 'nefertem', 'nezha', 'peng', 'ra',
+      'raijin', 'raiju', 'selene', 'shu', 'surya',
+      'tengu', 'theia', 'valkyrie', 'zeus',
     },
     'moon': {
-      'artemis', 'bastet', 'durga',
-      'phoebe', 'nyx', 'selene', 'hypnos',
-      'nut', 'khonsu',
-      'norns',
-      'chandra',
+      'artemis', 'baku', 'chandra', 'chang\'e', 'gashadokuro',
+      'hecate', 'hypnos', 'jiangshi', 'khonsu', 'morpheus',
+      'nephthys', 'nyx', 'phoebe', 'selene', 'tsukuyomi',
     },
   };
-
-  // ── Favorites → matching gods ──
-  static const _favoriteMap = {
+// ── Favorites → matching gods ──
+    static const _favoriteMap = {
     'music': {
-      'apollo', 'bastet', 'freya', 'saraswati',
-      'dionysus', 'sirens',
-      'bes',
-      'bragi',
+      'ame-no-uzume', 'apollo', 'asura', 'bastet', 'benzaiten',
+      'bes', 'bragi', 'eight immortals', 'fuxi', 'ganesha',
+      'hapi', 'hathor', 'hotei', 'kappa', 'krishna',
+      'mnemosyne', 'odin', 'odysseus', 'orpheus', 'ptah',
+      'saraswati', 'shiva', 'takamimusubi', 'tengu', 'wepwawet',
+      'white impermanence',
     },
     'war': {
-      'ares', 'horus', 'seth', 'durga', 'krishna',
-      'menoetius', 'cerberus', 'achilles', 'minotaur', 'chimera', 'hydra',
-      'sekhmet', 'sobek', 'pharaoh',
-      'vidar', 'surtr', 'thrym', 'hrungnir', 'fenrir', 'jörmungandr', 'draugr', 'valkyrie',
-      'varaha', 'narasimha', 'parashurama', 'kalki', 'kartikeya', 'ravana', 'asura',
+      'achilles', 'ammit', 'apollo', 'ares', 'arjuna',
+      'artemis', 'athena', 'baku', 'bellerophon', 'bes',
+      'bhishma', 'bishamonten', 'bixie', 'durga', 'erlang shen',
+      'freya', 'futsunushi', 'guan yu', 'hachiman', 'heimdall',
+      'hephaestus', 'heracles', 'horus', 'hou yi', 'indra',
+      'karna', 'kartikeya', 'lei gong', 'lu dongbin', 'marishiten',
+      'menshen', 'minamoto no yoshitsune', 'mulan', 'odin', 'oni',
+      'perseus', 'pixiu', 'rama', 'sekhmet', 'sha wujing',
+      'sobek', 'surtr', 'takemikazuchi', 'takeminakata', 'taotie',
+      'tartarus', 'taweret', 'tengu', 'theseus', 'tyr',
+      'ullr', 'valkyrie', 'vishwakarma', 'wepwawet', 'white tiger',
+      'yamato takeru', 'zhao gongming',
     },
     'knowledge': {
-      'athena', 'thoth', 'odin', 'brahma', 'vishnu',
-      'cronus', 'iapetus', 'hyperion', 'coeus', 'phoebe', 'themis', 'mnemosyne', 'prometheus', 'nereus', 'sphinx',
-      'amun', 'khonsu', "ma'at", 'seshat',
-      'mimir', 'vili & vé', 'norns',
-      'kurma', 'vamana', 'buddha', 'varuna', 'yama',
+      'aegir & rán', 'amenotokotachi', 'amphitrite', 'amun', 'apep',
+      'aten', 'athena', 'atlas', 'atum', 'azure dragon',
+      'baldur', 'benkei', 'bennu', 'benzaiten', 'bhishma',
+      'black tortoise', 'bragi', 'brahma', 'buddha', 'chaos',
+      'charon', 'chimera', 'coeus', 'cyclops', 'dragon king of the north (ao shun)',
+      'dragon king of the west (ao run)', 'eight immortals', 'erebus', 'fenrir', 'forseti',
+      'frigg', 'fujin', 'fukurokuju', 'fuxi', 'ganesha',
+      'gashadokuro', 'hanuman', 'helios', 'hrungnir', 'huginn & muninn',
+      'huli jing', 'hundun', 'hydra', 'hyperion', 'hypnos',
+      'iapetus', 'isis', 'izanami', 'jigong', 'judge cui',
+      'jurojin', 'kitsune', 'krishna', 'lu dongbin', 'matsya',
+      'menoetius', 'mimir', 'minotaur', 'naga', 'nandi',
+      'nereus', 'nidhogg', 'nu wa', 'nue', 'nyx',
+      'odin', 'pangu', 'persephone', 'pharaoh', 'phoebe',
+      'prometheus', 'proteus', 'qilin', 'queen mother of the west', 'ra',
+      'ratatoskr', 'ravana', 'saraswati', 'selene', 'seshat',
+      'shinigami', 'shu', 'sirens', 'sokar', 'sphinx',
+      'susanoo', 'tai bai jin xing', 'taiyi', 'takamimusubi', 'tang sanzang',
+      'thanatos', 'thoth', 'triton', 'tsukuyomi', 'uranus',
+      'vamana', 'varaha', 'vidar', 'wen chang', 'yamata no orochi',
+      'ymir', 'yomotsu hirasaka',
     },
     'nature': {
-      'demeter', 'ganesha', 'skadi',
-      'oceanus', 'rhea', 'tethys', 'epimetheus', 'hestia', 'gaia', 'persephone',
-      'shu', 'tefnut', 'geb', 'hapi', 'taweret', 'min',
-      'idun', 'freyr', 'njord',
-      'nandi',
+      'angrboda', 'aphrodite', 'bastet', 'chandra', 'crius',
+      'cronus', 'daikokuten', 'demeter', 'dionysus', 'dragon king of the east (ao guang)',
+      'dragon king of the south (ao qin)', 'echidna', 'epimetheus', 'feng bo', 'freya',
+      'freyr', 'gaia', 'geb', 'hapi', 'he bo',
+      'idun', 'inari', 'izanagi', 'jiangshi', 'jörmungandr',
+      'kamimusubi', 'khnum', 'khonsu', 'kintaro', 'konohanasakuya',
+      'kuraokami', 'kurma', 'lakshmi', 'long (dragon)', 'min',
+      'mnevis', 'oceanus', 'orpheus', 'osiris', 'poseidon',
+      'raijin', 'rhea', 'ryujin', 'shinatsuhiko', 'sif',
+      'skadi', 'sobek', 'suijin', 'takeminakata', 'taweret',
+      'tefnut', 'tethys', 'tu di gong', 'umashiashikabihikoji', 'varuna',
+      'watatsumi', 'yu shi', 'ōkuninushi',
     },
     'beauty': {
-      'aphrodite', 'bastet', 'freya', 'lakshmi',
-      'hera', 'theia', 'eros', 'selene', 'amphitrite',
-      'hathor',
-      'sif', 'baldur',
-      'parvati', 'radha', 'chandra',
+      'aphrodite', 'baldur', 'chandra', 'chang\'e', 'eros',
+      'fenghuang', 'freya', 'frigg', 'hathor', 'huli jing',
+      'kamadeva', 'konohanasakuya', 'krishna', 'lakshmi', 'nefertem',
+      'orpheus', 'parvati', 'radha', 'sif', 'yuki-onna',
     },
     'adventure': {
-      'hermes', 'ra', 'thor', 'loki',
-      'crius', 'atlas', 'uranus', 'helios', 'triton', 'heracles', 'perseus', 'theseus', 'odysseus',
-      'ullr', 'aegir & rán', 'sleipnir',
-      'matsya', 'rama', 'vayu', 'surya', 'hanuman', 'garuda',
+      'achilles', 'garuda', 'hermes', 'horse-face', 'huginn & muninn',
+      'khonsu', 'marishiten', 'nezha', 'orpheus', 'peng',
+      'raiju', 'sleipnir', 'takemikazuchi', 'tengu', 'urashima taro',
+      'valkyrie', 'vayu', 'yamato takeru',
     },
     'magic': {
-      'loki', 'thoth', 'shiva', 'kali',
-      'hephaestus', 'chaos', 'tartarus', 'nyx', 'erebus', 'thanatos', 'hypnos', 'charon', 'medusa', 'cyclops',
-      'isis', 'ptah', 'atum', 'nut', 'nephthys', 'ammit', 'khnum', 'apep',
-      'ymir', 'angrboda', 'hel', 'nidhogg',
-      'agni', 'kubera', 'naga',
+      'angrboda', 'draugr', 'eight immortals', 'erlang shen', 'feng bo',
+      'freya', 'fuxi', 'hecate', 'huli jing', 'isis',
+      'jigong', 'jorōgumo', 'kali', 'kappa', 'khepri',
+      'kitsune', 'krishna', 'li jing', 'loki', 'mnevis',
+      'morpheus', 'nephthys', 'odin', 'oni', 'orpheus',
+      'peng', 'proteus', 'serqet', 'shikome', 'shiva',
+      'sun wukong', 'tang sanzang', 'tanuki', 'tengu', 'theia',
+      'thoth', 'utgard-loki', 'vamana', 'vermilion bird', 'zhao gongming',
+      'zhong kui', 'zhu bajie', 'ōkuninushi',
     },
     'wealth': {
-      'hades', 'hermes',
-      'min',
-      'njord', 'thrym', 'freyr',
-      'kubera', 'lakshmi',
+      'bishamonten', 'cai shen', 'daikokuten', 'dragon king of the east (ao guang)', 'dragon king of the west (ao run)',
+      'ebisu', 'eight immortals', 'fenghuang', 'freyr', 'guan yu',
+      'hades', 'hapi', 'hotei', 'inari', 'jurojin',
+      'kubera', 'lakshmi', 'long (dragon)', 'min', 'naga',
+      'njord', 'pixiu', 'tanuki', 'taweret', 'thrym',
+      'vishnu', 'wen chang', 'white impermanence', 'zhao gongming',
     },
     'family': {
-      'hera', 'hestia', 'rhea',
-      'bastet', 'isis', 'taweret', 'bes',
-      'frigg', 'sif', 'vili & vé',
-      'parvati', 'durga',
+      'angrboda', 'bastet', 'bes', 'daikokuten', 'durga',
+      'echidna', 'frigg', 'gaia', 'hathor', 'hera',
+      'hestia', 'isis', 'konohanasakuya', 'li jing', 'menshen',
+      'parvati', 'rhea', 'sif', 'taweret', 'thetis',
+      'typhon',
     },
     'justice': {
-      'zeus', 'athena', 'themis',
-      "ma'at",
-      'tyr', 'varuna',
-      'vishnu', 'yama', 'rama', 'kalki', 'narasimha', 'parashurama',
+      'amaterasu', 'amenominakanushi', 'athena', 'bishamonten', 'black impermanence',
+      'crius', 'dian mu', 'emma-o', 'erinyes (furies)', 'forseti',
+      'hel', 'horse-face', 'jade emperor', 'judge cui', 'kalki',
+      'lei gong', 'ma\'at', 'momotaro', 'narasimha', 'nereus',
+      'norns', 'ox-head', 'parashurama', 'qilin', 'raiju',
+      'rama', 'sekhmet', 'seth', 'tefnut', 'ten kings of hell',
+      'themis', 'thoth', 'tyr', 'varuna', 'vili & vé',
+      'vishnu', 'white impermanence', 'yama', 'yanluo wang', 'zeus',
+      'zhong kui',
     },
     'healing': {
-      'apollo',
-      'isis', 'khonsu', 'sekhmet',
-      'idun',
-      'surya',
+      'apollo', 'ashwini kumaras', 'buddha', 'idun', 'isis',
+      'jigong', 'jurojin', 'kamimusubi', 'kappa', 'khonsu',
+      'lu dongbin', 'meng po', 'nefertem', 'sekhmet', 'serqet',
+      'surya', 'tang sanzang', 'ōkuninushi',
     },
     'protection': {
-      'artemis', 'thor', 'heimdall', 'frigg', 'rhea',
-      'isis', 'horus', 'bastet', 'taweret', 'bes', 'nut', 'sobek', 'min', 'ammit',
-      'durga', 'vishnu', 'kubera', 'matsya', 'narasimha', 'garuda',
-      'cerberus', 'sphinx',
+      'agni', 'anubis', 'artemis', 'baku', 'bastet',
+      'bes', 'bishamonten', 'bixie', 'cerberus', 'dragon king of the south (ao qin)',
+      'durga', 'frigg', 'futsunushi', 'garuda', 'hachiman',
+      'heimdall', 'horse-face', 'horus', 'isis', 'izanagi',
+      'kubera', 'li jing', 'matsya', 'medusa', 'menshen',
+      'min', 'naga', 'narasimha', 'nekhbet', 'nephthys',
+      'nu wa', 'nut', 'ox-head', 'pixiu', 'rhea',
+      'scylla & charybdis', 'serqet', 'sobek', 'sphinx', 'taweret',
+      'thetis', 'thor', 'tu di gong', 'vishnu', 'wadjet',
+      'wepwawet', 'zhong kui',
     },
   };
-
-  // ── God profiles: tags for each god ──
+// ── God profiles: tags for each god ──
   static Map<String, Set<String>> _buildGodProfile(God g) {
     final name = g.name.toLowerCase();
     return {
@@ -433,6 +586,13 @@ class QuizResultScreen extends StatelessWidget {
     return reasons;
   }
 
+  // ── Shared mythic palette ──
+  static const _gold = Color(0xFFB07800);
+  static const _goldBright = Color(0xFFC9A227);
+  static const _cream = Color(0xFFEDE4D3);
+  static const _cardBg = Color(0xE00E0B08); // translucent so parchment shows
+  static const _textShadow = [Shadow(color: Colors.black, blurRadius: 8)];
+
   @override
   Widget build(BuildContext context) {
     final lang = LanguageProvider.of(context).value;
@@ -440,85 +600,155 @@ class QuizResultScreen extends StatelessWidget {
     final top = results.isNotEmpty ? results.first.key : null;
     final scoreMax = results.isNotEmpty ? results.first.value : 1.0;
 
-    final titleText = lang == 'en' ? 'Your God Is...' : 'Dewamu Adalah...';
-    final matchPct = top != null ? ((results.first.value / scoreMax) * 100).round() : 0;
+    final titleText = lang == 'en' ? 'The Signs Reveal...' : 'Tanda Menunjukkan...';
 
     return Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(
-        child: Column(
-          children: [
-            // Header
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: () => Navigator.pop(context),
-                    child: Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1A1A1A),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xFF333333)),
-                      ),
-                      child: const Icon(Icons.arrow_back_ios_new_rounded,
-                          color: Colors.white, size: 18),
-                    ),
-                  ),
-                  const SizedBox(width: 14),
-                  Text(
-                    titleText,
-                    style: AppFonts.cinzel(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w900,
-                      color: const Color(0xFFB07800),
-                      letterSpacing: 1.5,
-                    ),
-                  ),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Parchment / map background for a mythic, ancient-scroll feel.
+          Image.asset(
+            'assets/images/peta.webp',
+            fit: BoxFit.cover,
+            errorBuilder: (_, __, ___) =>
+                Container(color: const Color(0xFF1A1410)),
+          ),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withValues(alpha: 0.82),
+                  Colors.black.withValues(alpha: 0.7),
+                  Colors.black.withValues(alpha: 0.9),
                 ],
               ),
             ),
-
-            Expanded(
-              child: results.isEmpty
-                  ? const Center(
-                      child: Text('No matching gods found.',
-                          style: TextStyle(color: Colors.white54)),
-                    )
-                  : ListView(
-                      padding: const EdgeInsets.all(20),
-                      children: [
-                        // Top result hero
-                        if (top != null) _buildHeroCard(top, lang),
-                        const SizedBox(height: 16),
-                        // Why this god matches
-                        if (top != null) _buildReasonsCard(top, lang),
-                        const SizedBox(height: 20),
-                        // Alternatives
-                        if (results.length > 1) ...[
-                          Text(
-                            lang == 'en' ? 'Also matches' : 'Cocok juga dengan',
-                            style: const TextStyle(
-                              color: Color(0xFF9CA3AF),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          const SizedBox(height: 10),
-                          ...results.skip(1).map(
-                                (e) => _buildCompactCard(e.key, e.value, scoreMax, lang),
+          ),
+          SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Header — back link, then ceremonial title.
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GestureDetector(
+                        onTap: () => Navigator.pop(context),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.arrow_back_rounded,
+                                color: Colors.white, size: 22),
+                            SizedBox(width: 4),
+                            Text(
+                              'Back',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
                               ),
-                        ],
-                        const SizedBox(height: 16),
-                        // Your traits summary
-                        _buildTraitsSummary(lang),
-                      ],
-                    ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 14),
+                      Text(
+                        titleText,
+                        style: AppFonts.cinzel(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w900,
+                          color: _goldBright,
+                          letterSpacing: 1.5,
+                          shadows: const [
+                            Shadow(color: Colors.black, blurRadius: 10)
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                    ],
+                  ),
+                ),
+
+                Expanded(
+                  child: results.isEmpty
+                      ? Center(
+                          child: Text(
+                            lang == 'en'
+                                ? 'No matching gods found.'
+                                : 'Tidak ada dewa yang cocok.',
+                            style: const TextStyle(color: Colors.white54),
+                          ),
+                        )
+                      : ListView(
+                          padding: const EdgeInsets.fromLTRB(20, 6, 20, 24),
+                          children: [
+                            // Top result hero
+                            if (top != null) _buildHeroCard(top, lang),
+                            const SizedBox(height: 16),
+                            // Why this god matches
+                            if (top != null) _buildReasonsCard(top, lang),
+                            const SizedBox(height: 22),
+                            // Alternatives
+                            if (results.length > 1) ...[
+                              _miniSectionLabel(lang == 'en'
+                                  ? 'The signs also point to'
+                                  : 'Tanda juga menunjuk pada'),
+                              const SizedBox(height: 12),
+                              ...results.skip(1).map(
+                                    (e) => _buildCompactCard(
+                                        e.key, e.value, scoreMax, lang),
+                                  ),
+                            ],
+                            const SizedBox(height: 18),
+                            // Your traits summary
+                            _buildTraitsSummary(lang),
+                          ],
+                        ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
+    );
+  }
+
+  Widget _miniSectionLabel(String text) {
+    return Row(
+      children: [
+        Text(
+          text.toUpperCase(),
+          style: AppFonts.cinzel(
+            color: _cream,
+            fontSize: 11.5,
+            fontWeight: FontWeight.w700,
+            letterSpacing: 1.4,
+            shadows: _textShadow,
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Container(height: 1, color: _gold.withValues(alpha: 0.3)),
+        ),
+      ],
+    );
+  }
+
+  Widget _ornament() {
+    return Row(
+      children: [
+        Container(width: 30, height: 1, color: _gold.withValues(alpha: 0.7)),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 9),
+          child: Icon(Icons.auto_awesome, color: _goldBright, size: 12),
+        ),
+        Container(width: 30, height: 1, color: _gold.withValues(alpha: 0.7)),
+      ],
     );
   }
 
@@ -526,103 +756,163 @@ class QuizResultScreen extends StatelessWidget {
     final color = GodCard.mythologyColor(god.mythology);
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color, width: 2),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: _gold.withValues(alpha: 0.7), width: 1.5),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.3),
-            blurRadius: 20,
-            offset: const Offset(0, 6),
+            color: _gold.withValues(alpha: 0.28),
+            blurRadius: 24,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          // Image
-          SizedBox(
-            height: 180,
-            child: ClipRRect(
-              borderRadius:
-                  const BorderRadius.vertical(top: Radius.circular(14)),
-              child: god.imageUrl.isNotEmpty
-                  ? (god.imageUrl.startsWith('assets/')
-                      ? Image.asset(god.imageUrl, fit: BoxFit.cover)
-                      : Image.network(god.imageUrl, fit: BoxFit.cover))
-                  : Container(color: const Color(0xFF222222)),
-            ),
-          ),
-          // Info
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-              color: Color(0xFF111111),
-              borderRadius:
-                  BorderRadius.vertical(bottom: Radius.circular(14)),
-            ),
-            child: Column(
-              children: [
-                Text(
-                  god.name,
-                  style: GodCard.mythologyFont(
-                    god.mythology,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
-                    letterSpacing: 2,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16.5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Portrait with a "chosen deity" ribbon over it.
+            SizedBox(
+              height: 210,
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  god.imageUrl.isNotEmpty
+                      ? (god.imageUrl.startsWith('assets/')
+                          ? Image.asset(god.imageUrl,
+                              fit: BoxFit.cover, alignment: Alignment.topCenter)
+                          : Image.network(god.imageUrl,
+                              fit: BoxFit.cover, alignment: Alignment.topCenter))
+                      : Container(color: const Color(0xFF222222)),
+                  // Bottom scrim so the ribbon + top edge blend into the info panel.
+                  DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        stops: const [0.55, 1.0],
+                        colors: [
+                          Colors.transparent,
+                          _cardBg.withValues(alpha: 0.95),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  god.localizedTitle(lang),
-                  style: TextStyle(
-                    color: color,
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Text(
-                  god.mythology,
-                  style: const TextStyle(
-                    color: Color(0xFF777777),
-                    fontSize: 11,
-                    letterSpacing: 2,
-                  ),
-                ),
-                const SizedBox(height: 12),
-                // Powers
-                Wrap(
-                  spacing: 6,
-                  runSpacing: 6,
-                  alignment: WrapAlignment.center,
-                  children: god
-                      .localizedPowers(lang)
-                      .take(4)
-                      .map((p) => Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: color.withOpacity(0.15),
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                  color: color.withOpacity(0.3)),
+                  Positioned(
+                    top: 12,
+                    left: 0,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 14, vertical: 6),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [_goldBright, _gold],
+                        ),
+                        borderRadius: const BorderRadius.horizontal(
+                            right: Radius.circular(20)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.4),
+                            blurRadius: 8,
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(Icons.auto_awesome_rounded,
+                              color: Colors.white, size: 13),
+                          const SizedBox(width: 6),
+                          Text(
+                            lang == 'en' ? 'YOUR DEITY' : 'DEWA PILIHANMU',
+                            style: AppFonts.cinzel(
+                              color: Colors.white,
+                              fontSize: 10,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 1.5,
                             ),
-                            child: Text(
-                              p,
-                              style: TextStyle(
-                                color: color,
-                                fontSize: 11,
-                                fontWeight: FontWeight.w600,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Info panel
+            Container(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 18),
+              color: _cardBg,
+              child: Column(
+                children: [
+                  Text(
+                    god.name,
+                    textAlign: TextAlign.center,
+                    style: GodCard.mythologyFont(
+                      god.mythology,
+                      fontSize: 26,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                      letterSpacing: 2,
+                      shadows: const [Shadow(color: Colors.black, blurRadius: 8)],
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  _ornament(),
+                  const SizedBox(height: 8),
+                  Text(
+                    god.localizedTitle(lang),
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: _cream,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    god.mythology.toUpperCase(),
+                    style: TextStyle(
+                      color: color,
+                      fontSize: 10.5,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 2.5,
+                    ),
+                  ),
+                  const SizedBox(height: 14),
+                  // Powers
+                  Wrap(
+                    spacing: 6,
+                    runSpacing: 6,
+                    alignment: WrapAlignment.center,
+                    children: god
+                        .localizedPowers(lang)
+                        .take(4)
+                        .map((p) => Container(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: _gold.withValues(alpha: 0.14),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                    color: _gold.withValues(alpha: 0.4)),
                               ),
-                            ),
-                          ))
-                      .toList(),
-                ),
-              ],
+                              child: Text(
+                                p,
+                                style: const TextStyle(
+                                  color: _goldBright,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ))
+                        .toList(),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -633,46 +923,53 @@ class QuizResultScreen extends StatelessWidget {
     if (reasons.isEmpty) return const SizedBox.shrink();
 
     return Container(
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: const Color(0xFF111111),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF2A2A2A)),
+        color: _cardBg,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _gold.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            lang == 'en'
-                ? 'Why ${god.name} Fits You'
-                : 'Kenapa ${god.name} Cocok Untukmu',
-            style: const TextStyle(
-              color: Color(0xFFB07800),
-              fontSize: 12,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1,
-            ),
+          Row(
+            children: [
+              const Icon(Icons.local_library_rounded,
+                  color: _goldBright, size: 15),
+              const SizedBox(width: 8),
+              Flexible(
+                child: Text(
+                  lang == 'en'
+                      ? 'Why ${god.name} Fits You'
+                      : 'Kenapa ${god.name} Cocok Untukmu',
+                  style: AppFonts.cinzel(
+                    color: Colors.white,
+                    fontSize: 12.5,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.8,
+                  ),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 12),
           ...reasons.map((r) => Padding(
-                padding: const EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.only(bottom: 9),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(top: 6, right: 10),
-                      width: 6,
-                      height: 6,
-                      decoration:
-                          BoxDecoration(color: color, shape: BoxShape.circle),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2, right: 9),
+                      child: Icon(Icons.auto_awesome,
+                          color: color.withValues(alpha: 0.9), size: 12),
                     ),
                     Expanded(
                       child: Text(
                         r,
                         style: const TextStyle(
-                          color: Colors.white,
+                          color: _cream,
                           fontSize: 12.5,
-                          height: 1.5,
+                          height: 1.55,
                         ),
                       ),
                     ),
@@ -685,24 +982,23 @@ class QuizResultScreen extends StatelessWidget {
   }
 
   Widget _buildCompactCard(God god, double score, double maxScore, String lang) {
-    final color = GodCard.mythologyColor(god.mythology);
-    final pct = (score / maxScore * 100).round();
+    final pct = ((score / maxScore) * 100).round();
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFF111111),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF2A2A2A)),
+        color: _cardBg,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _gold.withValues(alpha: 0.22)),
       ),
       child: Row(
         children: [
           // Mini image
           ClipRRect(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(10),
             child: SizedBox(
-              width: 48,
-              height: 48,
+              width: 50,
+              height: 50,
               child: god.imageUrl.isNotEmpty
                   ? (god.imageUrl.startsWith('assets/')
                       ? Image.asset(god.imageUrl, fit: BoxFit.cover)
@@ -727,8 +1023,10 @@ class QuizResultScreen extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   god.localizedTitle(lang),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    color: Color(0xFF999999),
+                    color: Color(0xFFB3A98F),
                     fontSize: 11,
                   ),
                 ),
@@ -737,15 +1035,16 @@ class QuizResultScreen extends StatelessWidget {
           ),
           // Match percentage
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.15),
+              color: _gold.withValues(alpha: 0.16),
               borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: _gold.withValues(alpha: 0.4)),
             ),
             child: Text(
               '$pct%',
-              style: TextStyle(
-                color: color,
+              style: const TextStyle(
+                color: _goldBright,
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
               ),
@@ -757,62 +1056,87 @@ class QuizResultScreen extends StatelessWidget {
   }
 
   Widget _buildTraitsSummary(String lang) {
-    final traits = {
-      'zodiac': zodiac.toUpperCase(),
-      'chinese': _chineseZodiac(birthYear).toUpperCase(),
-      'personality': personality,
-      'element': element,
-      'favorite': favorites.join(', '),
-    };
+    // Localized display values (fall back to the raw id if unmapped).
+    final personalityText =
+        _personalityLabels[personality]?[lang] ?? personality;
+    final elementText = _elementLabels[element]?[lang] ?? element;
+    final favoriteText = favorites
+        .map((f) => _favoriteLabels[f]?[lang] ?? f)
+        .join(', ');
 
-    final labels = {
-      'zodiac': lang == 'en' ? 'Zodiac' : 'Zodiak',
-      'chinese': lang == 'en' ? 'Chinese Zodiac' : 'Shio',
-      'personality': lang == 'en' ? 'Personality' : 'Kepribadian',
-      'element': lang == 'en' ? 'Element' : 'Elemen',
-      'favorite': lang == 'en' ? 'Favorite' : 'Kesukaan',
-    };
+    final rows = <(IconData, String, String)>[
+      (Icons.star_border_rounded, lang == 'en' ? 'Zodiac' : 'Zodiak',
+          _zodiacLabels[zodiac] ?? zodiac),
+      (
+        Icons.pets_rounded,
+        lang == 'en' ? 'Chinese Zodiac' : 'Shio',
+        _chineseZodiacLabels[_chineseZodiac(birthYear)]?[lang] ??
+            _chineseZodiac(birthYear)
+      ),
+      (Icons.psychology_rounded,
+          lang == 'en' ? 'Personality' : 'Kepribadian', personalityText),
+      (Icons.whatshot_rounded, lang == 'en' ? 'Element' : 'Elemen',
+          elementText),
+      (Icons.favorite_rounded, lang == 'en' ? 'Favorite' : 'Kesukaan',
+          favoriteText),
+    ];
 
     return Container(
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: const Color(0xFF111111),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF2A2A2A)),
+        color: _cardBg,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _gold.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            lang == 'en' ? 'Your Traits' : 'Cirimu',
-            style: const TextStyle(
-              color: Color(0xFFB07800),
-              fontSize: 12,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1,
-            ),
+          Row(
+            children: [
+              const Icon(Icons.fingerprint_rounded,
+                  color: _goldBright, size: 15),
+              const SizedBox(width: 8),
+              Flexible(
+                child: Text(
+                  lang == 'en' ? 'The Signs You Gave' : 'Tanda yang Kamu Beri',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppFonts.cinzel(
+                    color: Colors.white,
+                    fontSize: 12.5,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.8,
+                  ),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 10),
-          ...traits.entries.map((e) => Padding(
-                padding: const EdgeInsets.only(bottom: 6),
+          const SizedBox(height: 12),
+          ...rows.map((r) => Padding(
+                padding: const EdgeInsets.only(bottom: 9),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Icon(r.$1, color: _gold.withValues(alpha: 0.8), size: 14),
+                    const SizedBox(width: 9),
                     SizedBox(
-                      width: 80,
+                      width: 92,
                       child: Text(
-                        labels[e.key]!,
+                        r.$2,
                         style: const TextStyle(
-                          color: Color(0xFF777777),
-                          fontSize: 11,
+                          color: Color(0xFFB3A98F),
+                          fontSize: 11.5,
                         ),
                       ),
                     ),
-                    Text(
-                      e.value,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
+                    Expanded(
+                      child: Text(
+                        r.$3,
+                        style: const TextStyle(
+                          color: _cream,
+                          fontSize: 12.5,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                   ],

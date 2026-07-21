@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mytharium/data/pop_culture_data.dart';
-import 'package:mytharium/l10n/language_provider.dart';
-import 'package:mytharium/screens/favorites_screen.dart';
-import 'package:mytharium/screens/mythic_pop_culture_screen.dart';
-import 'package:mytharium/services/pop_culture_bookmark_service.dart';
+import 'package:mythera/data/pop_culture_data.dart';
+import 'package:mythera/l10n/language_provider.dart';
+import 'package:mythera/screens/favorites_screen.dart';
+import 'package:mythera/screens/mythic_pop_culture_screen.dart';
+import 'package:mythera/services/pop_culture_bookmark_service.dart';
 
 Widget _wrap(Widget child, LanguageNotifier lang) =>
     LanguageProvider(notifier: lang, child: MaterialApp(home: child));

@@ -22,38 +22,47 @@ class _Genre {
 
 const List<_Genre> _genres = [
   _Genre('Greek', 'Dewa-dewa Olympus', 'Gods of Olympus',
-      'assets/images/greek.jpg'),
+      'assets/images/greek.webp'),
   _Genre('Egyptian', 'Dewa Sungai Nil Abadi', 'Gods of the Eternal Nile',
-      'assets/images/egypt.jpg'),
+      'assets/images/egypt.webp'),
   _Genre('Nordic', 'Dewa-dewa Asgard', 'Gods of Asgard',
-      'assets/images/nordik.jpg',
+      'assets/images/nordik.webp',
       featuredAlignment: Alignment(0, -0.5)),
   _Genre('Hindu', 'Dewa Dharma Abadi', 'Gods of the Eternal Dharma',
-      'assets/images/hindu.jpg',
+      'assets/images/hindu.webp',
       featuredAlignment: Alignment(0, -0.5)),
   _Genre('Chinese', 'Dewa Istana Surgawi', 'Gods of the Celestial Court',
-      'assets/images/cina.jpg',
+      'assets/images/cina.webp',
       featuredAlignment: Alignment(0, -0.5)),
   _Genre('Japanese', 'Dewa Matahari Terbit', 'Gods of the Rising Sun',
-      'assets/images/japanese.jpg'),
+      'assets/images/japanese.webp'),
 ];
 
 class StoriesScreen extends StatefulWidget {
   const StoriesScreen({super.key});
 
   @override
-  State<StoriesScreen> createState() => _StoriesScreenState();
+  State<StoriesScreen> createState() => StoriesScreenState();
 }
 
-class _StoriesScreenState extends State<StoriesScreen> {
+class StoriesScreenState extends State<StoriesScreen> {
   static const _gold = Color(0xFFB07800);
 
-  final PageController _carouselCtrl =
-      PageController(viewportFraction: 0.9);
+  final PageController _carouselCtrl = PageController(viewportFraction: 0.9);
   int _carouselPage = 0;
+
+  final _scrollCtrl = ScrollController();
+
+  void scrollToTop() {
+    if (_scrollCtrl.hasClients) {
+      _scrollCtrl.animateTo(0,
+          duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
+    }
+  }
 
   @override
   void dispose() {
+    _scrollCtrl.dispose();
     _carouselCtrl.dispose();
     super.dispose();
   }
@@ -89,19 +98,21 @@ class _StoriesScreenState extends State<StoriesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final id = LanguageProvider.of(context).value == 'id';
+    final lang = LanguageProvider.of(context).value;
+    final id = lang == 'id';
 
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 28),
+          controller: _scrollCtrl,
+          padding: const EdgeInsets.fromLTRB(16, 10, 16, 28),
           children: [
             const Text(
               'Stories',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 26,
+                fontSize: 24,
                 fontWeight: FontWeight.w800,
               ),
             ),
@@ -111,7 +122,8 @@ class _StoriesScreenState extends State<StoriesScreen> {
             _mythicPopCultureBanner(id),
             const SizedBox(height: 22),
 
-            _sectionHeader(id ? 'Pilihan & terbaru' : 'New & noteworthy'),
+            _sectionHeader(
+                localize(lang, 'Pilihan & terbaru', 'New & noteworthy')),
             const SizedBox(height: 12),
 
             // Swipeable featured carousel
@@ -134,7 +146,7 @@ class _StoriesScreenState extends State<StoriesScreen> {
             _dots(),
             const SizedBox(height: 24),
 
-            _sectionHeader(id ? 'Jelajahi lainnya' : 'Browse more'),
+            _sectionHeader(localize(lang, 'Jelajahi lainnya', 'Browse more')),
             const SizedBox(height: 12),
 
             // 6-genre grid
@@ -175,6 +187,7 @@ class _StoriesScreenState extends State<StoriesScreen> {
   }
 
   Widget _mythicPopCultureBanner(bool id) {
+    final lang = id ? 'id' : 'en';
     return GestureDetector(
       onTap: _openMythicPopCulture,
       child: Container(
@@ -182,14 +195,13 @@ class _StoriesScreenState extends State<StoriesScreen> {
         decoration: BoxDecoration(
           color: const Color(0xFF111111),
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: const Color(0xFF1E1E1E)),
         ),
         clipBehavior: Clip.antiAlias,
         child: Stack(
           fit: StackFit.expand,
           children: [
             Image.asset(
-              'assets/images/mythic_pop_culture.jpg',
+              'assets/images/myth.webp',
               fit: BoxFit.cover,
               errorBuilder: (_, __, ___) => const SizedBox.shrink(),
             ),
@@ -235,9 +247,10 @@ class _StoriesScreenState extends State<StoriesScreen> {
                         ),
                         const SizedBox(height: 2),
                         Text(
-                          id
-                              ? 'Mitologi dalam film, game & budaya populer'
-                              : 'Mythology in films, games & pop culture',
+                          localize(
+                              lang,
+                              'Mitologi dalam film, game & budaya populer',
+                              'Mythology in films, games & pop culture'),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
@@ -296,80 +309,80 @@ class _FeaturedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = GodCard.mythologyColor(genre.key);
+    final lang = id ? 'id' : 'en';
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 6),
-      child: GestureDetector(
-        onTap: onTap,
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: color.withValues(alpha: 0.4)),
-          ),
-          clipBehavior: Clip.antiAlias,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              Image.asset(
-                genre.image,
-                fit: BoxFit.cover,
-                alignment: genre.featuredAlignment,
-                errorBuilder: (_, __, ___) => Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        color.withValues(alpha: 0.55),
-                        const Color(0xFF0E0E0E),
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        clipBehavior: Clip.antiAlias,
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset(
+              genre.image,
+              fit: BoxFit.cover,
+              alignment: genre.featuredAlignment,
+              errorBuilder: (_, __, ___) => Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Colors.transparent,
-                      Colors.black.withValues(alpha: 0.55),
-                      Colors.black.withValues(alpha: 0.92),
+                      color.withValues(alpha: 0.55),
+                      const Color(0xFF0E0E0E),
                     ],
-                    stops: const [0.35, 0.7, 1.0],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(18),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
+            ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withValues(alpha: 0.55),
+                    Colors.black.withValues(alpha: 0.92),
+                  ],
+                  stops: const [0.35, 0.7, 1.0],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    genre.key,
+                    style: GodCard.mythologyFont(
                       genre.key,
-                      style: GodCard.mythologyFont(
-                        genre.key,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.white,
-                      ),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
                     ),
-                    const SizedBox(height: 3),
-                    Text(
-                      id ? genre.taglineId : genre.taglineEn,
-                      style: const TextStyle(
-                          color: Color(0xFFD1D5DB), fontSize: 12.5),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '$deities ${id ? 'dewa' : 'deities'}  ·  '
-                      '$stories ${id ? 'kisah' : 'stories'}',
-                      style: const TextStyle(
-                          color: Color(0xFF9CA3AF), fontSize: 11),
-                    ),
-                    const SizedBox(height: 12),
-                    Container(
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    localize(lang, genre.taglineId, genre.taglineEn),
+                    style: const TextStyle(
+                        color: Color(0xFFD1D5DB), fontSize: 12.5),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    '$deities ${localize(lang, 'dewa', 'deities')}  ·  '
+                    '$stories ${localize(lang, 'kisah', 'stories')}',
+                    style:
+                        const TextStyle(color: Color(0xFF9CA3AF), fontSize: 11),
+                  ),
+                  const SizedBox(height: 12),
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
                       decoration: BoxDecoration(
@@ -377,7 +390,7 @@ class _FeaturedCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
-                        id ? 'Kisah & Fakta' : 'Stories & Facts',
+                        localize(lang, 'Kisah & Fakta', 'Stories & Facts'),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 12,
@@ -386,11 +399,11 @@ class _FeaturedCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -416,12 +429,12 @@ class _GenreCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = GodCard.mythologyColor(genre.key);
+    final lang = id ? 'id' : 'en';
     return GestureDetector(
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: color.withValues(alpha: 0.35)),
         ),
         clipBehavior: Clip.antiAlias,
         child: Stack(
@@ -474,8 +487,8 @@ class _GenreCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    '$deities ${id ? 'dewa' : 'gods'}  ·  '
-                    '$stories ${id ? 'kisah' : 'stories'}',
+                    '$deities ${localize(lang, 'dewa', 'gods')}  ·  '
+                    '$stories ${localize(lang, 'kisah', 'stories')}',
                     style: const TextStyle(
                         color: Color(0xFFB0B0B0), fontSize: 10.5),
                   ),

@@ -10,12 +10,21 @@ import 'profile_screen.dart';
 class MainShell extends StatefulWidget {
   const MainShell({super.key});
 
+  /// Toggled by quiz screens to hide/show the bottom nav bar. Reset is
+  /// tied to the Future returned by the Navigator.push that opens the
+  /// quiz (see home_screen.dart / quiz_genre_screen.dart), which the
+  /// framework guarantees resolves exactly once that route is popped —
+  /// more reliable than trusting a screen's own dispose() alone.
+  static final ValueNotifier<bool> quizActive = ValueNotifier<bool>(false);
+
   @override
   State<MainShell> createState() => _MainShellState();
 }
 
 class _MainShellState extends State<MainShell> {
   int _currentIndex = 0;
+  final _homeKey = GlobalKey<HomeScreenState>();
+  final _storiesKey = GlobalKey<StoriesScreenState>();
   final _profileKey = GlobalKey<ProfileScreenState>();
 
   /// One Navigator per tab so that pushing deeper screens (god detail,
@@ -25,8 +34,8 @@ class _MainShellState extends State<MainShell> {
       List.generate(4, (_) => GlobalKey<NavigatorState>());
 
   late final List<Widget> _rootPages = [
-    const HomeScreen(),
-    const StoriesScreen(),
+    HomeScreen(key: _homeKey),
+    StoriesScreen(key: _storiesKey),
     const CodexScreen(),
     ProfileScreen(key: _profileKey),
   ];
@@ -45,9 +54,14 @@ class _MainShellState extends State<MainShell> {
     if (index == _currentIndex) {
       // Re-tapping the active tab returns it to its root screen.
       _navKeys[index].currentState?.popUntil((r) => r.isFirst);
+      if (index == 0) _homeKey.currentState?.scrollToTop();
+      if (index == 1) _storiesKey.currentState?.scrollToTop();
+      if (index == 3) _profileKey.currentState?.scrollToTop();
       return;
     }
     SoundService.playClick();
+    // Reset the destination tab to its root when switching tabs.
+    _navKeys[index].currentState?.popUntil((r) => r.isFirst);
     setState(() => _currentIndex = index);
     if (index == 3) _profileKey.currentState?.refresh();
   }
@@ -75,7 +89,10 @@ class _MainShellState extends State<MainShell> {
           index: _currentIndex,
           children: List.generate(_rootPages.length, _tabNavigator),
         ),
-        bottomNavigationBar: _buildNavBar(lang),
+        bottomNavigationBar: ValueListenableBuilder<bool>(
+          valueListenable: MainShell.quizActive,
+          builder: (_, active, __) => active ? const SizedBox.shrink() : _buildNavBar(lang),
+        ),
       ),
     );
   }
@@ -85,7 +102,7 @@ class _MainShellState extends State<MainShell> {
       (icon: Icons.auto_awesome_rounded, label: 'Discover'),
       (icon: Icons.auto_stories_rounded, label: 'Stories'),
       (icon: Icons.library_books_rounded, label: 'Codex'),
-      (icon: Icons.person_rounded, label: lang == 'id' ? 'Profil' : 'Profile'),
+      (icon: Icons.person_rounded, label: localize(lang, 'Profil', 'Profile')),
     ];
 
     return DecoratedBox(

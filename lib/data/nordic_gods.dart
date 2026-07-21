@@ -23,7 +23,7 @@ Odin is known as the god of wisdom, magic, war, death, and poetry, a relentless 
 
 In one of the most famous episodes, Odin hangs himself from the World Tree Yggdrasil for nine days and nine nights, piercing himself with his own spear, in order to gain knowledge of the runes. He also sacrifices one eye at Mimir's well in exchange for a drink granting true wisdom. As Frigg's husband, he fathers many gods including Thor and Baldur, and his name lives on in the English word Wednesday, derived from "Woden's day," used across many European languages to this day.''',
     imageUrl:
-        'assets/images/Nordik/Aesir/odin.jpg',
+        'assets/images/Nordik/Aesir/odin.webp',
     category: 'Aesir',
   ),
   God(
@@ -48,7 +48,7 @@ As the god of thunder, strength, and storms, Thor commands thunder each time he 
 
 One famous tale tells of when Mjolnir is stolen by the giant Thrym, forcing Thor to disguise himself as Freya in a bridal gown to win his hammer back, as recounted in the poem Thrymskvida. In another story, he goes fishing with the giant Hymir and nearly succeeds in catching Jormungandr, the World Serpent. According to prophecy, Thor is destined to slay and be slain by Jormungandr at Ragnarok, and his name endures in the English word Thursday, derived from "Thor's day," remaining popular today through numerous works of modern popular culture.''',
     imageUrl:
-        'assets/images/Nordik/Aesir/thor.jpg',
+        'assets/images/Nordik/Aesir/thor.webp',
     category: 'Aesir',
   ),
   God(
@@ -73,7 +73,7 @@ Loki is known as the god of trickery, chaos, and magic, possessing the ability t
 
 In his most infamous act, Loki tricks the blind god Hod into killing Baldur with a dart made of mistletoe, the only thing never sworn to refrain from harming him, and later thwarts the attempt to bring Baldur back from the dead. As punishment, he is bound with the entrails of his own son beneath a serpent that drips venom upon him without end until the coming of Ragnarok, while his wife Sigyn faithfully catches the poison in a bowl. At Ragnarok, Loki leads the army of giants against the gods, and today he stands as an influential archetype of the trickster figure in literature and modern popular culture.''',
     imageUrl:
-        'assets/images/Nordik/Aesir/loki.jpg',
+        'assets/images/Nordik/Aesir/loki.webp',
     category: 'Aesir',
   ),
   God(
@@ -97,7 +97,7 @@ Tyr is one of the oldest Aesir gods; some sources name him as Odin's son, while 
 As the god of justice, law, and bravery, Tyr is associated with oaths, agreements, and legal proceedings in ancient Norse society, including the legal assembly known as the Thing. His most recognizable feature is his missing right hand, a symbol of the great sacrifice he made to uphold trust and honor. He is described as resolute, brave, and willing to sacrifice for the common good, making him the ideal figure of justice within Norse mythology.
 
 The most famous story about Tyr occurs when the gods attempt to bind the giant wolf Fenrir with the magical ribbon Gleipnir. Suspecting a trick, Fenrir demands that one of the gods place a hand in his mouth as a pledge of good faith, and only Tyr dares to do so, ultimately losing his hand when Fenrir realizes he has been deceived. According to prophecy, Tyr is destined to kill and be killed by the monstrous hound Garm at Ragnarok, and his name endures today in the word Tuesday, derived from "Tiw's day."''',
-    imageUrl: 'assets/images/Nordik/Aesir/tyr.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/tyr.webp',
     category: 'Aesir',
   ),
   God(
@@ -121,7 +121,7 @@ Baldur is the son of Odin and Frigg, one of the Aesir gods most beloved by every
 Baldur is known as the god of light, purity, and beauty, described as so radiant and fair that light seems to shine forth from him. He is also wise and eloquent, and the judgments he once rendered were believed to be irreversible and beyond dispute. His goodness and purity make him beloved by nearly every being, whether god, mortal, or object within the universe.
 
 When Baldur begins dreaming of his own death, Frigg attempts to protect him by extracting an oath from every single thing in the universe never to harm him, except for the mistletoe plant, deemed too young and harmless to bother swearing. Loki exploits this loophole by fashioning a dart from mistletoe and tricking the blind god Hod into throwing it, killing Baldur. Although Hel offers to release him if every being in the universe weeps for him, one giantess, who is actually Loki in disguise, refuses to weep, and so Baldur's death is regarded as the opening catastrophe leading toward Ragnarok, though he is prophesied to return to life in the renewed world after Ragnarok ends.''',
-    imageUrl: 'assets/images/Nordik/Aesir/baldur.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/baldur.webp',
     category: 'Aesir',
   ),
   God(
@@ -145,7 +145,7 @@ Heimdall is born of nine mothers, described in some sources as the daughters of 
 As the guardian of the rainbow bridge Bifrost connecting Asgard to Midgard, Heimdall possesses extraordinarily keen sight and hearing, able to hear grass growing and see across vast distances, and needs only as little sleep as a bird. He owns the horn Gjallarhorn, which he will sound to warn the entire world when Ragnarok arrives, and his teeth are said to be made of gold. He is portrayed as ever vigilant, faithful to his duty, and never careless in guarding the gates of Asgard.
 
 In the poem Rigsthula, Heimdall wanders among mankind under the name Rig and fathers the three classes of human society, namely thralls, freemen, and nobles, earning him the occasional epithet "father of mankind." According to prophecy, he is destined to kill and be killed by Loki in their final confrontation at Ragnarok. He stands as a symbol of vigilance and dedication to duty, and his character has become widely recognized through his portrayal in Marvel's Thor film series.''',
-    imageUrl: 'assets/images/Nordik/Aesir/heimdall.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/heimdall.webp',
     category: 'Aesir',
   ),
   God(
@@ -169,7 +169,7 @@ Frigg is the wife of Odin and Queen of Asgard, daughter of Fjorgyn, and mother o
 Frigg is the goddess of marriage, motherhood, and prophecy, believed to know the fate of every being yet never revealing it to anyone. She is associated with the spindle as a symbol of domestic craft, and with keys as an emblem of her authority over the household of Asgard. She is portrayed as wise, loving, dignified, and ever protective of her family.
 
 The most famous story about Frigg is her attempt to protect her son Baldur by extracting an oath from every single thing in the universe never to harm him, yet she overlooks the mistletoe, which later becomes the very weapon that kills her own son, a tale that stands as one of the great tragedies of Norse mythology. She sits upon the throne Hlidskjalf beside Odin, from which she can see into every corner of the nine worlds, and is attended by handmaidens such as Fulla and Gna. Her name is believed to live on in the word Friday, derived from "Frigg's day," although scholars still debate whether the name derives from Frigg or from Freya.''',
-    imageUrl: 'assets/images/Nordik/Aesir/frigg.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/frigg.webp',
     category: 'Aesir',
   ),
   God(
@@ -193,7 +193,7 @@ Bragi is the son of Odin and husband of Idun, belonging to the Aesir, and serves
 As the god of poetry, music, and eloquence, Bragi is said to have runes carved upon his tongue, the source of his extraordinary eloquence. He welcomes heroes fallen in battle to Valhalla with song and verses of praise. His wisdom and skill in speech make him a respected figure, closely tied to the tradition of the skalds, the court poets of ancient Norse society.
 
 In the poem Lokasenna, Bragi is mocked and challenged by Loki at a feast hosted by the sea giant Aegir, nearly coming to blows before being calmed, notably by his own wife, Idun. His name is believed to be connected to the historical skald Bragi Boddason, showing how skill in poetry during that era could become deified. His existence reflects how highly ancient Norse society valued the art of poetry and oral tradition, which in turn became one of the primary sources of knowledge about Norse mythology that survives today.''',
-    imageUrl: 'assets/images/Nordik/Aesir/bragi.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/bragi.webp',
     category: 'Aesir',
   ),
   God(
@@ -217,7 +217,7 @@ Idun is the wife of Bragi, though her own lineage is not extensively described i
 Idun is entrusted with guarding the golden apples that keep the gods eternally youthful, stored within a special chest or box. Without these apples, the gods would begin to age and weaken rapidly. Her role symbolizes renewal, spring, fertility, and the continuity of the gods' power across generations.
 
 The most famous story about Idun tells of her abduction by the giant Thjazi, disguised as an eagle, after tricking Loki into luring her out of Asgard. Without Idun's apples, the gods begin aging rapidly, forcing Loki, who caused the abduction, to rescue her by transforming into a falcon and carrying her back in the form of a nut, pursued by Thjazi in eagle form, who is ultimately killed by fires set by the Aesir along the walls of Asgard. This tale makes Idun a symbol of immortality and eternal youth within Norse mythology, a golden apple motif that also echoes across numerous other world mythologies.''',
-    imageUrl: 'assets/images/Nordik/Aesir/Idun.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/Idun.webp',
     category: 'Aesir',
   ),
   God(
@@ -241,7 +241,7 @@ Vidar is the son of Odin and the giantess Grid, belonging to the Aesir, and is r
 As the god of vengeance and silence, Vidar dwells far from the bustle of Asgard, in a remote land thick with forest and undergrowth called Vidi. He wears a specially thick shoe, said to be made from leather scraps saved by cobblers, designed to withstand the bite of the giant wolf Fenrir's jaws. His character is quiet, patient, and enduring, in keeping with the stillness of the wilderness he inhabits.
 
 According to prophecy, Vidar is destined to avenge Odin's death at Ragnarok by killing the wolf Fenrir, pressing his thick shoe against Fenrir's lower jaw and tearing his mouth apart, or in another version, stabbing him directly through the heart. He is believed to be one of the few gods to survive Ragnarok along with Vali, together helping to rebuild the new world after the total destruction has passed. He stands as a symbol of justice that comes quietly yet inevitably in its own time.''',
-    imageUrl: 'assets/images/Nordik/Aesir/vidar.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/vidar.webp',
     category: 'Aesir',
   ),
   God(
@@ -265,7 +265,7 @@ Sif is the wife of Thor and mother of Ullr (from a previous relationship) as wel
 Sif is known as the goddess of the earth's fertility, harvest, and grain, distinguished by her famously golden hair, often interpreted symbolically as a field of ripe golden wheat ready for harvest. Her presence symbolizes domestic harmony, marital fidelity, and the abundance of the land's yield.
 
 The most famous story about Sif tells of when Loki maliciously cuts off her golden hair while she sleeps. Thor threatens to harm Loki unless he repairs the damage, so Loki seeks out the dwarven sons of Ivaldi to forge magical golden hair that grows just like real hair, along with several other treasures for the gods, including Odin's spear Gungnir and Freyr's ship Skidbladnir. This episode also indirectly leads to the creation of Thor's hammer Mjolnir, when the dwarves Brokkr and Sindri compete to craft a superior gift. Sif's golden hair remains to this day an enduring symbol of fertility and grain within Norse mythology.''',
-    imageUrl: 'assets/images/Nordik/Aesir/sif.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/sif.webp',
     category: 'Aesir',
   ),
   God(
@@ -289,7 +289,7 @@ Mimir is believed to be a close kinsman of Odin, and was once sent along with Ho
 Mimir is renowned for his unmatched wisdom and knowledge, serving as the keeper of the well of wisdom located beneath one of the roots of the World Tree Yggdrasil, whose waters grant true wisdom to anyone who drinks from it. He serves as a trusted counselor, and his presence symbolizes ancient knowledge bound closely to the World Tree itself.
 
 When the Vanir grow suspicious that Hoenir is incapable of making decisions without Mimir's counsel, they behead Mimir and send his head back to the Aesir. Odin then preserves the head with herbs and magical incantations so that it can continue to speak and offer him counsel. Odin even willingly sacrifices one of his eyes at Mimir's well in exchange for a drink of the water of wisdom, a story that explains the origin of Odin's missing eye. Mimir's presence stands as a symbol of the price that must be paid for true wisdom, as well as an embodiment of knowledge that endures even beyond death.''',
-    imageUrl: 'assets/images/Nordik/Aesir/mimir.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/mimir.webp',
     category: 'Aesir',
   ),
   God(
@@ -313,7 +313,7 @@ Ullr is the son of Sif, and thus the stepson of Thor, though his own biological 
 Ullr is known as the god of hunting, archery, and skiing, excelling in combat and often invoked for aid in duels. He is associated with winter landscapes, a pair of skis, snowshoes, and a bow, while his shield is said to have once served as a boat. His presence symbolizes skill, precision, and self-reliance.
 
 Relatively few narrative accounts of Ullr survive compared to other gods, though Snorri Sturluson notes that his skill was so extraordinary that no one could match him, and his name was often invoked to seek aid in duels or single combat. The many place names across Scandinavia, particularly in Sweden and Norway, that bear his name suggest that his worship may have been far more widespread in an earlier era, before the surviving written sources were composed. Some scholars even believe he briefly ruled Asgard during one of Odin's periods of exile. His legacy lives on through his close association with the sport of skiing in the modern era.''',
-    imageUrl: 'assets/images/Nordik/Aesir/ullr.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/ullr.webp',
     category: 'Aesir',
   ),
   God(
@@ -337,7 +337,7 @@ Vili and Ve are the sons of Bor and the giantess Bestla, and brothers of Odin. T
 Together with Odin, Vili and Ve form a trio that embodies the power of creation and the ordering of the cosmos. Vili is often associated with will and strength, while Ve is associated with sanctity and sacred things, so that together with Odin, who represents spirit and mind, the three of them collectively symbolize the union of will, sanctity, and soul needed to create and order the cosmos.
 
 According to Snorri Sturluson's Prose Edda, the three brothers kill the primordial giant Ymir and use his body to shape the world, where his flesh becomes the earth, his blood becomes the seas and lakes, his bones become the mountains, and his skull becomes the sky. They later find two lifeless tree trunks, ash and elm, upon a shore, and grant them life, breath, understanding, and senses, thereby creating the first humans, Ask and Embla, with Odin providing spirit and breath, Vili providing wit and understanding, and Ve providing the senses, warmth, and outward form. Though they rarely appear in later tales, the role of Vili and Ve in the creation of the world and the origin of mankind makes them fundamental figures within Norse cosmology.''',
-    imageUrl: 'assets/images/Nordik/Aesir/vili&ve.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/vili&ve.webp',
     category: 'Aesir',
   ),
 
@@ -363,7 +363,7 @@ Freya is known as the goddess of love, beauty, and fertility, as well as war and
 
 A famous story tells how Freya obtains the necklace Brisingamen by spending a night with each of the four dwarves who forge it. She is also frequently pursued by giants wishing to marry her, including being demanded as ransom in the tale of the recovery of Thor's hammer, a request she refuses, leading Thor himself to disguise himself in her place instead. She is said to weep tears of gold whenever she longs for her often-absent husband, Odr. Her name is believed to live on in the word Friday, derived from "Freya's day," though its etymology remains debated against Frigg, and she endures today as a lasting cultural symbol of feminine power and love across numerous works of Norse-themed media.''',
     imageUrl:
-        'assets/images/Nordik/Vanir/freya.jpg',
+        'assets/images/Nordik/Vanir/freya.webp',
     category: 'Vanir',
   ),
   God(
@@ -387,7 +387,7 @@ Freyr is the son of Njord and twin brother of Freya, one of the most prominent V
 As the god of fertility, sunshine, rain, harvest, and peace and prosperity, Freyr owns the magical ship Skidbladnir, which always catches a favorable wind and can be folded small enough to fit in a pocket, as well as the golden boar Gullinbursti, capable of running through both air and water while glowing brightly in the dark. He is closely associated with royal sovereignty, abundant harvests, and peaceful prosperity.
 
 A famous tale tells of Freyr falling in love with the giantess Gerd after glimpsing her from Odin's high seat, Hlidskjalf, and sending his servant Skirnir to woo her on his behalf; as part of the bargain, he gives up his magic sword, which can fight on its own, a sacrifice that will cost him dearly, as he must face the fire giant Surt unarmed at Ragnarok. He is widely worshipped in Sweden, especially at the great temple of Uppsala, and is believed to be the ancestor of the Swedish royal dynasty, the Ynglings. His legacy endures as a symbol of peace and prosperity, closely tied to the agricultural and royal traditions of ancient Scandinavia.''',
-    imageUrl: 'assets/images/Nordik/Vanir/freyr.jpg',
+    imageUrl: 'assets/images/Nordik/Vanir/freyr.webp',
     category: 'Vanir',
   ),
   God(
@@ -411,7 +411,7 @@ Njord is the father of Freyr and Freya, a leading god of the Vanir sent to Asgar
 As the god of the sea and wind, Njord governs seafaring, fishing, and the wealth that both bring, and is often invoked by sailors and fishermen seeking safe voyages and abundant catches. He dwells in a hall called Noatun, meaning "ship enclosure," by the shore. His character is portrayed as calm and generous, closely associated with the prosperity brought by maritime trade.
 
 A famous tale tells of his marriage to the giantess Skadi, who chooses him based solely on his feet during a ritual for selecting a husband, though she had actually hoped to win Baldur. Their marriage ultimately fails because Njord cannot bear living in Skadi's mountain home, Thrymheim, due to the ceaseless howling of wolves, while Skadi cannot bear the constant noise of the shore where Njord lives, so the two eventually separate and live apart. This story illustrates the incompatibility between life at sea and life in the snowy mountains within Norse cosmology, and to this day Njord remains associated with seafaring fortune in Scandinavian folk tradition.''',
-    imageUrl: 'assets/images/Nordik/Vanir/njord.jpg',
+    imageUrl: 'assets/images/Nordik/Vanir/njord.webp',
     category: 'Vanir',
   ),
 
@@ -436,7 +436,7 @@ Skadi is the daughter of the giant Thjazi, a Jotun who later becomes connected t
 As the goddess of winter, mountains, skiing, and hunting with a bow, Skadi is portrayed as a formidable skier and archer, often depicted wearing skis and carrying a bow and spear. She symbolizes fierce independence, self-reliance, and the wild beauty of the snow-covered mountain landscape, standing in contrast to the gentler, more domestic goddesses of Asgard.
 
 After her father Thjazi is killed by the Aesir following his abduction of Idun, Skadi arms herself and marches to Asgard to demand compensation. The gods offer her a husband, whom she must choose by looking only at their feet, and she picks Njord, though she had hoped for Baldur, and also attempt to make her laugh as further reparation, which Loki finally accomplishes by tying himself to a goat, while Odin casts her father's eyes into the sky, where they become stars. Her marriage to Njord ultimately fails due to their incompatible homes, and in some sources she is later said to be linked with Odin or with Ullr. Skadi remains a symbol of independent womanhood and the untamed winter landscape of Scandinavia.''',
-    imageUrl: 'assets/images/Nordik/Jotun/skadi.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/skadi.webp',
     category: 'Jotun',
   ),
   God(
@@ -460,7 +460,7 @@ Ymir is the first living being to emerge from the meeting of the fire of Muspelh
 Ymir embodies primordial chaos and raw, unordered creative potential. While sleeping, he produces offspring asexually from his own sweat, as a male and female grow from beneath his arm, while his two legs together produce a six-headed son, making him the progenitor of the entire race of giants. He is nourished by the milk of the primeval cow Audhumla, who licks the salty blocks of ice until she reveals the first god, Buri.
 
 Ymir is ultimately killed by Odin together with his two brothers, Vili and Ve, who then use his enormous body to construct the entire universe, where his flesh becomes the earth, his blood becomes the seas and oceans, his bones become the mountains, his teeth and broken bone fragments become rocks and stones, his skull becomes the vault of the sky held up at its four corners by dwarves, and his brain becomes the clouds. His death and dismemberment stand as the founding act of creation within Norse cosmology, echoing the widely attested "cosmic giant" creation motif also found across numerous other Indo-European traditions, such as the figure of Purusha in Hindu mythology. His legacy remains a foundational figure explaining the physical origin of the world within Norse cosmology, frequently referenced in modern retellings of the Norse creation myth.''',
-    imageUrl: 'assets/images/Nordik/Jotun/ymir.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/ymir.webp',
     category: 'Jotun',
   ),
   God(
@@ -484,7 +484,7 @@ Surtr is the ruler of the fire giants who dwell in Muspelheim, one of the nine w
 As the lord of Muspelheim, Surtr carries a flaming sword said to shine brighter than the sun, a weapon that stands as a symbol of the destructive power capable of consuming the universe itself. He rarely leaves his domain, yet his presence looms as a constant shadow over the order of the cosmos, for prophecy holds that he will one day lead an army of fire giants against the world of the gods. His figure embodies primordial fire in opposition to primordial ice, two forces that together shape and threaten the existence of the entire Norse universe.
 
 Surtr's most famous role is recorded in the poem Voluspa, which foretells that at Ragnarok he will lead the sons of Muspell across the Bifrost bridge, causing it to collapse beneath the heat of their passing. In that final battle, Surtr confronts the god Freyr, who by then no longer possesses his magic sword, having given it away to his servant Skirnir, and so Freyr falls at Surtr's hand. After the gods and giants have destroyed one another, Surtr sweeps his flaming sword across the whole of creation, setting Yggdrasil ablaze and plunging the Nine Realms into a sea of fire, an event known as Surtarlogi, before a new world, green and renewed, rises again from the ocean.''',
-    imageUrl: 'assets/images/Nordik/Jotun/surtr.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/surtr.webp',
     category: 'Jotun',
   ),
   God(
@@ -508,7 +508,7 @@ Thrym is the king of the giants who rules in Jotunheim, known in Norse tradition
 Thrym is remembered for his cunning and great greed, traits that drove him to commit one of the boldest thefts in Norse mythology: stealing Thor's sacred hammer Mjolnir while the god slept. He buried the hammer deep beneath the earth of Jotunheim and set an impossible ransom for its return, demanding marriage to Freyja, the Aesir goddess of beauty, in exchange. This act reflects Thrym's desire not only for wealth and a mighty weapon, but also for status equal to the gods, to be achieved through marriage to one of their goddesses.
 
 The tale of Thrym's theft of Mjolnir is one of the most famous, and even comedic, stories in Norse mythology. To reclaim the hammer, Thor disguised himself as the bride wearing Freyja's garments, accompanied by Loki, who posed as the bridesmaid, and together they traveled to Jotunheim to attend the wedding feast. When Mjolnir was brought out according to custom to bless the bride, Thor seized it at once and slew Thrym along with every giant guest present, so that Thrym's own deception turned into his downfall and cemented his lasting reputation as a symbol of greed that leads to ruin.''',
-    imageUrl: 'assets/images/Nordik/Jotun/thyrm.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/thyrm.webp',
     category: 'Jotun',
   ),
   God(
@@ -532,7 +532,7 @@ Hrungnir is known as the strongest of all the jotnar who dwell in Jotunheim, a f
 As a giant who relies on raw power and a body's endurance forged from stone, Hrungnir is also known for his great arrogance. He carries a stone shield and wields an enormous whetstone as his weapon, and in duels he always stands braced behind his shield, daring his opponent to strike first. His boastful nature and love of displaying his strength often led him to belittle the Aesir gods, an attitude that eventually brought him into direct conflict with Thor.
 
 The most famous tale of Hrungnir begins with a horse race between his steed, Gullfaxi, and Odin's Sleipnir, which led to an invitation to drink in Asgard, where Hrungnir grew drunk and insulted the gods. Thor then challenged him to a duel at Grjotunagardar; the giants built Hrungnir an ally out of clay named Mokkurkalfi, who trembled with fear the moment the battle began. In the duel, Thor hurled Mjolnir and shattered Hrungnir's head, but a shard of the whetstone Hrungnir threw at the same instant lodged in Thor's head and could never be fully removed, a wound that stands as a lasting reminder of the clash between a giant's raw power and Thor's divine strength.''',
-    imageUrl: 'assets/images/Nordik/Jotun/hrungnir.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/hrungnir.webp',
     category: 'Jotun',
   ),
   God(
@@ -556,7 +556,7 @@ Angrboda is a giantess who dwells in Jarnvid, the Ironwood, deep within Jotunhei
 Angrboda is known as a figure of dark power, closely tied to magic, prophecy, and a fertility that carries menace, since her offspring are no ordinary beings. In some sources she is described as ruling the Ironwood, where giantesses breed wolf-kin, so that her figure is deeply bound to the image of chaos and destruction lurking at the edges of an ordered world. Her role as mother makes her an ambivalent figure, a source of life and at the same time a source of calamity for the gods.
 
 The most significant tale about Angrboda is the birth of her three children with Loki: the monstrous wolf Fenrir, the world serpent Jormungandr, and Hel, ruler of the realm of the dead. When the gods learned of the prophecy that these three offspring would bring great disaster upon Asgard, Odin ordered them torn from Angrboda and cast to different corners of the world, an action that in fact only hastened the very doom it was meant to prevent. Through her three children, Angrboda's legacy endures all the way to Ragnarok, making her one of the most influential, and most feared, maternal figures in the whole of Norse mythology.''',
-    imageUrl: 'assets/images/Nordik/Jotun/angrboda.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/angrboda.webp',
     category: 'Jotun',
   ),
   God(
@@ -580,7 +580,7 @@ Aegir and Ran are a pair of sea giants who dwell in a magnificent hall at the bo
 As rulers of the sea and storms, Aegir and Ran hold complete power over the fate of anyone who sails the open ocean. Aegir is renowned for delighting in hosting the gods at great feasts filled with ale and abundant food in his hall beneath the waves, while Ran possesses an enormous net that she uses to snare shipwrecked sailors and draw them into her depths. Their combined symbolism reflects the ocean's dual nature for the Norse people, a source of abundance and at the same time a lurking threat of death for every sailor.
 
 The most famous tale involving Aegir is recorded in Hymiskvida, when the gods came to him seeking a great feast, but Aegir demanded they first bring him a cauldron large enough to brew ale for every guest, which Thor eventually obtained from the giant Hymir. The feast finally held in Aegir's hall also serves as the setting for Lokasenna, when Loki gate-crashes the banquet and hurls insults at nearly every god present. Meanwhile, Ran's net became widely known in Norse seafaring tradition as a symbol of death at sea, and sailors often carried gold to offer as tribute so they might be well received should they drown into her domain.''',
-    imageUrl: 'assets/images/Nordik/Jotun/aegir.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/aegir.webp',
     category: 'Jotun',
   ),
 
@@ -605,7 +605,7 @@ Fenrir is the monstrous wolf born from the union of Loki and the giantess Angrbo
 Fenrir grew at an extraordinary rate and with a strength far surpassing that of any other creature, until the gods decided he had to be bound for the safety of the Nine Realms. He embodies untamable wild power, an absolute freedom that refuses to be controlled, and at the same time a deep terror of an inescapable destiny. His massive body and powerful jaws made him one of the most iconic symbols of dread in Norse cosmology, a figure whose very existence is a reminder that even the gods are subject to fate.
 
 The most famous tale about Fenrir concerns the gods' effort to bind him with the chain Gleipnir, forged by the dwarves from six impossible ingredients: the sound of a cat's footfall, a woman's beard, the roots of a mountain, the sinews of a bear, the breath of a fish, and the spittle of a bird. Suspicious of trickery, Fenrir demanded that one of the gods place a hand inside his mouth as surety; Tyr stepped forward to do so, and when Fenrir realized he had been deceived, he bit off Tyr's hand. Fenrir was then chained on a remote island with a sword wedged in his jaws, bound until the coming of Ragnarok, when he finally breaks free, kills Odin by swallowing him, and is in turn slain by Vidar, Odin's son, who avenges his father's death.''',
-    imageUrl: 'assets/images/Nordik/Mythical/fenrir.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/fenrir.webp',
     category: 'Creature',
   ),
   God(
@@ -629,7 +629,7 @@ Jormungandr, also known as the World Serpent or the Midgard Serpent, is the chil
 Within the ocean, Jormungandr grew to such a colossal size that its body came to encircle the whole of Midgard, able to bite its own tail and form an endless circle that symbolizes both the boundary of the human world and the unending cosmic cycle. Its lethal venom and its power to churn the seas made it one of the greatest threats to the order of the world, as well as the eternal enemy of Thor, the god most persistently determined to overcome it.
 
 The most famous tale about Jormungandr is Thor's fishing expedition with the giant Hymir, as told in Hymiskvida, when Thor used an ox's head as bait and hooked the World Serpent up from the depths of the ocean, nearly striking it with Mjolnir before Hymir, overcome with fear, cut the line. Jormungandr also once disguised itself as an enormous cat within the illusory hall of Utgarda-Loki, when Thor unknowingly attempted to lift it and managed only to raise one of its paws slightly off the ground. The final encounter between the two occurs at Ragnarok, when Thor finally succeeds in killing Jormungandr, only to fall himself nine steps later from the deadly venom the serpent had sprayed upon him.''',
-    imageUrl: 'assets/images/Nordik/Mythical/jormungandr.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/jormungandr.webp',
     category: 'Creature',
   ),
   God(
@@ -653,7 +653,7 @@ Hel is the daughter of Loki and the giantess Angrboda, sister to the wolf Fenrir
 In the Prose Edda, Hel is described as having a body divided in two, half colored like a living person and the other half dark and bluish like a corpse, an image reflecting her position between the worlds of life and death. She reigns from her hall, Eljudnir, with a platter named Hunger and a knife named Famine, receiving the souls of those who die of old age or sickness, distinct from those who fall in battle and journey instead to Valhalla or Folkvangr. Her firm and uncompromising rule makes her a symbol of the final judgment that no one can escape.
 
 The most famous tale about Hel concerns the death of Baldr, when Hermod rode Sleipnir across the boundary of the worlds to plead for Baldr's release from her grasp. Hel agreed to the request on one condition, that every being in the world must weep for Baldr's death; but a giantess named Thokk, believed to actually be Loki in disguise, refused to weep, and so Baldr remained held within Helheim until after Ragnarok. Through this tale, Hel is confirmed as a ruler both just and merciless, a figure whose decisions cannot be swayed even by the pleas of the gods themselves.''',
-    imageUrl: 'assets/images/Nordik/Mythical/hel.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/hel.webp',
     category: 'Creature',
   ),
   God(
@@ -677,7 +677,7 @@ Sleipnir is Odin's eight-legged horse, born from an unusual event in which Loki,
 As the fastest horse among all creatures that have ever existed, Sleipnir possesses eight legs that allow him to cover distances impossible for an ordinary horse, including crossing the boundary between the world of the living and the world of the dead. According to several sources his coat is grey and his body is marked with magical runes, making him far more than an ordinary mount, a vehicle capable of traversing the Nine Realms. His loyalty to Odin is unmatched, and his very existence symbolizes the connection between the separate realms of Norse cosmology.
 
 The most famous tale about Sleipnir tells of Hermod riding him through Niflheim to reach Helheim, pleading for Baldr's release from Hel's grasp, a journey made possible only by Sleipnir's extraordinary speed and strength. This horse also once took part in a race against Gullfaxi, the steed belonging to the giant Hrungnir, a race that indirectly set off the chain of events leading to Hrungnir's death at Thor's hands. When Ragnarok finally arrives, Sleipnir carries Odin to the final battlefield, affirming his role as the loyal mount of the king of the gods until the end of the age.''',
-    imageUrl: 'assets/images/Nordik/Mythical/sleipnir.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/sleipnir.webp',
     category: 'Creature',
   ),
   God(
@@ -701,7 +701,7 @@ Nidhogg is a dragon, or giant serpent, dwelling in Niflheim, hiding near the spr
 As a dweller among the roots of Yggdrasil, Nidhogg is known for his ceaseless habit of gnawing at the roots of the world tree, an act that symbolizes the constant threat of destruction lurking beneath the balance of the cosmos even as the tree itself endures. In Voluspa, he is also described as residing at Nastrond, the Corpse Shore, a hall filled with venom where he feeds on the bodies of oathbreakers, murderers, and deceivers, making him closely tied to the punishment of sinful souls. His insatiable voracity and destructive nature make Nidhogg a symbol of the darkness and decay that forever lurk at the foundation of the world.
 
 The best-known tale about Nidhogg is his endless feud with a wise eagle perched at the very top of Yggdrasil, a quarrel relayed back and forth by the squirrel Ratatoskr, who scurries up and down the trunk carrying insults between the two. This eternal quarrel serves as a microcosm of the tension that both sustains and threatens the structure of the Norse universe. At the close of Voluspa, it is said that Nidhogg survives even after Ragnarok, flying with corpses carried in his wings, a closing image that confirms his role as a force of destruction that cannot be entirely extinguished, not even by the doom of the gods.''',
-    imageUrl: 'assets/images/Nordik/Mythical/nidhogg.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/nidhogg.webp',
     category: 'Creature',
   ),
   God(
@@ -725,7 +725,7 @@ Draugr are the undead of Norse and Icelandic tradition, arising from the corpses
 Draugar are depicted as guardians of their own burial mounds, possessing strength far beyond that of an ordinary human along with the ability to grow in size, emit an overpowering stench of decay, and even shift shape into mist or animal forms. They are believed capable of spreading a sickness called draugsott merely through their presence, and of controlling the weather around the place where they dwell. As guardians of treasure hoards, draugar symbolize greed that persists beyond the boundary of death, as well as the deep-seated fear held by Norse society toward the restless dead in the afterlife.
 
 The most famous tale about a draugr is the battle between Grettir the Strong and Glamr, a shepherd who died a wretched death and rose again as a draugr terrorizing a farmstead in Iceland, as recounted in Grettis Saga. Grettir eventually manages to defeat and behead Glamr, but before fully dying Glamr utters a curse that haunts the rest of Grettir's life. A similar tale appears in Eyrbyggja Saga through the figure of Thorolf Twist-Foot, who continues to haunt and terrorize the surrounding region after his death until his body must finally be burned to ashes. Through these tales, the draugr remains one of the most enduring symbols of horror in the legacy of Norse folklore.''',
-    imageUrl: 'assets/images/Nordik/Mythical/draugr.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/draugr.webp',
     category: 'Creature',
   ),
 
@@ -750,7 +750,7 @@ The Valkyries are chosen women who serve Odin, known in Old Norse as "val-kyrjur
 The primary duty of the Valkyries is to fly across the battlefield to determine who shall die and who is worthy of being carried to Valhalla, Odin's hall of honor for fallen warriors. They are depicted wearing armor, carrying spears, and riding winged horses or shifting into the form of swans, figures who combine beauty with lethal power. In Valhalla, they also serve mead to the einherjar, the chosen warriors who train for battle every day in preparation for Ragnarok, making the Valkyries a bridge between the world of warfare and the world of eternal honor.
 
 The most famous tale of a Valkyrie is that of Brynhildr in the Volsunga Saga and Sigrdrifumal, who is punished by Odin for defying his order by choosing the wrong victor in a battle. As punishment, Odin pierces her with a sleeping thorn and encircles her within a ring of fire until a hero brave enough is willing to pass through the flames to wake her, a destiny ultimately fulfilled by Sigurd the dragon-slayer. Through tales such as this, the Valkyries are established as figures who embody honor, fate, and the power of war, a legacy that continues to inspire popular culture to this day.''',
-    imageUrl: 'assets/images/Nordik/Figures/valkyrie.jpg',
+    imageUrl: 'assets/images/Nordik/Figures/valkyrie.webp',
     category: 'Special',
   ),
   God(
@@ -774,7 +774,7 @@ The Norns are three female entities who govern the fate of every being in the No
 The Norns are known as weavers and carvers of fate, figures who set the course of life for every god and human alike from birth to death, a concept referred to in Old Norse as orlog. Beyond determining destiny, they are also responsible for tending Yggdrasil, watering its roots each day with water from the well of Urd mixed with sacred clay, keeping the world tree alive and preventing it from decaying despite the constant gnawing of Nidhogg. Their presence affirms that even the Aesir gods themselves are subject to the law of fate that has already been set.
 
 Beyond the three principal Norns at Urd, Norse tradition also recognizes lesser, more scattered norns, believed to appear at the birth of every individual to determine the length and fortune of that person's life, as touched upon in several Icelandic sagas. The appearance of Norns at significant moments, such as the birth of a hero, is often taken as a sign of the great destiny that figure is fated to live out. Their legacy as weavers of fate remains one of the most profound concepts in Norse cosmology, reflecting the view that time, order, and the life of the entire universe rest under the control of a power that cannot be resisted, not even by Odin himself.''',
-    imageUrl: 'assets/images/Nordik/Figures/norns.jpg',
+    imageUrl: 'assets/images/Nordik/Figures/norns.webp',
     category: 'Special',
   ),
 
@@ -799,7 +799,7 @@ Yggdrasil is the immense ash tree that stands as the central axis of the entire 
 The tree has three principal roots, each reaching into a different realm: one toward Asgard and the well of Urd where the Norns dwell, one toward Jotunheim and the well of wisdom belonging to Mimir, and another toward Niflheim and the spring Hvergelmir, where the dragon Nidhogg gnaws at its roots. Numerous creatures live in and around Yggdrasil, including an eagle perched at its crown, the squirrel Ratatoskr who scurries back and forth relaying insults between the eagle and Nidhogg, and four stags that feed upon its foliage, making the tree a cosmic ecosystem that portrays both the balance and the enduring tension within the order of the universe.
 
 The most famous tale about Yggdrasil is Odin's self-sacrifice, as recounted in Havamal, when he hung himself upon the tree for nine days and nine nights, piercing his own body with a spear, without food or drink, in order to gain secret knowledge of the runes. This sacrifice makes Yggdrasil a symbol of the pursuit of wisdom through suffering, a theme deeply rooted in Norse spirituality. Although the world suffers total destruction at Ragnarok, Yggdrasil is believed to endure, sheltering the last two humans, Lif and Lifthrasir, within its trunk until they can emerge and begin life anew in a world made fresh again.''',
-    imageUrl: 'assets/images/Nordik/Cosmology/Yggdrasil.jpg',
+    imageUrl: 'assets/images/Nordik/Cosmology/Yggdrasil.webp',
     category: 'Cosmology',
   ),
   God(
@@ -823,7 +823,7 @@ The Nine Realms form the cosmological structure that supports all of existence i
 The nine realms generally include Asgard, home of the Aesir gods; Vanaheim, home of the Vanir gods; Alfheim, home of the light elves; Midgard, the world of humans; Jotunheim, home of the giants; Svartalfheim or Nidavellir, home of the dwarves; Niflheim, the primordial world of ice and mist; Muspelheim, the primordial world of fire; and Helheim, the realm of the dead ruled by Hel. Each realm has its own character, inhabitants, and natural laws, yet all remain bound together into a single cosmic whole supported by Yggdrasil, reflecting the Norse view that diversity and order can coexist within one grand structure.
 
 Interaction between the realms is a central theme in many Norse myths, such as Thor and Loki's journeys into Jotunheim, Odin's visits to Niflheim in search of knowledge, or Hermod's journey across the boundary into Helheim. The Bifrost bridge serves as one of the primary connections between Midgard and Asgard, while the roots of Yggdrasil form hidden pathways linking the other realms together. The legacy of the Nine Realms concept remains one of the most iconic ideas in Norse mythology, portraying a universe that is vast and diverse, yet held together in a fragile balance.''',
-    imageUrl: 'assets/images/Nordik/Cosmology/9realms.jpg',
+    imageUrl: 'assets/images/Nordik/Cosmology/9realms.webp',
     category: 'Cosmology',
   ),
   God(
@@ -847,7 +847,7 @@ Bifrost is the rainbow bridge that connects Midgard, the world of humans, to Asg
 Bifrost is formed from a combination of fire, air, and water, a composition that explains why the red band of the rainbow is in fact a flame burning within it, serving to prevent frost giants and mountain giants from crossing without permission. The bridge is guarded day and night by the god Heimdall, who stands watchful at its end carrying the horn Gjallarhorn, ready to sound it as a warning the moment the signs of Ragnarok begin to appear. The bridge's beauty, paired with its fragility, makes it a symbol of connection that is at the same time vulnerable to destruction.
 
 The most famous tale about Bifrost is directly tied to Ragnarok, when the sons of Muspell, led by Surtr, cross the bridge with such tremendous force that Bifrost finally collapses beneath them. Interestingly, Thor himself is said to never cross Bifrost together with the other gods, choosing instead to wade through the rivers beneath it on foot, out of concern that the heat accompanying his thunder might damage the bridge. Through these tales, Bifrost is affirmed as the magnificent gateway linking the world of humans and the world of the gods, while carrying a lasting warning that even the most beautiful of connections can collapse when the end of the world arrives.''',
-    imageUrl: 'assets/images/Nordik/Cosmology/bifrost.jpg',
+    imageUrl: 'assets/images/Nordik/Cosmology/bifrost.webp',
     category: 'Cosmology',
   ),
   God(
@@ -871,7 +871,7 @@ Valhalla is Odin's magnificent hall standing in Asgard, a shelter for half of th
 As the dwelling place of the chosen warriors known as the einherjar, Valhalla is not merely a resting place but an eternal training ground, where these warriors fight one another every day, fall, and then rise again by evening to feast together. They dine on the meat of the boar Saehrimnir, which is always restored after being cooked and eaten, and drink mead flowing from the udder of the goat Heidrun, who grazes on the roof of the hall. All of this splendor and honor represents the highest reward for bravery in battle according to the Norse worldview.
 
 The main purpose of gathering the einherjar in Valhalla is to prepare a formidable army for Odin to face Ragnarok, the final battle against Fenrir and the army of giants. When that day arrives, all five hundred and forty doors of Valhalla will open at once, and the einherjar will march out following Odin toward the final battlefield on the plain of Vigrid. Valhalla's legacy as a symbol of eternal honor for fallen warriors remains one of the most famous images in all of Norse mythology, embodying the idea that a courageous death opens the path to immortality.''',
-    imageUrl: 'assets/images/Nordik/Cosmology/valhalla.jpg',
+    imageUrl: 'assets/images/Nordik/Cosmology/valhalla.webp',
     category: 'Cosmology',
   ),
   God(
@@ -895,7 +895,7 @@ Ragnarok is the sequence of apocalyptic events foretold since the very beginning
 Ragnarok is preceded by Fimbulwinter, a prolonged winter lasting three years without any summer in between, followed by a series of terrible omens such as the sun turning black, the stars vanishing from the sky, and the earth shaking so violently that it frees Fenrir from his bonds and releases Loki from his chains. At its climax, the gods and the great monsters face one another in a final battle on the plain of Vigrid, a moment that symbolizes the peak of the cosmic tension between order and chaos that has loomed over the whole of Norse mythology since the beginning of creation.
 
 In that battle, Odin falls, swallowed by Fenrir, before being avenged by his son Vidar; Thor and Jormungandr kill each other; Tyr and the hound Garm slay one another; Heimdall and Loki likewise perish in their final duel; and Surtr ultimately sets the entire world ablaze with his flaming sword. Yet Voluspa does not close its prophecy with destruction alone, but with rebirth: the submerged earth rises again from the sea, green and renewed, the surviving gods such as Baldr, Hod, Vidar, and Vali gather once more, while Lif and Lifthrasir, the two humans who sheltered within Yggdrasil, emerge to begin human life anew in a world made whole again.''',
-    imageUrl: 'assets/images/Nordik/Cosmology/ragnarok.jpg',
+    imageUrl: 'assets/images/Nordik/Cosmology/ragnarok.webp',
     category: 'Cosmology',
   ),
 
@@ -920,7 +920,7 @@ Forseti is the son of Baldr, the god of light and beauty, and his wife Nanna, ma
 Forseti is the god of justice, mediation, and reconciliation, dwelling in a magnificent hall called Glitnir, "the shining one," supported by pillars of gold and roofed with silver. It is there that gods and men alike bring their disputes for judgment, and according to the Prose Edda, no one ever leaves his presence without being reconciled, for he is considered the wisest judge that ever existed. His attributes, the scales of justice and his radiant golden hall, symbolize purity and impartiality in rendering verdicts. His personality is portrayed as calm, patient, and fair, standing in contrast to many other Aesir who are prone to temper or warfare.
 
 The most notable link between Forseti and the historical record comes from the monk Alcuin's eighth-century Vita Willibrordi, which recounts the missionary Willibrord's visit to a sacred Frisian island called Fositesland, where a god named Fosite was worshipped under strict rules of peace and silence around his holy spring. Scholars generally believe the Frisian Fosite and the Norse Forseti are the same figure, or at least share a common Germanic root, indicating that worship of this god of justice was widespread well before the Viking Age. His legacy endures in an unexpected way: the modern Icelandic word "forseti" means "president," taken directly from the god's name to denote a leader who judges fairly. In this sense Forseti survives not only in ancient manuscripts but also in the everyday language of modern Nordic society.''',
-    imageUrl: 'assets/images/Nordik/Aesir/forseti.jpg',
+    imageUrl: 'assets/images/Nordik/Aesir/forseti.webp',
     category: 'Aesir',
   ),
   God(
@@ -944,7 +944,7 @@ Ratatoskr is neither a god nor a giant but a squirrel that lives on the world tr
 Ratatoskr's chief role is to carry insulting words back and forth between the unnamed eagle perched atop Yggdrasil and the dragon Nidhogg, who gnaws at the tree's roots near the spring Hvergelmir. He is no neutral courier but a deliberate instigator, twisting and inflaming each message so that the hostility between the eagle and Nidhogg never dies down. For this reason Ratatoskr has become an emblem of malicious gossip, slander, and corrosive incitement, a small but destructive force showing that even the grandest cosmic structure is not immune to intrigue and discord. He is characterized as nimble, cunning, and fond of stirring up trouble, a far cry from the harmless, amusing image squirrels usually evoke.
 
 His role is explicitly recorded in stanza 32 of the Grímnismál, which names Ratatoskr as the squirrel that runs upon the ash Yggdrasil carrying the eagle's words down to Nidhogg, an image later echoed and expanded by Snorri in Gylfaginning. Though he appears only briefly, he is presented as part of a wider ecosystem of creatures inhabiting Yggdrasil, including four stags that graze on its foliage and the dragon Nidhogg who never stops gnawing at its roots. His cultural legacy endures as a personification of gossip and incitement in modern retellings of Norse mythology, from literature to video games, where Ratatoskr is often invoked as a reminder that great conflicts are sometimes sparked by small whispers deliberately spread.''',
-    imageUrl: 'assets/images/Nordik/Mythical/ratatoskr.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/ratatoskr.webp',
     category: 'Creature',
   ),
   God(
@@ -968,7 +968,7 @@ Huginn and Muninn are a pair of ravens who serve as the constant companions of O
 Every morning at dawn, Huginn and Muninn leave Odin's shoulders to fly across the whole of Midgard and the nine realms, observing everything that happens in the world of men and beyond. By evening, at the time of the gods' feast, they return, perch on Odin's shoulders, and whisper into his ears everything they have seen and heard throughout the day. Thanks to these two ravens, Odin becomes an all-knowing figure who receives constant news from every corner of the cosmos without ever having to leave Asgard. The raven as a symbol clung closely to Odin because the bird was also associated in Norse culture with battlefields and death, matching Odin's role as a god of war and gatherer of slain warriors.
 
 In stanza 20 of the Grímnismál, Odin himself declares that he fears for Huginn, Thought, lest the raven fail to return one day, yet admits he worries even more for the safety of Muninn, Memory, a confession that scholars of mythology often interpret as a symbolic acknowledgment that the loss of memory is feared more than the loss of thought itself. Snorri Sturluson repeats this image in Gylfaginning, affirming that the two ravens are Odin's principal source of knowledge about the world. The legacy of Huginn and Muninn remains strong in modern popular culture, from raven emblems on the war banners of Viking leaders to their depiction in literature, video games, and contemporary film, making them one of the most widely recognized animal pairs in Norse tradition.''',
-    imageUrl: 'assets/images/Nordik/Mythical/huginn_muninn.jpg',
+    imageUrl: 'assets/images/Nordik/Mythical/huginn_muninn.webp',
     category: 'Creature',
   ),
   God(
@@ -992,7 +992,7 @@ Utgard-Loki, or Utgarda-Loki, is a giant king who rules the illusory realm of Ut
 Utgard-Loki's chief power lies in mastery of illusion, known in Old Norse as sjónhverfing, allowing him to disguise cosmic realities as seemingly ordinary things. His stronghold is described as so vast that visitors can barely see the top of its gate, an early sign of the deception awaiting them. He rules with a mocking, condescending manner toward his guests, staging a series of contests that appear fair but are in fact rigged so that victory is impossible. His personality is cunning, arrogant, and calculating, representing the giants' brand of intelligence, one that relies on trickery to overcome the vastly superior physical power of the gods.
 
 His most famous tale recounts the visit of Thor, Loki, and their servants Thjalfi and Roskva to Utgard, where Utgard-Loki challenges them to a series of contests: Loki loses an eating contest against Logi, who turns out to be the personification of wildfire, Thjalfi loses a footrace against Hugi, the personification of thought, while Thor himself fails to empty a drinking horn secretly connected to the ocean, fails to lift a grey cat that is in truth the Midgard Serpent, Jormungandr, coiled around the world, and very nearly loses a wrestling match against an old woman named Elli, who is none other than old age itself. After Thor's party departs, Utgard-Loki reveals the whole deception, admits his fear of Thor's true strength, and then causes himself and his entire stronghold to vanish the instant Thor raises Mjolnir to strike him down in revenge, leaving Thor forever unable to punish him. This episode from Gylfaginning stands as one of the most celebrated Thor myths, frequently cited as a classic illustration of the theme that even the mightiest can be deceived, and it continues to inspire modern retellings in literature and popular culture alike.''',
-    imageUrl: 'assets/images/Nordik/Jotun/utgard-loki.jpg',
+    imageUrl: 'assets/images/Nordik/Jotun/utgard-loki.webp',
     category: 'Jotun',
   ),
 ];

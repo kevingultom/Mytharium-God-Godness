@@ -23,7 +23,7 @@ As ruler of the sky, Zeus commands thunder, lightning, and storms, wielding a th
 
 One of the most famous episodes involving Zeus is his swallowing of his first wife, Metis, after learning a prophecy that her child would surpass him in power; from this act Athena was born, springing fully grown and armored directly from Zeus's head. Zeus married Hera as his principal consort and, together with the other Olympians, formed the pantheon that ruled from Olympus, though their marriage was frequently strained by Zeus's affairs with goddesses and mortals such as Leto, Alcmene, and Europa. As king of the gods, Zeus stood at the center of ancient Greek religious life, including his monumental sanctuary at Olympia, which housed Phidias's colossal statue of him, one of the Seven Wonders of the Ancient World, cementing his lasting legacy as a symbol of divine authority and justice in Western culture.''',
     imageUrl:
-        'assets/images/Greek/Olympians/zeus.jpg',
+        'assets/images/Greek/Olympians/zeus.webp',
     category: 'Olympian',
   ),
   God(
@@ -48,7 +48,7 @@ Athena is the goddess of wisdom, strategic warfare, craftsmanship, and justice, 
 
 One of the most famous myths about Athena is her contest with Poseidon for patronage of a city in Attica: Poseidon struck the ground with his trident to produce a spring of salt water, while Athena offered an olive tree, and the citizens chose her gift, naming the city Athens in her honor. She is also known as the steadfast protector of heroes such as Odysseus during his long journey home to Ithaca in Homer's Odyssey, as well as Perseus and Heracles during their arduous labors. As one of the Three Virgin Goddesses alongside Artemis and Hestia, Athena never married but maintained close mentoring relationships with many figures of myth, and the magnificent Parthenon temple on the Athenian Acropolis, one of the most iconic architectural monuments in human history, was built in her honor and remains a lasting symbol of classical Greek civilization and wisdom.''',
     imageUrl:
-        'assets/images/Greek/Olympians/athena.jpg',
+        'assets/images/Greek/Olympians/athena.webp',
     category: 'Olympian',
   ),
   God(
@@ -72,7 +72,7 @@ Hades is the eldest son of Cronus and Rhea, making him technically the firstborn
 As ruler of the underworld, Hades oversees the fate of departed souls, ensuring they cross the River Styx and receive proper judgment, while also serving as guardian of the earth's buried wealth, such as precious metals and gems, which is why he is also known as Plouton, meaning "the rich one." His symbols include Cerberus, the three-headed hound guarding the gates of the underworld, and the Helm of Darkness crafted by the Cyclopes, which renders its wearer invisible. Contrary to his popular image as a villain, Hades in classical Greek mythology is portrayed as just, stern, and impartial, a cold but not gratuitously cruel judge who rarely leaves his realm and stays largely uninvolved in the intrigues of the Olympians above.
 
 The most famous myth involving Hades is his abduction of Persephone, daughter of Demeter, whom he carried off to the underworld to be his wife; Demeter's profound grief caused the earth to grow barren, prompting Zeus to intervene and broker an agreement that Persephone would spend part of the year with Hades and the rest with her mother, a myth that explains the origin of the changing seasons. Through this union Hades became Persephone's husband and co-ruler of the underworld, and together with Zeus and Poseidon he formed the triad of supreme rulers of the cosmos, even though he rarely appears in the wider Olympian narratives. Hades's legacy as a stern yet fair figure of the underworld makes him one of the most misunderstood deities, while remaining central to the ancient Greek understanding of death, the afterlife, and cosmic order.''',
-    imageUrl: 'assets/images/Greek/Underworld/hades.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/hades.webp',
     category: 'Underworld',
   ),
   God(
@@ -97,7 +97,7 @@ As ruler of the seas, Poseidon commands the waves, storms, and earthquakes, his 
 
 One of the most famous myths involving Poseidon is his contest with Athena for patronage of the city of Athens, in which he struck the ground to produce a spring of salt water but lost to Athena's gift of the olive tree, a defeat that, according to some accounts, left him harboring resentment toward the city. In Homer's Odyssey, Poseidon becomes Odysseus's chief adversary after the hero blinds his son, the Cyclops Polyphemus, prompting Poseidon to send storm after storm to delay Odysseus's homeward journey for years. Poseidon married Amphitrite, one of the Nereids, and fathered numerous offspring among both gods and mythological creatures, making him a central figure in the maritime life of ancient Greece, a civilization deeply dependent on the sea for trade, warfare, and survival.''',
     imageUrl:
-        'assets/images/Greek/Olympians/poseidon.jpg',
+        'assets/images/Greek/Olympians/poseidon.webp',
     category: 'Olympian',
   ),
   God(
@@ -122,7 +122,7 @@ Apollo is the god of the sun, music, prophecy, healing, and archery, a combinati
 
 One of the most famous myths about Apollo is his slaying of Python, the giant serpent guarding the chasm at Delphi, which he then made the center of his worship and the site of the renowned Delphic Oracle. He also figures in the tragic tale of Daphne, a nymph who transformed into a laurel tree to escape his pursuit, and the story of Hyacinthus, a young man he loved who died in an accident during discus practice. As the twin brother of Artemis and a favored son of Zeus, Apollo maintains close ties with many gods and heroes, including his role as patron of poets and musicians through his leadership of the nine Muses, making him an enduring symbol of beauty, art, and enlightenment in Western cultural heritage.''',
     imageUrl:
-        'assets/images/Greek/Olympians/apollo.jpg',
+        'assets/images/Greek/Olympians/apollo.webp',
     category: 'Olympian',
   ),
   God(
@@ -147,7 +147,7 @@ Artemis is the goddess of the hunt, the moon, and the wilderness, worshipped as 
 
 One of the most famous myths about Artemis is her punishment of the hunter Actaeon, who accidentally saw her bathing naked in the forest, prompting her to transform him into a stag and let him be hunted down and killed by his own hounds. She is also credited, in various versions of the myth, with killing the giant Orion, her hunting companion, and with punishing Niobe, who boasted of having more children than Leto. As one of the Three Virgin Goddesses alongside Athena and Hestia, Artemis never married but became a deeply revered protector of young women, hunters, and the wild, with her temple at Ephesus, one of the Seven Wonders of the Ancient World, standing as evidence of the widespread devotion she commanded throughout the ancient Greek world.''',
     imageUrl:
-        'assets/images/Greek/Olympians/artemis.jpg',
+        'assets/images/Greek/Olympians/artemis.webp',
     category: 'Olympian',
   ),
   God(
@@ -172,32 +172,81 @@ Ares is the god of war who embodies the violent, brutal, and chaotic side of bat
 
 One of the most famous myths about Ares is his affair with Aphrodite, wife of Hephaestus, which ended in humiliation when Hephaestus rigged an invisible metal net over their bed and trapped the pair before all the Olympian gods, who laughed at their disgrace. In the Iliad, Ares fights in the Trojan War on the side of Troy but is repeatedly bested, including being wounded by the mortal hero Diomedes with Athena's assistance, reinforcing his image as a god of great physical power yet lacking in strategic wisdom. Nevertheless, Ares remained an important figure in Greek culture as the embodiment of raw courage and military force, and the Romans later elevated him, under the name Mars, into one of the most revered gods in their pantheon, owing to Rome's identity as a deeply militaristic civilization.''',
     imageUrl:
-        'assets/images/Greek/Olympians/ares.jpg',
+        'assets/images/Greek/Olympians/ares.webp',
     category: 'Olympian',
   ),
   God(
-    id: '8',
-    name: 'Aphrodite',
+    id: '40',
+    name: 'Cronus',
     mythology: 'Greek',
-    title: 'Dewi Cinta & Kecantikan',
-    titleEn: 'Goddess of Love & Beauty',
-    symbol: '💞',
-    powers: ['Cinta', 'Kecantikan', 'Kesuburan', 'Hasrat', 'Pesona'],
-    powersEn: ['Love', 'Beauty', 'Fertility', 'Desire', 'Charm'],
+    title: 'Raja Para Titan',
+    titleEn: 'King of the Titans',
+    symbol: '⏳',
+    powers: ['Waktu', 'Panen', 'Kekuasaan', 'Kepemimpinan', 'Takdir'],
+    powersEn: ['Time', 'Harvest', 'Dominion', 'Leadership', 'Fate'],
     story: '''
-Menurut Theogony karya Hesiod, Aphrodite lahir dengan cara yang tidak biasa: ketika Cronus mengebiri ayahnya, Uranus, dan melemparkan alat kelaminnya ke laut, buih yang terbentuk di sekitarnya melahirkan Aphrodite, yang kemudian muncul dari ombak di dekat pulau Cyprus dalam wujud dewi dewasa yang sempurna. Karena asal-usul ini, Aphrodite sebenarnya tergolong generasi yang lebih tua dari para Olympian keturunan Cronus dan Rhea, meski ia tetap diterima sebagai salah satu dari dua belas dewa utama Olympus. Versi mitos lain, terutama dalam tradisi Homer, menyebutnya sebagai putri Zeus dan Dione, namun kisah kelahirannya dari buih laut tetap menjadi versi yang paling dikenal luas dan menjadi inspirasi karya seni klasik seperti lukisan "The Birth of Venus".
+Cronus adalah putra bungsu Uranus (Langit) dan Gaia (Bumi), dan menjadi pemimpin generasi Titan setelah ia mengebiri ayahnya sendiri, Uranus, menggunakan sabit bergerigi yang diberikan Gaia karena Uranus terus menindas dan mengurung anak-anaknya di dalam tubuh Gaia. Setelah menggulingkan Uranus, Cronus membebaskan saudara-saudaranya sesama Titan dan menjadi penguasa alam semesta pada Zaman Keemasan, sebuah era yang menurut mitos dipenuhi kedamaian dan kemakmuran tanpa perlu bekerja keras. Ia menikahi saudarinya sendiri, Rhea, dan bersama mereka melahirkan generasi pertama Olympian, meski ketakutannya akan ramalan bahwa salah satu anaknya akan menggulingkannya menyebabkannya menelan setiap bayi yang lahir.
 
-Aphrodite adalah dewi cinta, kecantikan, kesuburan, dan hasrat, dipuja karena kekuatannya yang mampu memikat hati dewa maupun manusia serta mempengaruhi jalannya banyak peristiwa besar dalam mitologi Yunani hanya melalui daya tarik dan pesonanya. Burung merpati dan angsa menjadi hewan sucinya, sementara mawar dan pohon murad diasosiasikan dengannya sebagai simbol keindahan dan cinta abadi. Ia memiliki ikat pinggang ajaib bernama kestos himas yang mampu membuat siapa pun yang melihatnya jatuh cinta, dan kepribadiannya digambarkan sebagai sosok yang menawan namun juga posesif dan mudah cemburu, sering terlibat dalam intrik cinta yang memengaruhi nasib para dewa dan manusia.
+Cronus adalah penguasa waktu, panen, dan kekuasaan tertinggi, dipuja pada masanya sebagai raja para dewa yang mengatur siklus musim dan pertanian pada Zaman Keemasan. Sabit atau arit menjadi senjata dan simbol utamanya, mengingatkan pada tindakannya mengebiri Uranus sekaligus perannya sebagai dewa panen yang menuai hasil bumi. Kepribadiannya digambarkan sebagai sosok yang kuat dan berwibawa di masa kejayaannya, namun juga paranoid dan kejam ketika dikuasai ketakutan akan kehilangan takhta, sebuah sifat yang akhirnya menjadi penyebab kejatuhannya sendiri. Ironisnya, dewa yang menguasai waktu ini pada akhirnya tidak mampu menghindari takdir yang telah diramalkan untuknya.
 
-Salah satu kisah paling terkenal tentang Aphrodite adalah perannya dalam Penghakiman Paris, ketika ia menjanjikan cinta wanita tercantik di dunia, Helen dari Sparta, kepada pangeran Troya bernama Paris sebagai imbalan atas gelar dewi tercantik, sebuah janji yang pada akhirnya memicu meletusnya Perang Troya. Ia dinikahkan oleh Zeus dengan Hephaestus, dewa pandai besi yang pincang, namun tetap menjalin hubungan asmara dengan Ares yang berujung memalukan ketika keduanya tertangkap basah dalam jebakan jaring Hephaestus. Sebagai ibu dari Eros, dewa cinta asmara, dan tokoh sentral dalam berbagai kisah cinta serta konflik mitologis, Aphrodite tetap menjadi simbol abadi kecantikan dan gairah dalam warisan budaya Yunani, yang kelak diwarisi oleh bangsa Romawi melalui sosok Venus.''',
+Kisah paling terkenal tentang Cronus adalah caranya menelan lima dari enam anaknya—Hestia, Demeter, Hera, Hades, dan Poseidon—segera setelah lahir karena takut akan ramalan Gaia dan Uranus bahwa ia akan digulingkan oleh anaknya sendiri, sebagaimana ia sendiri pernah menggulingkan Uranus. Rhea, yang berduka kehilangan anak-anaknya satu per satu, akhirnya menyelamatkan anak keenam, Zeus, dengan menipu Cronus menggunakan batu yang dibungkus kain, dan setelah dewasa Zeus kembali untuk memaksa Cronus memuntahkan saudara-saudaranya sebelum mengalahkannya dalam Titanomachy. Setelah kekalahannya, Cronus diasingkan, meski dalam sebagian versi mitos ia kemudian dibebaskan untuk memerintah sebuah kerajaan damai di Elysium, menjadikan kisahnya simbol abadi tentang siklus kekuasaan yang tak terelakkan antara generasi ayah dan anak.''',
     storyEn: '''
-According to Hesiod's Theogony, Aphrodite was born in an extraordinary way: when Cronus castrated his father, Uranus, and cast his severed genitals into the sea, the foam that gathered around them gave rise to Aphrodite, who emerged from the waves near the island of Cyprus as a fully formed, adult goddess. Because of this origin, Aphrodite technically belongs to an older generation than the Olympians descended from Cronus and Rhea, though she was nonetheless accepted as one of the twelve principal deities of Olympus. An alternate tradition, especially in Homer, describes her as the daughter of Zeus and Dione, but the tale of her birth from sea foam remains the most widely known version and has inspired classical artworks such as "The Birth of Venus."
+Cronus is the youngest son of Uranus (Sky) and Gaia (Earth), and became leader of the Titan generation after castrating his own father, Uranus, with a jagged sickle given to him by Gaia, who was distraught over Uranus continually oppressing and imprisoning their children within her body. After overthrowing Uranus, Cronus freed his fellow Titan siblings and became ruler of the cosmos during the Golden Age, an era myth describes as filled with peace and abundance without the need for toil. He married his own sister, Rhea, and together they produced the first generation of Olympians, though his fear of a prophecy that one of his children would overthrow him led him to swallow every infant born to them.
 
-Aphrodite is the goddess of love, beauty, fertility, and desire, revered for her power to captivate the hearts of gods and mortals alike and to influence the course of major events in Greek mythology through attraction and charm alone. The dove and the swan are her sacred creatures, while the rose and the myrtle tree are associated with her as symbols of beauty and eternal love. She possesses a magical girdle called the kestos himas, capable of making anyone who beholds it fall in love, and her personality is portrayed as enchanting yet also possessive and easily jealous, frequently entangled in romantic intrigues that shape the fate of gods and mortals.
+Cronus is the ruler of time, harvest, and supreme dominion, worshipped in his era as king of the gods who governed the cycle of seasons and agriculture during the Golden Age. A sickle or scythe is his principal weapon and symbol, recalling both his act of castrating Uranus and his role as a harvest god reaping the earth's bounty. His personality is portrayed as powerful and commanding at the height of his reign, yet also paranoid and ruthless when gripped by fear of losing his throne, a trait that ultimately caused his own downfall. Ironically, this god who governed time itself was ultimately unable to escape the fate prophesied for him.
 
-One of the most famous myths about Aphrodite is her role in the Judgment of Paris, in which she promised the love of the most beautiful woman in the world, Helen of Sparta, to the Trojan prince Paris in exchange for being named the fairest goddess, a promise that ultimately triggered the outbreak of the Trojan War. She was married by Zeus to Hephaestus, the lame god of the forge, yet carried on an affair with Ares that ended in humiliation when the pair were caught in Hephaestus's trap of an invisible net. As the mother of Eros, the god of romantic love, and a central figure in numerous myths of passion and conflict, Aphrodite remains an enduring symbol of beauty and desire in Greek cultural heritage, later inherited by the Romans through the figure of Venus.''',
-    imageUrl:
-        'assets/images/Greek/Olympians/aphrodite.jpg',
+The most famous myth about Cronus is his swallowing of five of his six children, Hestia, Demeter, Hera, Hades, and Poseidon, immediately after their birth, out of fear of the prophecy from Gaia and Uranus that he would be overthrown by his own child, just as he himself had once overthrown Uranus. Rhea, grieving the loss of her children one by one, eventually saved her sixth child, Zeus, by deceiving Cronus with a stone wrapped in cloth, and once grown Zeus returned to force Cronus to disgorge his siblings before defeating him in the Titanomachy. After his defeat, Cronus was banished, though in some versions of the myth he was later freed to rule over a peaceful realm in Elysium, making his story an enduring symbol of the inevitable cycle of power between generations of father and child.''',
+    imageUrl: 'assets/images/Greek/Titans/cronus.webp',
+    category: 'Titan',
+  ),
+  God(
+    id: '201',
+    name: 'Kratos',
+    mythology: 'Greek',
+    title: 'Dewa Kekuatan & Kekuasaan',
+    titleEn: 'God of Strength & Power',
+    symbol: '\U0001F4AA',
+    powers: ['Kekuatan', 'Kekuasaan', 'Ketangguhan', 'Ketahanan', 'Otoritas'],
+    powersEn: ['Strength', 'Power', 'Might', 'Endurance', 'Authority'],
+    story: '''
+Kratos adalah personifikasi kekuatan dan kekuasaan dalam mitologi Yunani, salah satu abdi setia Zeus. Bersama saudaranya Bia (Kekerasan), Zelos (Semangat), dan Nike (Kemenangan), Kratos membentuk lingkaran pengawal pribadi Zeus yang menjalankan perintah raja para dewa dengan keteguhan dan kekuatan yang tak tertandingi.
+
+Dalam mitologi Yunani kuno, Kratos tidak memiliki kisah independennya sendiri, melainkan muncul sebagai tokoh pendukung dalam drama Aeschylus berjudul Prometheus Bound. Dalam drama itu, Kratos diutus oleh Zeus bersama Bia untuk mengikat Prometheus pada Gunung Kaukasus sebagai hukuman karena telah mencuri api dan memberikannya kepada manusia. Kratos menjalankan tugasnya tanpa belas kasihan, menggambarkan wujud kekuasaan otoriter yang taat pada perintah atasan tanpa mempertanyakan keadilannya.
+
+Sebagai simbol kekuatan murni, Kratos melambangkan konsep Yunani kuno tentang kekuasaan yang tak terbendung namun juga tunduk pada otoritas yang lebih tinggi. Ia tidak memiliki kehendak sendiri, hanya kekuatan untuk melaksanakan kehendak Zeus. Dalam budaya populer modern, terutama seri game God of War, nama Kratos dipinjam untuk karakter utama, meskipun versi game ini adalah interpretasi fiksi yang sangat berbeda dari mitos aslinya. Dalam tradisi kuno, Kratos tetap menjadi pengingat bahwa kekuatan terbesar pun harus tunduk pada tatanan kosmis yang ditetapkan oleh Zeus.
+''',
+    storyEn: '''
+Kratos is the personification of strength and power in Greek mythology, one of the loyal enforcers of Zeus. Together with his siblings Bia (Violence), Zelos (Zeal), and Nike (Victory), Kratos formed Zeus's personal guard, executing the king of the gods' commands with unmatched tenacity and force.
+
+In ancient Greek mythology, Kratos does not have an independent story of his own, but appears as a supporting figure in Aeschylus's play Prometheus Bound. In this drama, Kratos is sent by Zeus alongside Bia to bind Prometheus to Mount Caucasus as punishment for stealing fire and giving it to humanity. Kratos carries out his task without mercy, embodying the image of authoritarian power that obeys a superior's commands without questioning their justice.
+
+As a symbol of pure strength, Kratos represents the ancient Greek concept of irresistible power that nonetheless submits to a higher authority. He has no will of his own, only the strength to carry out Zeus's will. In modern popular culture, particularly the God of War game series, the name Kratos was borrowed for the main character, though this game version is a fictional interpretation very different from the original myth. In ancient tradition, Kratos remains a reminder that even the greatest power must submit to the cosmic order established by Zeus.
+''',
+    imageUrl: 'assets/images/Mythic/kratos.webp',
+    category: 'Titan',
+  ),
+  God(
+    id: '10',
+    name: 'Hephaestus',
+    mythology: 'Greek',
+    title: 'Dewa Api & Tempa',
+    titleEn: 'God of Fire & Forge',
+    symbol: '🔥',
+    powers: ['Api', 'Pandai Besi', 'Teknologi', 'Kerajinan', 'Senjata Dewa'],
+    powersEn: ['Fire', 'Smithing', 'Technology', 'Craftsmanship', 'Divine Weapons'],
+    story: '''
+Hephaestus adalah putra Zeus dan Hera menurut sebagian besar sumber, meski dalam Theogony karya Hesiod ia disebutkan lahir dari Hera seorang diri sebagai balasan atas kelahiran Athena dari Zeus tanpa keterlibatannya. Karena terlahir cacat atau menurut versi lain dilempar dari Olympus oleh Hera yang malu dengan kondisi fisiknya, Hephaestus jatuh ke laut dan diselamatkan oleh dewi laut Thetis dan Eurynome, yang membesarkannya secara diam-diam selama bertahun-tahun. Setelah dewasa dan menunjukkan bakat luar biasa dalam pandai besi, Hephaestus akhirnya kembali ke Olympus, dan meski hubungannya dengan Hera tetap rumit, ia diterima kembali sebagai salah satu dari dua belas dewa Olympian utama.
+
+Hephaestus adalah dewa api, pandai besi, dan teknologi, dikenal sebagai pengrajin paling terampil di antara para dewa yang menciptakan senjata dan perhiasan ilahi di bengkelnya, termasuk petir Zeus, baju zirah Achilles, dan mahkota Aphrodite. Palu, landasan, dan api menjadi simbol utamanya, sementara ia bekerja dibantu para automaton logam ciptaannya sendiri yang bisa bergerak dan berpikir layaknya makhluk hidup, menunjukkan kejeniusan tekniknya yang jauh melampaui zamannya. Berbeda dari kebanyakan dewa Olympian yang digambarkan sempurna secara fisik, Hephaestus digambarkan pincang namun memiliki kepribadian yang pekerja keras, sabar, dan rendah hati, mencerminkan nilai kerja keras dan keterampilan tangan dalam masyarakat Yunani kuno.
+
+Salah satu kisah paling terkenal tentang Hephaestus adalah caranya membalas dendam terhadap Hera dengan mengirimkan sebuah takhta emas yang terlihat indah namun terperangkap mekanisme rahasia, yang mengunci Hera begitu ia duduk di atasnya hingga Dionysus berhasil membujuk Hephaestus turun dari pengasingannya untuk membebaskannya. Ia menikah dengan Aphrodite atas perjodohan Zeus, namun pernikahan itu diwarnai perselingkuhan Aphrodite dengan Ares, yang berhasil ia tangkap basah menggunakan jaring logam tak terlihat ciptaannya sendiri di hadapan seluruh dewa Olympian. Sebagai pencipta banyak senjata dan artefak legendaris yang digunakan para pahlawan besar seperti Achilles dan Heracles, Hephaestus menjadi simbol abadi keahlian teknis dan kreativitas manusia, dihormati secara khusus oleh para pengrajin dan pandai besi di seluruh dunia Yunani kuno.''',
+    storyEn: '''
+Hephaestus is the son of Zeus and Hera according to most sources, though Hesiod's Theogony states that Hera bore him alone in retaliation for Zeus giving birth to Athena without her involvement. Because he was born with a physical disability, or according to another version because Hera, ashamed of his appearance, hurled him from Olympus, Hephaestus fell into the sea and was rescued by the sea goddesses Thetis and Eurynome, who raised him secretly for many years. Once grown and having shown extraordinary talent in metalworking, Hephaestus eventually returned to Olympus, and although his relationship with Hera remained complicated, he was accepted back as one of the twelve principal Olympian gods.
+
+Hephaestus is the god of fire, smithing, and technology, renowned as the most skilled craftsman among the gods, creating divine weapons and jewelry in his forge, including Zeus's thunderbolt, Achilles's armor, and Aphrodite's crown. The hammer, anvil, and fire are his principal symbols, and he works with the aid of metal automatons of his own invention that can move and think as if alive, showcasing an engineering genius far ahead of his time. Unlike most Olympians, who are depicted as physically flawless, Hephaestus is portrayed as lame, yet possessing a hardworking, patient, and humble personality, reflecting the value ancient Greek society placed on labor and craftsmanship.
+
+One of the most famous myths about Hephaestus recounts how he took revenge on Hera by sending her a beautiful golden throne rigged with a hidden mechanism that trapped her the moment she sat upon it, a predicament resolved only when Dionysus persuaded Hephaestus, living in self-imposed exile, to come free her. He married Aphrodite through an arrangement made by Zeus, but the marriage was marked by Aphrodite's affair with Ares, whom he caught in the act using an invisible metal net of his own design in front of the assembled Olympian gods. As the creator of many legendary weapons and artifacts wielded by great heroes such as Achilles and Heracles, Hephaestus stands as an enduring symbol of technical skill and human creativity, especially honored by craftsmen and blacksmiths throughout the ancient Greek world.''',
+    imageUrl: 'assets/images/Greek/Olympians/hephaestus.webp',
     category: 'Olympian',
   ),
   God(
@@ -222,31 +271,32 @@ Hermes is the god of speed, communication, trade, and cunning, serving as the of
 
 Beyond the famous theft of Apollo's cattle, Hermes plays a significant role in many other myths, including aiding Perseus with winged sandals for his quest to defeat Medusa, and guiding Persephone back from the underworld to her mother, Demeter, each year. As the god of trade and protector of travelers, merchants, and even thieves, Hermes was widely honored by the ancient Greeks, who erected roadside boundary markers called herms to seek his protection while journeying. His close bond with Zeus as a favored son and his role as a connector between worlds make Hermes one of the most versatile and beloved gods, his legacy enduring in modern terms such as "hermetic" and in the caduceus, still used today as a symbol of commerce.''',
     imageUrl:
-        'assets/images/Greek/Olympians/hermes.jpg',
+        'assets/images/Greek/Olympians/hermes.webp',
     category: 'Olympian',
   ),
   God(
-    id: '10',
-    name: 'Hephaestus',
+    id: '8',
+    name: 'Aphrodite',
     mythology: 'Greek',
-    title: 'Dewa Api & Tempa',
-    titleEn: 'God of Fire & Forge',
-    symbol: '🔥',
-    powers: ['Api', 'Pandai Besi', 'Teknologi', 'Kerajinan', 'Senjata Dewa'],
-    powersEn: ['Fire', 'Smithing', 'Technology', 'Craftsmanship', 'Divine Weapons'],
+    title: 'Dewi Cinta & Kecantikan',
+    titleEn: 'Goddess of Love & Beauty',
+    symbol: '💞',
+    powers: ['Cinta', 'Kecantikan', 'Kesuburan', 'Hasrat', 'Pesona'],
+    powersEn: ['Love', 'Beauty', 'Fertility', 'Desire', 'Charm'],
     story: '''
-Hephaestus adalah putra Zeus dan Hera menurut sebagian besar sumber, meski dalam Theogony karya Hesiod ia disebutkan lahir dari Hera seorang diri sebagai balasan atas kelahiran Athena dari Zeus tanpa keterlibatannya. Karena terlahir cacat atau menurut versi lain dilempar dari Olympus oleh Hera yang malu dengan kondisi fisiknya, Hephaestus jatuh ke laut dan diselamatkan oleh dewi laut Thetis dan Eurynome, yang membesarkannya secara diam-diam selama bertahun-tahun. Setelah dewasa dan menunjukkan bakat luar biasa dalam pandai besi, Hephaestus akhirnya kembali ke Olympus, dan meski hubungannya dengan Hera tetap rumit, ia diterima kembali sebagai salah satu dari dua belas dewa Olympian utama.
+Menurut Theogony karya Hesiod, Aphrodite lahir dengan cara yang tidak biasa: ketika Cronus mengebiri ayahnya, Uranus, dan melemparkan alat kelaminnya ke laut, buih yang terbentuk di sekitarnya melahirkan Aphrodite, yang kemudian muncul dari ombak di dekat pulau Cyprus dalam wujud dewi dewasa yang sempurna. Karena asal-usul ini, Aphrodite sebenarnya tergolong generasi yang lebih tua dari para Olympian keturunan Cronus dan Rhea, meski ia tetap diterima sebagai salah satu dari dua belas dewa utama Olympus. Versi mitos lain, terutama dalam tradisi Homer, menyebutnya sebagai putri Zeus dan Dione, namun kisah kelahirannya dari buih laut tetap menjadi versi yang paling dikenal luas dan menjadi inspirasi karya seni klasik seperti lukisan "The Birth of Venus".
 
-Hephaestus adalah dewa api, pandai besi, dan teknologi, dikenal sebagai pengrajin paling terampil di antara para dewa yang menciptakan senjata dan perhiasan ilahi di bengkelnya, termasuk petir Zeus, baju zirah Achilles, dan mahkota Aphrodite. Palu, landasan, dan api menjadi simbol utamanya, sementara ia bekerja dibantu para automaton logam ciptaannya sendiri yang bisa bergerak dan berpikir layaknya makhluk hidup, menunjukkan kejeniusan tekniknya yang jauh melampaui zamannya. Berbeda dari kebanyakan dewa Olympian yang digambarkan sempurna secara fisik, Hephaestus digambarkan pincang namun memiliki kepribadian yang pekerja keras, sabar, dan rendah hati, mencerminkan nilai kerja keras dan keterampilan tangan dalam masyarakat Yunani kuno.
+Aphrodite adalah dewi cinta, kecantikan, kesuburan, dan hasrat, dipuja karena kekuatannya yang mampu memikat hati dewa maupun manusia serta mempengaruhi jalannya banyak peristiwa besar dalam mitologi Yunani hanya melalui daya tarik dan pesonanya. Burung merpati dan angsa menjadi hewan sucinya, sementara mawar dan pohon murad diasosiasikan dengannya sebagai simbol keindahan dan cinta abadi. Ia memiliki ikat pinggang ajaib bernama kestos himas yang mampu membuat siapa pun yang melihatnya jatuh cinta, dan kepribadiannya digambarkan sebagai sosok yang menawan namun juga posesif dan mudah cemburu, sering terlibat dalam intrik cinta yang memengaruhi nasib para dewa dan manusia.
 
-Salah satu kisah paling terkenal tentang Hephaestus adalah caranya membalas dendam terhadap Hera dengan mengirimkan sebuah takhta emas yang terlihat indah namun terperangkap mekanisme rahasia, yang mengunci Hera begitu ia duduk di atasnya hingga Dionysus berhasil membujuk Hephaestus turun dari pengasingannya untuk membebaskannya. Ia menikah dengan Aphrodite atas perjodohan Zeus, namun pernikahan itu diwarnai perselingkuhan Aphrodite dengan Ares, yang berhasil ia tangkap basah menggunakan jaring logam tak terlihat ciptaannya sendiri di hadapan seluruh dewa Olympian. Sebagai pencipta banyak senjata dan artefak legendaris yang digunakan para pahlawan besar seperti Achilles dan Heracles, Hephaestus menjadi simbol abadi keahlian teknis dan kreativitas manusia, dihormati secara khusus oleh para pengrajin dan pandai besi di seluruh dunia Yunani kuno.''',
+Salah satu kisah paling terkenal tentang Aphrodite adalah perannya dalam Penghakiman Paris, ketika ia menjanjikan cinta wanita tercantik di dunia, Helen dari Sparta, kepada pangeran Troya bernama Paris sebagai imbalan atas gelar dewi tercantik, sebuah janji yang pada akhirnya memicu meletusnya Perang Troya. Ia dinikahkan oleh Zeus dengan Hephaestus, dewa pandai besi yang pincang, namun tetap menjalin hubungan asmara dengan Ares yang berujung memalukan ketika keduanya tertangkap basah dalam jebakan jaring Hephaestus. Sebagai ibu dari Eros, dewa cinta asmara, dan tokoh sentral dalam berbagai kisah cinta serta konflik mitologis, Aphrodite tetap menjadi simbol abadi kecantikan dan gairah dalam warisan budaya Yunani, yang kelak diwarisi oleh bangsa Romawi melalui sosok Venus.''',
     storyEn: '''
-Hephaestus is the son of Zeus and Hera according to most sources, though Hesiod's Theogony states that Hera bore him alone in retaliation for Zeus giving birth to Athena without her involvement. Because he was born with a physical disability, or according to another version because Hera, ashamed of his appearance, hurled him from Olympus, Hephaestus fell into the sea and was rescued by the sea goddesses Thetis and Eurynome, who raised him secretly for many years. Once grown and having shown extraordinary talent in metalworking, Hephaestus eventually returned to Olympus, and although his relationship with Hera remained complicated, he was accepted back as one of the twelve principal Olympian gods.
+According to Hesiod's Theogony, Aphrodite was born in an extraordinary way: when Cronus castrated his father, Uranus, and cast his severed genitals into the sea, the foam that gathered around them gave rise to Aphrodite, who emerged from the waves near the island of Cyprus as a fully formed, adult goddess. Because of this origin, Aphrodite technically belongs to an older generation than the Olympians descended from Cronus and Rhea, though she was nonetheless accepted as one of the twelve principal deities of Olympus. An alternate tradition, especially in Homer, describes her as the daughter of Zeus and Dione, but the tale of her birth from sea foam remains the most widely known version and has inspired classical artworks such as "The Birth of Venus."
 
-Hephaestus is the god of fire, smithing, and technology, renowned as the most skilled craftsman among the gods, creating divine weapons and jewelry in his forge, including Zeus's thunderbolt, Achilles's armor, and Aphrodite's crown. The hammer, anvil, and fire are his principal symbols, and he works with the aid of metal automatons of his own invention that can move and think as if alive, showcasing an engineering genius far ahead of his time. Unlike most Olympians, who are depicted as physically flawless, Hephaestus is portrayed as lame, yet possessing a hardworking, patient, and humble personality, reflecting the value ancient Greek society placed on labor and craftsmanship.
+Aphrodite is the goddess of love, beauty, fertility, and desire, revered for her power to captivate the hearts of gods and mortals alike and to influence the course of major events in Greek mythology through attraction and charm alone. The dove and the swan are her sacred creatures, while the rose and the myrtle tree are associated with her as symbols of beauty and eternal love. She possesses a magical girdle called the kestos himas, capable of making anyone who beholds it fall in love, and her personality is portrayed as enchanting yet also possessive and easily jealous, frequently entangled in romantic intrigues that shape the fate of gods and mortals.
 
-One of the most famous myths about Hephaestus recounts how he took revenge on Hera by sending her a beautiful golden throne rigged with a hidden mechanism that trapped her the moment she sat upon it, a predicament resolved only when Dionysus persuaded Hephaestus, living in self-imposed exile, to come free her. He married Aphrodite through an arrangement made by Zeus, but the marriage was marked by Aphrodite's affair with Ares, whom he caught in the act using an invisible metal net of his own design in front of the assembled Olympian gods. As the creator of many legendary weapons and artifacts wielded by great heroes such as Achilles and Heracles, Hephaestus stands as an enduring symbol of technical skill and human creativity, especially honored by craftsmen and blacksmiths throughout the ancient Greek world.''',
-    imageUrl: 'assets/images/Greek/Olympians/hephaestus.jpg',
+One of the most famous myths about Aphrodite is her role in the Judgment of Paris, in which she promised the love of the most beautiful woman in the world, Helen of Sparta, to the Trojan prince Paris in exchange for being named the fairest goddess, a promise that ultimately triggered the outbreak of the Trojan War. She was married by Zeus to Hephaestus, the lame god of the forge, yet carried on an affair with Ares that ended in humiliation when the pair were caught in Hephaestus's trap of an invisible net. As the mother of Eros, the god of romantic love, and a central figure in numerous myths of passion and conflict, Aphrodite remains an enduring symbol of beauty and desire in Greek cultural heritage, later inherited by the Romans through the figure of Venus.''',
+    imageUrl:
+        'assets/images/Greek/Olympians/aphrodite.webp',
     category: 'Olympian',
   ),
   God(
@@ -270,7 +320,7 @@ Hera is the daughter of Cronus and Rhea, one of the six siblings of the first ge
 Hera is the goddess of marriage, family, and childbirth, worshipped as protector of the institution of marriage and fidelity, though ironically her own marriage to Zeus was marked by turmoil stemming from her husband's infidelities. The peacock and the cow are her sacred animals, symbolizing elegance and fertility, while the crown she always wears affirms her status as queen of Olympus. Hera's personality is portrayed as majestic and dignified, yet also jealous and vengeful, particularly toward Zeus's lovers and the children born of his affairs, a trait that drives many of her acts of retribution throughout Greek mythology.
 
 One of the most famous accounts of Hera's wrath is her persecution of Heracles, Zeus's son by the mortal woman Alcmene, whom she sent two venomous serpents to kill as an infant and later afflicted with a fit of madness that led to his undertaking the Twelve Labors as penance. She also played a significant role in the Trojan War, supporting the Greek side out of resentment toward Paris, who had failed to choose her as the fairest goddess in the Judgment of Paris. As queen of Olympus and protector of marriage, Hera remained a central figure in the divine hierarchy, and the cities of Argos and Samos became her most important centers of worship in the ancient Greek world, home to magnificent temples built in her honor.''',
-    imageUrl: 'assets/images/Greek/Olympians/hera.jpg',
+    imageUrl: 'assets/images/Greek/Olympians/hera.webp',
     category: 'Olympian',
   ),
   God(
@@ -294,7 +344,7 @@ Demeter is the daughter of Cronus and Rhea, sister to Zeus, Hades, Poseidon, Her
 Demeter is the goddess of harvest, agriculture, and the earth's fertility, worshipped by the agrarian society of ancient Greece as a source of life because of her power to govern the growth of crops and the fruitfulness of the soil. Wheat and the poppy flower are her symbols, representing harvest and the cycle of life, death, and rebirth, while the pig is also frequently associated with her in ancient ritual worship. Demeter's personality is portrayed as maternal and nurturing, yet also capable of deep grief and severity when wounded or bereaved, as clearly shown in her most famous myth. She is also central to the Eleusinian Mysteries, one of the most secretive and revered religious rites in ancient Greek history.
 
 The most famous myth about Demeter is her profound grief when her daughter, Persephone, was abducted by Hades to become queen of the underworld; in her sorrow and anger, Demeter let the entire earth turn barren and crops fail, forcing Zeus to intervene and negotiate Persephone's return. The agreement reached, that Persephone would spend a third of the year in the underworld with Hades and the rest with her mother, became the origin myth for the changing seasons, with winter representing Demeter's grief during her separation from her daughter. Through this myth, along with her role as founder of the Eleusinian Mysteries, which taught initiates about the afterlife, Demeter became one of the most revered goddesses in the spiritual and agricultural life of ancient Greece, symbolizing the inseparable bond between nature, fertility, and a mother's love.''',
-    imageUrl: 'assets/images/Greek/Olympians/demeter.jpg',
+    imageUrl: 'assets/images/Greek/Olympians/demeter.webp',
     category: 'Olympian',
   ),
   God(
@@ -318,34 +368,10 @@ Dionysus is the son of Zeus and Semele, a mortal princess of Thebes, and his bir
 Dionysus is the god of wine, festivity, ecstasy, and theater, worshipped for his power to bring both joy and wild disorder through wine and passionate celebration. The grapevine and ivy are his symbols, while leopards and tigers are often depicted accompanying him as emblems of the untamed, uncontrollable side of his nature. Dionysus is also regarded as the father of Greek drama, since the festivals held in his honor, particularly the Dionysia in Athens, gave rise to classical Greek theater. His personality is portrayed as ambivalent: on one hand he brings joy, freedom, and liberation from social convention, but on the other he can become a terrifying and vengeful figure toward anyone who refuses to honor his worship.
 
 One of the most famous myths about Dionysus is his punishment of King Pentheus of Thebes, who refused to acknowledge his divinity and banned his worship, prompting Dionysus to drive Pentheus's mother and aunts into ecstatic madness, causing them to unknowingly tear the king apart with their bare hands, a story immortalized in Euripides's tragedy "The Bacchae." He is also known for rescuing and marrying Ariadne, daughter of King Minos, who had been abandoned alone on the island of Naxos after helping Theseus defeat the Minotaur. As the only Olympian god with a mortal mother, Dionysus serves as a unique bridge between the mortal and divine worlds, and his legacy endures today through the tradition of Western theater and the wine festivals still celebrated in many parts of the world.''',
-    imageUrl: 'assets/images/Greek/Olympians/dionysus.jpg',
+    imageUrl: 'assets/images/Greek/Olympians/dionysus.webp',
     category: 'Olympian',
   ),
 
-  God(
-    id: '40',
-    name: 'Cronus',
-    mythology: 'Greek',
-    title: 'Raja Para Titan',
-    titleEn: 'King of the Titans',
-    symbol: '⏳',
-    powers: ['Waktu', 'Panen', 'Kekuasaan', 'Kepemimpinan', 'Takdir'],
-    powersEn: ['Time', 'Harvest', 'Dominion', 'Leadership', 'Fate'],
-    story: '''
-Cronus adalah putra bungsu Uranus (Langit) dan Gaia (Bumi), dan menjadi pemimpin generasi Titan setelah ia mengebiri ayahnya sendiri, Uranus, menggunakan sabit bergerigi yang diberikan Gaia karena Uranus terus menindas dan mengurung anak-anaknya di dalam tubuh Gaia. Setelah menggulingkan Uranus, Cronus membebaskan saudara-saudaranya sesama Titan dan menjadi penguasa alam semesta pada Zaman Keemasan, sebuah era yang menurut mitos dipenuhi kedamaian dan kemakmuran tanpa perlu bekerja keras. Ia menikahi saudarinya sendiri, Rhea, dan bersama mereka melahirkan generasi pertama Olympian, meski ketakutannya akan ramalan bahwa salah satu anaknya akan menggulingkannya menyebabkannya menelan setiap bayi yang lahir.
-
-Cronus adalah penguasa waktu, panen, dan kekuasaan tertinggi, dipuja pada masanya sebagai raja para dewa yang mengatur siklus musim dan pertanian pada Zaman Keemasan. Sabit atau arit menjadi senjata dan simbol utamanya, mengingatkan pada tindakannya mengebiri Uranus sekaligus perannya sebagai dewa panen yang menuai hasil bumi. Kepribadiannya digambarkan sebagai sosok yang kuat dan berwibawa di masa kejayaannya, namun juga paranoid dan kejam ketika dikuasai ketakutan akan kehilangan takhta, sebuah sifat yang akhirnya menjadi penyebab kejatuhannya sendiri. Ironisnya, dewa yang menguasai waktu ini pada akhirnya tidak mampu menghindari takdir yang telah diramalkan untuknya.
-
-Kisah paling terkenal tentang Cronus adalah caranya menelan lima dari enam anaknya—Hestia, Demeter, Hera, Hades, dan Poseidon—segera setelah lahir karena takut akan ramalan Gaia dan Uranus bahwa ia akan digulingkan oleh anaknya sendiri, sebagaimana ia sendiri pernah menggulingkan Uranus. Rhea, yang berduka kehilangan anak-anaknya satu per satu, akhirnya menyelamatkan anak keenam, Zeus, dengan menipu Cronus menggunakan batu yang dibungkus kain, dan setelah dewasa Zeus kembali untuk memaksa Cronus memuntahkan saudara-saudaranya sebelum mengalahkannya dalam Titanomachy. Setelah kekalahannya, Cronus diasingkan, meski dalam sebagian versi mitos ia kemudian dibebaskan untuk memerintah sebuah kerajaan damai di Elysium, menjadikan kisahnya simbol abadi tentang siklus kekuasaan yang tak terelakkan antara generasi ayah dan anak.''',
-    storyEn: '''
-Cronus is the youngest son of Uranus (Sky) and Gaia (Earth), and became leader of the Titan generation after castrating his own father, Uranus, with a jagged sickle given to him by Gaia, who was distraught over Uranus continually oppressing and imprisoning their children within her body. After overthrowing Uranus, Cronus freed his fellow Titan siblings and became ruler of the cosmos during the Golden Age, an era myth describes as filled with peace and abundance without the need for toil. He married his own sister, Rhea, and together they produced the first generation of Olympians, though his fear of a prophecy that one of his children would overthrow him led him to swallow every infant born to them.
-
-Cronus is the ruler of time, harvest, and supreme dominion, worshipped in his era as king of the gods who governed the cycle of seasons and agriculture during the Golden Age. A sickle or scythe is his principal weapon and symbol, recalling both his act of castrating Uranus and his role as a harvest god reaping the earth's bounty. His personality is portrayed as powerful and commanding at the height of his reign, yet also paranoid and ruthless when gripped by fear of losing his throne, a trait that ultimately caused his own downfall. Ironically, this god who governed time itself was ultimately unable to escape the fate prophesied for him.
-
-The most famous myth about Cronus is his swallowing of five of his six children, Hestia, Demeter, Hera, Hades, and Poseidon, immediately after their birth, out of fear of the prophecy from Gaia and Uranus that he would be overthrown by his own child, just as he himself had once overthrown Uranus. Rhea, grieving the loss of her children one by one, eventually saved her sixth child, Zeus, by deceiving Cronus with a stone wrapped in cloth, and once grown Zeus returned to force Cronus to disgorge his siblings before defeating him in the Titanomachy. After his defeat, Cronus was banished, though in some versions of the myth he was later freed to rule over a peaceful realm in Elysium, making his story an enduring symbol of the inevitable cycle of power between generations of father and child.''',
-    imageUrl: 'assets/images/Greek/Titans/cronus.jpg',
-    category: 'Titan',
-  ),
   God(
     id: '41',
     name: 'Oceanus',
@@ -367,7 +393,7 @@ Oceanus is the eldest son of Uranus (Sky) and Gaia (Earth), making him one of th
 Oceanus is the personification of the primordial sea that encircles the world, worshipped as the source of all fresh and salt water, including the rivers, lakes, and springs that flow from his boundless expanse. He is often depicted as a being half-man and half-serpent or as a giant fish with horns upon his head, reflecting his primordial power distinct from later sea gods such as Poseidon. Together with Tethys, Oceanus fathered thousands of Oceanids, the freshwater nymphs, as well as the river gods found throughout the world, making him one of the most prolific ancestral figures in Greek mythology. His personality is portrayed as calm, wise, and largely neutral, mirroring the nature of water that flows endlessly and takes no side in the conflicts among generations of gods.
 
 One of Oceanus's significant roles in mythology is his status as grandfather to many important gods and nymphs through his daughters, the Oceanids, including Metis, Zeus's first wife, and Styx, goddess of the underworld river whose oath was considered the most sacred among the gods. In Aeschylus's Prometheus Bound, Oceanus is depicted visiting the chained Prometheus to offer counsel that he submit to Zeus, revealing a personality that favors peace over open confrontation. As the embodiment of the ancient Greek geographical concept of a sea encircling the world, Oceanus holds an important place in the understanding of ancient Greek cosmology, and his name endures today in the modern English term "ocean."''',
-    imageUrl: 'assets/images/Greek/Titans/oceanus.jpg',
+    imageUrl: 'assets/images/Greek/Titans/oceanus.webp',
     category: 'Titan',
   ),
   God(
@@ -391,7 +417,7 @@ Iapetus is one of the sons of Uranus (Sky) and Gaia (Earth), belonging to the fi
 Iapetus is associated with the concepts of mortality, death, and the human lifespan, a domain reflected through the roles his sons played in the myths of human creation and fate, Prometheus, who shaped humans from clay and gave them fire, and Atlas, who was condemned to bear the sky as a consequence of the Titanomachy. Ancient sources record relatively few specific symbols or physical attributes for Iapetus compared to other Titans, though he is often associated with skill and craft through his lineage's close connection to the origins of human technology and knowledge. His personality in myth is portrayed as more passive than his siblings, appearing primarily through the stories of his sons rather than through his own actions.
 
 Iapetus took part in the Titanomachy against the Olympians alongside most of the other Titans, and after their defeat, he was cast into Tartarus with the other rebellious Titans as punishment. His most significant legacy comes through his sons: Prometheus, who stole fire from Olympus to give to humanity and was severely punished by Zeus for it, and Atlas, who was forced to carry the heavens upon his shoulders for eternity. Through this lineage, Iapetus is regarded as a kind of ancestral father of humankind in some ancient Greek traditions, making him an important figure even though he rarely appears directly in the central mythological narratives, his legacy instead carried forward through the far more famous stories of his sons.''',
-    imageUrl: 'assets/images/Greek/Titans/iapetus.jpg',
+    imageUrl: 'assets/images/Greek/Titans/iapetus.webp',
     category: 'Titan',
   ),
   God(
@@ -415,7 +441,7 @@ Hyperion is one of the sons of Uranus (Sky) and Gaia (Earth), belonging to the f
 Hyperion is associated with heavenly light, the sun, and the observation of the sky, a domain later largely inherited by his son, Helios, who personally drives the sun's chariot across the sky each day. Although Hyperion himself is rarely described in detail in ancient sources, he is often regarded as the personification of light itself before this role was gradually passed on to his far more widely known descendants. His personality is portrayed as wise and observant, reflecting his role as overseer of the passage of time through the regular cycles of sun, moon, and dawn.
 
 As the father of Helios, Selene, and Eos, Hyperion plays a crucial role as ancestor to the trio of celestial rulers who govern the cycle of day and night in ancient Greek cosmology, a legacy far more prominent than any action attributed to Hyperion himself in the surviving myths. Like the other Titans, he took part in the Titanomachy against the Olympians led by Zeus, and after the Titans' defeat, his role as ruler of heavenly light was gradually taken over by his own descendants, particularly Helios, who became synonymous with the sun in classical Greek mythology. The name Hyperion was later immortalized in later literary works, including an epic poem by John Keats, making him a lasting symbol of the primordial majesty of light that preceded the age of the Olympian gods.''',
-    imageUrl: 'assets/images/Greek/Titans/hyperion.jpg',
+    imageUrl: 'assets/images/Greek/Titans/hyperion.webp',
     category: 'Titan',
   ),
   God(
@@ -439,7 +465,7 @@ Crius is one of the sons of Uranus (Sky) and Gaia (Earth), belonging to the firs
 Crius is associated with the constellations, measurement, and the ordering of the seasons, a domain reflected through his descendants, particularly Astraeus, who fathered the stars and winds through his union with Eos, goddess of the dawn. As one of the Titans connected to the concept of celestial order and measurement, Crius is often regarded as a personification of the principle of cosmic regularity, though his specific physical attributes or symbols are not described in much detail in Hesiod's Theogony or other classical sources. His personality in myth tends to be sparsely depicted, reflecting his position as one of the first-generation Titans whose role is more cosmological than narrative.
 
 Like the other Titans, Crius took part in the Titanomachy, the great war between the Titans and the Olympians led by Zeus, and after the Titans' defeat, he was cast into Tartarus along with most of his siblings. His most significant legacy is carried forward through his son Astraeus, who together with Eos fathered the Anemoi, the wind gods, and the Astra Planeta, the wandering star gods, making Crius the grandfather of many personifications of the night sky in Greek mythology. Although he rarely appears directly in the central mythological narratives, Crius remains important as part of the Titan cosmological structure that explains the origins of celestial bodies and the ordering of the seasons in the ancient Greek understanding of the universe.''',
-    imageUrl: 'assets/images/Greek/Titans/crius.jpg',
+    imageUrl: 'assets/images/Greek/Titans/crius.webp',
     category: 'Titan',
   ),
   God(
@@ -463,7 +489,7 @@ Coeus is one of the sons of Uranus (Sky) and Gaia (Earth), belonging to the firs
 Coeus is associated with intellect, knowledge, and the celestial axis, a domain that, according to some modern interpretations of Hesiod's Theogony, refers to his role as a personification of reason and inquiry directed toward the heavens. Alongside his wife Phoebe, who governed prophecy, Coeus is regarded as a symbol of wisdom and the axis of thought, though ancient sources provide relatively few direct narrative details about his actions. His personality in myth is portrayed sparsely and more abstractly than other, more narratively active Titans, reflecting his nature as a personification of a philosophical concept rather than a figure with adventures of his own.
 
 Like the other Titans, Coeus took part in the Titanomachy against the Olympians, and after the Titans' defeat, he was cast into Tartarus with most of his siblings as punishment for their rebellion. His most important legacy is carried forward through his daughter Leto, who later became a lover of Zeus and bore Apollo and Artemis, making Coeus the grandfather of two of the most revered Olympian gods in the Greek pantheon. Through this lineage, Coeus, though rarely appearing in active myths himself, holds a significant role as the genealogical link between ancient Titan wisdom and the powers of light and prophecy passed down to his grandchildren in the Olympian generation.''',
-    imageUrl: 'assets/images/Greek/Titans/coeus.jpg',
+    imageUrl: 'assets/images/Greek/Titans/coeus.webp',
     category: 'Titan',
   ),
   God(
@@ -487,7 +513,7 @@ Rhea is the daughter of Uranus (Sky) and Gaia (Earth), belonging to the first ge
 Rhea is associated with fertility, motherhood, and birth, worshipped as the great maternal personification who bore the generation of gods that would rule the world after the age of the Titans ended. She is often associated with lions and a chariot drawn by lions, a tradition that later merged with the worship of the Anatolian goddess Cybele, symbolizing her unshakable maternal strength and authority. Rhea's personality is portrayed as loving yet also brave and resourceful, as shown by her courage in deceiving Cronus to protect her youngest child, an act revealing that beneath her gentleness lay firm resolve.
 
 The most famous myth about Rhea is her role in saving Zeus from his own father: after secretly giving birth to Zeus in a cave in Crete, Rhea wrapped a large stone in swaddling cloth and gave it to Cronus to swallow in place of their child, while the real Zeus was entrusted to nymphs and the divine goat Amalthea to be raised in secret. This act made it possible for Zeus to grow to adulthood, return to challenge Cronus, force him to disgorge his siblings, and ultimately win the Titanomachy to establish the new world order under the Olympians. As mother to the generation of gods who reshaped the course of Greek mythology, Rhea is honored as the "Mother of the Gods," a figure whose courage laid the foundation for the entire rise of Olympus.''',
-    imageUrl: 'assets/images/Greek/Titans/rhea.jpg',
+    imageUrl: 'assets/images/Greek/Titans/rhea.webp',
     category: 'Titan',
   ),
   God(
@@ -511,7 +537,7 @@ Tethys is the daughter of Uranus (Sky) and Gaia (Earth), belonging to the first 
 Tethys is associated with fresh water, rivers, and the source of life, worshipped as the personification of the nurturing power that gives life through the flow of water that fertilizes the earth. She is often depicted as a gentle, maternal figure, in contrast to the fiercer imagery associated with sea gods such as Poseidon, reflecting the calming, life-giving nature of fresh water as opposed to the wild, stormy nature of the open sea. Tethys's personality is portrayed as loving, nurturing, and inclined to keep her distance from the power struggles among generations of gods, a trait reflected in her and Oceanus's choice not to take part in the Titanomachy.
 
 One of Tethys's significant roles in mythology appears in a passage from Homer's Iliad, where Hera visits Tethys and Oceanus, who had raised her during her childhood, revealing a close bond between the Titan and Olympian generations despite their having once been at war. Through her daughters, the Oceanids, including Metis and Styx, Tethys became ancestor to many important figures, including within the lineage leading to the birth of Athena. As mother to thousands of river gods and water nymphs, Tethys remains a central figure in ancient Greek cosmology, explaining the origin of every source of fresh water in the world, a legacy that affirms her role as the "Mother of the World's Rivers" who sustains life on earth.''',
-    imageUrl: 'assets/images/Greek/Titans/tethys.jpg',
+    imageUrl: 'assets/images/Greek/Titans/tethys.webp',
     category: 'Titan',
   ),
   God(
@@ -535,7 +561,7 @@ Theia is one of the twelve original Titans, a daughter of Uranus (Sky) and Gaia 
 As the Titaness of sight and light, Theia personifies the eye's capacity to perceive beauty and the brilliance that radiates from gold, silver, and precious gems. The poet Pindar credits her with giving these metals their shimmering worth, explaining why humans prize gold, silver, and ivory above other materials. She is also linked to divination, since light was believed to illuminate hidden truths and grant clarity of inner vision. Ancient sources describe her as serene and dignified, embodying a light that shines quietly rather than through open conflict.
 
 In Hesiod's Theogony, Theia is described as submitting to the love of Hyperion and bearing three children who excel all others in their brightness. Through this lineage she becomes the grandmother of figures such as Phaethon, whose disastrous attempt to drive his father's sun chariot became one of Greek mythology's cautionary tales. Theia's legacy endures in the ancient association between vision, light, and divine truth, a concept passed down through her more widely known descendants who came to govern the sun, moon, and dawn.''',
-    imageUrl: 'assets/images/Greek/Titans/theia.jpg',
+    imageUrl: 'assets/images/Greek/Titans/theia.webp',
     category: 'Titan',
   ),
   God(
@@ -559,7 +585,7 @@ Phoebe is one of the twelve original Titans, a daughter of Uranus and Gaia born 
 As the Titaness of prophecy, Phoebe embodies divine intellect and the power to foresee the future, and she is often linked to the light of the moon as a symbol of vision piercing the darkness. Her name itself means the bright one or the pure one, an epithet later inherited by her grandson Apollo, who came to be known as Phoebus. She was honored for her calm wisdom and her skill in reading mystical signs, qualities that made her a keeper of sacred knowledge among the Titans.
 
 According to Aeschylus's tragedy Eumenides, Phoebe was the third divine owner of the Oracle at Delphi, a sacred seat of prophecy she inherited from Themis before giving it as a birthday gift to her grandson Apollo. Through this act, Phoebe directly linked her prophetic legacy to one of the most important religious centers of the ancient Greek world. The epithet Phoebus that Apollo carried throughout Greek mythology stands as lasting evidence of his grandmother's influence, making Phoebe a quietly foundational figure despite her rare direct appearances in the major myths.''',
-    imageUrl: 'assets/images/Greek/Titans/phoebe.jpg',
+    imageUrl: 'assets/images/Greek/Titans/phoebe.webp',
     category: 'Titan',
   ),
   God(
@@ -583,7 +609,7 @@ Themis is one of the original Titans, a daughter of Uranus and Gaia who later be
 Themis is the personification of divine law, justice, and the order that governs relations between gods and mortals, distinct from human law because it is eternal and rooted in cosmic will itself. She is often depicted holding a set of scales as a symbol of fair judgment, and she was known for her wisdom in settling disputes and for summoning the gods to their great assemblies on Olympus. Because true justice requires foresight, Themis also possessed the gift of prophecy, making her a trusted advisor to Zeus in many of his most important decisions.
 
 Before Apollo claimed it, the Oracle at Delphi was first guarded by Gaia and then passed to Themis, making her one of the earliest keepers of one of ancient Greece's holiest sites of prophecy. Themis also played a crucial role in warning the gods that Zeus should not marry the sea nymph Thetis, since prophecy foretold that any son born of her would grow stronger than his father, a warning that ultimately spared Zeus the fate of being overthrown by his own son, just as Cronus had overthrown Uranus. As the embodiment of divine justice, Themis's legacy endures into the modern era through concepts of law and fair judgment, her name remaining synonymous with the very idea of justice.''',
-    imageUrl: 'assets/images/Greek/Titans/themis.jpg',
+    imageUrl: 'assets/images/Greek/Titans/themis.webp',
     category: 'Titan',
   ),
   God(
@@ -607,7 +633,7 @@ Mnemosyne is one of the original Titans, a daughter of Uranus and Gaia who perso
 As the Titaness of memory, Mnemosyne represents the mind's ability to store and recall knowledge, language, and experience, a power held in extremely high regard at a time when oral tradition was the only means of passing down history and story. Ancient poets invoked her, or her daughters the Muses, before reciting lengthy verses, since without a powerful memory, great epics such as those of Homer could never have been memorized and transmitted across generations. She is portrayed as dignified and wise, a quiet guardian of the entire oral history of both gods and mortals.
 
 In his Theogony, Hesiod specifically credits Mnemosyne's daughters, the Muses, with inspiring him to record the genealogy of the gods, making Mnemosyne a direct source behind one of the earliest surviving works of Greek literature. In certain ancient Greek religious traditions, particularly the Orphic mystery cults, deceased initiates were instructed to drink from the river of Mnemosyne in the underworld rather than the river Lethe, which caused forgetfulness, so that their souls would retain memory and achieve enlightenment. Mnemosyne's legacy survives today in the modern word mnemonic, a term that directly references her role as the goddess of memory.''',
-    imageUrl: 'assets/images/Greek/Titans/mnemosyne.jpg',
+    imageUrl: 'assets/images/Greek/Titans/mnemosyne.webp',
     category: 'Titan',
   ),
   God(
@@ -631,7 +657,7 @@ Atlas is a second-generation Titan, the son of Iapetus and the Oceanid Clymene, 
 As punishment for leading the Titans in their war against Zeus, Atlas was condemned to the eternal task of bearing the sky upon his shoulders at the western edge of the world, near the garden of the Hesperides. His strength and endurance became legendary because the burden he carried was no ordinary weight but the entire vault of the heavens, which had to be held up without rest to prevent it from crashing down upon the earth. Because of his position beneath the starry sky, Atlas also became associated with astronomy and navigation, since sailors and travelers relied on knowledge of the stars to find their way.
 
 In the story of the twelve labors of Heracles, Atlas plays a key role when Heracles is sent to fetch the golden apples from the garden of the Hesperides; since only a Titan could enter the garden, Heracles offered to hold up the sky while Atlas went to retrieve the apples himself. Atlas nearly refused to take back his burden, but Heracles tricked him into resuming it by asking for a moment to adjust the padding on his shoulders. In another version recorded by Ovid, Atlas was later turned to stone by Perseus using the severed head of Medusa, giving rise to the mythological origin of the Atlas Mountains in North Africa, a legacy that still carries his name today.''',
-    imageUrl: 'assets/images/Greek/Titans/atlas.jpg',
+    imageUrl: 'assets/images/Greek/Titans/atlas.webp',
     category: 'Titan',
   ),
   God(
@@ -655,7 +681,7 @@ Prometheus is a second-generation Titan, the son of Iapetus and Clymene, and the
 Prometheus is widely known as the creator of humanity, whom several sources say he shaped from clay in the likeness of the gods, and as the bringer of fire who stole a spark of the sacred flame from Olympus and hid it inside a hollow fennel stalk to give to mankind. This act made him a symbol of cunning, of rebellion against unjust authority, and of concern for weaker beings. He is portrayed as a clever yet noble-hearted figure, willing to face enormous risk for the sake of the humans he created and cherished.
 
 After stealing fire and tricking Zeus during the division of a sacrificial bull at Mecone, where Prometheus wrapped the bones in tempting fat so that Zeus would choose that portion while leaving humans the more valuable meat, Zeus punished him by chaining him to a rock in the Caucasus Mountains. There, an eagle devoured his liver every day, only for it to regenerate each night, so that the torment continued endlessly until the hero Heracles finally freed him. The story of Prometheus has become one of the most influential myths in Western culture, symbolizing sacrifice for the sake of knowledge and progress, as reflected in major works such as the tragedy Prometheus Bound attributed to Aeschylus.''',
-    imageUrl: 'assets/images/Greek/Titans/prometheus.jpg',
+    imageUrl: 'assets/images/Greek/Titans/prometheus.webp',
     category: 'Titan',
   ),
   God(
@@ -679,7 +705,7 @@ Epimetheus is a second-generation Titan, the son of Iapetus and Clymene, and the
 According to the story told by Plato in his dialogue Protagoras, Epimetheus was given the task by the gods of distributing various abilities to each newly created living creature, such as fur, claws, speed, and strength. Because of his careless and short-sighted nature, he used up the entire supply of special gifts on the animals before it was humanity's turn, forcing Prometheus to step in and give humans fire and intelligence instead. Epimetheus is portrayed as honest and sincere, yet easily persuaded and poorly equipped to recognize danger hidden behind something tempting.
 
 Epimetheus's weakness is most apparent in the story of Pandora, the first woman created at Zeus's command as a punishment for humanity after Prometheus's theft of fire. Although warned by his brother never to accept any gift from Zeus, Epimetheus nonetheless took Pandora as his wife, and when she opened the forbidden jar she carried with her, all manner of suffering, disease, and evil spread throughout the world, leaving only hope trapped inside. From this marriage came Pyrrha, who together with her husband Deucalion, the son of Prometheus, became the only human couple to survive the great flood and afterward the ancestors of a renewed humanity.''',
-    imageUrl: 'assets/images/Greek/Titans/epimetheus.jpg',
+    imageUrl: 'assets/images/Greek/Titans/epimetheus.webp',
     category: 'Titan',
   ),
   God(
@@ -703,7 +729,7 @@ Menoetius is a second-generation Titan, the son of Iapetus and Clymene, and the 
 Menoetius is known as the personification of explosive rage and uncontrolled brute force, a trait that Hesiod describes as making him overweening and prone to acting with recklessness beyond reasonable limits. Unlike the cunning Prometheus or the naive Epimetheus, Menoetius is portrayed as a figure who relied on physical strength and anger rather than wisdom, a character flaw that ultimately led to his downfall. His hubris is treated as a classic case of overstepping boundaries, a transgression that in Greek mythology invariably invites punishment from the gods.
 
 According to Hesiod, during the great Titanomachy between the Titans and Zeus, Menoetius was struck down by Zeus's thunderbolt because of his excessive arrogance and violence, and was then hurled down into the gloom of Erebus in the underworld as punishment for his insolence. His fate stands as one of the clearest examples in Greek mythology of how strength without wisdom and humility leads to ruin, a moral lesson echoed repeatedly throughout Greek tragedy. Though his story is brief, Menoetius remains significant as the fourth of the brothers of Iapetus, representing the darker side of courage unbalanced by reason, in sharp contrast to the cunning of Prometheus or the endurance of Atlas.''',
-    imageUrl: 'assets/images/Greek/Titans/menoetius.jpg',
+    imageUrl: 'assets/images/Greek/Titans/menoetius.webp',
     category: 'Titan',
   ),
 
@@ -728,7 +754,7 @@ Hestia is an Olympian goddess, the eldest child of Cronus and Rhea, though becau
 Hestia is the goddess of the hearth, home, and family, worshipped as the keeper of the sacred fire that burned in every home, temple, and town hall across ancient Greece, symbolizing warmth, security, and family unity. She swore before Zeus to remain a virgin forever after both Apollo and Poseidon sought her hand in marriage, an oath she kept faithfully, making her a symbol of purity and selfless devotion. Because of her calm, humble nature and her lack of interest in power or glory, Hestia was always given the first portion of every offering burned in religious ceremonies, an honor that affirmed her position as the foundation of every household and community.
 
 One of the best-known stories about Hestia is her decision to give up her seat of honor among the twelve principal Olympian gods to Dionysus in order to preserve peace and avoid discord among the gods, an act that reflects her preference for harmony over personal status. Unlike her siblings, who were embroiled in various wars, affairs, and intrigues, Hestia has almost no myths involving personal conflict, since her presence was instead celebrated through the daily rituals of every Greek household, where the hearth fire was never allowed to go out. Her legacy survives in the Roman tradition as Vesta, and even today the concept of home as the center of family life continues to recall Hestia's central role in the everyday life of ancient Greek society.''',
-    imageUrl: 'assets/images/Greek/Olympians/hestia.jpg',
+    imageUrl: 'assets/images/Greek/Olympians/hestia.webp',
     category: 'Olympian',
   ),
 
@@ -753,7 +779,7 @@ According to Hesiod's Theogony, Chaos is the very first entity to come into bein
 As the primordial void, Chaos represents pure, unformed potential, a state that existed before order, before space and time had any clear boundaries. It is not a god with a personality or physical form like the deities that followed, but rather a cosmic condition, an abstract principle that served as the vessel from which all creation was born. Because it exists outside ordinary concepts of time and space, Chaos has no myths of adventure or personal story like the gods born after it, yet its existence remains the absolute foundation of the entire Greek cosmology.
 
 In Hesiod's genealogical framework, the emergence of Chaos marks the zero point of all Greek mythology, the source from which Earth, Sky, Sea, and every subsequent generation of gods eventually branched out. This concept of Chaos went on to influence much of ancient Greek philosophical thought about the origin of the universe, including early cosmogonic ideas that attempted to explain how order could arise from nothingness. The legacy of the word chaos itself survives into modern language, though its meaning has shifted from a primordial empty gap to disorder in everyday usage, an interesting shift from its far calmer and more foundational mythological root.''',
-    imageUrl: 'assets/images/Greek/Primordial/chaos.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/chaos.webp',
     category: 'Primordial',
   ),
   God(
@@ -777,7 +803,7 @@ Gaia is one of the first four primordial beings to emerge from Chaos, and she is
 As Mother Earth, Gaia represents fertility, creation, and the natural forces that sustain all life in the world, worshipped as the source of soil, plants, and everything that grows upon the earth's surface. She is portrayed as a loving maternal figure who is nonetheless firm and unafraid to act when her children are treated unjustly, a trait that appears repeatedly throughout the many myths describing her intervention in the affairs of the gods. Because of her role as the physical foundation of the world, Gaia is often regarded as omnipresent, not confined to any single region, but existing as the earth itself in personified form.
 
 One of the most important stories about Gaia concerns her role in the overthrow of Uranus, when her own husband imprisoned their children, the Cyclopes and Hecatoncheires, deep within her body out of disgust and fear of their power; the furious Gaia then fashioned an adamantine sickle and persuaded her son Cronus to castrate his father in revenge. From the blood spilled by Uranus arose the Erinyes, the Giants, and the Meliae, while from his severed genitals cast into the sea arose Aphrodite. Later, Gaia also turned against Zeus by giving birth to Typhon and supporting the Giants in the Gigantomachy, making her a primordial force that continued to shape the course of Olympian history, and a figure still remembered today as a universal symbol of Mother Earth.''',
-    imageUrl: 'assets/images/Greek/Primordial/gaia.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/gaia.webp',
     category: 'Primordial',
   ),
   God(
@@ -801,7 +827,7 @@ Uranus is the personification of the Sky in Greek mythology, one of the primordi
 As the primordial ruler of the sky, Uranus represents supreme authority over the universe in the earliest age of creation, reigning alongside Gaia before any other generation of gods rose to challenge their authority. He is portrayed as a figure consumed by suspicion and fear of his own children's power, especially the Cyclopes and Hecatoncheires, whose terrifying forms and extraordinary strength unsettled him. This tyrannical nature and fear of his own offspring became the direct cause of his downfall, making Uranus a cautionary figure about the dangers of power exercised through fear and oppression.
 
 Fearing he would be overthrown, Uranus imprisoned the children he found repulsive, the Cyclopes and Hecatoncheires, deep within Gaia's body, an act that enraged Gaia so greatly that she fashioned an adamantine sickle and asked her children to help her overthrow their father. Only Cronus, the youngest Titan, dared accept the task; he ambushed Uranus and castrated him with the sickle, separating Sky from Earth forever and ending Uranus's reign. From the blood that spilled onto the earth arose the Erinyes, the Giants, and the Meliae, while from his severed genitals cast into the sea arose Aphrodite, making the fall of Uranus one of the most decisive events in all of Greek cosmology, since it opened the way for the age of Cronus and the Titans.''',
-    imageUrl: 'assets/images/Greek/Primordial/uranus.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/uranus.webp',
     category: 'Primordial',
   ),
   God(
@@ -825,7 +851,7 @@ Tartarus is one of the first four primordial beings to emerge directly from Chao
 As the personification of the deepest abyss and darkness, Tartarus represents punishment and imprisonment for those who have committed grave offenses against cosmic order, making it a place avoided and feared even by the gods themselves. Its unimaginable depth and impenetrable darkness set it apart from Hades, which functions more as the general resting place for the souls of the dead, while Tartarus is reserved specifically as a prison for the most dangerous and guilty beings. Because of its terrifying and inescapable nature, Tartarus is guarded closely, surrounded by bronze walls and iron gates, making escape from it truly impossible.
 
 After Zeus's victory in the Titanomachy, Tartarus became the prison for Cronus and most of the defeated Titans, who were then guarded closely by the Hecatoncheires on Zeus's orders so that they could never again rise to challenge Olympian rule. Later, Tartarus also became the site of punishment for great sinners of mythology such as Sisyphus, Tantalus, and Ixion, each of whom endured eternal torment as retribution for their offenses against the gods. As the ultimate symbol of cosmic punishment, Tartarus remains an important reference point in Western culture to this day, frequently used as a synonym for hell or a place of eternal torment in countless works of literature and art.''',
-    imageUrl: 'assets/images/Greek/Primordial/tartarus.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/tartarus.webp',
     category: 'Primordial',
   ),
   God(
@@ -849,7 +875,7 @@ In the oldest tradition of Greek mythology, as recorded in Hesiod's Theogony, Er
 As the primordial god of love, Eros represents the force of desire and attraction that drives union, a cosmic power necessary for other primordial beings to unite with one another and give rise to the next generation of gods. Without Eros, according to early Greek cosmogony, there would be no impulse toward further creation, since it was desire that moved Gaia and Uranus, along with other primordial pairs, to unite and multiply. Eros is portrayed as an irresistible force, capable of weakening the mind and resolve of even the strongest beings, a theme that recurs throughout countless love stories in Greek mythology.
 
 Eros's role as a cosmic unifying force is described directly by Hesiod as one of the four first powers that shaped the universe, making him an essential element of the creative process itself rather than merely a god of romance. Over time, mythological tradition began merging this primordial figure with the younger Eros, son of Aphrodite, who appears in popular stories such as the romance between Eros and Psyche recorded by Apuleius. This dual legacy of Eros, as both an ancient cosmic force and an individual god of romantic love, makes him one of the most richly layered figures in Greek mythology, influencing the concept of love within Greek philosophy, including the notion of eros in Plato's thought on ideal love.''',
-    imageUrl: 'assets/images/Greek/Primordial/eros.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/eros.webp',
     category: 'Primordial',
   ),
   God(
@@ -873,7 +899,7 @@ Nyx is the personification of Night, one of the earliest primordial beings born 
 As the goddess of night, Nyx represents darkness, mystery, and a primal power that predates even the authority of the Olympian gods, and although she rarely appears directly in the major myths, her power is described as immense and deeply respected. In Homer's Iliad, even Zeus himself is portrayed as reluctant to anger Nyx, restraining his fury toward Hypnos, who had deceived him, purely to avoid offending the goddess of night. Nyx is often imagined riding a chariot across the sky each night, trailing a cloak of darkness that envelops the world, a figure of majesty, mystery, and one almost untouchable by the power of other gods.
 
 The episode in Book XIV of the Iliad stands as one of the clearest pieces of evidence for Nyx's extraordinary power, when Hera enlisted the help of Hypnos, Nyx's son, to lull Zeus to sleep, and upon discovering the deception, the furious Zeus chose to hold back his wrath because Hypnos fled to his mother's embrace, and Zeus was reluctant to act rashly against Nyx even in his anger. This power, feared even by the king of the gods, confirms Nyx's status as one of the most respected primordial forces in the entire Greek cosmology. Her legacy endures through her many offspring, who personify universal concepts such as death, sleep, and fate, making Nyx a central figure who binds the most fundamental aspects of human experience to the very origin of the universe.''',
-    imageUrl: 'assets/images/Greek/Primordial/nyx.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/nyx.webp',
     category: 'Primordial',
   ),
   God(
@@ -897,7 +923,7 @@ Erebus is the personification of primordial Darkness, born directly from Chaos a
 As the god of darkness, Erebus represents the primordial shadow and thick mist that shrouded the world before the existence of light, and he is also often associated with the darkness that envelops the depths of the underworld. His very name, Erebos, was used by the ancient Greeks to refer to a dark region of the underworld that the souls of the dead had to pass through before reaching the realm of Hades, making Erebus both a personified god and a place name at once. He is portrayed as an almost formless figure, more a quality of darkness itself than a god with a clearly defined personality, and so he rarely appears in narrative myths involving dialogue or direct action.
 
 Because of his highly abstract nature, Erebus is rarely a central character in narrative myth, yet his role as the father of Aether and Hemera together with Nyx places him in an important position as the ancestor of the concepts of light and day, an intriguing irony given that darkness gave rise to light. Some ancient writers, including Hyginus, also record him as the father of several other entities, such as Charon, the ferryman of souls across the river Styx, though these genealogical records vary between sources. The legacy of the name Erebus survives today, widely used in literature and popular culture as a term describing total darkness or the darkest region of the underworld, cementing his position as an enduring symbol of mystery and primordial shadow.''',
-    imageUrl: 'assets/images/Greek/Primordial/erebus.jpg',
+    imageUrl: 'assets/images/Greek/Primordial/erebus.webp',
     category: 'Primordial',
   ),
 
@@ -922,7 +948,7 @@ Helios is a second-generation Titan, the son of Hyperion and Theia, and the brot
 Each day, Helios is depicted driving his golden chariot, drawn by four fiery horses, across the sky, radiating sunlight that illuminates the entire world, before descending in the west and sailing back to the east through the ocean encircling the earth each night in a giant golden cup. Because of his elevated position in the sky, Helios earned the epithet all-seeing, since from his golden chariot he could witness every event occurring on earth and among the gods, making him an important witness in numerous myths. He is portrayed as meticulous and honest, a god faithfully carrying out his duty without fail, day after day, throughout all time.
 
 Because of his ability to see everything, Helios plays a crucial role in several famous myths: he was the witness who informed Demeter of the abduction of her daughter Persephone by Hades, and he was also the one who revealed to Hephaestus the affair between his wife, Aphrodite, and Ares. One of the most tragic stories involves his son Phaethon, who begged to drive his father's sun chariot for a single day but lost control of it, nearly setting the earth ablaze, until Zeus was forced to strike him down with a thunderbolt to stop the disaster. Helios also fathered Circe and Aeetes, the king of Colchis in the story of Jason and the Argonauts, and in later Classical and Hellenistic Greece he came to be partly merged in character with Apollo, although the two were originally distinct and separate gods in the oldest mythology.''',
-    imageUrl: 'assets/images/Greek/Titans/helios.jpg',
+    imageUrl: 'assets/images/Greek/Titans/helios.webp',
     category: 'Titan',
   ),
   God(
@@ -946,7 +972,7 @@ Selene is a second-generation Titan, the daughter of Hyperion and Theia, and the
 Each night, Selene is depicted driving her silver chariot, drawn by two white horses or sometimes by silver-horned oxen, across the night sky, bathing the world in the soft glow of moonlight. The moonlight she carries is closely linked to the cycles and rhythms of nature, including the ebb and flow of the tides and the calculation of time through the lunar calendar used by the ancient Greeks. Selene is also associated with the realm of dreams, since the night illuminated by her light was considered a time when the boundary between the waking world and the dream world grew thin, a quality that made her a gentle yet deeply mysterious figure.
 
 The most famous story involving Selene is her love for Endymion, a mortal shepherd whose beauty so captivated her that she asked Zeus to grant him eternal sleep so that he would remain forever young, allowing Selene to visit and gaze upon him every night without ever losing him to death. According to some versions of the myth, from these nightly visits Selene bore fifty daughters, understood as personifications of the fifty months that passed between each celebration of the ancient Olympic Games. The love story of Selene and Endymion has become one of the most enduring metaphors in Western literature and art for a love that transcends the boundary of death, while Selene herself remains a lasting symbol of the moon's quiet and yearning beauty.''',
-    imageUrl: 'assets/images/Greek/Titans/selene.jpg',
+    imageUrl: 'assets/images/Greek/Titans/selene.webp',
     category: 'Titan',
   ),
 
@@ -971,7 +997,7 @@ Persephone is the daughter of Zeus, king of the Olympian gods, and Demeter, godd
 As Queen of the Underworld, Persephone represents the eternal cycle of death and rebirth, a power reflected in the yearly turning of the seasons; her presence in the world above brings spring and growth, while her descent into the underworld brings autumn and the barren cold of winter. She is often depicted holding stalks of grain and a pomegranate, symbols of both growth and her binding tie to the underworld, reflecting the two sides of her character, gentle and nurturing as a goddess of fertility, yet firm and authoritative as ruler of the realm of the dead. Persephone governs the underworld alongside her husband Hades, holding full authority over the fate of the souls of the deceased.
 
 The most famous myth involving Persephone, recorded in the Homeric Hymn to Demeter, tells of her abduction by Hades while she was gathering narcissus flowers in a meadow; the grieving Demeter then caused the entire earth to become barren and crops to fail until Zeus intervened and ordered Hades to return her. However, because Persephone had already eaten several pomegranate seeds in the underworld, a bond that could not be fully undone, it was agreed that she would spend a third of the year with Hades in the underworld and the rest with her mother in the world above, a compromise that became the mythological explanation for the changing seasons. Persephone's story later became the foundation for the Eleusinian Mysteries, one of the most revered religious rites of ancient Greece, which promised its initiates understanding of the afterlife through insight into Persephone's own eternal cycle.''',
-    imageUrl: 'assets/images/Greek/Underworld/persephone.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/persephone.webp',
     category: 'Underworld',
   ),
   God(
@@ -995,7 +1021,7 @@ Thanatos is the personification of Death in Greek mythology, a son of Nyx, godde
 Thanatos represents death that is calm and natural, distinct from the Keres, the fierce spirits of death who personify violent death on the battlefield or from sudden illness. He is portrayed as neither cruel nor malicious, but as the bearer of an inevitable peace, carrying out his duty of leading mortal souls to the underworld fairly and without favoring anyone, whether king or commoner. Because of his neutral and certain nature, Thanatos is often regarded as a symbol of the fate of death itself, a force respected even by the gods as an inseparable part of the cosmic order.
 
 One of the most famous myths involving Thanatos concerns Sisyphus, the cunning king who managed to trick and bind Thanatos in his own chains, so that for a time no creature on earth could die, until Ares finally intervened and freed Thanatos because the resulting chaos was disrupting the course of war. In Euripides's tragedy Alcestis, Thanatos also comes to claim Alcestis, a queen who willingly sacrificed her own life in place of her husband's, but he is overcome in a physical struggle by Heracles, who wrestles the queen's life back from his grasp. Through these stories, Thanatos becomes an enduring representation of death as a certain force that can nonetheless be delayed momentarily by extraordinary cunning or courage, an idea that continues to inspire literature and art into the modern era.''',
-    imageUrl: 'assets/images/Greek/Underworld/thanatos.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/thanatos.webp',
     category: 'Underworld',
   ),
   God(
@@ -1019,7 +1045,7 @@ Hypnos is the personification of Sleep in Greek mythology, a son of Nyx, goddess
 Hypnos represents the calm and rest that every living being absolutely requires, bringing relief from daily exhaustion and suffering through the soothing power of his sleep, which can overcome anyone, even the gods themselves. He is portrayed as a gentle, nonviolent figure, often shown with a pair of wings at his temples and carrying a horn filled with a sleep-inducing liquid or a sprig of poppy flowers, symbols of his ability to make anyone fall asleep instantly. Because his power can subdue even the mightiest beings without resistance, Hypnos is regarded as one of the most subtle yet irresistible forces in Greek mythology, able to conquer through gentleness rather than violence.
 
 The most famous story involving Hypnos appears in Book XIV of Homer's Iliad, when Hera persuades him to lull Zeus to sleep so that Poseidon could freely assist the Greek forces in the Trojan War without the king of the gods' knowledge; Hypnos was initially reluctant, having nearly faced severe punishment from Zeus for a similar trick he once played involving Heracles, but he finally agreed after Hera promised him one of the Charites, Pasithea, as his wife. After successfully putting Zeus to sleep, Hypnos immediately fled to the embrace of his mother, Nyx, knowing that even the king of the gods dared not provoke the goddess of night's anger. Hypnos's legacy survives today through modern medical terms such as hypnosis and hypnotic, which derive directly from his name, affirming the enduring influence of the god of sleep on human language and understanding of the subconscious mind.''',
-    imageUrl: 'assets/images/Greek/Underworld/hypnos.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/hypnos.webp',
     category: 'Underworld',
   ),
   God(
@@ -1043,7 +1069,7 @@ Charon is one of the most ancient figures in Greek mythology, traditionally desc
 Charon's principal task is to ferry the souls of the dead across the river Styx or Acheron into the realm of Hades, rowing an old boat that he alone commands. He permits passage only to those whose bodies have received proper burial rites and whose mouths or eyes have been placed with a coin, usually an obolus, as payment for the crossing; those lacking this fare or proper burial are condemned to wander the near shore aimlessly for a hundred years. He is typically portrayed as a grim, elderly boatman in tattered robes, with a stern face and burning eyes, embodying the eternal, merciless, yet impartial nature of his duty, one that spares no soul regardless of rank in life.
 
 One of the most celebrated episodes involving Charon occurs during Heracles' twelfth labor, when the hero descended to the underworld to capture Cerberus; Charon ferried him across despite his being alive, and for this transgression Hades bound him in chains for a full year. Charon also appears in the myth of Orpheus, who charmed him with the music of his lyre and was allowed to cross in search of his wife Eurydice, and in the tale of Psyche, who carried two coins so that she could pay for both the journey there and back. Through later literary works such as Virgil's Aeneid and Dante's Divine Comedy, the image of Charon as the unforgiving ferryman of souls has endured, making him one of the most lasting symbols of death and its passage in Western culture.''',
-    imageUrl: 'assets/images/Greek/Underworld/charon.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/charon.webp',
     category: 'Underworld',
   ),
   God(
@@ -1067,7 +1093,7 @@ Cerberus was born to the union of two primordial monsters, Typhon and Echidna, m
 Cerberus is depicted as a monstrous three-headed hound with serpents writhing from his back and a tail formed of a venomous snake, an appearance designed to inspire both terror and reverence. His task is to guard the gate of the underworld so that souls who have entered can never return to the world of the living, while also preventing the living from trespassing into the realm of death uninvited; he greets newly arrived souls calmly but attacks anyone attempting to leave. His absolute loyalty to Hades and his tremendous strength make him a lasting symbol of the boundary that cannot be crossed between life and death.
 
 The most famous story involving Cerberus is Heracles' twelfth and final labor, in which he was ordered to bring Cerberus up from the underworld without using any weapon; with Hades' permission, Heracles subdued the hound with his bare hands, displayed him before the terrified King Eurystheus, and then returned him to his post. Orpheus once calmed Cerberus's fury with the music of his lyre in order to pass through the gate of the underworld in search of Eurydice, while in Virgil's Aeneid the Sibyl of Cumae drugs him with a honeyed cake so that Aeneas may pass safely. To this day, Cerberus remains one of the most iconic representations of an impenetrable guardian in Western culture, frequently invoked as a symbol of unbreachable vigilance.''',
-    imageUrl: 'assets/images/Greek/Underworld/cerberus.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/cerberus.webp',
     category: 'Underworld',
   ),
 
@@ -1092,7 +1118,7 @@ Amphitrite was one of the fifty Nereids, daughters of Nereus, the wise old man o
 As Queen of the Sea, Amphitrite reigns alongside Poseidon over all waters and the creatures within them, governing waves, currents, and marine life with a calming authority that contrasts with her husband's volatile and often stormy temperament. She is commonly depicted seated on a chariot drawn by sea creatures or dolphins, surrounded by Nereids and Tritons, wearing a crown that signifies her sovereignty over the entire ocean. The dolphin holds special sanctity in her honor, owing to the decisive role it played in the story of her marriage.
 
 When Poseidon first proposed to her, Amphitrite refused and fled to the Atlas mountains to hide from the sea god; Poseidon then sent out messengers, including a dolphin, to search for her, and it was this dolphin that succeeded in persuading her to return and accept his proposal. In gratitude, Poseidon placed the dolphin among the stars as the constellation Delphinus. From her marriage to Poseidon, Amphitrite bore Triton, the herald of the sea, along with daughters such as Rhode and Benthesikyme, making her an important ancestral figure for many beings and places associated with the sea in Greek mythology.''',
-    imageUrl: 'assets/images/Greek/SeaGods/amphitrite.jpg',
+    imageUrl: 'assets/images/Greek/SeaGods/amphitrite.webp',
     category: 'Sea',
   ),
   God(
@@ -1116,7 +1142,7 @@ Triton is the only son of the sea's ruling pair, Poseidon and Amphitrite, born a
 Triton's principal role is that of herald and messenger of the sea, a duty he carries out by blowing a great conch shell whose booming call can either calm or rouse the waves at his father Poseidon's command. When his conch trumpet sounds, raging seas can subside in an instant, or conversely, calm waters can be stirred into turmoil in accordance with the message he carries. This conch shell has become his defining emblem, representing his power to govern the ocean's temper on behalf of his parents.
 
 In Apollonius of Rhodes' Argonautica, Triton plays a crucial part in aiding Jason and the Argonauts after they become stranded in Lake Tritonis in Libya, showing them the passage out to the open sea and presenting Euphemus with a clod of sacred earth that mythology credits as the origin of the colony of Cyrene. He is also frequently depicted accompanying the processions of Poseidon and Amphitrite, sounding his trumpet to announce their arrival among the other sea deities. The name Triton has since been widely adopted in culture as a general term for the half-human, half-fish attendants of the sea who accompany Poseidon.''',
-    imageUrl: 'assets/images/Greek/SeaGods/triton.jpg',
+    imageUrl: 'assets/images/Greek/SeaGods/triton.webp',
     category: 'Sea',
   ),
   God(
@@ -1140,7 +1166,7 @@ Nereus is the eldest son of Pontus, the primordial personification of the sea, a
 Nereus is renowned as an honest, just, and wise deity, qualities rarely associated with other sea gods, who tend to be wilder and more volatile, such as Poseidon. He possesses the gift of accurate prophecy as well as the power to transform himself into countless shapes, from water and fire to wild beasts, an ability he frequently uses to evade anyone attempting to force him to speak. Because of his unwavering honesty, he is believed always to deliver a true prophecy to anyone who manages to hold him fast.
 
 The most famous story concerning Nereus involves Heracles' eleventh labor, when the hero needed to learn the location of the Garden of the Hesperides; Heracles found and seized Nereus while he slept, gripping him tightly even as the god shifted through fire, water, a lion, and a serpent to break free, until Nereus finally relented and gave him the guidance he sought. As the father of Thetis, Nereus is also, indirectly, the grandfather of Achilles, the greatest hero of the Trojan War. The figure of Nereus went on to inspire many later depictions of the wise, elusive sea god found across various mythological traditions.''',
-    imageUrl: 'assets/images/Greek/SeaGods/nereus.jpg',
+    imageUrl: 'assets/images/Greek/SeaGods/nereus.webp',
     category: 'Sea',
   ),
 
@@ -1165,7 +1191,7 @@ Heracles is the son of Zeus, king of the gods, and Alcmene, a mortal woman desce
 Heracles is renowned for his extraordinary physical strength, unmatched courage, and endurance in facing the relentless trials and suffering that marked his life. He is typically depicted wearing the impenetrable pelt of the Nemean Lion as a protective cloak and carrying a great olive-wood club as his primary weapon, two attributes that became his most recognizable identifiers in Greek art and literature. His fortitude in enduring seemingly impossible tasks made him a universal symbol of strength tempered by hard labor and perseverance, rather than raw power alone.
 
 The most famous story of Heracles concerns the Twelve Labors he was compelled to perform as atonement after, driven mad by Hera, he killed his own wife and children; these tasks, assigned by King Eurystheus, included slaying the Nemean Lion, destroying the many-headed Lernaean Hydra, capturing the Ceryneian Hind, subduing the Erymanthian Boar, cleaning the Augean stables, driving off the Stymphalian Birds, capturing the Cretan Bull, taming the Mares of Diomedes, seizing the belt of Hippolyta, herding the cattle of Geryon, retrieving the golden apples of the Hesperides, and finally capturing Cerberus from the underworld. After his death from the poisoned blood of Nessus, unwittingly applied to his cloak by his wife Deianira, Heracles was raised to Mount Olympus and granted immortality, marrying Hebe, goddess of youth. His legacy as both hero and worshipped god makes him one of the most influential figures in the entire history of Western culture.''',
-    imageUrl: 'assets/images/Greek/Heroes/heracles.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/heracles.webp',
     category: 'Hero',
   ),
   God(
@@ -1189,7 +1215,7 @@ Perseus is the son of Zeus and Danaë, a princess of Argos who was imprisoned by
 Perseus grew into a hero renowned for his courage and cunning, most notably in his mission to slay Medusa, the sole mortal Gorgon whose gaze could turn any living creature to stone. To accomplish this perilous task, he received divine assistance in the form of winged sandals from Hermes, a mirror-bright polished shield from Athena, the cap of invisibility belonging to Hades, and a magical pouch along with a curved sword from the nymphs, all of which established him as a hero who relied on divine favor as much as his own ingenuity. Athena's shield proved decisive, allowing Perseus to view Medusa's reflection and avoid meeting her petrifying gaze directly.
 
 After beheading Medusa as she slept, Perseus rescued Andromeda on his journey home, an Ethiopian princess chained to a seaside rock as an offering to the sea monster Cetus, and subsequently married her. He also used Medusa's severed head, which retained its petrifying power, to defeat Polydectes, the king of Seriphos who had tried to force his mother into marriage, turning him and his followers to stone. Perseus later unwittingly fulfilled the old prophecy by killing his grandfather Acrisius when a discus he threw during a competition went astray, and he would go on to be remembered as the founder of the city of Mycenae and the ancestor of the line that would eventually produce Heracles.''',
-    imageUrl: 'assets/images/Greek/Heroes/perseus.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/perseus.webp',
     category: 'Hero',
   ),
   God(
@@ -1213,7 +1239,7 @@ Theseus is the son of Aegeus, king of Athens, and Aethra, a princess of Troezen,
 On his overland journey to Athens, Theseus demonstrated his courage and intelligence by defeating a series of bandits and monsters terrorizing the road, including Procrustes, who forced travelers to sleep on an iron bed and mutilated or stretched their bodies to fit it, and Sinis, the pine-bender. As a leader who combined boldness with wisdom, Theseus would later be remembered not merely as a warrior hero but also as the king who unified the scattered communities of Attica into a single city-state of Athens, a process known as synoikismos.
 
 The most famous story of Theseus is his courage in volunteering as one of fourteen Athenian youths sent as tribute to the Minotaur in Crete; with the aid of a ball of thread given to him by Ariadne, daughter of King Minos, who had fallen in love with him, Theseus successfully navigated Daedalus's Labyrinth, slew the Minotaur, and led his companions safely back out. On the voyage home, however, he forgot to replace his ship's black sails with white ones as previously agreed to signal his survival, so that Aegeus, watching from a cliff and seeing the black sails, believed his son had perished and threw himself into the sea, which has since been named the Aegean Sea in his memory.''',
-    imageUrl: 'assets/images/Greek/Heroes/theseus.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/theseus.webp',
     category: 'Hero',
   ),
   God(
@@ -1237,7 +1263,7 @@ Achilles is the son of Peleus, mortal king of Phthia, and Thetis, a Nereid so re
 Achilles is known as the leader of the Myrmidons and the greatest warrior of the Trojan War, possessing speed, strength, and courage far surpassing any other mortal soldier, so much so that he was widely considered nearly unbeatable in single combat. He held honor and glory, or kleos, in the highest regard, a value that drives his every action throughout Homer's Iliad, even as he must choose between a long, unremembered life and a short one immortalized in memory forever. The combination of his extraordinary combat prowess and his single point of vulnerability at the heel has made him an enduring symbol of heroism that remains fragile beneath an appearance of invincibility.
 
 The most famous story of Achilles centers on his wrath, the central theme of the Iliad, which begins when Agamemnon seizes Briseis, his war captive, causing Achilles to withdraw from battle and allow the Greek forces to be driven back by Troy. He returns to combat only after his closest companion, Patroclus, wearing his armor, is killed by Hector, prince of Troy; consumed by grief and rage, Achilles kills Hector in single combat and drags his body around the walls of Troy in vengeance, before finally returning the body to King Priam at his plea. Achilles himself is ultimately killed by an arrow from Paris, guided by Apollo directly to his heel, a story that remains to this day one of the most influential narratives of heroism and tragedy in world literature.''',
-    imageUrl: 'assets/images/Greek/Heroes/archilles.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/archilles.webp',
     category: 'Hero',
   ),
   God(
@@ -1261,7 +1287,7 @@ Odysseus is the son of Laertes and Anticlea, king of Ithaca, renowned not for ph
 Odysseus is famed for his cunning, eloquence, and capacity for devising strategies that far outweigh mere physical strength, a quality the Greeks called metis. He is likewise known for his endurance through years of suffering and his unshakeable devotion to a single goal, returning home to his family in Ithaca, despite facing one obstacle after another along the way. His leadership of his soldiers and crew, though it often ends tragically for his men, still establishes him as the archetypal hero who relies on wit rather than brawn.
 
 Odysseus's most celebrated contribution to the Greek victory was the idea of the Trojan Horse, the ruse that allowed Greek soldiers to infiltrate the city of Troy after ten years of failed siege and finally conquer it. His ten-year journey home, recounted in Homer's Odyssey, is filled with perilous adventures, including blinding the Cyclops Polyphemus through the trick of calling himself Nobody, resisting the Sirens' song by having himself bound to the mast, and being held captive for seven years by the nymph Calypso, before finally arriving back in Ithaca and disposing of the suitors harassing his wife Penelope through an archery contest that only he could win.''',
-    imageUrl: 'assets/images/Greek/Heroes/odysseus.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/odysseus.webp',
     category: 'Hero',
   ),
 
@@ -1286,7 +1312,7 @@ Medusa is one of three Gorgon sisters, alongside Stheno and Euryale, daughters o
 As a Gorgon, Medusa possesses a terrifying visage with hissing living serpents for hair, sharp fangs, and scaled skin, but her most fearsome feature is her gaze, which can instantly turn any living creature to stone. Though generally regarded as a fearsome monster, her severed head was later placed by Athena upon her aegis, or shield, as the Gorgoneion, an apotropaic symbol meant to ward off evil, making Medusa a dual figure representing both terror and protection at once. Her story is also frequently read as a representation of a victim unjustly punished for a crime committed against her.
 
 The most famous story of Medusa is her death at the hands of Perseus, who, aided by Athena's polished shield, beheaded her without ever looking directly at her, using the reflection as a shield against her curse. From the blood spilled as her head was severed sprang Pegasus, the winged horse, and Chrysaor, both offspring of her earlier union with Poseidon that had remained hidden within her body. Medusa's severed head, which retained its petrifying power even after her death, was subsequently used by Perseus in several other significant events, including his defeat of Polydectes, before finally being given to Athena and mounted permanently upon her shield.''',
-    imageUrl: 'assets/images/Greek/Monsters/medusa.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/medusa.webp',
     category: 'Monster',
   ),
   God(
@@ -1310,7 +1336,7 @@ The Minotaur, whose true name was Asterion, was born from the unnatural union be
 Because of his terrifying appearance and savage nature, the Minotaur was confined by Minos within the Labyrinth, a vast structure of bewildering passages specially designed by Daedalus so that anyone who entered could never find their way back out. The Minotaur consumed human flesh offered to him periodically, making him a symbol of pure brutality born from a transgression against the will of the gods and a punishment inflicted upon innocent offspring for the sins of their parents. His confinement within the nearly impenetrable Labyrinth made this monster a symbol of hidden danger, one that could scarcely be overcome without outside help.
 
 After Minos's son Androgeus died in Athens, Minos compelled the city to send seven young men and seven young women every few years as tribute to the Minotaur within the Labyrinth. Theseus, prince of Athens, volunteered to join one such group of tributes with the determination to kill the Minotaur, and succeeded in finding his way out of the Labyrinth thanks to a ball of thread given to him by Ariadne, Minos's daughter, who had fallen in love with him. Theseus's victory over the Minotaur ended that terrible tradition of human sacrifice and became one of the most famous heroic tales in Greek mythology, frequently held up as a symbol of reason and courage triumphing over uncontrolled savage power.''',
-    imageUrl: 'assets/images/Greek/Monsters/minotaur.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/minotaur.webp',
     category: 'Monster',
   ),
   God(
@@ -1334,7 +1360,7 @@ The Chimera was born to two of the most feared primordial monsters in Greek myth
 The Chimera is depicted as a hybrid creature with the main body of a lion, a goat's head protruding from its back, and a tail formed of a serpent or dragon, along with the ability to breathe fire from its mouth, making it a lethal threat to anyone who came near. Its triple form makes it a symbol of natural chaos exceeding the ordinary boundaries of living creatures, a monster whose very existence challenges the orderly structure of the world. Because of this unnatural combination of forms, the name chimera has since entered modern language to describe any unnatural fusion of disparate elements, or something considered impossible.
 
 The most famous story of the Chimera is its defeat at the hands of Bellerophon, a hero sent by King Iobates of Lycia in the secret hope that he would perish on the mission. With the aid of Pegasus, the winged horse he managed to tame using a golden bridle given by Athena, Bellerophon attacked the Chimera from the air, beyond the reach of its fire and claws, and thrust a lead-tipped spear into its fire-breathing mouth; the heat of the flames melted the lead, choking the monster's throat and killing it from within. This victory established Bellerophon as one of the great heroes of Greece, and the story of the Chimera continues to be passed down as a classic example of a hybrid monster that could only be overcome through cunning rather than strength alone.''',
-    imageUrl: 'assets/images/Greek/Monsters/chimera.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/chimera.webp',
     category: 'Monster',
   ),
   God(
@@ -1358,7 +1384,7 @@ The Hydra, more properly known as the Lernaean Hydra, was born to Typhon and Ech
 The Hydra is depicted as a giant many-headed serpent whose breath and blood are so venomous that even its scent alone could kill. The Hydra's most terrifying trait is its regenerative ability, for whenever one of its heads was severed, two new heads would grow in its place, while one head among them all was immortal and could not be destroyed by ordinary means. This regenerative nature makes the Hydra a symbol of a threat that only multiplies when handled incorrectly, a monster that could be overcome only through strategy rather than strength alone.
 
 The most famous story of the Hydra is its defeat during Heracles' second labor, which initially proved difficult because every head he severed was replaced by two new ones; with the help of his nephew Iolaus, who cauterized each neck wound with a torch immediately after a head was cut off to prevent regrowth, Heracles finally subdued the Hydra and buried its immortal head beneath a massive boulder. After this victory, Heracles dipped the tips of his arrows into the Hydra's highly venomous blood, making his weapons lethal for the rest of his life, a weapon that would later, through the same poison carried in the blood of the centaur Nessus, unwittingly cause his own death.''',
-    imageUrl: 'assets/images/Greek/Monsters/hydra.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/hydra.webp',
     category: 'Monster',
   ),
   God(
@@ -1382,7 +1408,7 @@ The Sphinx of Greek mythology, particularly the well-known Theban version, is ge
 The Sphinx is depicted as a hybrid creature with the head and face of a woman, the body of a lion, the wings of an eagle, and sometimes the tail of a serpent, a form combining human intelligence with the strength and terror of a wild beast. She was widely known for waylaying travelers passing through Thebes and posing a riddle that had to be answered correctly; anyone who failed was strangled and devoured on the spot. This combination of intelligence and lethal power made the Sphinx a symbol of the mysterious guardian who tests wisdom before permitting anyone to cross the boundary she watches.
 
 The Sphinx's most famous riddle asks, what creature walks on four legs in the morning, two legs at noon, and three legs in the evening, a question that claimed many lives among the people of Thebes before it was finally answered correctly by Oedipus, who explained that the answer was man, who crawls on four limbs as an infant, walks upright on two legs in adulthood, and uses a cane as a third leg in old age. This defeat caused the Sphinx to hurl herself from the rocky hill to her death, while Oedipus was rewarded with the throne of Thebes and married the widowed queen Jocasta, who, unbeknownst to him, was his own mother, a chain of events that would become the core of Sophocles' great tragedy Oedipus Rex.''',
-    imageUrl: 'assets/images/Greek/Monsters/sphinx.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/sphinx.webp',
     category: 'Monster',
   ),
   God(
@@ -1406,7 +1432,7 @@ The Sirens in Greek mythology are generally regarded as daughters of the river g
 In classical Greek art and literature, the Sirens are depicted as creatures half woman and half bird, dwelling on a rocky island surrounded by the bones of the sailors they had claimed. Their principal power lies in their song, so enchanting that anyone who hears it is compelled to draw near, steering their ship toward the rocks, and ultimately perishing. The Sirens' song symbolizes temptation that appears beautiful yet leads to destruction, a classic warning about danger concealed beneath alluring beauty.
 
 The most famous story of the Sirens appears in Homer's Odyssey, when Odysseus, wishing to hear their song without perishing, orders his crew to plug their ears with beeswax while he himself is bound tightly to the ship's mast, instructing them not to release him no matter how he might beg. In the Argonautica, the Argonauts sailing past the Sirens' island are saved by Orpheus, who plays his own lyre so beautifully that it overpowers and drowns out the Sirens' song. Both stories have made the Sirens an enduring symbol of temptation that must be resisted through discipline, reason, or an even greater art.''',
-    imageUrl: 'assets/images/Greek/Monsters/sirens.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/sirens.webp',
     category: 'Monster',
   ),
   God(
@@ -1430,7 +1456,7 @@ The term Cyclops actually encompasses two distinct groups in Greek mythology. Th
 The defining trait of all Cyclopes is their gigantic body with a single large eye set in the middle of the forehead, the source of their name, which means round-eyed in Greek. The three primordial Cyclopes were renowned as master smiths with extraordinary skill in forging the most powerful weapons in the world, while the later Cyclopes, such as Polyphemus, were known instead for their brutal physical strength and wild nature, far removed from civilization. This combination of gigantic strength and forging skill makes the figure of the Cyclops a varied one, symbolizing both the raw power of nature and extraordinary craftsmanship.
 
 In gratitude for the freedom Zeus granted them, the three primordial Cyclopes forged the thunder and lightning bolt for Zeus, the trident for Poseidon, and the cap of invisibility for Hades, three weapons that proved decisive in the Olympian gods' victory over the Titans in the Titanomachy. The most famous Cyclops story, however, is Odysseus's encounter with Polyphemus, who trapped Odysseus and his men inside his cave and devoured several of them, before finally being blinded by Odysseus with a sharpened, heated wooden stake, after having first been deceived by the false name Nobody so that the other Cyclopes would not come to his aid.''',
-    imageUrl: 'assets/images/Greek/Monsters/cyclops.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/cyclops.webp',
     category: 'Monster',
   ),
 
@@ -1455,7 +1481,7 @@ Mount Olympus is the highest mountain in Greece, situated on the border between 
 Mount Olympus is described as a magnificent palace where the twelve principal Olympian gods, led by Zeus, hold their thrones and convene to deliberate on the affairs of the world and the fate of humankind. There the gods feast on nectar and ambrosia, the food and drink of immortality forbidden to mortal beings, while grand palaces were constructed by Hephaestus, the god of the forge, for each resident of Olympus. As a symbol of the highest divinity and majesty, Mount Olympus represents an ordered cosmic structure, standing in contrast to the chaos that characterized the earlier reign of the Titans.
 
 In addition to serving as the setting for the Titanomachy, Mount Olympus was also the site of the Gigantomachy, the great battle between the Olympian gods and the Giants, who sought to seize control of the cosmos, another victory that cemented the Olympian gods' position as the rightful rulers of the universe. The name Olympian, attached to the principal gods of Greece, continues to this day to be used widely in culture, literature, and modern language to describe something magnificent, majestic, or beyond ordinary human capability, a direct legacy of this mountain's standing as the dwelling place of the gods in ancient Greek mythology.''',
-    imageUrl: 'assets/images/Greek/Cosmology/mount.jpg',
+    imageUrl: 'assets/images/Greek/Cosmology/mount.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1479,7 +1505,7 @@ The Underworld in Greek mythology is the realm of the dead located deep beneath 
 The Underworld is crossed by five rivers, each carrying its own symbolic meaning: the Styx, river of sacred oaths; the Acheron, river of woe; the Cocytus, river of wailing; the Phlegethon, river of fire; and the Lethe, river of forgetfulness. The realm is divided into several regions, including the Asphodel Meadows for ordinary souls, Elysium for heroes and the righteous, and Tartarus, the deepest abyss, which serves as a place of punishment for wicked souls and a prison for the defeated Titans. Three judges, Minos, Rhadamanthus, and Aeacus, weigh the deeds of each soul to determine which region they will be sent to, while Cerberus guards the gate to ensure no one leaves without permission.
 
 Several heroes are recorded as having entered and returned from the Underworld while still alive, a rare feat known as a catabasis, including Orpheus, who descended to bring back his wife Eurydice, Heracles, who captured Cerberus as his final labor, and Odysseus, who visited it to consult the prophetic spirit of Tiresias, as recounted in the Odyssey. The myth of Persephone's abduction by Hades, which subsequently compels her to spend a third of each year in the Underworld, also serves as the mythological explanation for the changing of the seasons, making the Underworld not merely a realm of death but an inseparable part of the cycle of life in the world above.''',
-    imageUrl: 'assets/images/Greek/Cosmology/underworld.jpg',
+    imageUrl: 'assets/images/Greek/Cosmology/underworld.webp',
     category: 'Cosmology',
   ),
   God(
@@ -1503,7 +1529,7 @@ The river Styx is one of the primordial rivers in Greek mythology that encircles
 According to Hesiod's Theogony, Styx married the Titan Pallas and bore four children, Nike, meaning victory, Kratos, meaning strength, Bia, meaning force, and Zelus, meaning rivalry, all of whom sided with Zeus in the Titanomachy, prompting Zeus to grant Styx the special honor of serving as the guarantor of the gods' most sacred oaths. An oath sworn upon the river Styx was considered absolutely unbreakable; any god who dared violate it would be punished with a year of unconsciousness followed by nine years of exile from Mount Olympus. Its waters were also believed to possess a mystic power capable of granting extraordinary invulnerability to anyone submerged in them.
 
 The most famous story associated with the river Styx is when Thetis dipped her son Achilles into its waters while holding him by the heel to render his body invulnerable to weapons, leaving the untouched heel as his single point of weakness, a tale that gave rise to the expression Achilles heel still used today. Charon, the ferryman of souls, traditionally carries the spirits of the dead across this river into the Underworld, making the Styx the final gate that must be crossed before fully entering the realm of death. The legacy of the river Styx as a symbol of an unbreakable oath and the boundary between life and death endures across countless works of literature and popular culture to this day.''',
-    imageUrl: 'assets/images/Greek/Cosmology/styx.jpg',
+    imageUrl: 'assets/images/Greek/Cosmology/styx.webp',
     category: 'Cosmology',
   ),
 
@@ -1528,7 +1554,7 @@ Hecate is the daughter of two Titans, Perses and Asteria, making her genealogica
 As goddess of magic, sorcery, and crossroads, Hecate was worshipped at liminal places such as three-way road junctions, doorways, and the boundary between the known and unknown world, locations believed to be charged with magical and dangerous power. She is often depicted with three bodies facing outward (Hecate triformis), allowing her to watch all three directions of a crossroads at once, carrying torches to light the darkness and accompanied by black dogs as her faithful companions. Her character is portrayed as mysterious and fully sovereign over liminal things, making her the patroness of witches and anyone dealing with the spirit world, while also being honored as a protector of households, which left offerings for her at their doorsteps each month.
 
 The most famous myth involving Hecate appears in the Homeric Hymn to Demeter, where she is the only witness to hear Persephone's cries as Hades drags her into the underworld; Hecate then helps Demeter search for her daughter by carrying torches through the darkness, and once Persephone is found, Hecate becomes her devoted companion, accompanying her back and forth between the upper and lower worlds with each turning season. Through this role Hecate becomes closely linked to Demeter, Persephone, and Hades, and she is also widely known as the patron of sorceresses such as Medea and Circe in various myths. Her legacy endures today as one of the most iconic symbols of magic, the occult, and mysterious feminine power in Western popular culture.''',
-    imageUrl: 'assets/images/Greek/Underworld/hecate.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/hecate.webp',
     category: 'Underworld',
   ),
   God(
@@ -1552,7 +1578,7 @@ The Erinyes, three goddesses named Alecto, Megaera, and Tisiphone, were born fro
 As goddesses of retribution, the Erinyes hunt down and punish anyone who violates the natural order and sacred oaths, especially those who commit kin-murder, betray guests, or wrong their parents. They are depicted as terrifying figures with hissing serpents for hair, bat-like wings, blood-weeping eyes, and bronze whips in hand, an appearance that reflects their merciless fury toward crimes of blood. Their character is portrayed as utterly uncompromising and immune to bribery or persuasion, pursuing their prey to the brink of madness before finally claiming their life, making them the personification of guilty conscience as much as inescapable primordial justice.
 
 The most famous myth involving the Erinyes is their pursuit of Orestes, son of Agamemnon, after he killed his own mother, Clytemnestra, to avenge his father's murder; this story forms the heart of Aeschylus's Oresteia trilogy, particularly its final part, the Eumenides. Orestes, driven nearly mad by their relentless chase, is ultimately tried at the court of the Areopagus in Athens, where Athena herself casts the deciding vote to acquit him, while the furious Erinyes are persuaded to accept a new role as the Eumenides, the "Kindly Ones," and are granted a permanent shrine beneath the city of Athens. Through this myth the Erinyes come to symbolize the transition from tribal blood-vengeance to formal judicial process, a legacy that makes them one of the most significant figures in the ancient Greek understanding of justice and law.''',
-    imageUrl: 'assets/images/Greek/Underworld/erinyes.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/furies.webp',
     category: 'Underworld',
   ),
   God(
@@ -1576,7 +1602,7 @@ Morpheus is the son of Hypnos, the god of sleep, as recounted by the Roman poet 
 Morpheus's principal power is his ability to assume the form of any human being within a dream with extraordinary perfection, mimicking a person's face, voice, gait, and even small mannerisms so precisely that the dream he creates feels entirely real to the dreamer. His name derives from the Greek word "morphe," meaning "form" or "shape," reflecting his unique dominion over appearance and likeness within the dream world. He is depicted as a winged figure who moves almost without a sound, carrying messages from the gods to sleeping mortals, with a character that is calm, quiet, and subtly cunning in the way he slips into the human subconscious.
 
 The most famous myth involving Morpheus appears in Ovid's Metamorphoses, in the episode of Ceyx and Alcyone: after Ceyx drowns in a storm at sea, the goddess Juno orders Hypnos to send a dream informing his wife, Alcyone, of his death, and Hypnos dispatches Morpheus to carry out the task. Morpheus perfectly assumes the drenched, pallid form of Ceyx, appearing in Alcyone's dream to reveal his own death, a scene so convincing that Alcyone awakens in profound grief and ultimately casts herself into the sea to join her husband, after which the gods transform them both into a pair of halcyon birds, or kingfishers. Though he appears in only a handful of classical sources, Morpheus's name later became so closely tied to the realm of dreams that it was immortalized in the term "morphine," a pain-relieving drug known for inducing sleep and vivid hallucinations.''',
-    imageUrl: 'assets/images/Greek/Underworld/morpheus.jpg',
+    imageUrl: 'assets/images/Greek/Underworld/morpheus.webp',
     category: 'Underworld',
   ),
   God(
@@ -1600,7 +1626,7 @@ Orpheus is the son of Calliope, one of the nine Muses and the patroness of epic 
 Orpheus's principal power lies in music so beautiful that it can tame wild beasts, cause trees to uproot themselves and draw near, halt the flow of rivers, and even soften the hearts of stones. The lyre is his defining symbol, an instrument he carries always and the source of his magical power, while his character is portrayed as gentle and deeply loving, yet also prone to profound despair. He is venerated as the patron of poets and musicians, and a religious movement that grew up around his legend, known as Orphism, elevated music and poetry as a path toward the purification of the soul and understanding of the afterlife.
 
 The most famous myth involving Orpheus is his attempt to save his wife, Eurydice, who died from the bite of a venomous snake shortly after their wedding. Overcome with grief, Orpheus descended into the underworld and played music so sorrowful that it moved Hades and Persephone to pity, and they agreed to let Eurydice return to the world above on one condition: Orpheus must not look back at her until they had both fully reached the surface. Yet at the very threshold of light, overtaken by doubt and longing, Orpheus turned to look a moment too soon, and Eurydice was drawn back into the underworld forever. Orpheus himself later met his death torn apart by the Maenads, female followers of Dionysus, but his severed head, still singing, drifted to the island of Lesbos and became the site of an oracle, cementing his story as one of the most enduring symbols of love, loss, and the power of art in Western cultural heritage.''',
-    imageUrl: 'assets/images/Greek/Heroes/orpheus.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/orpheus.webp',
     category: 'Hero',
   ),
   God(
@@ -1624,7 +1650,7 @@ Bellerophon is the grandson of Sisyphus, the cunning king famously condemned to 
 Bellerophon's central power came not from divine strength but from his courage in taming Pegasus, the magical winged horse born from the blood of Medusa, with the help of a golden bridle given to him by Athena, who appeared to him in a dream after he spent a night sleeping in her temple. With Pegasus as his mount, Bellerophon could soar through the sky, making the winged horse his defining symbol as well as an emblem of human courage and ambition reaching beyond mortal limits. His character is portrayed as bold and resourceful in the face of seemingly impossible tasks, yet also carrying a seed of pride that grew steadily with each of his triumphs, a trait that would ultimately become the cause of his own downfall.
 
 The most famous myth involving Bellerophon is his defeat of the Chimera, a fire-breathing monster with the head of a lion, the body of a goat, and a serpent's tail, after King Iobates of Lycia sent him to face the creature secretly hoping Bellerophon would be killed, a plot set in motion by a sealed letter from King Proetus requesting his death over his wife's false accusation. Bellerophon killed the Chimera by thrusting a lead-tipped spear into its throat, which melted from the monster's own fiery breath and choked it from within. Yet success after success made Bellerophon arrogant, and he attempted to fly Pegasus all the way to Mount Olympus to join the company of the gods, an act of hubris that enraged Zeus, who sent a gadfly to sting Pegasus, throwing Bellerophon back down to earth crippled and disgraced, to live out his remaining years as a lonely wanderer shunned by the gods, a story that has since stood as an enduring warning against the dangers of hubris.''',
-    imageUrl: 'assets/images/Greek/Heroes/bellerophon.jpg',
+    imageUrl: 'assets/images/Greek/Heroes/bellerophon.webp',
     category: 'Hero',
   ),
   God(
@@ -1648,7 +1674,7 @@ Typhon is the youngest son of Gaia, the earth, and Tartarus, the darkest region 
 Typhon is described as a terrifying being with a hundred dragon heads, each producing a different sound, from the roar of a lion to the hiss of a serpent, a lower body made of countless coiling serpents, and vast wings that darkened the sky when he took flight. Fire and molten rock poured from his mouths, while his roars and the beating of his wings could stir devastating storms that shook both sea and land at once, making fire and storm his most terrifying attributes. His nature is portrayed as the purest personification of primordial chaos, a wild force that refused to submit to any cosmic order, even the order Zeus himself had established.
 
 The most famous myth involving Typhon is his battle against Zeus for supremacy over the cosmos, a cataclysmic struggle that, according to Hesiod, sent the other gods fleeing to Egypt in terror, and in some versions of the myth Zeus himself was gravely wounded after Typhon managed to steal his sinews or his thunderbolt weapon. Zeus ultimately rallied and overpowered Typhon with an unrelenting barrage of thunderbolts, chasing him all the way to Sicily and finally burying him alive beneath Mount Etna, which the ancient Greeks believed to be the source of volcanic eruptions whenever Typhon struggled beneath the earth. Together with his mate, Echidna, Typhon fathered nearly all the great monsters of Greek mythology, including Cerberus, the Lernaean Hydra, the Chimera, and Orthrus, making him the ancestral source of nearly every fearsome creature later faced by Greek heroes.''',
-    imageUrl: 'assets/images/Greek/Monsters/typhon.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/typhon.webp',
     category: 'Monster',
   ),
   God(
@@ -1665,14 +1691,14 @@ Echidna adalah makhluk purba yang menurut Hesiod dalam Theogony lahir dari Phorc
 
 Wujud Echidna sendiri adalah perpaduan dua rupa yang saling bertentangan: bagian atas tubuhnya berupa wanita cantik dengan wajah menawan, sementara bagian bawahnya berupa tubuh ular raksasa yang berbintik-bintik dan bersisik, sebuah kombinasi yang melambangkan tipu daya di balik keindahan yang menyembunyikan bahaya mematikan. Ia dikenal sebagai pemakan daging mentah, tinggal menyendiri di kegelapan gua, dan jarang muncul di hadapan dewa maupun manusia, mencerminkan sifatnya yang liar, tersembunyi, namun penuh naluri keibuan yang kuat terhadap keturunannya yang buas. Meski demikian, Echidna tidak pernah benar-benar menjadi tokoh sentral dalam mitos aksi seperti anak-anaknya, melainkan lebih dikenal sebagai sumber asal-usul mereka.
 
-Bersama Typhon, Echidna melahirkan hampir semua monster paling terkenal dalam mitologi Yunani, termasuk Cerberus si anjing penjaga dunia bawah berkepala tiga, Hydra dari Lerna yang berkepala banyak dan beracun, Chimera yang kelak dikalahkan Bellerophon, Orthrus si anjing berkepala dua, serta dalam sebagian tradisi juga Sphinx dan Singa Nemea yang kelak menjadi lawan Heracles. Menurut Hesiod, Echidna akhirnya dibunuh saat tertidur oleh Argus Panoptes, raksasa bermata seratus yang melihat segalanya, mengakhiri hidup makhluk yang telah melahirkan begitu banyak ancaman bagi dunia para pahlawan. Warisan Echidna sebagai leluhur monster menjadikannya figur penting dalam memahami asal-usul hampir setiap makhluk buas yang dihadapi tokoh-tokoh besar seperti Heracles, Bellerophon, dan Oedipus dalam mitologi Yunani klasik.''',
+Bersama Typhon, Echidna melahirkan hampir semua monster paling terkenal dalam mitologi Yunani, termasuk Cerberus si anjing penjaga dunia bawah berkepala tiga, Hydra dari Lerna yang berkepala banyak dan beracun, Chimera yang kelak dikalahkan Bellerophon, Orthrus si anjing berkepala dua, serta dalam sebagian tradisi juga Sphinx dan Singa Nemea yang kelak menjadi lawan Heracles. Menurut Hesiod dalam Theogony, Echidna sendiri bersifat abadi dan tidak pernah menua, dipercaya terus hidup tersembunyi di gua Arima hingga kini, meski sumber lain seperti Bibliotheca karya Pseudo-Apollodorus mencatat tradisi berbeda bahwa ia akhirnya dibunuh saat tertidur oleh Argus Panoptes, raksasa bermata seratus yang melihat segalanya. Warisan Echidna sebagai leluhur monster menjadikannya figur penting dalam memahami asal-usul hampir setiap makhluk buas yang dihadapi tokoh-tokoh besar seperti Heracles, Bellerophon, dan Oedipus dalam mitologi Yunani klasik.''',
     storyEn: '''
 Echidna is a primordial being who, according to Hesiod's Theogony, was born to Phorcys and Ceto, an ancient pair of sea deities who also produced various other monstrous offspring, though other traditions name her as a direct daughter of Gaia and Tartarus, making her both sister and mate to Typhon. She is described as an immortal being who never ages, living hidden far from the sight of both gods and mortals in a cave in the region of Arima, where she was rarely seen by anyone. Because of her role as ancestor to nearly every major monster in Greek mythology, Echidna is widely known by the epithet "Mother of All Monsters," a title that reflects just how central her position is within the lineage of ancient Greece's most fearsome creatures.
 
 Echidna's form itself combines two opposing natures: her upper body is that of a beautiful woman with an alluring face, while her lower body is that of a massive, dappled, scaly serpent, a combination that symbolizes deception lurking behind beauty that conceals deadly danger. She is known to feed on raw flesh, dwelling alone in the darkness of her cave and rarely appearing before gods or mortals, reflecting a nature that is wild and hidden, yet driven by a fierce maternal instinct toward her monstrous offspring. Even so, Echidna herself never became a central figure in action-driven myths the way her children did, and is instead remembered primarily as their point of origin.
 
-Together with Typhon, Echidna gave birth to nearly all of Greek mythology's most famous monsters, including Cerberus, the three-headed hound guarding the underworld, the many-headed and venomous Lernaean Hydra, the Chimera later defeated by Bellerophon, the two-headed hound Orthrus, and in some traditions also the Sphinx and the Nemean Lion, later opponents of Heracles. According to Hesiod, Echidna was ultimately slain in her sleep by Argus Panoptes, the hundred-eyed giant who saw all things, ending the life of a creature who had brought forth so many threats to the world of heroes. Echidna's legacy as the mother of monsters makes her a key figure for understanding the origins of nearly every fearsome creature confronted by great figures such as Heracles, Bellerophon, and Oedipus in classical Greek mythology.''',
-    imageUrl: 'assets/images/Greek/Monsters/echidna.jpg',
+Together with Typhon, Echidna gave birth to nearly all of Greek mythology's most famous monsters, including Cerberus, the three-headed hound guarding the underworld, the many-headed and venomous Lernaean Hydra, the Chimera later defeated by Bellerophon, the two-headed hound Orthrus, and in some traditions also the Sphinx and the Nemean Lion, later opponents of Heracles. According to Hesiod's Theogony, Echidna herself is immortal and never ages, believed to still live hidden in her cave at Arima to this day; other, later sources such as Pseudo-Apollodorus's Bibliotheca record a different tradition in which she was ultimately slain in her sleep by Argus Panoptes, the hundred-eyed giant who saw all things. Echidna's legacy as the mother of monsters makes her a key figure for understanding the origins of nearly every fearsome creature confronted by great figures such as Heracles, Bellerophon, and Oedipus in classical Greek mythology.''',
+    imageUrl: 'assets/images/Greek/Monsters/echidna.webp',
     category: 'Monster',
   ),
   God(
@@ -1696,7 +1722,7 @@ Scylla was originally a beautiful sea nymph, but according to most sources she w
 Scylla is depicted as a terrifying six-headed monster with long, snaking necks, each head lined with three rows of sharp teeth, and twelve tentacle-like legs, lurking within a high cave on a cliff face to snatch sailors from ships that passed too close. Charybdis, by contrast, takes no bodily form at all but exists as a colossal whirlpool that three times a day draws in enormous volumes of seawater and then violently expels it again, capable of swallowing an entire ship along with its crew. Because the two dwell so close together within the same narrow strait, sailors attempting to avoid one were almost certain to be caught by the other, making the pair an enduring symbol of being trapped between two equally deadly dangers.
 
 The most famous myth involving Scylla and Charybdis appears in Homer's Odyssey, when Odysseus, on his homeward voyage, is warned by Circe that it is better to lose a few crewmen to Scylla than to risk losing the entire ship to the whirlpool of Charybdis. Odysseus steers his ship closer to Scylla's cliff, and although he stands ready with weapons in hand, the six-headed monster still manages to snatch and devour six of his men before his own eyes, a bitter sacrifice made to save the rest of the ship and its crew. This episode gave rise to the idiom "between Scylla and Charybdis," still used today in English and many other languages to describe being caught between two equally risky choices, making these two monsters one of the most enduring legacies of Greek mythology in everyday language.''',
-    imageUrl: 'assets/images/Greek/Monsters/scylla_charybdis.jpg',
+    imageUrl: 'assets/images/Greek/Monsters/scylla_charybdis.webp',
     category: 'Monster',
   ),
   God(
@@ -1720,7 +1746,7 @@ Thetis is one of the fifty Nereids, sea nymphs who are daughters of Nereus and D
 As a Nereid, Thetis holds power over the sea and can shift her shape at will, an ability she used to resist Peleus when he first tried to win her as his bride, before finally yielding after Peleus managed to hold on to her through a series of wild transformations, including fire, water, and ferocious beasts. Her symbolism is closely tied to sea waves and ocean depths, reflecting a nature that appears calm on the surface yet conceals great power beneath, alongside a maternal devotion that would later run extraordinarily deep toward her son. Her character is portrayed as loving yet fiercely determined and courageous, unafraid to approach Olympus alone to plead for justice on behalf of those she loves.
 
 From her marriage to Peleus, Thetis bore Achilles, the greatest hero of the Trojan War, and attempted to make him invulnerable by dipping him into the River Styx shortly after his birth, holding him firmly by the heel, which remained the one vulnerable part of his body, the origin of the enduring phrase "Achilles' heel." In Homer's Iliad, Thetis plays a pivotal role by approaching Zeus and pleading with him to humiliate the Greek forces in retribution for Agamemnon's insult to Achilles, and after Achilles's close companion Patroclus is killed and his armor stripped from his body, Thetis travels to the forge of Hephaestus to commission magnificent new armor and a shield for her son. Her role as a mother tirelessly championing her son's fate makes Thetis one of the most influential maternal figures in Greek epic, as well as a vital link between the world of the gods and the world of mortal heroes.''',
-    imageUrl: 'assets/images/Greek/SeaGods/thetis.jpg',
+    imageUrl: 'assets/images/Greek/SeaGods/thetis.webp',
     category: 'Sea',
   ),
   God(
@@ -1744,7 +1770,7 @@ Proteus is an ancient sea god whose exact origins are not entirely clear across 
 Proteus's most famous power is his ability to transform into anything he wishes, from wild beasts such as lions and boars to natural elements such as fire and water, and even into a tree, a gift that makes him nearly impossible for anyone to capture. He also possesses an unerringly accurate gift of prophecy, able to foresee the future with precision, but his lazy and reluctant nature means he almost never volunteers his knowledge willingly. His character is portrayed as cunning yet honest once truly cornered, meaning the only way to force him to speak is to seize and hold onto him tightly through the entire sequence of forms he assumes in his attempts to escape.
 
 The most famous myth involving Proteus appears in Homer's Odyssey, when Menelaus, king of Sparta, finds himself stranded on the island of Pharos during his voyage home from Troy and is told by Eidothea, Proteus's daughter, that the only way to secure his passage home is to force her father to reveal the secrets of the sea. Menelaus and his men disguise themselves in sealskins and ambush Proteus while he counts his flock at midday, holding on tightly as the god transforms in succession into a lion, a serpent, a leopard, a boar, water, and a tree, until he finally relents and returns to his true form. Proteus then reveals the offerings Menelaus must make to the gods to sail home safely, and also discloses the fates of other Greek heroes, including the murder of Agamemnon by his own wife, making this episode one of the most famous examples in Greek myth of divine knowledge that must be seized rather than simply requested.''',
-    imageUrl: 'assets/images/Greek/SeaGods/proteus.jpg',
+    imageUrl: 'assets/images/Greek/SeaGods/proteus.webp',
     category: 'Sea',
   ),
 ];

@@ -1,3 +1,5 @@
+import '../l10n/language_provider.dart';
+
 class QuizQuestion {
   final String question;
   final String questionEn;
@@ -13,6 +15,6 @@ class QuizQuestion {
     required this.correctIndex,
   });
 
-  String localizedQuestion(String lang) => lang == 'id' ? question : questionEn;
-  List<String> localizedOptions(String lang) => lang == 'id' ? options : optionsEn;
+  String localizedQuestion(String lang) => localize(lang, question, questionEn);
+  List<String> localizedOptions(String lang) => lang == 'en' ? optionsEn : options;
 }

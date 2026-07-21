@@ -92,6 +92,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
     _battleTimer = Timer.periodic(const Duration(milliseconds: 16), (t) {
       final elapsed = DateTime.now().millisecondsSinceEpoch - startMs;
       final progress = (elapsed / 3000.0).clamp(0.0, 1.0);
+      if (!mounted) { t.cancel(); return; }
       setState(() => _battleProgress = progress);
       if (progress >= 1.0) {
         t.cancel();
@@ -127,6 +128,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildHeader(lang),
             Expanded(
@@ -145,48 +147,45 @@ class _GodBattleScreenState extends State<GodBattleScreen>
   // ─── Header ─────────────────────────────────────────────
   Widget _buildHeader(String lang) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 12, 20, 10),
-      child: Row(
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           GestureDetector(
             onTap: () => Navigator.pop(context),
-            child: Container(
-              margin: const EdgeInsets.only(right: 10),
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF333333)),
-              ),
-              child: const Icon(Icons.arrow_back_ios_new_rounded,
-                  color: Colors.white, size: 16),
-            ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
+                Icon(Icons.arrow_back_rounded, color: Colors.white, size: 22),
+                SizedBox(width: 4),
                 Text(
-                  'GOD BATTLE',
-                  style: AppFonts.cinzel(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800,
+                  'Back',
+                  style: TextStyle(
                     color: Colors.white,
-                    letterSpacing: 3,
-                  ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  lang == 'id'
-                      ? 'Pilih 2 dewa, siapa yang lebih kuat?'
-                      : 'Pick 2 gods, who is stronger?',
-                  style: const TextStyle(
-                    color: Color(0xFF9CA3AF),
-                    fontSize: 11.5,
+                    fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ],
+            ),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'GOD BATTLE',
+            style: AppFonts.cinzel(
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
+              letterSpacing: 3,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            localize(lang, 'Pilih 2 dewa, siapa yang lebih kuat?', 'Pick 2 gods, who is stronger?'),
+            style: const TextStyle(
+              color: Color(0xFF9CA3AF),
+              fontSize: 11.5,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ],
@@ -235,14 +234,14 @@ class _GodBattleScreenState extends State<GodBattleScreen>
 
     // Status text — epic, mythological phrasing.
     final statusText = v < 0.25
-        ? (lang == 'id' ? 'TAKDIR BERADU' : 'FATES COLLIDE')
+        ? localize(lang, 'TAKDIR BERADU', 'FATES COLLIDE')
         : v < 0.50
-            ? (lang == 'id' ? 'BENTURAN KOSMIK' : 'COSMIC CLASH')
+            ? localize(lang, 'BENTURAN KOSMIK', 'COSMIC CLASH')
             : v < 0.83
-                ? (lang == 'id' ? 'ADU KEKUATAN' : 'CLASH OF POWER')
+                ? localize(lang, 'ADU KEKUATAN', 'CLASH OF POWER')
                 : v < 0.92
-                    ? (lang == 'id' ? 'PUKULAN PENENTU' : 'DECISIVE BLOW')
-                    : (lang == 'id' ? 'SANG PEMENANG' : 'THE VICTOR');
+                    ? localize(lang, 'PUKULAN PENENTU', 'DECISIVE BLOW')
+                    : localize(lang, 'SANG PEMENANG', 'THE VICTOR');
 
     return Stack(
       fit: StackFit.expand,
@@ -570,12 +569,6 @@ class _GodBattleScreenState extends State<GodBattleScreen>
             decoration: BoxDecoration(
               color: const Color(0xFF111111),
               borderRadius: BorderRadius.circular(14),
-              border: Border.all(
-                color: isWinner && reveal > 0.5
-                    ? const Color(0xFFFFD700)
-                    : accent.withValues(alpha: 0.4),
-                width: 1 + (isWinner ? reveal * 2.5 : 0),
-              ),
               boxShadow: [
                 if (isWinner && reveal > 0.3)
                   BoxShadow(
@@ -698,51 +691,51 @@ class _GodBattleScreenState extends State<GodBattleScreen>
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          const SizedBox(height: 20),
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(child: _buildGodSlot(1, lang)),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 52,
-                        height: 52,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: const LinearGradient(
-                            colors: [Color(0xFFFF6F00), Color(0xFFFF3D00)],
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFFFF6F00).withValues(alpha: 0.4),
-                              blurRadius: 16,
-                              spreadRadius: 2,
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Text(
-                            'VS',
-                            style: AppFonts.cinzel(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
+          const Spacer(flex: 2),
+          // Two small square god slots with a plain VS between them. Each slot
+          // has its own dice button to randomize just that side.
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: _RollableGodSlot(
+                  slot: 1,
+                  god: _god1,
+                  accent: const Color(0xFF2196F3),
+                  lang: lang,
+                  onPick: () => _pickGod(1),
+                  rollPool: () => _rollPoolFor(1),
+                  onRolled: (g) => _setRolledGod(1, g),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Text(
+                  'VS',
+                  style: AppFonts.cinzel(
+                    fontSize: 26,
+                    fontWeight: FontWeight.w900,
+                    color: const Color(0xFFFFC107),
+                    shadows: const [
+                      Shadow(color: Color(0xFFFF6F00), blurRadius: 16),
                     ],
                   ),
                 ),
-                Expanded(child: _buildGodSlot(2, lang)),
-              ],
-            ),
+              ),
+              Expanded(
+                child: _RollableGodSlot(
+                  slot: 2,
+                  god: _god2,
+                  accent: const Color(0xFFFF3D00),
+                  lang: lang,
+                  onPick: () => _pickGod(2),
+                  rollPool: () => _rollPoolFor(2),
+                  onRolled: (g) => _setRolledGod(2, g),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 16),
+          const Spacer(flex: 1),
           GestureDetector(
             onTap: (_god1 != null && _god2 != null) ? _startBattle : null,
             child: AnimatedContainer(
@@ -775,9 +768,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                 child: Text(
                   _god1 != null && _god2 != null
                       ? 'FIGHT!'
-                      : lang == 'id'
-                          ? 'Pilih Dewamu'
-                          : 'Choose Your Gods',
+                      : localize(lang, 'Pilih Dewamu', 'Choose Your Gods'),
                   style: AppFonts.cinzel(
                     fontSize: (_god1 != null && _god2 != null) ? 18 : 13,
                     fontWeight: FontWeight.w800,
@@ -790,165 +781,32 @@ class _GodBattleScreenState extends State<GodBattleScreen>
               ),
             ),
           ),
-          const SizedBox(height: 10),
-          // Random battle — pick two combatants at random and fight instantly.
-          GestureDetector(
-            onTap: _randomFight,
-            child: Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(14),
-                border:
-                    Border.all(color: const Color(0xFFB07800).withValues(alpha: 0.5)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.casino_rounded,
-                      color: Color(0xFFB07800), size: 18),
-                  const SizedBox(width: 8),
-                  Text(
-                    lang == 'id' ? 'Acak Pertarungan' : 'Random Battle',
-                    style: AppFonts.cinzel(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700,
-                      color: const Color(0xFFB07800),
-                      letterSpacing: 1,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 24),
+          const Spacer(flex: 2),
         ],
       ),
     );
   }
 
-  void _randomFight() {
-    final pool = <Combatant>[
+  // The pool a slot's dice rolls from — every combatant except the god
+  // already chosen in the other slot.
+  List<Combatant> _rollPoolFor(int slot) {
+    final other = slot == 1 ? _god2 : _god1;
+    return [
       ...godsData.where((g) => g.category != 'Cosmology'),
       ...popCultureCombatants,
-    ]..shuffle();
+    ].where((g) => other == null || g.id != other.id).toList();
+  }
+
+  void _setRolledGod(int slot, Combatant g) {
     setState(() {
-      _god1 = pool[0];
-      _god2 = pool[1];
+      if (slot == 1) {
+        _god1 = g;
+      } else {
+        _god2 = g;
+      }
       _result = null;
       _showResult = false;
     });
-    _startBattle();
-  }
-
-  // ─── God Slot ───────────────────────────────────────────
-  Widget _buildGodSlot(int slot, String lang) {
-    final god = slot == 1 ? _god1 : _god2;
-    final accent = slot == 1
-        ? const Color(0xFF2196F3)
-        : const Color(0xFFFF3D00);
-
-    return GestureDetector(
-      onTap: () => _pickGod(slot),
-      child: Container(
-        decoration: BoxDecoration(
-          color: const Color(0xFF111111),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(
-            color: god != null
-                ? accent.withValues(alpha: 0.6)
-                : const Color(0xFF333333),
-            width: god != null ? 2 : 1,
-          ),
-        ),
-        child: god != null
-            ? _buildFilledSlot(god, accent, lang)
-            : _buildEmptySlot(slot, lang),
-      ),
-    );
-  }
-
-  Widget _buildEmptySlot(int slot, String lang) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.add_circle_outline_rounded,
-              color: Colors.white.withValues(alpha: 0.3), size: 48),
-          const SizedBox(height: 8),
-          Text(
-            slot == 1
-                ? (lang == 'id' ? 'Pilih Dewa 1' : 'Pick God 1')
-                : (lang == 'id' ? 'Pilih Dewa 2' : 'Pick God 2'),
-            style: TextStyle(
-              color: Colors.white.withValues(alpha: 0.4),
-              fontSize: 13,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFilledSlot(Combatant god, Color accent, String lang) {
-    final url = god.imageUrl;
-    final color = GodCard.mythologyColor(god.mythology);
-
-    return Column(
-      children: [
-        Expanded(
-          flex: 5,
-          child: ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(15)),
-            child: url.startsWith('assets/')
-                ? Image.asset(url,
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    errorBuilder: (_, __, ___) => _placeholderGod(god, accent))
-                : _placeholderGod(god, accent),
-          ),
-        ),
-        Expanded(
-          flex: 2,
-          child: Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [accent.withValues(alpha: 0.4), color.withValues(alpha: 0.2)],
-              ),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  god.name,
-                  style: GodCard.mythologyFont(
-                    god.mythology,
-                    fontSize: 13,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  god.mythology,
-                  style: TextStyle(
-                    color: accent,
-                    fontSize: 9,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
   }
 
   Widget _buildWinnerCard(Combatant god, Color accent, String lang) {
@@ -1002,7 +860,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                   Row(
                     children: [
                       Text(
-                        lang == 'id' ? 'PEMENANG' : 'WINNER',
+                        localize(lang, 'PEMENANG', 'WINNER'),
                         style: AppFonts.cinzel(
                           color: gold,
                           fontSize: 11,
@@ -1039,7 +897,6 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                     decoration: BoxDecoration(
                       color: accent.withValues(alpha: 0.25),
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: accent.withValues(alpha: 0.6)),
                     ),
                     child: Text(
                       god.mythology,
@@ -1137,13 +994,17 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                         // Section header + myth badge
                         Row(
                           children: [
-                            Text(
-                              lang == 'id' ? 'FAKTOR PENENTU' : 'KEY FACTORS',
-                              style: AppFonts.cinzel(
-                                fontSize: 11,
-                                fontWeight: FontWeight.w700,
-                                color: const Color(0xFFFFD700),
-                                letterSpacing: 2,
+                            Flexible(
+                              child: Text(
+                                localize(lang, 'FAKTOR PENENTU', 'KEY FACTORS'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppFonts.cinzel(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                  color: const Color(0xFFFFD700),
+                                  letterSpacing: 2,
+                                ),
                               ),
                             ),
                             if (r.isCanonical) ...[
@@ -1154,11 +1015,9 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                                 decoration: BoxDecoration(
                                   color: const Color(0xFFFFD700).withValues(alpha: 0.15),
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                      color: const Color(0xFFFFD700).withValues(alpha: 0.5)),
                                 ),
                                 child: Text(
-                                  lang == 'id' ? 'KISAH MITOLOGI' : 'MYTH-ATTESTED',
+                                  localize(lang, 'KISAH MITOLOGI', 'MYTH-ATTESTED'),
                                   style: const TextStyle(
                                     color: Color(0xFFFFD700),
                                     fontSize: 8.5,
@@ -1176,7 +1035,7 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                         const SizedBox(height: 8),
                         // Full narrative chronicle
                         Text(
-                          lang == 'id' ? 'KRONIK PERTARUNGAN' : 'BATTLE CHRONICLE',
+                          localize(lang, 'KRONIK PERTARUNGAN', 'BATTLE CHRONICLE'),
                           style: AppFonts.cinzel(
                             fontSize: 10.5,
                             fontWeight: FontWeight.w700,
@@ -1214,12 +1073,10 @@ class _GodBattleScreenState extends State<GodBattleScreen>
                   decoration: BoxDecoration(
                     color: const Color(0xFF1A1A1A),
                     borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                        color: const Color(0xFFB07800).withValues(alpha: 0.3)),
                   ),
                   child: Center(
                     child: Text(
-                      lang == 'id' ? 'ADU LAGI' : 'REMATCH',
+                      localize(lang, 'ADU LAGI', 'REMATCH'),
                       style: AppFonts.cinzel(
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
@@ -1255,6 +1112,10 @@ class _GodBattleScreenState extends State<GodBattleScreen>
         icon = Icons.military_tech_rounded;
         color = const Color(0xFFFF8A65);
         break;
+      case 'prowess':
+        icon = Icons.sports_martial_arts_rounded;
+        color = const Color(0xFFE53935);
+        break;
       default: // balance
         icon = Icons.balance_rounded;
         color = const Color(0xFFB0BEC5);
@@ -1266,7 +1127,6 @@ class _GodBattleScreenState extends State<GodBattleScreen>
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.06),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: color.withValues(alpha: 0.25)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1382,7 +1242,6 @@ class _GodBattleScreenState extends State<GodBattleScreen>
               decoration: BoxDecoration(
                 color: color.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: color.withValues(alpha: 0.3)),
               ),
               child: Text(
                 p,
@@ -1396,6 +1255,276 @@ class _GodBattleScreenState extends State<GodBattleScreen>
           }).toList(),
         ),
       ],
+    );
+  }
+}
+
+// ─── Rollable God Slot ──────────────────────────────────────
+// A small square pick-a-god card with its own dice button. Tapping the card
+// opens the picker; tapping the dice riffles through gods with a decelerating
+// 3D flip (like the Random God reel) before landing on a random one.
+class _RollableGodSlot extends StatefulWidget {
+  final int slot;
+  final Combatant? god;
+  final Color accent;
+  final String lang;
+  final VoidCallback onPick;
+  final List<Combatant> Function() rollPool;
+  final ValueChanged<Combatant> onRolled;
+
+  const _RollableGodSlot({
+    required this.slot,
+    required this.god,
+    required this.accent,
+    required this.lang,
+    required this.onPick,
+    required this.rollPool,
+    required this.onRolled,
+  });
+
+  @override
+  State<_RollableGodSlot> createState() => _RollableGodSlotState();
+}
+
+class _RollableGodSlotState extends State<_RollableGodSlot>
+    with SingleTickerProviderStateMixin {
+  // One half-turn per tick; delays grow so the flip decelerates like a reel.
+  static const _tickDelaysMs = [
+    55, 62, 71, 81, 93, 107, 123, 141, 162, 186, 214, 300,
+  ];
+
+  late final AnimationController _spinCtrl;
+  Timer? _timer;
+  int _tickIndex = 0;
+  bool _rolling = false;
+  bool _landed = false;
+  final _rng = Random();
+  List<Combatant> _reel = [];
+  Combatant? _finalGod;
+
+  @override
+  void initState() {
+    super.initState();
+    _spinCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 300),
+    );
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    _spinCtrl.dispose();
+    super.dispose();
+  }
+
+  void _roll() {
+    if (_rolling) return;
+    final pool = widget.rollPool();
+    if (pool.isEmpty) return;
+    SoundService.playClick();
+    _finalGod = pool[_rng.nextInt(pool.length)];
+    _reel = [
+      for (int i = 0; i < _tickDelaysMs.length - 1; i++)
+        pool[_rng.nextInt(pool.length)],
+      _finalGod!,
+    ];
+    setState(() {
+      _rolling = true;
+      _landed = false;
+      _tickIndex = 0;
+    });
+    _scheduleTick();
+  }
+
+  void _scheduleTick() {
+    final isLast = _tickIndex >= _tickDelaysMs.length - 1;
+    // Extra-slow final flip for a little suspense before the reveal.
+    final spinMs = isLast ? 440 : _tickDelaysMs[_tickIndex];
+    _spinCtrl.duration = Duration(milliseconds: spinMs);
+    _spinCtrl
+      ..value = 0
+      ..forward();
+    _timer = Timer(Duration(milliseconds: spinMs), () {
+      if (!mounted) return;
+      if (isLast) {
+        SoundService.playResult();
+        widget.onRolled(_finalGod!);
+        setState(() {
+          _rolling = false;
+          _landed = true;
+        });
+        // Replay the controller to drive the settle bounce.
+        _spinCtrl
+          ..duration = const Duration(milliseconds: 500)
+          ..forward(from: 0);
+      } else {
+        SoundService.playButton();
+        setState(() => _tickIndex++);
+        _scheduleTick();
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final shown = _rolling ? _reel[_tickIndex] : widget.god;
+    return AspectRatio(
+      aspectRatio: 1,
+      child: Stack(
+        children: [
+          Positioned.fill(
+            child: GestureDetector(
+              onTap: _rolling ? null : widget.onPick,
+              child: AnimatedBuilder(
+                animation: _spinCtrl,
+                builder: (context, child) {
+                  double rotY = 0;
+                  double scale = 1;
+                  if (_rolling) {
+                    rotY = (_tickIndex + _spinCtrl.value) * pi;
+                  } else if (_landed) {
+                    final b = Curves.elasticOut.transform(_spinCtrl.value);
+                    scale = 0.9 + b * 0.1;
+                  }
+                  return Transform(
+                    alignment: Alignment.center,
+                    transform: Matrix4.identity()
+                      ..setEntry(3, 2, 0.0012)
+                      ..rotateY(rotY)
+                      ..scaleByDouble(scale, scale, scale, 1.0),
+                    child: child,
+                  );
+                },
+                child: _slotCard(shown),
+              ),
+            ),
+          ),
+          // Dice button — on the outer side of each slot (left card → left,
+          // right card → right), so it reads as "randomize this side".
+          Positioned(
+            top: 6,
+            left: widget.slot == 1 ? 6 : null,
+            right: widget.slot == 2 ? 6 : null,
+            child: GestureDetector(
+              onTap: _roll,
+              child: Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1A1A1A),
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.2),
+                  ),
+                ),
+                child: const Icon(Icons.casino_rounded,
+                    color: Colors.white, size: 17),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _slotCard(Combatant? god) {
+    final accent = widget.accent;
+    if (god == null) {
+      return Container(
+        decoration: BoxDecoration(
+          color: const Color(0xFF111111),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: const Color(0xFF333333)),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.add_circle_outline_rounded,
+                  color: Colors.white.withValues(alpha: 0.3), size: 34),
+              const SizedBox(height: 6),
+              Text(
+                widget.slot == 1
+                    ? localize(widget.lang, 'Pilih Dewa 1', 'Pick God 1')
+                    : localize(widget.lang, 'Pilih Dewa 2', 'Pick God 2'),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white.withValues(alpha: 0.4),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    final url = god.imageUrl;
+    return Container(
+      decoration: BoxDecoration(
+        color: const Color(0xFF111111),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      clipBehavior: Clip.antiAlias,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          url.startsWith('assets/')
+              ? Image.asset(url,
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topCenter,
+                  errorBuilder: (_, __, ___) => _ph(god, accent))
+              : _ph(god, accent),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.fromLTRB(6, 14, 6, 6),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withValues(alpha: 0.85),
+                  ],
+                ),
+              ),
+              child: Text(
+                god.name,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: GodCard.mythologyFont(
+                  god.mythology,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _ph(Combatant god, Color accent) {
+    return Container(
+      color: accent.withValues(alpha: 0.1),
+      child: Center(
+        child: Text(
+          god.name.isNotEmpty ? god.name[0] : '?',
+          style: GodCard.mythologyFont(
+            god.mythology,
+            fontSize: 34,
+            fontWeight: FontWeight.w800,
+            color: accent.withValues(alpha: 0.4),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -1544,11 +1673,6 @@ class _GodPickerSheetState extends State<_GodPickerSheet> {
                               ? color.withValues(alpha: 0.3)
                               : const Color(0xFF1A1A1A),
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(
-                            color: active
-                                ? color.withValues(alpha: 0.6)
-                                : const Color(0xFF333333),
-                          ),
                         ),
                         child: Text(
                           m == 'All' ? 'Semua' : m,
@@ -1580,7 +1704,6 @@ class _GodPickerSheetState extends State<_GodPickerSheet> {
                         decoration: BoxDecoration(
                           color: const Color(0xFF1A1A1A),
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: color.withValues(alpha: 0.25)),
                         ),
                         child: Row(
                           children: [

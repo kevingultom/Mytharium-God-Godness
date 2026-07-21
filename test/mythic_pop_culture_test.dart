@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mytharium/main.dart';
-import 'package:mytharium/l10n/language_provider.dart';
-import 'package:mytharium/services/onboarding_service.dart';
+import 'package:mythera/main.dart';
+import 'package:mythera/l10n/language_provider.dart';
+import 'package:mythera/services/onboarding_service.dart';
 
 Future<void> _enterAppAndOpenPopCulture(WidgetTester tester) async {
   tester.view.physicalSize = const Size(750, 1334); // iPhone SE class
@@ -17,7 +17,7 @@ Future<void> _enterAppAndOpenPopCulture(WidgetTester tester) async {
   await lang.init();
 
   await tester.pumpWidget(
-    LanguageProvider(notifier: lang, child: const MythariumApp()),
+    LanguageProvider(notifier: lang, child: const MytheraApp()),
   );
   await tester.pumpAndSettle(); // splash auto-advances into the app
 
@@ -79,18 +79,23 @@ void main() {
   });
 
   testWidgets(
-      'Mythic Pop Culture: Kratos detail falls back gracefully (no god card match)',
+      'Mythic Pop Culture: Zagreus detail falls back gracefully (no god card match)',
       (WidgetTester tester) async {
     await _enterAppAndOpenPopCulture(tester);
 
-    // Default filter is All → the first card is Kratos (Greek), who has no
-    // matching god card in the catalog.
+    // Filter to Greek, then scroll past Kratos (who now has a matching god
+    // card in the catalog) to Zagreus, who still has none.
+    await tester.tap(find.text('Greek'));
+    await tester.pumpAndSettle();
+    await tester.drag(find.byType(CustomScrollView), const Offset(0, -1000));
+    await tester.pumpAndSettle();
+    expect(find.text('Zagreus'), findsOneWidget);
     final info = find.byIcon(Icons.info_outline_rounded).first;
     await tester.ensureVisible(info);
     await tester.pumpAndSettle();
     await tester.tap(info);
     await tester.pumpAndSettle();
-    expect(tester.takeException(), isNull, reason: 'Opening Kratos detail threw');
+    expect(tester.takeException(), isNull, reason: 'Opening Zagreus detail threw');
     expect(find.textContaining('Belum ada kartu dewa'), findsOneWidget,
         reason: 'Fallback message missing for a figure with no god card match');
   });

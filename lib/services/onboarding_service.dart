@@ -49,6 +49,20 @@ class OnboardingService {
     _rhythm = rhythm;
   }
 
+  /// Clear the persisted onboarding state (disk + cache) so the intro plays
+  /// again on next launch. Backs the "Replay intro" action in Profile.
+  static Future<void> reset() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_completeKey);
+    await prefs.remove(_patronKey);
+    await prefs.remove(_pantheonKey);
+    await prefs.remove(_rhythmKey);
+    _complete = false;
+    _patronGodId = null;
+    _pantheon = null;
+    _rhythm = null;
+  }
+
   /// Test/debug helper: wipe the cached state (does not touch disk).
   static void debugReset() {
     _complete = false;

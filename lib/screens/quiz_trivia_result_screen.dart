@@ -21,35 +21,25 @@ class QuizTriviaResultScreen extends StatelessWidget {
       case 'nordic': return 'Nordic Mythology';
       case 'egyptian': return 'Egyptian Mythology';
       case 'hindu': return 'Hindu Mythology';
+      case 'chinese': return 'Chinese Mythology';
+      case 'japanese': return 'Japanese Mythology';
       case 'all': return 'All Mythologies';
       default: return '';
     }
   }
 
-  Color get _genreColor {
-    switch (genre) {
-      case 'greek': return const Color(0xFF6B1013);
-      case 'nordic': return const Color(0xFF2563EB);
-      case 'egyptian': return const Color(0xFFD97706);
-      case 'hindu': return const Color(0xFFFF6F00);
-      case 'all': return const Color(0xFFB07800);
-      default: return const Color(0xFFB07800);
-    }
-  }
-
   String _rank(String lang) {
     final pct = score / total;
-    if (pct == 1.0) return lang == 'id' ? 'Sempurna! Dewa sejati!' : 'Perfect! A true god!';
-    if (pct >= 0.8) return lang == 'id' ? 'Luar biasa! Hampir dewa!' : 'Amazing! Almost divine!';
-    if (pct >= 0.6) return lang == 'id' ? 'Bagus! Pengetahuan solid' : 'Good! Solid knowledge';
-    if (pct >= 0.4) return lang == 'id' ? 'Lumayan, terus belajar' : 'Decent, keep learning';
-    return lang == 'id' ? 'Masih banyak yang harus dipelajari' : 'Much to learn still';
+    if (pct == 1.0) return localize(lang, 'Sempurna! Dewa sejati!', 'Perfect! A true god!');
+    if (pct >= 0.8) return localize(lang, 'Luar biasa! Hampir dewa!', 'Amazing! Almost divine!');
+    if (pct >= 0.6) return localize(lang, 'Bagus! Pengetahuan solid', 'Good! Solid knowledge');
+    if (pct >= 0.4) return localize(lang, 'Lumayan, terus belajar', 'Decent, keep learning');
+    return localize(lang, 'Masih banyak yang harus dipelajari', 'Much to learn still');
   }
 
   @override
   Widget build(BuildContext context) {
     final lang = LanguageProvider.of(context).value;
-    final color = _genreColor;
     final pct = (score / total * 100).round();
 
     return Scaffold(
@@ -59,21 +49,27 @@ class QuizTriviaResultScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
-              const SizedBox(height: 32),
+              const SizedBox(height: 10),
               // Back
               Align(
                 alignment: Alignment.centerLeft,
                 child: GestureDetector(
                   onTap: () => Navigator.pop(context),
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF1A1A1A),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: const Color(0xFF333333)),
-                    ),
-                    child: const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: Colors.white, size: 18),
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.arrow_back_rounded,
+                          color: Colors.white, size: 22),
+                      SizedBox(width: 4),
+                      Text(
+                        'Back',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -84,8 +80,8 @@ class QuizTriviaResultScreen extends StatelessWidget {
                 height: 140,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: color.withValues(alpha: 0.12),
-                  border: Border.all(color: color, width: 3),
+                  color: Colors.white.withValues(alpha: 0.1),
+                  border: Border.all(color: Colors.white, width: 3),
                 ),
                 alignment: Alignment.center,
                 child: Column(
@@ -96,13 +92,13 @@ class QuizTriviaResultScreen extends StatelessWidget {
                       style: AppFonts.cinzel(
                         fontSize: 32,
                         fontWeight: FontWeight.w900,
-                        color: color,
+                        color: Colors.white,
                       ),
                     ),
                     Text(
                       '$score/$total',
-                      style: TextStyle(
-                        color: color.withValues(alpha: 0.7),
+                      style: const TextStyle(
+                        color: Colors.white70,
                         fontSize: 13,
                       ),
                     ),
@@ -115,7 +111,7 @@ class QuizTriviaResultScreen extends StatelessWidget {
                 style: AppFonts.cinzel(
                   fontSize: 18,
                   fontWeight: FontWeight.w800,
-                  color: color,
+                  color: Colors.white,
                   letterSpacing: 2,
                 ),
               ),
@@ -130,9 +126,9 @@ class QuizTriviaResultScreen extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               // Stats
-              _statRow(lang == 'id' ? 'Benar' : 'Correct', '$score', const Color(0xFF22C55E)),
-              _statRow(lang == 'id' ? 'Salah' : 'Wrong', '${total - score}', const Color(0xFFEF4444)),
-              _statRow(lang == 'id' ? 'Soal' : 'Questions', '$total', const Color(0xFF9CA3AF)),
+              _statRow(localize(lang, 'Benar', 'Correct'), '$score', const Color(0xFF22C55E)),
+              _statRow(localize(lang, 'Salah', 'Wrong'), '${total - score}', const Color(0xFFEF4444)),
+              _statRow(localize(lang, 'Soal', 'Questions'), '$total', const Color(0xFF9CA3AF)),
               const SizedBox(height: 28),
               // Retry button
               GestureDetector(
@@ -144,16 +140,16 @@ class QuizTriviaResultScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 48,
                   decoration: BoxDecoration(
-                    color: color,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   alignment: Alignment.center,
                   child: Text(
-                    lang == 'id' ? 'COBA LAGI' : 'TRY AGAIN',
+                    localize(lang, 'COBA LAGI', 'TRY AGAIN'),
                     style: AppFonts.cinzel(
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
-                      color: Colors.white,
+                      color: Colors.black,
                       letterSpacing: 2,
                     ),
                   ),
@@ -168,9 +164,9 @@ class QuizTriviaResultScreen extends StatelessWidget {
                   Navigator.pop(context); // back to genre
                 },
                 child: Text(
-                  lang == 'id' ? 'Kembali ke Menu Kuis' : 'Back to Quiz Menu',
-                  style: TextStyle(
-                    color: color,
+                  localize(lang, 'Kembali ke Menu Kuis', 'Back to Quiz Menu'),
+                  style: const TextStyle(
+                    color: Colors.white,
                     fontSize: 12,
                     fontWeight: FontWeight.w600,
                   ),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../utils/app_fonts.dart';
 import '../models/history_model.dart';
 import '../l10n/language_provider.dart';
-import '../widgets/god_card.dart';
 import '../services/sound_service.dart';
 import '../services/reading_service.dart';
 
@@ -27,8 +26,8 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
   int _page = 0;
   late bool _read;
 
-  static const _gold = Color(0xFFC9A227);
   static const _textShadow = [Shadow(color: Colors.black, blurRadius: 8)];
+  static const _readGreen = Color(0xFF66BB6A);
 
   @override
   void initState() {
@@ -61,8 +60,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
   @override
   Widget build(BuildContext context) {
     final lang = LanguageProvider.of(context).value;
-    final color = GodCard.mythologyColor(widget.story.mythology);
-    final pages = _buildPages(lang, color);
+    final pages = _buildPages(lang);
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -71,7 +69,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         children: [
           // Map / parchment background
           Image.asset(
-            'assets/images/peta.jpg',
+            'assets/images/peta.webp',
             fit: BoxFit.cover,
             errorBuilder: (_, __, ___) => Container(color: const Color(0xFF1A1410)),
           ),
@@ -90,8 +88,9 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
           ),
           SafeArea(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _buildHeader(context, lang, color),
+                _buildHeader(context),
                 Expanded(
                   child: PageView.builder(
                     controller: _controller,
@@ -100,7 +99,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
                     itemBuilder: (_, i) => pages[i],
                   ),
                 ),
-                _buildNavBar(lang, color, pages.length),
+                _buildNavBar(lang, pages.length),
               ],
             ),
           ),
@@ -110,65 +109,56 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
   }
 
   // ─── Header ─────────────────────────────────────────────
-  Widget _buildHeader(BuildContext context, String lang, Color color) {
+  Widget _buildHeader(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 8, 20, 4),
-      child: Row(
-        children: [
-          GestureDetector(
-            onTap: () => Navigator.pop(context),
-            child: Container(
-              margin: const EdgeInsets.only(right: 10),
-              padding: const EdgeInsets.all(9),
-              decoration: BoxDecoration(
-                color: Colors.black.withValues(alpha: 0.5),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.white24),
+      padding: const EdgeInsets.fromLTRB(12, 10, 20, 4),
+      child: GestureDetector(
+        onTap: () => Navigator.pop(context),
+        child: const Padding(
+          padding: EdgeInsets.only(right: 10),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.arrow_back_rounded, color: Colors.white, size: 22),
+              SizedBox(width: 4),
+              Text(
+                'Back',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-              child: const Icon(Icons.arrow_back_ios_new_rounded,
-                  color: Colors.white, size: 16),
-            ),
+            ],
           ),
-          Expanded(
-            child: Text(
-              widget.story.localizedTitle(lang),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: GodCard.mythologyFont(
-                widget.story.mythology,
-                fontSize: 16,
-                fontWeight: FontWeight.w800,
-                color: Colors.white,
-                shadows: const [Shadow(color: Colors.black, blurRadius: 10)],
-              ),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
 
   // ─── Bottom navigation ──────────────────────────────────
-  Widget _buildNavBar(String lang, Color color, int total) {
+  Widget _buildNavBar(String lang, int total) {
     final canPrev = _page > 0;
     final canNext = _page < total - 1;
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 6, 16, 14),
       child: Row(
         children: [
-          _navButton(
-            label: lang == 'id' ? 'Sebelumnya' : 'Previous',
-            icon: Icons.chevron_left_rounded,
-            enabled: canPrev,
-            onTap: () => _goTo(_page - 1, total),
-            iconLeft: true,
+          Flexible(
+            child: _navButton(
+              label: localize(lang, 'Sebelumnya', 'Previous'),
+              icon: Icons.chevron_left_rounded,
+              enabled: canPrev,
+              onTap: () => _goTo(_page - 1, total),
+              iconLeft: true,
+            ),
           ),
           Expanded(
             child: Center(
               child: Text(
                 '${_page + 1} / $total',
                 style: AppFonts.cinzel(
-                  color: _gold,
+                  color: Colors.white,
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 1,
@@ -177,48 +167,52 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
             ),
           ),
           // On the final page, the "Next" slot becomes the Mark-as-read button.
-          canNext
-              ? _navButton(
-                  label: lang == 'id' ? 'Berikutnya' : 'Next',
-                  icon: Icons.chevron_right_rounded,
-                  enabled: true,
-                  onTap: () => _goTo(_page + 1, total),
-                  iconLeft: false,
-                )
-              : _buildMarkReadButton(lang),
+          Flexible(
+            child: canNext
+                ? _navButton(
+                    label: localize(lang, 'Berikutnya', 'Next'),
+                    icon: Icons.chevron_right_rounded,
+                    enabled: true,
+                    onTap: () => _goTo(_page + 1, total),
+                    iconLeft: false,
+                  )
+                : _buildMarkReadButton(lang),
+          ),
         ],
       ),
     );
   }
 
   Widget _buildMarkReadButton(String lang) {
-    final id = lang == 'id';
-    const readGreen = Color(0xFF66BB6A);
     return GestureDetector(
       onTap: _toggleRead,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
           color: _read
-              ? readGreen.withValues(alpha: 0.16)
+              ? _readGreen.withValues(alpha: 0.18)
               : Colors.black.withValues(alpha: 0.5),
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
               color: _read
-                  ? readGreen.withValues(alpha: 0.7)
-                  : _gold.withValues(alpha: 0.5)),
+                  ? _readGreen.withValues(alpha: 0.7)
+                  : Colors.white.withValues(alpha: 0.5)),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              _read
-                  ? (id ? 'Sudah Dibaca' : 'Read')
-                  : (id ? 'Tandai Dibaca' : 'Mark Read'),
-              style: TextStyle(
-                color: _read ? readGreen : Colors.white,
-                fontSize: 12.5,
-                fontWeight: FontWeight.w700,
+            Flexible(
+              child: Text(
+                _read
+                    ? localize(lang, 'Sudah Dibaca', 'Read')
+                    : localize(lang, 'Tandai Dibaca', 'Mark Read'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: _read ? _readGreen : Colors.white,
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
             const SizedBox(width: 4),
@@ -226,7 +220,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
               _read
                   ? Icons.check_circle_rounded
                   : Icons.check_circle_outline_rounded,
-              color: _read ? readGreen : _gold,
+              color: _read ? _readGreen : Colors.white,
               size: 18,
             ),
           ],
@@ -243,17 +237,21 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
     required bool iconLeft,
   }) {
     final content = <Widget>[
-      Text(
-        label,
-        style: TextStyle(
-          color: enabled ? Colors.white : Colors.white24,
-          fontSize: 12.5,
-          fontWeight: FontWeight.w700,
+      Flexible(
+        child: Text(
+          label,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+          style: TextStyle(
+            color: enabled ? Colors.white : Colors.white24,
+            fontSize: 12.5,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     ];
     final iconW = Icon(icon,
-        color: enabled ? _gold : Colors.white24, size: 20);
+        color: enabled ? Colors.white : Colors.white24, size: 20);
 
     return GestureDetector(
       onTap: enabled ? onTap : null,
@@ -265,7 +263,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
               : Colors.black.withValues(alpha: 0.25),
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: enabled ? _gold.withValues(alpha: 0.5) : Colors.white12,
+            color: enabled ? Colors.white.withValues(alpha: 0.5) : Colors.white12,
           ),
         ),
         child: Row(
@@ -279,22 +277,22 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
   }
 
   // ─── Pages ──────────────────────────────────────────────
-  List<Widget> _buildPages(String lang, Color color) {
+  List<Widget> _buildPages(String lang) {
     final s = widget.story;
     final pages = <Widget>[
-      _coverPage(lang, color),
+      _coverPage(lang),
     ];
     for (int i = 0; i < s.chapters.length; i++) {
-      pages.add(_chapterPage(s.chapters[i], i, s.chapters.length, lang, color));
+      pages.add(_chapterPage(s.chapters[i], i, s.chapters.length, lang));
     }
-    pages.add(_chronologyPage(lang, color));
-    pages.add(_impactMeaningPage(lang, color));
+    pages.add(_chronologyPage(lang));
+    pages.add(_impactMeaningPage(lang));
     return pages;
   }
 
   /// Reusable scrollable page shell — transparent so the map background
   /// shows through and the text blends into the parchment.
-  Widget _pageShell({required Color color, required List<Widget> children}) {
+  Widget _pageShell({required List<Widget> children}) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(18, 6, 18, 8),
       child: SingleChildScrollView(
@@ -307,22 +305,21 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
     );
   }
 
-  Widget _coverPage(String lang, Color color) {
+  Widget _coverPage(String lang) {
     final s = widget.story;
     return _pageShell(
-      color: color,
       children: [
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.22),
+            color: Colors.white.withValues(alpha: 0.14),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: color.withValues(alpha: 0.55)),
+            border: Border.all(color: Colors.white.withValues(alpha: 0.4)),
           ),
           child: Text(
             s.mythology.toUpperCase(),
-            style: TextStyle(
-              color: color,
+            style: const TextStyle(
+              color: Colors.white,
               fontSize: 10.5,
               fontWeight: FontWeight.w700,
               letterSpacing: 2,
@@ -344,44 +341,47 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
         const SizedBox(height: 6),
         Text(
           s.localizedTimeline(lang),
-          style: TextStyle(
-            color: color,
+          style: const TextStyle(
+            color: Colors.white,
             fontSize: 12.5,
             fontStyle: FontStyle.italic,
             fontWeight: FontWeight.w600,
             shadows: _textShadow,
           ),
         ),
+        if (s.imageUrl.isNotEmpty) ...[
+          const SizedBox(height: 18),
+          _coverImage(s.imageUrl, s.icon),
+        ],
         const SizedBox(height: 16),
         Text(
           s.localizedSummary(lang),
           textAlign: TextAlign.justify,
           style: const TextStyle(
-            color: Color(0xFFF0EADD),
+            color: Colors.white,
             fontSize: 14.5,
             height: 1.7,
             shadows: _textShadow,
           ),
         ),
         const SizedBox(height: 22),
-        _ornament(color),
+        _ornament(),
         const SizedBox(height: 18),
-        _sectionLabel(lang == 'id' ? 'Tokoh Utama' : 'Main Characters', color),
+        _sectionLabel(localize(lang, 'Tokoh Utama', 'Main Characters')),
         const SizedBox(height: 12),
-        ...s.localizedCharacters(lang).map((c) => _characterItem(c, color)),
+        ...s.localizedCharacters(lang).map((c) => _characterItem(c)),
       ],
     );
   }
 
   Widget _chapterPage(
-      StoryChapter ch, int index, int total, String lang, Color color) {
+      StoryChapter ch, int index, int total, String lang) {
     return _pageShell(
-      color: color,
       children: [
         Text(
-          '${lang == 'id' ? 'BAB' : 'CHAPTER'} ${index + 1} / $total',
+          '${localize(lang, 'BAB', 'CHAPTER')} ${index + 1} / $total',
           style: AppFonts.cinzel(
-            color: color,
+            color: Colors.white,
             fontSize: 10.5,
             fontWeight: FontWeight.w700,
             letterSpacing: 2,
@@ -404,7 +404,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
           ch.localizedBody(lang),
           textAlign: TextAlign.justify,
           style: const TextStyle(
-            color: Color(0xFFF0EADD),
+            color: Colors.white,
             fontSize: 14.5,
             height: 1.85,
             letterSpacing: 0.2,
@@ -415,46 +415,44 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
     );
   }
 
-  Widget _chronologyPage(String lang, Color color) {
+  Widget _chronologyPage(String lang) {
     final steps = widget.story.localizedChronology(lang);
     return _pageShell(
-      color: color,
       children: [
-        _sectionLabel(lang == 'id' ? 'Kronologi' : 'Chronology', color),
+        _sectionLabel(localize(lang, 'Kronologi', 'Chronology')),
         const SizedBox(height: 16),
         for (int i = 0; i < steps.length; i++) ...[
-          _chronologyItem(i + 1, steps[i], color),
+          _chronologyItem(i + 1, steps[i]),
           if (i != steps.length - 1) const SizedBox(height: 4),
         ],
       ],
     );
   }
 
-  Widget _impactMeaningPage(String lang, Color color) {
+  Widget _impactMeaningPage(String lang) {
     final s = widget.story;
     return _pageShell(
-      color: color,
       children: [
-        _sectionLabel(lang == 'id' ? 'Dampak' : 'Impact', color),
+        _sectionLabel(localize(lang, 'Dampak', 'Impact')),
         const SizedBox(height: 12),
         Text(
           s.localizedImpact(lang),
           textAlign: TextAlign.justify,
           style: const TextStyle(
-            color: Color(0xFFF0EADD),
+            color: Colors.white,
             fontSize: 14.5,
             height: 1.8,
             shadows: _textShadow,
           ),
         ),
         const SizedBox(height: 26),
-        _sectionLabel(lang == 'id' ? 'Makna Mitologis' : 'Mythological Meaning', color),
+        _sectionLabel(localize(lang, 'Makna Mitologis', 'Mythological Meaning')),
         const SizedBox(height: 12),
         Text(
           s.localizedMeaning(lang),
           textAlign: TextAlign.justify,
           style: const TextStyle(
-            color: Color(0xFFF0EADD),
+            color: Colors.white,
             fontSize: 14.5,
             height: 1.8,
             shadows: _textShadow,
@@ -465,34 +463,39 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
   }
 
   // ─── Small building blocks ──────────────────────────────
-  Widget _sectionLabel(String text, Color color) {
+  Widget _sectionLabel(String text) {
     return Row(
       children: [
         Container(
           width: 3,
           height: 18,
-          decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(2)),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(2)),
         ),
         const SizedBox(width: 8),
-        Text(
-          text.toUpperCase(),
-          style: AppFonts.cinzel(
-            color: Colors.white,
-            fontSize: 15,
-            fontWeight: FontWeight.w800,
-            letterSpacing: 1.5,
-            shadows: _textShadow,
+        Flexible(
+          child: Text(
+            text.toUpperCase(),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: AppFonts.cinzel(
+              color: Colors.white,
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 1.5,
+              shadows: _textShadow,
+            ),
           ),
         ),
       ],
     );
   }
 
-  Widget _characterItem(String text, Color color) {
-    // Split "Name — role" so the name can be emphasised.
-    final parts = text.split('—');
+  Widget _characterItem(String text) {
+    // Split "Name, role" so the name can be emphasised.
+    final parts = text.split(',');
     final name = parts.first.trim();
-    final role = parts.length > 1 ? parts.sublist(1).join('—').trim() : '';
+    final role = parts.length > 1 ? parts.sublist(1).join(',').trim() : '';
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: Row(
@@ -502,7 +505,8 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
             margin: const EdgeInsets.only(top: 6, right: 10),
             width: 6,
             height: 6,
-            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: Colors.white, shape: BoxShape.circle),
           ),
           Expanded(
             child: RichText(
@@ -521,7 +525,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
                     TextSpan(
                       text: '  —  $role',
                       style: const TextStyle(
-                        color: Color(0xFFC9BCA5),
+                        color: Colors.white70,
                         fontSize: 13,
                         height: 1.4,
                         shadows: _textShadow,
@@ -536,7 +540,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
     );
   }
 
-  Widget _chronologyItem(int number, String text, Color color) {
+  Widget _chronologyItem(int number, String text) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
@@ -547,14 +551,14 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
             height: 24,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.2),
+              color: Colors.white.withValues(alpha: 0.16),
               shape: BoxShape.circle,
-              border: Border.all(color: color.withValues(alpha: 0.6)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.6)),
             ),
             child: Text(
               '$number',
-              style: TextStyle(
-                color: color,
+              style: const TextStyle(
+                color: Colors.white,
                 fontSize: 11.5,
                 fontWeight: FontWeight.w800,
               ),
@@ -568,7 +572,7 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
                 text,
                 textAlign: TextAlign.justify,
                 style: const TextStyle(
-                  color: Color(0xFFF0EADD),
+                  color: Colors.white,
                   fontSize: 13.5,
                   height: 1.55,
                   shadows: _textShadow,
@@ -581,15 +585,49 @@ class _HistoryStoryDetailScreenState extends State<HistoryStoryDetailScreen> {
     );
   }
 
-  Widget _ornament(Color color) {
+  /// Large illustration for the story, shown on the cover page over the map
+  /// background. No colored frame — just rounded corners and a soft shadow so
+  /// the image reads big and clear, supporting the story it opens.
+  Widget _coverImage(String url, String icon) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.6),
+            blurRadius: 18,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: AspectRatio(
+          aspectRatio: 4 / 5,
+          child: Image.asset(
+            url,
+            fit: BoxFit.cover,
+            alignment: Alignment.center,
+            errorBuilder: (_, __, ___) => Container(
+              color: const Color(0xFF161210),
+              alignment: Alignment.center,
+              child: Text(icon, style: const TextStyle(fontSize: 52)),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _ornament() {
     return Row(
       children: [
-        Container(width: 32, height: 1, color: color.withValues(alpha: 0.6)),
+        Container(width: 32, height: 1, color: Colors.white.withValues(alpha: 0.6)),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Icon(Icons.auto_awesome, color: color, size: 13),
+          child: Icon(Icons.auto_awesome, color: Colors.white, size: 13),
         ),
-        Expanded(child: Container(height: 1, color: color.withValues(alpha: 0.4))),
+        Expanded(child: Container(height: 1, color: Colors.white.withValues(alpha: 0.4))),
       ],
     );
   }

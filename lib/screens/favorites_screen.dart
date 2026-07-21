@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import '../data/gods_data.dart';
 import '../data/pop_culture_data.dart';
+import '../models/god_model.dart';
 import '../models/pop_culture_model.dart';
 import '../widgets/god_card.dart';
 import '../l10n/language_provider.dart';
 import '../l10n/app_strings.dart';
 import '../services/pop_culture_bookmark_service.dart';
 import '../services/sound_service.dart';
+import '../utils/app_fonts.dart';
+import 'god_detail_screen.dart';
 import 'pop_culture_detail_screen.dart';
 
 class FavoritesScreen extends StatefulWidget {
@@ -16,46 +19,17 @@ class FavoritesScreen extends StatefulWidget {
   State<FavoritesScreen> createState() => _FavoritesScreenState();
 }
 
-class _FavoritesScreenState extends State<FavoritesScreen>
-    with SingleTickerProviderStateMixin {
-  String? _expandedGodId;
-  late final AnimationController _staggerCtrl;
-
-  List get _bookmarkedGods => godsData.where((g) => g.isBookmarked).toList();
+class _FavoritesScreenState extends State<FavoritesScreen> {
+  List<God> get _bookmarkedGods =>
+      godsData.where((g) => g.isBookmarked).toList();
 
   List<MythicPopCultureCharacter> get _favPopChars => popCultureData
       .where((c) => PopCultureBookmarkService.isFavorite(c.id))
       .toList();
 
   @override
-  void initState() {
-    super.initState();
-    _staggerCtrl = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 600),
-    )..forward();
-  }
-
-  @override
-  void dispose() {
-    _staggerCtrl.dispose();
-    super.dispose();
-  }
-
-  Animation<double> _stagger(int index) {
-    final count = _bookmarkedGods.length.clamp(1, 20);
-    final start = (index / count).clamp(0.0, 1.0);
-    final end = ((index + 1) / count).clamp(0.0, 1.0);
-    return CurvedAnimation(
-      parent: _staggerCtrl,
-      curve: Interval(start, end, curve: Curves.easeOutCubic),
-    );
-  }
-
-  @override
   Widget build(BuildContext context) {
     final lang = LanguageProvider.of(context).value;
-    final id = lang == 'id';
     final gods = _bookmarkedGods;
     final popChars = _favPopChars;
     final total = gods.length + popChars.length;
@@ -66,48 +40,56 @@ class _FavoritesScreenState extends State<FavoritesScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header
+            // Header — plain back link, with the title stacked below it.
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 12),
-              child: Row(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
-                    child: Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1A1A1A),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xFF333333)),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_back_ios_new_rounded,
-                        color: Colors.white,
-                        size: 18,
-                      ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.arrow_back_rounded,
+                            color: Colors.white, size: 22),
+                        SizedBox(width: 4),
+                        Text(
+                          'Back',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(width: 14),
-                  const Icon(Icons.bookmark_rounded,
-                      color: Color(0xFFB07800), size: 20),
-                  const SizedBox(width: 8),
-                  Text(
-                    id ? 'FAVORIT' : 'FAVORITES',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 2,
-                    ),
+                  const SizedBox(height: 14),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.bookmark_rounded,
+                          color: Colors.white, size: 24),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          localize(lang, 'Favorit', 'Favorites'),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        '$total ${localize(lang, 'favorit', 'favorites')}',
+                        style: const TextStyle(
+                            color: Color(0xFFD1D5DB), fontSize: 11),
+                      ),
+                    ],
                   ),
                 ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
-              child: Text(
-                '$total ${id ? 'favorit' : 'favorites'}',
-                style: const TextStyle(color: Color(0xFFD1D5DB), fontSize: 11),
               ),
             ),
             Expanded(
@@ -116,26 +98,28 @@ class _FavoritesScreenState extends State<FavoritesScreen>
                   : ListView(
                       padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
                       children: [
-                        for (int i = 0; i < gods.length; i++)
-                          GodCard(
-                            god: gods[i],
-                            isExpanded: gods[i].id == _expandedGodId,
-                            entranceAnim: _stagger(i),
-                            onToggle: () {
-                              setState(() {
-                                final tappedId = gods[i].id;
-                                _expandedGodId =
-                                    _expandedGodId == tappedId ? null : tappedId;
-                              });
-                            },
-                            onReturn: () => setState(() {}),
+                        if (gods.isNotEmpty)
+                          GridView.builder(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 12,
+                              crossAxisSpacing: 12,
+                              childAspectRatio: 0.72,
+                            ),
+                            itemCount: gods.length,
+                            itemBuilder: (context, i) =>
+                                _favGodCard(context, gods[i]),
                           ),
                         if (popChars.isNotEmpty) ...[
                           const SizedBox(height: 18),
                           Padding(
                             padding: const EdgeInsets.only(left: 4, bottom: 10),
                             child: Text(
-                              id ? 'MYTHIC POP CULTURE' : 'MYTHIC POP CULTURE',
+                              localize(lang, 'MYTHIC POP CULTURE', 'MYTHIC POP CULTURE'),
                               style: const TextStyle(
                                 color: Color(0xFF9CA3AF),
                                 fontSize: 12,
@@ -173,6 +157,87 @@ class _FavoritesScreenState extends State<FavoritesScreen>
             style: const TextStyle(color: Color(0xFF555555), fontSize: 13),
           ),
         ],
+      ),
+    );
+  }
+
+  // Full-bleed image card for a favorited god — 2 per row, name + a small
+  // "mythology · category" caption overlaid at the bottom of the image.
+  Widget _favGodCard(BuildContext context, God god) {
+    final color = GodCard.mythologyColor(god.mythology);
+    return GestureDetector(
+      onTap: () {
+        SoundService.playClick();
+        Navigator.push(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (_, __, ___) => GodDetailScreen(god: god),
+            transitionsBuilder: (_, anim, __, child) =>
+                FadeTransition(opacity: anim, child: child),
+            transitionDuration: const Duration(milliseconds: 300),
+          ),
+        ).then((_) {
+          if (mounted) setState(() {});
+        });
+      },
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Image.asset(
+              god.imageUrl,
+              fit: BoxFit.cover,
+              alignment: Alignment.topCenter,
+              errorBuilder: (_, __, ___) => Container(
+                color: color.withValues(alpha: 0.12),
+                child: Icon(Icons.shield_moon_rounded,
+                    color: color.withValues(alpha: 0.5), size: 40),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.transparent,
+                    Colors.black.withValues(alpha: 0.85),
+                  ],
+                  stops: const [0.5, 1.0],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 10,
+              right: 10,
+              bottom: 10,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    god.name,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppFonts.cinzel(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    '${god.mythology} · ${god.category}',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        color: Color(0xFFB0B0B0), fontSize: 11),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

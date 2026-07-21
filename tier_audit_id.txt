@@ -1,0 +1,521 @@
+================================================================
+  AUDIT TIER DEWA — MYTHERA
+  Tinjauan internal atas penempatan tier tiap dewa
+================================================================
+
+METODOLOGI
+----------
+Enam riset independen (satu per mitologi), masing-masing membaca ulang
+entri cerita tiap dewa di lib/data/*_gods.dart lalu membandingkannya
+dengan sumber mitologi primer/ilmiah (Poetic & Prose Edda, Hesiod,
+Pyramid Texts, Purana/wiracarita, Investiture of the Gods & Journey to
+the West, Kojiki/Nihon Shoki). Versi film/game/pop culture sengaja TIDAK
+dipakai sebagai acuan.
+
+Belum ada satupun perubahan yang diterapkan ke god_tiers.dart — ini
+murni daftar temuan sesuai permintaan.
+
+LEGENDA TIER
+------------
+  World-Ender  — penentu nasib dunia
+  Legendary    — legenda besar lintas mitologi
+  Elite        — kekuatan tempur papan atas
+  Veteran      — berpengalaman, mengandalkan siasat/keahlian khusus
+  Noble        — figur mulia/sakral, bukan petarung
+  Guardian     — penjaga keseimbangan, figur pendukung
+
+RINGKASAN ANGKA
+---------------
+  27  temuan dengan keyakinan tinggi (high-confidence)
+  18  layak dipertimbangkan (worth a look)
+  12  karakter belum punya tier sama sekali
+   6  mitologi ditinjau
+
+
+================================================================
+  NORDIC
+  Sumber: Poetic Edda (Völuspá), Prose Edda (Gylfaginning), tradisi saga
+================================================================
+Ringkasan: 5 keyakinan tinggi · 5 layak dipertimbangkan · 2 hilang
+
+-- KEYAKINAN TINGGI --
+
+1. Norns
+   Guardian -> Legendary (atau lebih tinggi)
+   Merekalah yang menentukan nasib (takdir) setiap makhluk yang ada —
+   teks kita sendiri bilang Odin pun tak bisa melawan kekuatan mereka.
+   Sosok yang levelnya di atas Sang Bapak Segala (Odin) tidak pantas
+   ada di tier untuk roh latar belakang. Temuan paling jelas di
+   seluruh audit ini.
+
+2. Vili & Vé
+   Elite -> Legendary (atau lebih tinggi)
+   Bukan petarung sama sekali — Elite adalah tier pertempuran, tapi
+   satu-satunya kisah mereka adalah ikut menciptakan alam semesta dan
+   manusia pertama bersama Odin. Dewa pencipta ditaruh sejajar dengan
+   raksasa yang suka berkelahi adalah kesalahan kategori, bukan cuma
+   soal level kekuatan.
+
+3. Baldur
+   Veteran -> Legendary
+   Kematiannya adalah pemicu utama Ragnarök. Nyaris tak terkalahkan —
+   semua benda di dunia bersumpah tak akan melukainya — dan diramalkan
+   akan ikut memerintah dunia yang terlahir kembali. Bukan sekadar
+   "satu tingkat di bawah para titan."
+
+4. Nidhogg
+   Noble -> Elite (atau lebih tinggi)
+   Noble berarti kebijaksanaan, keahlian, tugas suci — tidak cocok
+   untuk naga purba. Sudah ada sebelum sebagian besar dewa lain,
+   menggerogoti akar Yggdrasil selamanya, dan salah satu dari sedikit
+   makhluk bernama yang dipastikan selamat dari Ragnarök.
+
+5. Vidar
+   Legendary -> mungkin World-Ender
+   Teks kita sendiri menyebutnya "dewa terkuat kedua setelah Thor",
+   nyaris kata-per-kata dari Gylfaginning. Dia sendiri yang membunuh
+   Fenrir (World-Ender) dalam duel di Ragnarök.
+
+-- LAYAK DIPERTIMBANGKAN --
+
+- Tyr: Elite -> Legendary
+  Menurut mitologi Jermanik komparatif, Tyr adalah dewa langit/perang
+  yang lebih tua, kemudian digeser oleh Odin — secara struktural lebih
+  senior dari sebagian besar tier Legendary saat ini, dan dia mati
+  dalam duel bernama di Ragnarök sama seperti Heimdall (Legendary).
+
+- Loki vs Surtr (tetap, tapi perlu dicatat)
+  Keduanya sama-sama memimpin pasukan di pertempuran akhir Ragnarök
+  dan tewas di sana. Kalau memimpin pasukan kiamat membuat Surtr layak
+  World-Ender, peran paralel Loki yang cuma satu tier di bawah terasa
+  tidak konsisten.
+
+- Frigg: Noble -> Legendary
+  Ratu Asgard, duduk di samping Odin di singgasana yang bisa melihat
+  ke sembilan dunia — levelnya di atas Freya dalam hal kedudukan di
+  istana, tapi malah dua tier di bawahnya tanpa alasan jelas.
+
+- Thrym: Elite -> Veteran
+  Nol prestasi tempur — cuma mencuri palu dewa yang sedang tidur, lalu
+  mati seketika saat palu itu dikembalikan. "Siasat, bukan kekuatan
+  mentah" (Veteran) jauh lebih cocok daripada Elite.
+
+- Draugr: Guardian -> Elite
+  Nyaris tak terbunuh, menyebarkan penyakit — dalam Grettis Saga,
+  Glamr sang draugr hampir membunuh Grettir, salah satu pahlawan saga
+  terbesar. Itu ancaman tempur, bukan "penjaga keseimbangan dunia".
+
+Dicek juga, tapi dianggap sudah pas apa adanya:
+Sleipnir (Noble — bisa juga masuk Veteran), Hel (Legendary masuk akal,
+tapi layak di posisi teratas tier-nya), Njord vs Aegir & Rán, Idun.
+
+-- BELUM PUNYA TIER --
+
+- Höðr & Váli: belum ada tier -> disarankan
+  Keduanya disebut langsung di entri Ragnarök kita sendiri sebagai
+  yang selamat — Höðr adalah pembunuh Baldur, Váli lahir khusus untuk
+  membalaskan dendamnya. Lebih penting secara cerita dibanding
+  beberapa nama Noble/Veteran yang sudah masuk daftar. Sepertinya
+  memang terlewat.
+
+
+================================================================
+  YUNANI (GREEK)
+  Sumber: Hesiod (Theogony), Homer, Aeschylus
+================================================================
+Ringkasan: 6 keyakinan tinggi · 3 layak dipertimbangkan · 3 hilang
+
+-- KEYAKINAN TINGGI --
+
+1. Nyx
+   Noble -> World-Ender
+   Salah satu dari empat makhluk purba yang lahir langsung dari Chaos;
+   ibu dari Thanatos, Hypnos, para Fates (Moirai), dan Eris. Menurut
+   Iliad Buku XIV (dikutip di teks kita sendiri) — bahkan Zeus menahan
+   amarahnya demi tidak menyinggung Nyx. Kesalahan paling jelas di
+   seluruh daftar Yunani.
+
+2. Themis, Theia, Phoebe
+   Elite -> Legendary
+   Ketiganya tidak pernah bertarung dalam sumber aslinya, padahal
+   Elite didefinisikan lewat kehebatan tempur. Themis adalah
+   penasihat sekaligus istri Zeus dan penjaga Oracle Delphi; Theia
+   punya peran & wilayah persis sama dengan Hyperion, tapi dia
+   (Hyperion) dua tier di atasnya tanpa alasan jelas.
+
+3. Erinyes (Furies)
+   Veteran -> Legendary
+   Teks kita sendiri bilang mereka "lebih tua, dan dalam banyak hal
+   lebih ditakuti, daripada para dewa Olympus sendiri." Itu langsung
+   bertentangan dengan posisi mereka yang dua tier di bawah para
+   Olympian yang katanya mereka lampaui.
+
+4. Echidna
+   Elite -> Legendary
+   "Ibu dari Segala Monster" — leluhur hampir semua monster di daftar
+   ini — tapi levelnya disamakan dengan tiap anaknya satu-satu. Rhea
+   duduk satu tier penuh di atas anak-anak Olympian-nya; Echidna tidak
+   dapat penghormatan serupa, meski dia sendiri tak pernah punya
+   prestasi tempur (dibunuh saat tidur).
+
+5. Cerberus
+   Legendary -> Elite
+   Supaya sejajar dengan saudara kandungnya Hydra dan Chimera (sama-
+   sama anak Typhon x Echidna). Di semua mitosnya dia dikalahkan
+   dengan cara yang sama seperti saudaranya — digulat tangan kosong,
+   ditidurkan lewat musik lira, dibius kue madu — tidak ada yang
+   setara dengan "menghadapi ancaman terbesar dalam mitologi".
+
+6. Amphitrite & Triton (posisi terbalik)
+   Amphitrite (Veteran) — Ratu Lautan, ikut memerintah bersama
+   Poseidon — levelnya di bawah anaknya sendiri, Triton (Elite),
+   seorang pembawa pesan yang tugasnya meniup kerang. Ini terbalik
+   dari kedudukan asli mereka dalam cerita.
+
+-- LAYAK DIPERTIMBANGKAN --
+
+- Kratos: Veteran -> Guardian
+  Digambarkan murni sebagai personifikasi tanpa kehendak sendiri,
+  "hanya kekuatan untuk menjalankan perintah Zeus" — nol prestasi
+  mandiri. Kerangka Veteran (siasat/pengalaman) tidak cocok untuk
+  kekuatan tanpa keinginan sendiri.
+
+- Menoetius, Epimetheus, Coeus, Crius -> pertimbangkan Guardian
+  Teks kita sendiri menyebut mereka "kecil", "abstrak", atau
+  didefinisikan lewat kebodohan — cocok sekali dengan definisi
+  Guardian, yang saat ini kosong sementara keempatnya tersebar di
+  Veteran/Elite.
+
+- Entri "Cyclops" (penggabungan yang ambigu)
+  Menggabungkan dua makhluk yang sangat berbeda dalam satu entri
+  Elite: Cyclops purba pembuat senjata (menempa petir Zeus — layak
+  Legendary) dan Cyclops gembala seperti Polyphemus (dibutakan oleh
+  manusia biasa — jelas Elite). Layak dicatat meski tier
+  kompromi-nya dipertahankan.
+
+Dicek juga, tapi dianggap sudah pas apa adanya:
+Thanatos (Elite; konsisten digambarkan bisa dikalahkan, beda dengan
+Nyx), Hecate (Legendary sudah pas, hanya terasa aneh posisinya di
+atas Themis yang sebenarnya lebih senior).
+
+-- BELUM PUNYA TIER --
+
+- Eris, para Moirai (Fates), Pan: belum ada tier
+  Eris disebut sebagai anak Nyx sendiri dan pemicu Perang Troya di
+  entri Aphrodite/Hera kita. Para Moirai disebut sebagai anak Themis
+  di entrinya sendiri — sang takdir itu sendiri, kadang dikatakan
+  levelnya di atas Zeus. Pan bahkan tidak punya entri sama sekali
+  padahal termasuk dewa Olympus-adjacent yang cukup dikenal luas.
+
+
+================================================================
+  MESIR (EGYPTIAN)
+  Sumber: Pyramid Texts, Book of the Dead, teologi Memphis & Heliopolis
+================================================================
+Ringkasan: 7 keyakinan tinggi · 3 layak dipertimbangkan · 3 hilang
+
+-- KEYAKINAN TINGGI (Elite dipakai jadi "tong sampah" non-petarung) --
+
+1. Ma'at
+   Elite -> Legendary (atau lebih tinggi)
+   Personifikasi kebenaran & tatanan kosmis itu sendiri — pondasi
+   dari hampir seluruh aspek agama dan politik Mesir kuno. Ditaruh di
+   tier tempur bersebelahan dengan Ammit adalah kesalahan kategori
+   terbesar di mitologi Mesir.
+
+2. Ammit
+   Elite -> Guardian
+   Tidak pernah bertarung dengan siapapun — dia hanya duduk di
+   samping timbangan penghakiman dan menunggu. Sosok penjaga/akibat,
+   bukan petarung.
+
+3. Serqet & Nekhbet
+   Elite -> Guardian
+   Seluruh peran Serqet adalah sihir perlindungan/penyembuhan — dia
+   secara harfiah menjaga guci canopic. Mitos Nekhbet murni sosok ibu
+   pelindung bersayap di atas firaun, tanpa kisah perang (beda dengan
+   pasangannya, Wadjet).
+
+4. Khnum, Sokar, Bennu
+   Elite -> Noble (atau lebih tinggi)
+   Khnum membentuk setiap manusia di atas roda tembikar — setara
+   secara kosmis dengan Ptah (Legendary). Sokar adalah pelindung
+   pekuburan/kerajinan, tanpa peran tempur. Bennu adalah burung
+   penciptaan purba yang setara Khepri (Legendary). Tak satupun dari
+   mereka pernah bertarung.
+
+-- LAYAK DIPERTIMBANGKAN --
+
+- Ptah vs Atum (tidak konsisten)
+  Atum berada di World-Ender sebagian karena ramalan bahwa suatu saat
+  dia akan "membatalkan" ciptaan dunia. Memphite Theology memberi Ptah
+  klaim yang sama kuatnya — dia "merancang alam semesta dan semua
+  dewa lain di hatinya lalu menciptakannya dengan menyebut namanya."
+  Kalau logika itu mengangkat Atum, harusnya mengangkat Ptah
+  (saat ini Legendary) juga.
+
+- Osiris: Legendary -> mungkin World-Ender
+  Entri Amun kita sendiri menyebut Ra, Osiris, dan Amun sebagai "tiga
+  dewa terpenting dalam sejarah agama Mesir kuno" — tapi Osiris dua
+  tier di bawah dua lainnya, padahal dialah yang mengadili nasib
+  abadi setiap jiwa.
+
+- Hathor / Bastet vs Tefnut (tidak konsisten)
+  Ketiganya berbagi mitos yang identik — "Mata Ra yang mengamuk
+  berwujud singa betina" — bahkan saling dirujuk di entri masing-
+  masing. Tapi Tefnut (Veteran) dua tier di bawah Hathor dan Bastet
+  (Elite) tanpa alasan yang disebutkan.
+
+Dicek juga, tapi dianggap sudah pas apa adanya:
+Sekhmet (Legendary; dia adalah alat amarah Ra yang dikirim, bukan
+penentu nasib dunia yang berdiri sendiri), Thoth (Legendary; pada
+dasarnya penengah/juru tulis, bukan pencipta-penguasa — klaim itu
+sebenarnya milik Ptah).
+
+-- BELUM PUNYA TIER --
+
+- Nephthys & Sobek: belum ada tier
+  Nephthys adalah saudara inti keluarga Ennead, penting sekali dalam
+  mitos kebangkitan Osiris, dan sudah punya entri lengkap — tapi
+  belum ada tier-nya. Sobek adalah dewa dengan kultus besar (ribuan
+  buaya yang dimumikan ditemukan secara arkeologis), juga punya entri
+  lengkap tapi tanpa tier. Keduanya sepertinya kelewat, karena
+  tokoh-tokoh yang lebih kecil saja sudah masuk daftar.
+
+
+================================================================
+  HINDU
+  Sumber: Purana, Mahabharata, Ramayana, Weda & Upanishad
+================================================================
+Ringkasan: 5 keyakinan tinggi · 3 layak dipertimbangkan · 0 hilang
+
+-- KEYAKINAN TINGGI --
+
+1. Parashurama
+   Veteran -> Elite/Legendary
+   Teks kita sendiri bilang dia melatih Bhishma dan Karna (Elite)
+   secara langsung, dan dia sendiri bertarung sengit melawan Rama
+   (Legendary). Seorang guru berada di tier lebih rendah dari
+   murid-muridnya sendiri adalah kontradiksi internal, bukan cuma
+   soal tafsir kitab.
+
+2. Vamana
+   Veteran -> Legendary
+   Wujud Trivikrama-nya membentangi seluruh bumi dalam satu langkah
+   dan seluruh langit dalam langkah kedua — pencapaian sebesar alam
+   semesta, sebanding dengan Vishvarupa kosmis milik Krishna.
+   "Veteran" menangkap kecerdikan penyamarannya tapi sangat
+   meremehkan hasil akhirnya.
+
+3. Varaha
+   Veteran -> Elite
+   Bertarung selama seribu tahun dan membunuh iblis yang cukup kuat
+   untuk menyeret bumi ke dasar samudra. Saudara iblis itu sendiri
+   (Hiranyakashipu) dibunuh oleh Narasimha, yang levelnya dua tier
+   lebih tinggi — perlakuan yang tidak konsisten untuk sepasang iblis
+   yang setara.
+
+4. Ravana
+   Elite -> Legendary
+   Menggulingkan Kubera (seorang penjaga dunia) dan mengepung alam
+   para Dewa secara langsung — pola celah-berkah yang sama dengan
+   Hiranyakashipu, yang pembunuhnya berada di Legendary. Ancaman yang
+   butuh perang koalisi dipimpin avatar untuk dikalahkan rasanya
+   janggal kalau levelnya di bawah Indra dan Hanuman.
+
+5. Vayu
+   Elite -> Legendary
+   Teks kita sendiri mengutip langsung Brihadaranyaka Upanishad yang
+   menyebutnya "yang terdepan di antara para dewa" — satu-satunya
+   yang tak tergoyahkan saat semua dewa lain diuji dan kehilangan
+   kekuatan mereka. Posisinya di bawah Indra/Agni/Varuna/Surya
+   bertentangan dengan klaim dari teks kita sendiri.
+
+-- LAYAK DIPERTIMBANGKAN --
+
+- Narasimha: Legendary -> mungkin World-Ender
+  Prestasi utamanya — melampaui setiap kategori keberadaan sekaligus
+  (bukan manusia/bukan hewan, bukan siang/bukan malam, bukan di dalam/
+  bukan di luar) — secara struktural setara dengan amukan Kali yang
+  levelnya World-Ender dan butuh campur tangan Shiwa sendiri untuk
+  diredakan.
+
+- Bhishma (urutan di dalam tier Elite)
+  Berkah "memilih sendiri saat kematiannya" membuatnya benar-benar
+  tak terkalahkan kecuali oleh dirinya sendiri — bisa dibilang bentuk
+  kekuatan yang lebih superior dibanding kekuatan Arjuna/Karna yang
+  berbasis senjata dan skill. Layak ditaruh di atas mereka berdua
+  dalam tier Elite, bukan sejajar rata.
+
+- Yama & Kubera vs Indra & Varuna (pemisahan dipertanyakan)
+  Secara tradisi mereka adalah empat Lokapala (penjaga arah mata
+  angin) dengan kedudukan Weda yang setara, tapi dipisah ke dua tier
+  berbeda tanpa dasar tekstual yang jelas — meski kalau Ravana naik
+  tier seperti saran di atas, posisi "Kubera di bawah penakluknya
+  sendiri" jadi konsisten lagi.
+
+Dicek juga, tapi dianggap sudah pas apa adanya:
+Krishna, Kalki, Matsya, Kurma, Garuda, Indra, Kartikeya, Arjuna, Karna,
+Rama, Hanuman, Buddha (masuk akal sebagai avatar Purana, bukan pop
+culture — posisinya di Noble cocok dengan narasi avatar Buddha yang
+memang unik karena non-kekerasan).
+
+
+================================================================
+  TIONGKOK (CHINESE)
+  Sumber: Journey to the West, Investiture of the Gods (Fengshen
+  Yanyi), Shan Hai Jing, Zhuangzi
+================================================================
+Ringkasan: 4 keyakinan tinggi · 2 layak dipertimbangkan · 6 hilang
+
+-- KEYAKINAN TINGGI --
+
+1. Hundun
+   Guardian -> Legendary (atau lebih tinggi)
+   Teks kita SENDIRI menyebut Hundun "setara dengan telur kosmis yang
+   ada sebelum kemunculan Pangu" — kerangka yang nyaris identik
+   dengan Taiyi, yang levelnya Legendary. Dua makhluk dengan peran
+   "mendahului Yin dan Yang" yang sama, tapi sekarang terpaut empat
+   tier.
+
+2. Delapan Dewa (Eight Immortals)
+   Elite -> Noble
+   Kisah utama mereka (Menyeberangi Lautan) adalah kontes kecerdikan
+   individu tanpa pertarungan. Hanya satu dari delapan (Lu Dongbin,
+   dengan pedangnya) yang punya kaitan senjata — sisanya didefinisikan
+   lewat welas asih, kemurnian, dan kebijaksanaan yang nyeleneh.
+
+3. Sun Wukong
+   World-Ender -> mungkin Legendary
+   Benar-benar bisa diperdebatkan, ini sekadar dicatat bukan
+   dipastikan. Berdasarkan kriteria tier-nya sendiri — membentuk
+   ulang, menghancurkan, atau MEMERINTAH dunia — dia tidak pernah
+   memerintah apapun dan ceritanya berakhir dengan dia dikekang di
+   bawah ikat kepala. Sisi sebaliknya: dialah tokoh petarung paling
+   ikonik di seluruh mitologi Tionghoa. Benar-benar 50:50.
+
+-- LAYAK DIPERTIMBANGKAN --
+
+- Taotie (soal konsistensi, bukan kekuatan)
+  Entri kita sendiri mengakui Taotie tidak punya satupun mitos
+  naratif tunggal — murni motif simbolis pada perunggu tanpa
+  prestasi yang digambarkan. Veteran sudah cukup murah hati; masalah
+  sebenarnya adalah dia dan Hundun (sama-sama "Empat Momok/Perils")
+  jadi sangat tidak konsisten jaraknya begitu Hundun naik tier.
+
+- Mulan: belum ada tier -> disarankan Veteran
+  Teks kita sendiri tegas bilang kehebatannya "bukan berasal dari
+  kekuatan supernatural... melainkan dari tekad, latihan, dan
+  kecerdikan" — cocok nyaris kata-per-kata dengan Veteran. Catatan:
+  dia akan jadi satu-satunya manusia biasa tanpa unsur supernatural
+  di seluruh sistem tier ini — pertanyaan kategori tersendiri buat
+  yang mengelola daftar ini nantinya.
+
+Dicek juga, tapi dianggap sudah pas apa adanya:
+Nezha vs Erlang Shen (sama-sama Legendary, masuk akal), Zhong Kui vs
+Yanluo Wang (penegak hukum Elite di bawah penguasa dunia bawah
+Legendary — hubungan kekuatan yang sudah benar).
+
+-- BELUM PUNYA TIER --
+
+- He Bo: belum ada tier -> disarankan Veteran (atau lebih tinggi)
+  Secara struktural sama dengan empat Raja Naga (Legendary) — cuma
+  wilayahnya sungai, bukan laut.
+
+- Cai Shen: belum ada tier -> disarankan Noble
+  Salah satu dewa rakyat yang paling banyak disembah di Tiongkok
+  (tokoh utama Tahun Baru Imlek), tapi tanpa unsur tempur — beda
+  dengan sesama dewa kekayaan Zhao Gongming (Elite) yang levelnya
+  didapat lewat rekam jejak perang sungguhan.
+
+- Jigong: belum ada tier -> disarankan Noble
+  Pengembara penyembuh ajaib bergaya trickster-welas asih, mirip
+  Lu Dongbin — didefinisikan lewat kecerdikan, bukan pertarungan.
+
+- Empat Simbol (Four Symbols): belum ada tier -> disarankan Elite
+  (atau lebih tinggi)
+  Macan Putih, Naga Biru, Kura-kura Hitam, Burung Vermilion —
+  penjaga sekelas rasi bintang, jelas setara dengan Long/Fenghuang/
+  Qilin (sudah Elite). Kura-kura Hitam/Xuanwu khususnya punya kultus
+  bela diri besar sendiri dan bisa dibilang layak Legendary.
+
+
+================================================================
+  JEPANG (JAPANESE)
+  Sumber: Kojiki, Nihon Shoki, tradisi Shinto
+================================================================
+Ringkasan: 4 keyakinan tinggi · 2 layak dipertimbangkan · 0 hilang
+
+-- KEYAKINAN TINGGI --
+
+1. Kotoamatsukami (perlu dipecah, bukan disamaratakan)
+   Saat ini kelima-limanya ditaruh di Guardian — tier TERENDAH —
+   padahal mereka adalah dewa paling pertama dalam kosmogoni Shinto.
+   Tapi mereka bukan satu kesatuan yang sama:
+     - Takamimusubi: duduk di dewan para dewa dan secara langsung
+       mengatur penaklukan Izumo serta turunnya keturunan kekaisaran
+       -> disarankan Legendary.
+     - Kamimusubi: menghidupkan kembali Ōkuninushi dan menjadi orang
+       tua Sukunabikona — sihir pemulihan yang nyata -> disarankan
+       Noble.
+     - Tiga lainnya (Amenominakanushi, Umashiashikabihikoji,
+       Amenotokotachi) memang tidak pernah beraksi lagi, jadi
+       kerangka Guardian ("roh latar belakang") kurang pas juga —
+       minimal Noble lebih cocok untuk peran mereka sebagai "aksioma
+       kosmis yang diam", dibanding "roh pendukung".
+
+2. Inari
+   Elite -> Noble/Legendary
+   Daftar kekuatannya sendiri (Padi, Pertanian, Kemakmuran, Rubah,
+   Kesuburan) sama sekali tidak menyebut unsur tempur. Salah satu
+   kami yang paling banyak disembah di Jepang — 30.000+ kuil — dan
+   memerintah para kitsune sebagai utusan, tapi Elite jelas sumbu
+   yang salah.
+
+3. Emma-O
+   Elite -> Legendary
+   Entri Oni kita sendiri bilang para Oni bertugas sebagai penyiksa
+   "di bawah perintah Enma." Kalau Oni levelnya Elite, sosok yang
+   memerintah mereka dan bertakhta sebagai raja/hakim alam baka
+   seharusnya tidak sejajar dengan bawahannya sendiri.
+
+4. Kitsune
+   Elite -> Noble
+   Daftar kekuatannya (Perubahan Wujud, Ilusi, Kebijaksanaan, Api
+   Rubah, Kesetiaan) sama sekali non-tempur, dan kisah utamanya
+   (Kuzunoha) tentang istri dan ibu yang setia, bukan petarung — jadi
+   satu-satunya yang ganjil di antara Oni dan Tengu yang memang
+   bernuansa tempur.
+
+-- LAYAK DIPERTIMBANGKAN --
+
+- Shinigami: Elite -> Veteran/Noble
+  Daftar kekuatannya (Kematian, Godaan, Kefanaan, Bayangan,
+  Ketidakterelakan) menggambarkan ancaman psikologis, bukan tempur —
+  dan teks kita sendiri mencatat dia bahkan tidak ada di Kojiki
+  maupun Nihon Shoki, melainkan konsep rakyat zaman Edo dengan
+  pijakan kanon yang tipis.
+
+- Ame-no-Uzume: Noble -> mungkin Legendary
+  Tariannya adalah satu-satunya aksi yang berhasil memancing
+  Amaterasu keluar dari gua langit dan mengembalikan cahaya ke
+  seluruh alam semesta — taruhannya bisa dibilang lebih besar
+  dibanding beberapa dewa yang sudah ada di Legendary.
+
+Dicek juga, tapi dianggap sudah pas apa adanya:
+Yamata no Orochi (Legendary masuk akal dibanding Susanoo, walau dia
+pingsan sebelum sempat bertarung sungguhan), Ōkuninushi (kriteria
+"memerintah wilayah" di Legendary tetap mendukungnya meski gaya
+kekuatannya lembut/non-tempur).
+
+
+================================================================
+  LANGKAH SELANJUTNYA
+================================================================
+Belum ada satupun perubahan yang diterapkan. Item "keyakinan tinggi"
+adalah yang paling layak ditindaklanjuti duluan; item "layak
+dipertimbangkan" lebih ke soal selera di mana garis batasnya
+ditarik.
+
+Tinggal kabari mitologi mana (atau nama-nama mana saja) yang mau
+diubah tier-nya, nanti saya update lib/data/god_tiers.dart sesuai itu.

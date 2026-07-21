@@ -22,7 +22,7 @@ class StaticPageScaffold extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 4),
+              padding: const EdgeInsets.fromLTRB(20, 40, 20, 4),
               child: Row(
                 children: [
                   GestureDetector(
@@ -39,13 +39,17 @@ class StaticPageScaffold extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 14),
-                  Text(
-                    title,
-                    style: AppFonts.cinzel(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                      letterSpacing: 1,
+                  Expanded(
+                    child: Text(
+                      title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppFonts.cinzel(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        letterSpacing: 1,
+                      ),
                     ),
                   ),
                 ],

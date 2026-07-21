@@ -23,14 +23,31 @@
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="mytharium">
+  <meta name="apple-mobile-web-app-title" content="mythera">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>mytharium</title>
+  <title>mythera</title>
   <link rel="manifest" href="manifest.json">
+
+  <!--
+    Locks the host page to the viewport so the browser itself never scrolls —
+    only Flutter's own internal scroll views should move. Without this, mouse
+    wheel / trackpad scroll on some browsers can scroll the whole HTML page,
+    dragging "fixed" Flutter overlays (like floating back buttons) along with
+    it even though they're pinned within Flutter's own layout.
+  -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+  </style>
 </head>
 <body>
   <!--

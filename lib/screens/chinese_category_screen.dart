@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/god_card.dart';
 import '../l10n/language_provider.dart';
 import '../services/sound_service.dart';
-import 'category_god_list_screen.dart';
+import 'immersive_god_list_screen.dart';
 
 class ChineseCategoryScreen extends StatelessWidget {
   const ChineseCategoryScreen({super.key});
@@ -14,7 +14,7 @@ class ChineseCategoryScreen extends StatelessWidget {
     Navigator.push(
       context,
       PageRouteBuilder(
-        pageBuilder: (_, __, ___) => CategoryGodListScreen(
+        pageBuilder: (_, __, ___) => ImmersiveGodListScreen(
           mythology: _mythology,
           category: category,
           titleLabel: label,
@@ -30,87 +30,104 @@ class ChineseCategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final lang = LanguageProvider.of(context).value;
     final color = GodCard.mythologyColor(_mythology);
-    final id = lang == 'id';
 
     return Scaffold(
       backgroundColor: Colors.black,
+      // Back button is a plain Column child above the list — never inside
+      // any scrollable subtree — so it's structurally guaranteed to stay
+      // put, unlike a Positioned overlay sitting next to a scroll view.
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildHeader(context, color, lang),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.arrow_back_rounded,
+                        color: Colors.white, size: 22),
+                    SizedBox(width: 4),
+                    Text(
+                      'Back',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Expanded(
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
                 children: [
+                _buildHeader(context, color, lang),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Istana Surga' : 'Heavenly Court',
+                    label: localize(lang, 'Istana Surga', 'Heavenly Court'),
                     category: 'Court',
-                    subtitle: id
-                        ? 'Penguasa surga & birokrasi langit'
-                        : 'Rulers of Heaven & the celestial bureaucracy',
+                    subtitle: localize(lang, 'Penguasa surga & birokrasi langit', 'Rulers of Heaven & the celestial bureaucracy'),
+                    imagePath: 'assets/images/Chinese/Category/court.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Dewa Purba' : 'Primordial',
+                    label: localize(lang, 'Dewa Purba', 'Primordial'),
                     category: 'Primordial',
-                    subtitle: id
-                        ? 'Pencipta alam semesta & peradaban'
-                        : 'Creators of the universe & civilization',
+                    subtitle: localize(lang, 'Pencipta alam semesta & peradaban', 'Creators of the universe & civilization'),
+                    imagePath: 'assets/images/Chinese/Category/primordial.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Dewa Alam' : 'Nature Gods',
+                    label: localize(lang, 'Dewa Alam', 'Nature Gods'),
                     category: 'Nature',
-                    subtitle: id
-                        ? 'Naga laut, petir, hujan & angin'
-                        : 'Sea dragons, thunder, rain & wind',
+                    subtitle: localize(lang, 'Naga laut, petir, hujan & angin', 'Sea dragons, thunder, rain & wind'),
+                    imagePath: 'assets/images/Chinese/Category/nature.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Dunia Bawah' : 'Underworld',
+                    label: localize(lang, 'Dunia Bawah', 'Underworld'),
                     category: 'Underworld',
-                    subtitle: id
-                        ? 'Diyu, penghakiman & reinkarnasi'
-                        : 'Diyu, judgment & reincarnation',
+                    subtitle: localize(lang, 'Diyu, penghakiman & reinkarnasi', 'Diyu, judgment & reincarnation'),
+                    imagePath: 'assets/images/Chinese/Category/underworld.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Pahlawan & Tokoh' : 'Hero & Figures',
+                    label: localize(lang, 'Pahlawan & Tokoh', 'Hero & Figures'),
                     category: 'Hero',
-                    subtitle: id
-                        ? 'Tokoh legendaris & manusia abadi'
-                        : 'Legendary figures & immortals',
+                    subtitle: localize(lang, 'Tokoh legendaris & manusia abadi', 'Legendary figures & immortals'),
+                    imagePath: 'assets/images/Chinese/Category/heroe.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Makhluk Mitologi' : 'Monster & Creature',
+                    label: localize(lang, 'Makhluk Mitologi', 'Monster & Creature'),
                     category: 'Creature',
-                    subtitle: id
-                        ? 'Naga, phoenix & makhluk sakti lainnya'
-                        : 'Dragons, phoenixes & other mystical beings',
+                    subtitle: localize(lang, 'Naga, phoenix & makhluk sakti lainnya', 'Dragons, phoenixes & other mystical beings'),
+                    imagePath: 'assets/images/Chinese/Category/monster.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Kosmologi' : 'Cosmology',
+                    label: localize(lang, 'Kosmologi', 'Cosmology'),
                     category: 'Cosmology',
-                    subtitle: id
-                        ? 'Alam, gunung suci & tempat mitologis'
-                        : 'Realms, sacred mountains & mythic places',
+                    subtitle: localize(lang, 'Alam, gunung suci & tempat mitologis', 'Realms, sacred mountains & mythic places'),
+                    imagePath: 'assets/images/Chinese/Category/cosmology.webp',
                   ),
                 ],
               ),
@@ -123,44 +140,26 @@ class ChineseCategoryScreen extends StatelessWidget {
 
   Widget _buildHeader(BuildContext context, Color color, String lang) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 12, 20, 10),
-      child: Row(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          GestureDetector(
-            onTap: () => Navigator.pop(context),
-            child: Container(
-              margin: const EdgeInsets.only(right: 10),
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF333333)),
-              ),
-              child: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 16),
+          Text(
+            'CHINESE',
+            textAlign: TextAlign.center,
+            style: GodCard.mythologyFont(
+              _mythology,
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
             ),
           ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'CHINESE',
-                  style: GodCard.mythologyFont(
-                    _mythology,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  lang == 'id'
-                      ? 'Pilih kategori dewa Tiongkok'
-                      : 'Choose a category of Chinese gods',
-                  style: const TextStyle(color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.w600),
-                ),
-              ],
-            ),
+          const SizedBox(height: 2),
+          Text(
+            localize(lang, 'Pilih kategori dewa Tiongkok', 'Choose a category of Chinese gods'),
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.w600),
           ),
         ],
       ),
@@ -173,37 +172,75 @@ class ChineseCategoryScreen extends StatelessWidget {
     required String label,
     required String category,
     required String subtitle,
+    String? imagePath,
   }) {
     return GestureDetector(
       onTap: () => _openCategory(context, category, label),
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        height: 90,
+        clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [color.withValues(alpha: 0.32), color.withValues(alpha: 0.08)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: color.withValues(alpha: 0.4)),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-            Text(
-              label,
-              style: GodCard.mythologyFont(
-                _mythology,
-                fontSize: 16,
-                fontWeight: FontWeight.w800,
-                color: Colors.white,
+            if (imagePath != null)
+              Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [color.withValues(alpha: 0.32), color.withValues(alpha: 0.08)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                ),
+              )
+            else
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [color.withValues(alpha: 0.32), color.withValues(alpha: 0.08)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+              ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.black.withValues(alpha: 0.6), Colors.black.withValues(alpha: 0.2)],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
               ),
             ),
-            const SizedBox(height: 3),
-            Text(
-              subtitle,
-              style: const TextStyle(color: Colors.white, fontSize: 11, height: 1.25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: GodCard.mythologyFont(
+                      _mythology,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 11, height: 1.25),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

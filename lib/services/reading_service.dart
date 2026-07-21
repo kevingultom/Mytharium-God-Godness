@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/god_model.dart';
 import '../models/history_model.dart';
+import 'firebase_auth_service.dart';
+import 'firestore_service.dart';
 
 /// One entry in the "recently read" history shown on the My Myths screen.
 class RecentRead {
@@ -44,6 +46,7 @@ class ReadingService {
   static Set<String> _readGods = {};
   static Set<String> _readStories = {};
   static int _streak = 0;
+  static String _lastDate = '';
   static List<RecentRead> _recent = [];
 
   static Future<void> init() async {
@@ -51,9 +54,21 @@ class ReadingService {
     _readGods = (prefs.getStringList(_readGodsKey) ?? const []).toSet();
     _readStories = (prefs.getStringList(_readStoriesKey) ?? const []).toSet();
     _streak = prefs.getInt(_streakKey) ?? 0;
+    _lastDate = prefs.getString(_lastDateKey) ?? '';
     _recent = (prefs.getStringList(_recentKey) ?? const [])
-        .map((s) => RecentRead.fromJson(jsonDecode(s) as Map<String, dynamic>))
+        .map(_tryParseRecent)
+        .whereType<RecentRead>()
         .toList();
+  }
+
+  // A single malformed entry (e.g. from a restored backup on a different
+  // app version) shouldn't crash startup or wipe out the rest of the list.
+  static RecentRead? _tryParseRecent(String s) {
+    try {
+      return RecentRead.fromJson(jsonDecode(s) as Map<String, dynamic>);
+    } catch (_) {
+      return null;
+    }
   }
 
   static bool isGodRead(String id) => _readGods.contains(id);
@@ -76,6 +91,7 @@ class ReadingService {
     if (last == today) return; // already counted today
     final yesterday = _dateStr(now.subtract(const Duration(days: 1)));
     _streak = (last == yesterday) ? _streak + 1 : 1;
+    _lastDate = today;
     await prefs.setString(_lastDateKey, today);
     await prefs.setInt(_streakKey, _streak);
   }
@@ -111,6 +127,7 @@ class ReadingService {
     }
     await prefs.setStringList(_readGodsKey, _readGods.toList());
     await _saveRecent(prefs);
+    _syncToCloud();
     return nowRead;
   }
 
@@ -134,6 +151,23 @@ class ReadingService {
     }
     await prefs.setStringList(_readStoriesKey, _readStories.toList());
     await _saveRecent(prefs);
+    _syncToCloud();
     return nowRead;
+  }
+
+  /// Fire-and-forget push to Firestore.
+  static void _syncToCloud() {
+    final uid = FirebaseAuthService.instance.uid;
+    if (uid == null || FirebaseAuthService.instance.isAnonymous) return;
+    FirestoreService.instance
+        .saveReadingProgress(
+      uid,
+      readGodIds: _readGods,
+      readStoryIds: _readStories,
+      streak: _streak,
+      lastDate: _lastDate,
+      recent: _recent.map((r) => r.toJson()).toList(),
+    )
+        .catchError((e) {});
   }
 }

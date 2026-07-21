@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/god_model.dart';
 import '../models/pop_culture_model.dart';
 import '../data/gods_data.dart';
-import '../data/pop_culture_data.dart';
 import '../widgets/god_card.dart';
 import '../widgets/random_god_dialog.dart';
 import '../l10n/language_provider.dart';
@@ -11,7 +10,8 @@ import '../services/bookmark_service.dart';
 import '../services/onboarding_service.dart';
 import '../services/sound_service.dart';
 import '../utils/app_fonts.dart';
-import 'detail_screen.dart';
+import 'main_shell.dart';
+import 'god_detail_screen.dart';
 import 'pop_culture_detail_screen.dart';
 import 'greek_category_screen.dart';
 import 'nordic_category_screen.dart';
@@ -26,13 +26,14 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  HomeScreenState createState() => HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late List<God> _allGods;
   List<God> _filteredGods = [];
   final TextEditingController _searchController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
   String _selectedMythology = 'All';
   String? _expandedGodId;
   late final AnimationController _staggerCtrl;
@@ -69,10 +70,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     if (mounted) setState(() {});
   }
 
+  /// Scrolls the Discover feed back to the top — called by [MainShell] when
+  /// the Discover tab is re-tapped while already active.
+  void scrollToTop() {
+    if (_scrollController.hasClients) {
+      _scrollController.animateTo(0, duration: const Duration(milliseconds: 400), curve: Curves.easeOut);
+    }
+  }
+
   @override
   void dispose() {
     _staggerCtrl.dispose();
     _searchController.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -100,7 +110,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     SoundService.playClick();
     final lang = LanguageProvider.of(context).value;
 
-    // The dice can land on a god OR a Mythic Pop Culture character.
+    // The dice spins the 6 mythic realms first, then a god within the one
+    // it lands on — so the pool is real gods only, no pop-culture entries.
     final pool = <RandomEntry>[
       for (final g in _allGods)
         RandomEntry(
@@ -110,14 +121,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           verse: g.mythology,
           payload: g,
         ),
-      for (final c in popCultureData)
-        RandomEntry(
-          imageUrl: c.imageUrl,
-          name: c.name,
-          subtitle: c.sourceMedia,
-          verse: c.originVerse,
-          payload: c,
-        ),
     ];
 
     final result = await RandomGodDialog.show(context, pool);
@@ -126,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     final payload = result.payload;
     Widget page;
     if (payload is God) {
-      page = DetailScreen(god: payload, onReturn: () {});
+      page = GodDetailScreen(god: payload);
     } else if (payload is MythicPopCultureCharacter) {
       page = PopCultureDetailScreen(character: payload);
     } else {
@@ -171,14 +174,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   void _toggleLanguage() {
     final lang = LanguageProvider.of(context);
-    lang.setLanguage(lang.value == 'id' ? 'en' : 'id');
+    lang.cycleLanguage();
   }
 
   void _showBattleDisclaimer(String lang) {
     showGeneralDialog(
       context: context,
       barrierDismissible: true,
-      barrierLabel: lang == 'id' ? 'Tutup dialog' : 'Dismiss dialog',
+      barrierLabel: localize(lang, 'Tutup dialog', 'Dismiss dialog'),
       barrierColor: Colors.black54,
       transitionDuration: const Duration(milliseconds: 300),
       transitionBuilder: (ctx, a1, a2, child) {
@@ -220,7 +223,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 const SizedBox(height: 16),
                 // Title
                 Text(
-                  lang == 'id' ? 'Pernyataan Penting' : 'Important Notice',
+                  localize(lang, 'Pernyataan Penting', 'Important Notice'),
                   style: AppFonts.cinzel(
                     fontSize: 16,
                     fontWeight: FontWeight.w800,
@@ -231,9 +234,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 const SizedBox(height: 14),
                 // Warning text
                 Text(
-                  lang == 'id'
-                      ? 'Fitur "Adu Dewa" dibuat semata-mata untuk hiburan dan edukasi mengenai mitologi.\n\nKami tidak bermaksud untuk menyinggung, menyalahgunakan, atau tidak menghormati dewa-dewi dari berbagai kepercayaan.\n\nGunakan fitur ini dengan bijak dan tetap hormati mitologi yang ada.'
-                      : 'The "God Battle" feature is created solely for entertainment and educational purposes about mythology.\n\nWe do not intend to offend, misuse, or disrespect any deities from various beliefs.\n\nUse this feature wisely and remain respectful of existing mythologies.',
+                  localize(lang,
+                      'Fitur "Adu Dewa" dibuat semata-mata untuk hiburan dan edukasi mengenai mitologi.\n\nKami tidak bermaksud untuk menyinggung, menyalahgunakan, atau tidak menghormati dewa-dewi dari berbagai kepercayaan.\n\nGunakan fitur ini dengan bijak dan tetap hormati mitologi yang ada.',
+                      'The "God Battle" feature is created solely for entertainment and educational purposes about mythology.\n\nWe do not intend to offend, misuse, or disrespect any deities from various beliefs.\n\nUse this feature wisely and remain respectful of existing mythologies.'),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 13,
@@ -259,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                           child: Center(
                             child: Text(
-                              lang == 'id' ? 'Batal' : 'Cancel',
+                              localize(lang, 'Batal', 'Cancel'),
                               style: const TextStyle(
                                 color: Color(0xFF9CA3AF),
                                 fontSize: 14,
@@ -295,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           ),
                           child: Center(
                             child: Text(
-                              lang == 'id' ? 'Lanjut' : 'Continue',
+                              localize(lang, 'Lanjut', 'Continue'),
                               style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
@@ -324,15 +327,61 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          controller: _scrollController,
+          padding: const EdgeInsets.only(bottom: 24),
           children: [
             _buildHeader(lang),
             _buildGenreCards(lang),
             _buildFeatureCards(lang),
             _buildSearchBar(lang),
             _buildResultCount(lang),
-            Expanded(child: _buildList()),
+            if (_filteredGods.isEmpty)
+              SizedBox(
+                height: 200,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.search_off_rounded,
+                          size: 48, color: Color(0xFF555555)),
+                      const SizedBox(height: 14),
+                      Text(
+                        AppStrings.get('emptyTitle', lang),
+                        style: const TextStyle(
+                            color: Color(0xFF999999), fontSize: 15),
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        AppStrings.get('emptySubtitle', lang),
+                        style: const TextStyle(
+                            color: Color(0xFF555555), fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            else
+              ...List.generate(
+                _filteredGods.length,
+                (i) => Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                  child: GodCard(
+                    showInfoIcon: true,
+                    god: _filteredGods[i],
+                    isExpanded: _filteredGods[i].id == _expandedGodId,
+                    entranceAnim: _stagger(i),
+                    onToggle: () {
+                      setState(() {
+                        final tappedId = _filteredGods[i].id;
+                        _expandedGodId =
+                            _expandedGodId == tappedId ? null : tappedId;
+                      });
+                    },
+                    onReturn: () => setState(() {}),
+                  ),
+                ),
+              ),
           ],
         ),
       ),
@@ -341,16 +390,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   Widget _buildHeader(String lang) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'MYTHARIUM',
+                  'MYTHERA',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 26,
@@ -386,7 +435,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       color: Color(0xFFB07800), size: 16),
                   const SizedBox(width: 6),
                   Text(
-                    lang == 'id' ? 'EN' : 'ID',
+                    LanguageNotifier.shortLabels[LanguageNotifier.supportedLanguages[
+                        (LanguageNotifier.supportedLanguages.indexOf(lang) + 1) %
+                            LanguageNotifier.supportedLanguages.length]] ?? 'EN',
                     style: const TextStyle(
                       color: Color(0xFFB07800),
                       fontSize: 12,
@@ -414,10 +465,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               decoration: BoxDecoration(
                 color: const Color(0xFF1A1A1A),
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF333333)),
               ),
               child: TextField(
                 controller: _searchController,
+                textAlignVertical: TextAlignVertical.center,
                 style: const TextStyle(color: Colors.white, fontSize: 13),
                 decoration: InputDecoration(
                   hintText: AppStrings.get('searchHint', lang),
@@ -425,6 +476,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       const TextStyle(color: Color(0xFF777777), fontSize: 13),
                   prefixIcon: const Icon(Icons.search_rounded,
                       color: Color(0xFFB07800), size: 18),
+                  prefixIconConstraints:
+                      const BoxConstraints(minWidth: 40, minHeight: 0),
                   suffixIcon: _searchController.text.isNotEmpty
                       ? IconButton(
                           icon: const Icon(Icons.close_rounded,
@@ -432,16 +485,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           onPressed: () => _searchController.clear(),
                         )
                       : null,
+                  suffixIconConstraints:
+                      const BoxConstraints(minWidth: 40, minHeight: 0),
                   border: InputBorder.none,
                   isDense: true,
-                  contentPadding:
-                      const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  isCollapsed: true,
+                  contentPadding: const EdgeInsets.symmetric(vertical: 12),
                 ),
               ),
             ),
           ),
           const SizedBox(width: 8),
-          // Random God button
+          // Random God button — gilded dice, the app's "surprise me" action.
           GestureDetector(
             onTap: _startRandomGod,
             child: Container(
@@ -451,10 +506,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: const Color(0xFF1A1A1A),
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: const Color(0xFFB07800).withValues(alpha: 0.4)),
+                  color: Colors.white.withValues(alpha: 0.2),
+                ),
               ),
               child: const Icon(Icons.casino_rounded,
-                  color: Color(0xFFB07800), size: 20),
+                  color: Colors.white, size: 23),
             ),
           ),
         ],
@@ -465,12 +521,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   // 6 pantheon cards (image background), horizontally scrollable, replacing
   // the old plain filter chips. Tapping opens that pantheon's god catalog.
   static const _genreCards = [
-    (key: 'Greek', image: 'assets/images/greek.jpg'),
-    (key: 'Egyptian', image: 'assets/images/egypt.jpg'),
-    (key: 'Nordic', image: 'assets/images/nordik.jpg'),
-    (key: 'Hindu', image: 'assets/images/hindu.jpg'),
-    (key: 'Chinese', image: 'assets/images/cina.jpg'),
-    (key: 'Japanese', image: 'assets/images/japanese.jpg'),
+    (key: 'Greek', image: 'assets/images/greek.webp'),
+    (key: 'Egyptian', image: 'assets/images/egypt.webp'),
+    (key: 'Nordic', image: 'assets/images/nordik.webp'),
+    (key: 'Hindu', image: 'assets/images/hindu.webp'),
+    (key: 'Chinese', image: 'assets/images/cina.webp'),
+    (key: 'Japanese', image: 'assets/images/japanese.webp'),
   ];
 
   // Genre cards with the user's onboarding realm (their patron god's pantheon)
@@ -554,7 +610,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         ),
                         const SizedBox(height: 1),
                         Text(
-                          '$count ${lang == 'id' ? 'dewa' : 'gods'}',
+                          '$count ${localize(lang, 'dewa', 'gods')}',
                           style: const TextStyle(
                             color: Color(0xFFCFCFCF),
                             fontSize: 10,
@@ -582,13 +638,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           children: [
             Expanded(
               child: _featureCard(
-                image: 'assets/images/whats_your_god.jpg',
+                image: 'assets/images/yourgods.webp',
                 fallback: const Color(0xFFB07800),
                 icon: Icons.psychology_rounded,
-                title: lang == 'id' ? 'Dewa Apa Dirimu?' : "What's Your God?",
-                onTap: () {
+                title: localize(lang, 'Dewa Apa Dirimu?', "What's Your God?"),
+                onTap: () async {
+                  // Guards against a fast double-tap pushing two QuizScreen
+                  // instances (which would let the second one's early pop
+                  // reset this flag while the first is still open).
+                  if (MainShell.quizActive.value) return;
                   SoundService.playClick();
-                  Navigator.push(
+                  MainShell.quizActive.value = true;
+                  await Navigator.push(
                     context,
                     PageRouteBuilder(
                       pageBuilder: (_, __, ___) => const QuizScreen(),
@@ -597,16 +658,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       transitionDuration: const Duration(milliseconds: 300),
                     ),
                   );
+                  // Guaranteed to run once QuizScreen is popped, no matter
+                  // how (back button, system back, multiple pops through
+                  // the result screen) — a more reliable reset than relying
+                  // on the quiz screen's own dispose() alone.
+                  MainShell.quizActive.value = false;
                 },
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: _featureCard(
-                image: 'assets/images/god_battle.jpg',
+                image: 'assets/images/battle.webp',
                 fallback: const Color(0xFFB07800),
                 icon: Icons.flash_on_rounded,
-                title: lang == 'id' ? 'Adu Dewa' : 'God Battle',
+                title: localize(lang, 'Adu Dewa', 'God Battle'),
                 onTap: () {
                   SoundService.playClick();
                   _showBattleDisclaimer(lang);
@@ -635,7 +701,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         decoration: BoxDecoration(
           color: const Color(0xFF111111),
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: fallback.withValues(alpha: 0.45)),
         ),
         clipBehavior: Clip.antiAlias,
         child: Stack(
@@ -673,33 +738,38 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              child: Row(
-                children: [
-                  Container(
-                    width: 30,
-                    height: 30,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF1A1A1A),
-                      shape: BoxShape.circle,
+              // ClipRect: guards against overflow if this card is ever
+              // squeezed narrower than its icon+text+chevron minimum width
+              // (e.g. a very narrow browser window on Flutter Web).
+              child: ClipRect(
+                child: Row(
+                  children: [
+                    Container(
+                      width: 30,
+                      height: 30,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF1A1A1A),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(icon, color: fallback, size: 16),
                     ),
-                    child: Icon(icon, color: fallback, size: 16),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      title,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppFonts.cinzel(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.white,
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppFonts.cinzel(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  Icon(Icons.chevron_right_rounded,
-                      color: fallback, size: 16),
-                ],
+                    Icon(Icons.chevron_right_rounded,
+                        color: fallback, size: 16),
+                  ],
+                ),
               ),
             ),
           ],
@@ -718,40 +788,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget _buildList() {
-    final lang = LanguageProvider.of(context).value;
-    if (_filteredGods.isEmpty) {
-      return Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.search_off_rounded,
-                size: 48, color: Color(0xFF555555)),
-            const SizedBox(height: 14),
-            Text(AppStrings.get('emptyTitle', lang),
-                style: const TextStyle(color: Color(0xFF999999), fontSize: 15)),
-            const SizedBox(height: 6),
-            Text(AppStrings.get('emptySubtitle', lang),
-                style: const TextStyle(color: Color(0xFF555555), fontSize: 13)),
-          ],
-        ),
-      );
-    }
-    return ListView.builder(
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-      itemCount: _filteredGods.length,
-      itemBuilder: (_, i) => GodCard(
-        god: _filteredGods[i],
-        isExpanded: _filteredGods[i].id == _expandedGodId,
-        entranceAnim: _stagger(i),
-        onToggle: () {
-          setState(() {
-            final tappedId = _filteredGods[i].id;
-            _expandedGodId = _expandedGodId == tappedId ? null : tappedId;
-          });
-        },
-        onReturn: () => setState(() {}),
-      ),
-    );
-  }
 }
+
+  // _buildList removed — god cards now inline in build() ListView.

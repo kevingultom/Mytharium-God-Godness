@@ -1,4 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'firebase_auth_service.dart';
+import 'firestore_service.dart';
 
 /// Persists which Mythic Pop Culture characters the user has favorited.
 /// Kept separate from the god [BookmarkService] since characters aren't gods.
@@ -26,6 +28,14 @@ class PopCultureBookmarkService {
       _ids.remove(id);
     }
     await prefs.setStringList(_key, _ids.toList());
+    _syncToCloud();
     return nowFav;
+  }
+
+  /// Fire-and-forget push to Firestore.
+  static void _syncToCloud() {
+    final uid = FirebaseAuthService.instance.uid;
+    if (uid == null || FirebaseAuthService.instance.isAnonymous) return;
+    FirestoreService.instance.savePcFavorites(uid, _ids).catchError((e) {});
   }
 }

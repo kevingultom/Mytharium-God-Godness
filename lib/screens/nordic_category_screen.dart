@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/god_card.dart';
 import '../l10n/language_provider.dart';
 import '../services/sound_service.dart';
-import 'category_god_list_screen.dart';
+import 'immersive_god_list_screen.dart';
 
 class NordicCategoryScreen extends StatelessWidget {
   const NordicCategoryScreen({super.key});
@@ -14,7 +14,7 @@ class NordicCategoryScreen extends StatelessWidget {
     Navigator.push(
       context,
       PageRouteBuilder(
-        pageBuilder: (_, __, ___) => CategoryGodListScreen(
+        pageBuilder: (_, __, ___) => ImmersiveGodListScreen(
           mythology: _mythology,
           category: category,
           titleLabel: label,
@@ -30,27 +30,50 @@ class NordicCategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final lang = LanguageProvider.of(context).value;
     final color = GodCard.mythologyColor(_mythology);
-    final id = lang == 'id';
 
     return Scaffold(
       backgroundColor: Colors.black,
+      // Back button is a plain Column child above the list — never inside
+      // any scrollable subtree — so it's structurally guaranteed to stay
+      // put, unlike a Positioned overlay sitting next to a scroll view.
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildHeader(context, lang),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+              child: GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.arrow_back_rounded,
+                        color: Colors.white, size: 22),
+                    SizedBox(width: 4),
+                    Text(
+                      'Back',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Expanded(
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
                 children: [
+                _buildHeader(context, lang),
                   _buildCategoryCard(
                     context,
                     color: color,
                     label: 'Æsir',
                     category: 'Aesir',
-                    subtitle: id
-                        ? 'Klan dewa perang, hukum & kekuasaan'
-                        : 'Clan of war, law & sovereignty',
+                    subtitle: localize(lang, 'Klan dewa perang, hukum & kekuasaan', 'Clan of war, law & sovereignty'),
+                    imagePath: 'assets/images/Nordik/Category/aesir.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
@@ -58,9 +81,8 @@ class NordicCategoryScreen extends StatelessWidget {
                     color: color,
                     label: 'Vanir',
                     category: 'Vanir',
-                    subtitle: id
-                        ? 'Dewa kesuburan & alam'
-                        : 'Gods of fertility & nature',
+                    subtitle: localize(lang, 'Dewa kesuburan & alam', 'Gods of fertility & nature'),
+                    imagePath: 'assets/images/Nordik/Category/vanir.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
@@ -68,39 +90,35 @@ class NordicCategoryScreen extends StatelessWidget {
                     color: color,
                     label: 'Jötun',
                     category: 'Jotun',
-                    subtitle: id
-                        ? 'Para raksasa purba'
-                        : 'The primordial giants',
+                    subtitle: localize(lang, 'Para raksasa purba', 'The primordial giants'),
+                    imagePath: 'assets/images/Nordik/Category/jotun.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Makhluk Mitologi' : 'Mythical Creatures',
+                    label: localize(lang, 'Makhluk Mitologi', 'Mythical Creatures'),
                     category: 'Creature',
-                    subtitle: id
-                        ? 'Makhluk & monster legendaris'
-                        : 'Legendary beasts & monsters',
+                    subtitle: localize(lang, 'Makhluk & monster legendaris', 'Legendary beasts & monsters'),
+                    imagePath: 'assets/images/Nordik/Category/monster.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Tokoh Khusus' : 'Special Figures',
+                    label: localize(lang, 'Tokoh Khusus', 'Special Figures'),
                     category: 'Special',
-                    subtitle: id
-                        ? 'Valkyrie & pengatur takdir'
-                        : 'Valkyries & weavers of fate',
+                    subtitle: localize(lang, 'Valkyrie & pengatur takdir', 'Valkyries & weavers of fate'),
+                    imagePath: 'assets/images/Nordik/Category/figures.webp',
                   ),
                   const SizedBox(height: 10),
                   _buildCategoryCard(
                     context,
                     color: color,
-                    label: id ? 'Kosmologi' : 'Cosmology',
+                    label: localize(lang, 'Kosmologi', 'Cosmology'),
                     category: 'Cosmology',
-                    subtitle: id
-                        ? 'Alam & elemen dunia mitologi'
-                        : 'Realms & cosmic elements',
+                    subtitle: localize(lang, 'Alam & elemen dunia mitologi', 'Realms & cosmic elements'),
+                    imagePath: 'assets/images/Nordik/Category/cosmology.webp',
                   ),
                 ],
               ),
@@ -113,44 +131,26 @@ class NordicCategoryScreen extends StatelessWidget {
 
   Widget _buildHeader(BuildContext context, String lang) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(12, 12, 20, 10),
-      child: Row(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          GestureDetector(
-            onTap: () => Navigator.pop(context),
-            child: Container(
-              margin: const EdgeInsets.only(right: 10),
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A1A1A),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF333333)),
-              ),
-              child: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 16),
+          Text(
+            'NORDIC',
+            textAlign: TextAlign.center,
+            style: GodCard.mythologyFont(
+              _mythology,
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
             ),
           ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'NORDIC',
-                  style: GodCard.mythologyFont(
-                    _mythology,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  lang == 'id'
-                      ? 'Pilih kategori dewa Nordik'
-                      : 'Choose a category of Norse gods',
-                  style: const TextStyle(color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.w600),
-                ),
-              ],
-            ),
+          const SizedBox(height: 2),
+          Text(
+            localize(lang, 'Pilih kategori dewa Nordik', 'Choose a category of Norse gods'),
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.w600),
           ),
         ],
       ),
@@ -163,37 +163,75 @@ class NordicCategoryScreen extends StatelessWidget {
     required String label,
     required String category,
     required String subtitle,
+    String? imagePath,
   }) {
     return GestureDetector(
       onTap: () => _openCategory(context, category, label),
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        height: 90,
+        clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [color.withValues(alpha: 0.32), color.withValues(alpha: 0.08)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: color.withValues(alpha: 0.4)),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
+          fit: StackFit.expand,
           children: [
-            Text(
-              label,
-              style: GodCard.mythologyFont(
-                _mythology,
-                fontSize: 16,
-                fontWeight: FontWeight.w800,
-                color: Colors.white,
+            if (imagePath != null)
+              Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [color.withValues(alpha: 0.32), color.withValues(alpha: 0.08)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                ),
+              )
+            else
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [color.withValues(alpha: 0.32), color.withValues(alpha: 0.08)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+              ),
+            Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.black.withValues(alpha: 0.6), Colors.black.withValues(alpha: 0.2)],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
               ),
             ),
-            const SizedBox(height: 3),
-            Text(
-              subtitle,
-              style: const TextStyle(color: Colors.white, fontSize: 11, height: 1.25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    label,
+                    style: GodCard.mythologyFont(
+                      _mythology,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(color: Colors.white, fontSize: 11, height: 1.25),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

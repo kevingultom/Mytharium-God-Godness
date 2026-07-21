@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:mytharium/main.dart';
-import 'package:mytharium/l10n/language_provider.dart';
-import 'package:mytharium/services/onboarding_service.dart';
+import 'package:mythera/main.dart';
+import 'package:mythera/l10n/language_provider.dart';
+import 'package:mythera/services/onboarding_service.dart';
 
 void main() {
   testWidgets('Switching through all bottom nav tabs does not throw',
@@ -23,7 +23,7 @@ void main() {
     await langNotifier.init();
 
     await tester.pumpWidget(
-      LanguageProvider(notifier: langNotifier, child: const MythariumApp()),
+      LanguageProvider(notifier: langNotifier, child: const MytheraApp()),
     );
     await tester.pumpAndSettle();
 
@@ -104,7 +104,7 @@ void main() {
     // more than once.
     expect(find.text('Mythic Pop Culture'), findsWidgets);
     expect(find.text('Quiz'), findsOneWidget);
-    expect(find.text('Wallpapers'), findsOneWidget);
+    expect(find.text('Tier'), findsOneWidget);
 
     // Codex is a single non-scrolling screen whose cards flex to fill the
     // height. It renders without a layout overflow (checked above via
